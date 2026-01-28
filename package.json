@@ -1,7 +1,7 @@
 {
-  "name": "purrfectly-zen",
+  "name": "bask-landing",
   "private": true,
-  "description": "Find your zen. One breath, one paw print at a time.",
+  "description": "Bask - Vitamin D & Sun Tracker landing page",
   "license": "MIT",
   "author": "Fauzira Alpiandi <fauziralpiandi.dev@gmail.com>",
   "scripts": {
