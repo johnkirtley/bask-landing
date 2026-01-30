@@ -8,24 +8,23 @@ import {
   Menu,
   X,
   Download,
-  Smartphone,
-  Bell,
-  BarChart3,
-  MapPin,
-  Zap,
   Mail,
-  ArrowRight,
   Twitter,
   Instagram,
   Facebook,
+  Target,
+  Heart,
+  CloudSun,
+  TrendingUp,
+  Users,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '#features', label: 'Features', id: 'features' },
-  { href: '#how-it-works', label: 'How It Works', id: 'how-it-works' },
+  { href: '#science', label: 'Science', id: 'science' },
   { href: '#faq', label: 'FAQ', id: 'faq' },
-  { href: '#blog', label: 'Blog', id: 'blog' },
+  { href: '#pricing', label: 'Pricing', id: 'pricing' },
   { href: '#contact', label: 'Contact', id: 'contact' },
 ];
 
@@ -165,47 +164,43 @@ function PhoneMockup() {
 
           {/* App UI mockup */}
           <div className="space-y-4 px-6 py-4 pb-12">
-            {/* UV Index card */}
+            {/* Bask Ring */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="rounded-2xl bg-white/80 p-4 text-center shadow-sm"
             >
-              <p className="text-muted-foreground text-xs">Current UV Index</p>
-              <p className="text-primary text-4xl font-bold">6.2</p>
-              <p className="text-accent font-medium text-xs">Moderate</p>
+              <p className="text-muted-foreground text-xs">Bask Ring</p>
+              <p className="text-primary text-4xl font-bold">3,600 IU</p>
+              <p className="text-accent font-medium text-xs">72% of 5,000 IU goal</p>
             </motion.div>
 
-            {/* Vitamin D progress */}
+            {/* Live session */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="rounded-2xl bg-white/80 p-4 shadow-sm"
             >
-              <p className="text-muted-foreground text-xs">Today's Vitamin D</p>
-              <div className="bg-muted mt-2 h-2 rounded-full">
-                <div className="from-primary to-accent h-2 w-[72%] rounded-full bg-gradient-to-r" />
-              </div>
-              <p className="text-foreground mt-1 text-xs font-medium">
-                72% of daily goal
-              </p>
+              <p className="text-muted-foreground text-xs">Active Session</p>
+              <p className="text-foreground text-2xl font-bold">12:34</p>
+              <p className="text-secondary text-xs">+842 IU · UV 6.2</p>
             </motion.div>
 
-            {/* Timer suggestion */}
+            {/* D-Window card */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="bg-secondary/30 rounded-2xl p-4 shadow-sm"
             >
-              <p className="text-muted-foreground text-xs">Recommended</p>
+              <p className="text-muted-foreground text-xs">Next D-Window</p>
               <p className="text-foreground text-sm font-bold">
-                18 min sun session
+                Tomorrow 11:00 AM - 1:00 PM
               </p>
               <p className="text-muted-foreground text-xs">
-                Best window: 10:30 - 11:00 AM
+                Optimal 2-hour window · UV 7-8
               </p>
             </motion.div>
           </div>
@@ -240,18 +235,16 @@ function Hero() {
           className="space-y-6"
         >
           <div className="text-primary font-heading inline-block text-sm font-semibold uppercase tracking-wider">
-            Your personal sun companion
+            Get your daily vitamin D—naturally
           </div>
 
           <h1 className="font-heading text-foreground text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
-            Track your sunshine.{' '}
-            <span className="text-primary">Optimize your glow.</span>
+            Track your vitamin D and sun exposure{' '}
+            <span className="text-primary">with intelligent UV monitoring</span>
           </h1>
 
           <p className="text-muted-foreground max-w-xl text-lg leading-relaxed">
-            Bask helps you get the right amount of sun exposure for optimal
-            vitamin D, without the burn. Personalized UV tracking for healthier
-            days outdoors.
+            Personalized sun exposure guidance for optimal health, safely. Based on Dr. Michael Holick's peer-reviewed photobiology research.
           </p>
 
           {/* App Store Button */}
@@ -278,10 +271,10 @@ function Hero() {
             className="flex flex-wrap gap-4 pt-4"
           >
             {[
-              { icon: Shield, text: 'UV Protection' },
-              { icon: Activity, text: 'Health Insights' },
-              { icon: Clock, text: 'Smart Timing' },
-              { icon: Sun, text: 'Vitamin D Tracking' },
+              { icon: Target, text: 'D-Engine™' },
+              { icon: CloudSun, text: 'D-Window Forecast' },
+              { icon: Heart, text: 'Apple Health Sync' },
+              { icon: Shield, text: 'Never Burn' },
             ].map((badge, idx) => (
               <div
                 key={idx}
@@ -355,49 +348,49 @@ function Features() {
   const features = [
     {
       icon: Sun,
-      title: 'Real-Time UV Tracking',
+      title: 'Real-Time UV Monitoring',
       description:
-        "Monitor UV index at your exact location throughout the day. Know when it's safe to be outside and when to seek shade.",
+        'Get live UV index data for your exact location, updated every 5 minutes. See your city, current conditions, and know the perfect moment to step outside.',
       color: 'bg-primary/15',
       iconColor: 'text-accent',
     },
     {
-      icon: Activity,
-      title: 'Vitamin D Insights',
+      icon: Target,
+      title: 'Personalized D-Engine™',
       description:
-        'Track your estimated vitamin D synthesis based on your skin type, location, and actual sun exposure time.',
+        'Our proprietary algorithm calculates vitamin D synthesis based on your skin type, age, clothing, and current UV conditions. Based on Dr. Michael Holick\'s peer-reviewed research.',
       color: 'bg-secondary/20',
       iconColor: 'text-secondary',
     },
     {
       icon: Clock,
-      title: 'Smart Exposure Timer',
+      title: 'Smart Sun Sessions',
       description:
-        'Get personalized safe-sun windows based on your skin profile. Bask tells you exactly how long to stay out.',
+        'Start a timed session and watch your vitamin D accumulate in real-time. See your IU count, burn risk countdown, and clothing coverage—all in one elegant interface.',
       color: 'bg-primary/15',
       iconColor: 'text-accent',
     },
     {
-      icon: Bell,
-      title: 'Sunburn Alerts',
+      icon: CloudSun,
+      title: '48-Hour D-Window Forecast™',
       description:
-        "Receive timely notifications before you've had too much UV. Never get caught off guard by the sun again.",
+        'Our MOAT feature: Get intelligent predictions for the best sun exposure windows over the next 2 days. Bask analyzes hourly UV forecasts and cloud cover to recommend optimal 1-3 hour windows.',
       color: 'bg-destructive/10',
       iconColor: 'text-destructive',
     },
     {
-      icon: BarChart3,
-      title: 'Weekly Sun Reports',
+      icon: Shield,
+      title: 'Never Burn',
       description:
-        'Review your weekly sun exposure patterns and vitamin D trends. Build consistent, healthy outdoor habits.',
+        'Built-in biological saturation model caps recommendations at your personalized burn threshold. See real-time burn risk indicators and get alerts before you exceed safe exposure.',
       color: 'bg-secondary/20',
       iconColor: 'text-secondary',
     },
     {
-      icon: MapPin,
-      title: 'Location-Aware',
+      icon: Heart,
+      title: 'Apple Health Integration',
       description:
-        'Automatically adjusts recommendations based on your geographic location, altitude, and local weather conditions.',
+        'Bidirectional sync: Read "Time in Daylight" to estimate passive vitamin D and write your vitamin D supplement intake so other health apps can see your complete nutritional data.',
       color: 'bg-primary/15',
       iconColor: 'text-accent',
     },
@@ -455,30 +448,30 @@ function HowItWorks() {
   const steps = [
     {
       step: '01',
-      title: 'Set Your Profile',
+      title: 'Personalize Your Profile',
       description:
-        'Enter your skin type, location, and health goals. Bask personalizes everything to your unique needs.',
-      icon: Smartphone,
+        'Select your skin tone, sun reaction, age, weight, and goals. Bask calculates your Fitzpatrick skin type and creates a personalized vitamin D synthesis model.',
+      icon: Users,
     },
     {
       step: '02',
-      title: 'Get Your Sun Plan',
+      title: 'Get Real-Time Guidance',
       description:
-        'Receive daily recommendations for optimal sun exposure windows based on real-time UV data and your profile.',
-      icon: Sun,
+        'Our D-Engine™ analyzes current UV index, cloud cover, and your profile to recommend safe sun session durations. Watch your vitamin D accumulate in real-time (IU per minute).',
+      icon: Target,
     },
     {
       step: '03',
-      title: 'Track & Improve',
+      title: 'Track & Optimize',
       description:
-        'Log your time outdoors, monitor vitamin D progress, and build lasting habits with weekly insights.',
-      icon: BarChart3,
+        'Log sun sessions, supplements, and cofactors (K2, magnesium). See your Bask Ring progress, streaks, and trends. Export physician reports for medical appointments.',
+      icon: TrendingUp,
     },
   ];
 
   return (
     <section
-      id="how-it-works"
+      id="science"
       className="bg-muted/30 px-6 py-24 md:px-12 lg:px-24"
     >
       <div className="mx-auto max-w-7xl">
@@ -491,7 +484,7 @@ function HowItWorks() {
           className="mb-16 text-center"
         >
           <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
-            Simple to start
+            Science-backed methodology
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
             How Bask Works
@@ -545,39 +538,63 @@ function FAQ() {
   const faqs = [
     {
       id: 'faq-1',
-      question: 'How does Bask track my vitamin D levels?',
+      question: 'What is Bask?',
       answer:
-        'Bask estimates vitamin D synthesis based on scientifically validated models that factor in your skin type (Fitzpatrick scale), geographic location, time of day, UV index, and the amount of skin exposed. While not a medical measurement, it provides a reliable daily guideline.',
+        'Bask is an iOS app that helps you track vitamin D from sun exposure and supplements. It uses real-time UV data and personalized calculations to recommend safe sun exposure times and supplement doses.',
     },
     {
       id: 'faq-2',
-      question: 'Is Bask a replacement for sunscreen?',
+      question: 'How accurate are the vitamin D calculations?',
       answer:
-        "No. Bask is a companion tool, not a substitute for sun protection. It helps you understand when and how long to be in the sun safely, but you should always follow dermatologist recommendations for sunscreen and protective clothing, especially during high UV periods.",
+        'Bask uses Dr. Michael Holick\'s peer-reviewed formula, which is the gold standard in photobiology. However, individual variation exists due to factors like sunscreen, altitude, pollution, and genetics. Treat estimates as guidelines, not absolutes.',
     },
     {
       id: 'faq-3',
-      question: 'What skin types does Bask support?',
+      question: 'Will Bask prevent me from burning?',
       answer:
-        'Bask supports all six Fitzpatrick skin types (I through VI). During onboarding, you select your skin type so the app can calculate safe exposure durations and vitamin D estimates tailored to your skin.',
+        'Bask includes burn risk indicators and caps recommendations at your personalized burn threshold. However, you are responsible for your own safety. Always monitor your skin and leave the sun if you feel uncomfortable.',
     },
     {
       id: 'faq-4',
-      question: 'Does Bask work indoors or through windows?',
+      question: 'What is the D-Window Forecast?',
       answer:
-        'Bask is designed for direct outdoor sun exposure. UVB rays, which are responsible for vitamin D synthesis, do not penetrate glass. The app will remind you that indoor time near windows does not contribute to your vitamin D goals.',
+        'Our proprietary feature that analyzes 48 hours of UV and cloud cover data to recommend the best 1-3 hour window for sun exposure. Get alerts before optimal windows open.',
     },
     {
       id: 'faq-5',
-      question: 'Is the app free to use?',
+      question: 'Does Bask work with Apple Health?',
       answer:
-        'Bask offers a free tier with core UV tracking and daily recommendations. A premium subscription unlocks advanced features like weekly reports, historical trends, and family profiles.',
+        'Yes! Bask reads "Time in Daylight" to estimate passive vitamin D and writes dietary vitamin D back to Apple Health.',
     },
     {
       id: 'faq-6',
+      question: 'Is my health data private?',
+      answer:
+        'Yes. All personal data is stored locally on your device using encrypted SQLite. We do not transmit your health data to our servers.',
+    },
+    {
+      id: 'faq-7',
+      question: 'How much vitamin D do I need?',
+      answer:
+        'The default goal is 5,000 IU/day, which aligns with recommendations for optimal blood levels (40-60 ng/mL). Consult your doctor for personalized advice.',
+    },
+    {
+      id: 'faq-8',
+      question: 'What\'s the Shadow Rule?',
+      answer:
+        'Below UV index 3, UVB rays are scattered by the atmosphere, so you produce zero vitamin D (but still get UVA damage). Bask only credits vitamin D when UV ≥ 3.',
+    },
+    {
+      id: 'faq-9',
+      question: 'Is Bask free?',
+      answer:
+        'Bask offers a free tier with core features. Premium plans (monthly, yearly, lifetime) unlock advanced features like D-Window Forecast and physician report export.',
+    },
+    {
+      id: 'faq-10',
       question: 'Which devices does Bask support?',
       answer:
-        'Bask is currently available for iPhone running iOS 16 or later. An Android version and Apple Watch companion app are on the roadmap.',
+        'Bask is currently iOS-only (iPhone & iPad). Android support may come in the future.',
     },
   ];
 
@@ -647,33 +664,57 @@ function FAQ() {
   );
 }
 
-function Blog() {
-  const blogPosts = [
+function Pricing() {
+  const plans = [
     {
-      title: 'Why Vitamin D Matters More Than You Think',
-      excerpt:
-        "Research shows that over 40% of adults are vitamin D deficient. Here's what that means for your health.",
-      date: 'Coming Soon',
-      tag: 'Health',
+      name: 'Free',
+      price: '$0',
+      period: 'forever',
+      features: [
+        'Real-time UV monitoring',
+        'Sun exposure session tracking',
+        'Supplement & cofactor logging',
+        'Basic Bask Ring progress',
+        'History timeline view',
+        'Apple Health sync',
+      ],
+      cta: 'Download Free',
+      highlighted: false,
     },
     {
-      title: 'The Science of Safe Sun Exposure',
-      excerpt:
-        'How to get enough sun for vitamin D without increasing your risk of skin damage.',
-      date: 'Coming Soon',
-      tag: 'Science',
+      name: 'Premium',
+      price: '$4.99',
+      period: '/month',
+      features: [
+        'All free features',
+        'D-Window Forecast (48-hour predictions)',
+        'Physician report export',
+        'Advanced insights & trends',
+        'Priority support',
+        'Ad-free experience',
+      ],
+      cta: 'Start Free Trial',
+      highlighted: true,
     },
     {
-      title: 'Understanding UV Index: A Complete Guide',
-      excerpt:
-        'What the UV index really means and how to use it for smarter sun habits.',
-      date: 'Coming Soon',
-      tag: 'Guide',
+      name: 'Lifetime',
+      price: '$49.99',
+      period: 'one-time',
+      features: [
+        'All Premium features',
+        'One-time payment',
+        'Lifetime access',
+        'No recurring fees',
+        'Future updates included',
+        'Best value',
+      ],
+      cta: 'Get Lifetime Access',
+      highlighted: false,
     },
   ];
 
   return (
-    <section id="blog" className="bg-muted/30 px-6 py-24 md:px-12 lg:px-24">
+    <section id="pricing" className="bg-muted/30 px-6 py-24 md:px-12 lg:px-24">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -684,46 +725,63 @@ function Blog() {
           className="mb-16 text-center"
         >
           <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
-            From the Blog
+            Simple Pricing
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
-            Sun Science & Wellness Tips
+            Choose Your Plan
           </h2>
         </motion.div>
 
-        {/* Blog Grid */}
+        {/* Pricing Grid */}
         <div className="grid gap-8 md:grid-cols-3">
-          {blogPosts.map((post, idx) => (
-            <motion.article
+          {plans.map((plan, idx) => (
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -8 }}
-              className="glass group cursor-pointer overflow-hidden rounded-2xl transition-shadow hover:shadow-lg"
+              className={`glass overflow-hidden rounded-2xl p-8 transition-shadow hover:shadow-lg ${
+                plan.highlighted ? 'border-primary border-2' : ''
+              }`}
             >
-              {/* Tag */}
-              <div className="border-border border-b p-6">
-                <span className="bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-medium">
-                  {post.tag}
-                </span>
+              {plan.highlighted && (
+                <div className="bg-primary text-primary-foreground -mt-8 -mx-8 mb-6 px-4 py-2 text-center text-sm font-semibold">
+                  Most Popular
+                </div>
+              )}
+
+              <h3 className="font-heading text-foreground mb-2 text-2xl font-bold">
+                {plan.name}
+              </h3>
+              <div className="mb-6">
+                <span className="text-foreground text-4xl font-bold">{plan.price}</span>
+                <span className="text-muted-foreground text-sm">/{plan.period}</span>
               </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-heading text-foreground mb-3 text-xl font-bold group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {post.excerpt}
-                </p>
-                <div className="text-muted-foreground flex items-center justify-between text-sm">
-                  <span>{post.date}</span>
-                  <ArrowRight className="text-primary h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </div>
-              </div>
-            </motion.article>
+              <ul className="mb-8 space-y-3">
+                {plan.features.map((feature, fidx) => (
+                  <li key={fidx} className="text-muted-foreground flex items-start gap-2 text-sm">
+                    <Sun className="text-primary mt-0.5 h-4 w-4 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`block w-full rounded-xl px-6 py-3 text-center font-medium transition-colors ${
+                  plan.highlighted
+                    ? 'bg-primary text-primary-foreground hover:bg-accent'
+                    : 'bg-foreground/10 text-foreground hover:bg-foreground/20'
+                }`}
+              >
+                {plan.cta}
+              </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -775,11 +833,10 @@ function Contact() {
 
           <div className="relative z-10">
             <h2 className="text-primary-foreground font-heading mb-4 text-4xl font-bold md:text-5xl">
-              Start basking in better health
+              Get Your Personalized Solar Plan
             </h2>
             <p className="text-primary-foreground/90 mx-auto mb-8 max-w-2xl text-lg">
-              Download Bask and take the first step toward optimizing your
-              relationship with the sun.
+              Download Bask — Free on iOS. Start tracking your vitamin D and optimizing your sun exposure today.
             </p>
             <motion.a
               href="#"
@@ -927,8 +984,7 @@ function Footer() {
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Your personal sun companion. Track UV, optimize vitamin D, live
-              brighter.
+              Track your vitamin D and sun exposure with intelligent UV monitoring. Personalized guidance for optimal health, safely.
             </p>
           </div>
 
@@ -948,10 +1004,10 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#how-it-works"
+                  href="#science"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  How It Works
+                  Science
                 </a>
               </li>
               <li>
@@ -960,6 +1016,14 @@ function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Pricing
                 </a>
               </li>
             </ul>
@@ -1030,6 +1094,13 @@ function Footer() {
             Made with <Sun className="text-primary h-4 w-4" /> in California
           </p>
         </div>
+
+        {/* Medical Disclaimer */}
+        <div className="text-muted-foreground mt-8 border-t border-border pt-8 text-center text-xs">
+          <p className="mx-auto max-w-4xl leading-relaxed">
+            <strong>Medical Disclaimer:</strong> Bask is not a medical device. The app is for informational purposes only and does not provide medical advice. Consult a licensed healthcare provider before making changes to your vitamin D supplementation or sun exposure habits. Excessive sun exposure increases skin cancer risk.
+          </p>
+        </div>
       </div>
     </footer>
   );
@@ -1043,7 +1114,7 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <FAQ />
-      <Blog />
+      <Pricing />
       <Contact />
       <Footer />
     </div>

@@ -24,102 +24,123 @@ import Layout from '../layouts/Layout.astro';
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">1. Acceptance of Terms</h2>
           <p class="text-muted-foreground leading-relaxed">
-            By downloading, installing, or using the Bask mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App. We reserve the right to modify these Terms at any time, and your continued use of the App constitutes acceptance of any changes.
+            By downloading, installing, or using the Bask mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the App.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">2. Description of Service</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">2. Medical Disclaimer</h2>
           <p class="text-muted-foreground leading-relaxed">
-            Bask is a vitamin D and sun exposure tracking application designed for iOS. The App provides UV index data, personalized sun exposure recommendations, and vitamin D tracking tools. The App is intended for informational and wellness purposes only.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">3. Medical Disclaimer</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            <strong>Bask is not a medical device and does not provide medical advice.</strong> The information provided by the App, including sun exposure recommendations and vitamin D tracking, is for general informational purposes only. It is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions you may have regarding a medical condition or vitamin D supplementation.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">4. User Accounts</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            You may be required to create an account to access certain features of the App. You are responsible for:
+            <strong>IMPORTANT: BASK IS NOT A MEDICAL DEVICE. THE APP IS FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.</strong>
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li>Maintaining the confidentiality of your account credentials</li>
-            <li>All activities that occur under your account</li>
-            <li>Providing accurate and up-to-date information</li>
-            <li>Notifying us immediately of any unauthorized use of your account</li>
+            <li>The App provides <strong>estimates</strong> of vitamin D synthesis based on scientific models (Holick's formula), but these are <strong>not medical advice</strong>.</li>
+            <li><strong>Do not</strong> rely solely on the App for medical decisions. Consult a licensed healthcare provider before making changes to your vitamin D supplementation or sun exposure habits.</li>
+            <li>The App is <strong>not</strong> a substitute for professional medical advice, diagnosis, or treatment.</li>
+            <li><strong>Skin Cancer Risk:</strong> Excessive sun exposure increases skin cancer risk. Always follow safe sun practices. Bask includes burn risk indicators, but you are responsible for your own safety.</li>
+            <li><strong>Supplement Safety:</strong> Vitamin D toxicity is rare but possible at very high doses (>10,000 IU/day for extended periods). Consult a doctor before taking high-dose supplements.</li>
+          </ul>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            <strong>By accepting the Medical Disclaimer during onboarding, you acknowledge these risks.</strong>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">3. Accuracy of Information</h2>
+          <ul class="text-muted-foreground list-disc space-y-2 pl-6">
+            <li><strong>UV Data:</strong> We use Apple WeatherKit for real-time UV data. While generally accurate, weather services may occasionally provide incorrect or delayed data.</li>
+            <li><strong>Vitamin D Calculations:</strong> Our D-Engine™ is based on peer-reviewed research, but individual variation exists. Factors like sunscreen, altitude, pollution, and genetics can affect actual vitamin D synthesis.</li>
+            <li><strong>Blood Test Integration:</strong> If you enter a blood test baseline, you are responsible for accuracy. We do not verify lab results.</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">5. Acceptable Use</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">4. User Responsibilities</h2>
           <p class="text-muted-foreground leading-relaxed">
-            You agree not to:
+            You agree to:
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li>Use the App for any unlawful purpose</li>
-            <li>Attempt to reverse engineer, decompile, or disassemble the App</li>
-            <li>Interfere with or disrupt the App's servers or networks</li>
-            <li>Transmit any viruses, malware, or harmful code</li>
-            <li>Use the App to collect data about other users without consent</li>
-            <li>Reproduce, distribute, or create derivative works from the App</li>
+            <li>Provide accurate information during onboarding (age, weight, skin type)</li>
+            <li>Use the App responsibly and not exceed safe sun exposure</li>
+            <li>Not rely on the App as medical advice</li>
+            <li>Comply with all applicable laws</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">5. Subscriptions & Payments</h2>
+          <ul class="text-muted-foreground list-disc space-y-2 pl-6">
+            <li><strong>Premium Plans:</strong> The App offers optional paid subscriptions (monthly, yearly, lifetime) via RevenueCat and Apple's In-App Purchase system.</li>
+            <li><strong>Billing:</strong> Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period.</li>
+            <li><strong>Refunds:</strong> Managed by Apple's App Store. Contact Apple for refund requests.</li>
+            <li><strong>Changes to Pricing:</strong> We reserve the right to change subscription pricing with advance notice.</li>
           </ul>
         </section>
 
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">6. Intellectual Property</h2>
           <p class="text-muted-foreground leading-relaxed">
-            All content, features, and functionality of the App — including but not limited to text, graphics, logos, icons, images, and software — are the exclusive property of Bask and are protected by copyright, trademark, and other intellectual property laws. You are granted a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes.
+            The App, including all text, graphics, logos, and software, is owned by Bask and protected by copyright and trademark laws. You may not copy, modify, distribute, or reverse-engineer the App.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">7. Subscriptions & Payments</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">7. Limitation of Liability</h2>
           <p class="text-muted-foreground leading-relaxed">
-            Certain features of the App may require a paid subscription. Subscriptions are billed through Apple's App Store and are subject to Apple's terms and conditions. You may manage or cancel your subscription through your App Store account settings. Refunds are handled in accordance with Apple's refund policy.
+            <strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong>
+          </p>
+          <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
+            <li>Bask is provided "as is" without warranties of any kind, express or implied.</li>
+            <li>We are <strong>not liable</strong> for:
+              <ul class="mt-2 list-circle space-y-1 pl-6">
+                <li>Sunburns, skin damage, or health issues resulting from App use</li>
+                <li>Inaccurate UV data or vitamin D calculations</li>
+                <li>Data loss or technical issues</li>
+                <li>Any indirect, incidental, or consequential damages</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            <strong>YOUR USE OF THE APP IS AT YOUR OWN RISK.</strong>
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">8. Limitation of Liability</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">8. Indemnification</h2>
           <p class="text-muted-foreground leading-relaxed">
-            To the fullest extent permitted by applicable law, Bask and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App. This includes, without limitation, any damages resulting from reliance on sun exposure recommendations or vitamin D tracking data provided by the App.
+            You agree to indemnify and hold harmless Bask, its developers, and affiliates from any claims, damages, or expenses arising from your use of the App or violation of these Terms.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">9. Disclaimer of Warranties</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">9. Termination</h2>
           <p class="text-muted-foreground leading-relaxed">
-            The App is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied. We do not warrant that the App will be uninterrupted, error-free, or free of harmful components. We make no guarantees regarding the accuracy of UV data, sun exposure calculations, or vitamin D estimates.
+            We may terminate or suspend your access to the App at any time, with or without cause, with or without notice.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">10. Termination</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">10. Governing Law</h2>
           <p class="text-muted-foreground leading-relaxed">
-            We reserve the right to suspend or terminate your access to the App at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties. Upon termination, your right to use the App will immediately cease.
+            These Terms are governed by the laws of the State of California, United States. Any disputes will be resolved in the courts of California.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">11. Governing Law</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">11. Changes to Terms</h2>
           <p class="text-muted-foreground leading-relaxed">
-            These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or the App shall be resolved in the courts located in California.
+            We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.
           </p>
         </section>
 
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">12. Contact Us</h2>
           <p class="text-muted-foreground leading-relaxed">
-            If you have questions about these Terms, please contact us at:
+            If you have questions about these Terms, contact us at:
           </p>
           <div class="text-muted-foreground mt-3 leading-relaxed">
-            <p>Bask</p>
-            <p>Email: <a href="mailto:support@bask.com" class="text-primary hover:text-accent transition-colors">support@bask.com</a></p>
+            <p>Email: <a href="mailto:support@getbask.app" class="text-primary hover:text-accent transition-colors">support@getbask.app</a></p>
+            <p>Website: <a href="https://bask.io/terms" class="text-primary hover:text-accent transition-colors">bask.io/terms</a></p>
           </div>
         </section>
       </div>

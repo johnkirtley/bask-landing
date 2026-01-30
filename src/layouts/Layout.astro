@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Bask - Vitamin D & Sun Tracker for iOS',
-  description = 'Track your sun exposure, optimize vitamin D levels, and build healthier outdoor habits with Bask for iPhone.',
+  description = 'Bask: Personalized vitamin D tracking with real-time UV monitoring. Get safe sun exposure recommendations based on your skin type, age, and location. Export reports for your doctor. iOS app with Apple Health sync.',
   canonicalPath = '',
   noindex = false,
 } = Astro.props;
@@ -44,7 +44,7 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
         '@context': 'https://schema.org',
         '@type': 'MobileApplication',
         name: 'Bask',
-        description: 'Track sun exposure and vitamin D levels with personalized insights for healthier outdoor habits.',
+        description: 'Bask is an iOS app that helps users track vitamin D from sun exposure and supplements. Using real-time UV data and personalized calculations based on skin type and age, Bask recommends safe sun exposure times and supplement doses. Built on Dr. Michael Holick\'s peer-reviewed photobiology research, Bask integrates with Apple Health and WeatherKit for seamless tracking.',
         applicationCategory: 'HealthApplication',
         operatingSystem: 'iOS',
         offers: {
