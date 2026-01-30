@@ -1012,6 +1012,20 @@ function Footer() {
           <p className="text-muted-foreground text-sm">
             © 2026 Bask. All rights reserved.
           </p>
+          <div className="flex gap-4">
+            <a
+              href="/privacy"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
+            >
+              Terms of Service
+            </a>
+          </div>
           <p className="text-muted-foreground flex items-center gap-2 text-sm">
             Made with <Sun className="text-primary h-4 w-4" /> in California
           </p>
