@@ -54,6 +54,8 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
         },
       })}
     />
+
+    <slot name="head" />
   </head>
   <body>
     <slot />

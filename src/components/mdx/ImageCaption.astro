@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  caption?: string;
+}
+
+const { src, alt, caption } = Astro.props;
+---
+
+<figure class="my-12 not-prose">
+  <div class="rounded-xl overflow-hidden border border-border shadow-lg">
+    <Image
+      src={src}
+      alt={alt}
+      class="w-full h-auto"
+      widths={[400, 800, 1200]}
+      sizes="(max-width: 768px) 100vw, 800px"
+    />
+  </div>
+  {caption && (
+    <figcaption class="text-center text-sm text-muted-foreground mt-4 italic">
+      {caption}
+    </figcaption>
+  )}
+</figure>

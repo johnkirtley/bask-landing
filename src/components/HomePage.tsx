@@ -24,7 +24,7 @@ const navLinks = [
   { href: '#features', label: 'Features', id: 'features' },
   { href: '#science', label: 'Science', id: 'science' },
   { href: '#faq', label: 'FAQ', id: 'faq' },
-  { href: '#pricing', label: 'Pricing', id: 'pricing' },
+  // { href: '#pricing', label: 'Pricing', id: 'pricing' },
   { href: '#contact', label: 'Contact', id: 'contact' },
 ];
 
@@ -57,7 +57,7 @@ function Navigation() {
   }, []);
 
   return (
-    <nav className="bg-background/80 fixed top-0 left-0 right-0 z-50 backdrop-blur-lg">
+    <nav className="bg-background/80 fixed top-0 right-0 left-0 z-50 backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12 lg:px-24">
         {/* Logo */}
         <a
@@ -84,17 +84,17 @@ function Navigation() {
               {activeSection === link.id && (
                 <motion.div
                   layoutId="activeIndicator"
-                  className="bg-primary absolute -bottom-1 left-0 right-0 h-0.5"
+                  className="bg-primary absolute right-0 -bottom-1 left-0 h-0.5"
                 />
               )}
             </a>
           ))}
-          <a
-            href="#download"
-            className="bg-primary hover:bg-accent text-primary-foreground flex items-center gap-2 rounded-full px-6 py-2.5 font-medium transition-all hover:shadow-lg"
-          >
-            <Download className="h-4 w-4" />
-            Download
+          <a href="" className="flex items-center gap-2 py-2.5">
+            <img
+              src="/images/black.svg"
+              alt="Download on the App Store"
+              className="h-8 w-auto"
+            />
           </a>
         </div>
 
@@ -104,7 +104,11 @@ function Navigation() {
           className="text-foreground md:hidden"
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
 
@@ -115,7 +119,7 @@ function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="bg-card border-border md:hidden border-t"
+            className="bg-card border-border border-t md:hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((link) => (
@@ -129,12 +133,15 @@ function Navigation() {
                 </a>
               ))}
               <a
-                href="#download"
+                href=""
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-primary text-primary-foreground hover:bg-accent mt-2 flex items-center justify-center gap-2 rounded-full px-6 py-3 font-medium transition-all"
+                className="mt-2 flex items-center justify-center gap-2 py-3 font-medium"
               >
-                <Download className="h-4 w-4" />
-                Download
+                <img
+                  src="/images/black.svg"
+                  alt="Download on the App Store"
+                  className="h-8 w-auto"
+                />
               </a>
             </div>
           </motion.div>
@@ -148,7 +155,7 @@ function PhoneMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[280px]">
       {/* Phone frame */}
-      <div className="rounded-[3rem] border-[8px] border-foreground bg-card p-2 shadow-2xl">
+      <div className="border-foreground bg-card rounded-[3rem] border-[8px] p-2 shadow-2xl">
         {/* Notch */}
         <div className="bg-foreground absolute top-[12px] left-1/2 z-20 h-[25px] w-[120px] -translate-x-1/2 rounded-full" />
 
@@ -173,7 +180,9 @@ function PhoneMockup() {
             >
               <p className="text-muted-foreground text-xs">Bask Ring</p>
               <p className="text-primary text-4xl font-bold">3,600 IU</p>
-              <p className="text-accent font-medium text-xs">72% of 5,000 IU goal</p>
+              <p className="text-accent text-xs font-medium">
+                72% of 5,000 IU goal
+              </p>
             </motion.div>
 
             {/* Live session */}
@@ -215,15 +224,12 @@ function PhoneMockup() {
 
 function Hero() {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen overflow-hidden pt-24"
-    >
+    <section id="home" className="relative min-h-screen overflow-hidden pt-24">
       {/* Radial gradient background */}
       <div className="absolute inset-0 -z-10">
-        <div className="from-primary/20 via-background to-background absolute inset-0 bg-gradient-radial" />
-        <div className="from-primary/10 absolute top-1/4 right-0 h-[500px] w-[500px] -translate-y-1/2 translate-x-1/4 rounded-full bg-gradient-radial blur-3xl" />
-        <div className="from-secondary/20 absolute bottom-0 left-0 h-[400px] w-[400px] -translate-x-1/4 translate-y-1/4 rounded-full bg-gradient-radial blur-3xl" />
+        <div className="from-primary/20 via-background to-background bg-gradient-radial absolute inset-0" />
+        <div className="from-primary/10 bg-gradient-radial absolute top-1/4 right-0 h-[500px] w-[500px] translate-x-1/4 -translate-y-1/2 rounded-full blur-3xl" />
+        <div className="from-secondary/20 bg-gradient-radial absolute bottom-0 left-0 h-[400px] w-[400px] -translate-x-1/4 translate-y-1/4 rounded-full blur-3xl" />
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:px-12 lg:px-24">
@@ -234,17 +240,17 @@ function Hero() {
           transition={{ duration: 0.6 }}
           className="space-y-6"
         >
-          <div className="text-primary font-heading inline-block text-sm font-semibold uppercase tracking-wider">
+          <div className="text-primary font-heading inline-block text-sm font-semibold tracking-wider uppercase">
             Get your daily vitamin D—naturally
           </div>
 
-          <h1 className="font-heading text-foreground text-5xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-foreground text-5xl leading-tight font-bold tracking-tight md:text-6xl lg:text-7xl">
             Track your vitamin D and sun exposure{' '}
             <span className="text-primary">with intelligent UV monitoring</span>
           </h1>
 
           <p className="text-muted-foreground max-w-xl text-lg leading-relaxed">
-            Personalized sun exposure guidance for optimal health, safely. Based on Dr. Michael Holick's peer-reviewed photobiology research.
+            Personalized sun exposure guidance for optimal health, safely.
           </p>
 
           {/* App Store Button */}
@@ -252,15 +258,12 @@ function Hero() {
             href="#"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-foreground text-background inline-flex items-center gap-3 rounded-2xl px-8 py-4 font-medium shadow-lg transition-shadow hover:shadow-xl"
           >
-            <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            <div className="text-left">
-              <div className="text-xs opacity-80">Download on the</div>
-              <div className="text-lg font-semibold">App Store</div>
-            </div>
+            <img
+              src="/images/black.svg"
+              alt="Download on the App Store"
+              className="h-14 w-auto"
+            />
           </motion.a>
 
           {/* Trust badges */}
@@ -271,10 +274,9 @@ function Hero() {
             className="flex flex-wrap gap-4 pt-4"
           >
             {[
-              { icon: Target, text: 'D-Engine™' },
+              { icon: Target, text: 'D-Engine' },
               { icon: CloudSun, text: 'D-Window Forecast' },
               { icon: Heart, text: 'Apple Health Sync' },
-              { icon: Shield, text: 'Never Burn' },
             ].map((badge, idx) => (
               <div
                 key={idx}
@@ -305,7 +307,9 @@ function Hero() {
             <div className="flex items-center gap-2">
               <Sun className="text-primary h-8 w-8" />
               <div>
-                <p className="text-foreground text-sm font-bold">UV Index: 6.2</p>
+                <p className="text-foreground text-sm font-bold">
+                  UV Index: 6.2
+                </p>
                 <p className="text-muted-foreground text-xs">Moderate</p>
               </div>
             </div>
@@ -324,7 +328,9 @@ function Hero() {
             <div className="flex items-center gap-2">
               <Activity className="text-secondary h-8 w-8" />
               <div>
-                <p className="text-foreground text-sm font-bold">Vitamin D: 72%</p>
+                <p className="text-foreground text-sm font-bold">
+                  Vitamin D: 72%
+                </p>
                 <p className="text-muted-foreground text-xs">On track today</p>
               </div>
             </div>
@@ -358,7 +364,7 @@ function Features() {
       icon: Target,
       title: 'Personalized D-Engine™',
       description:
-        'Our proprietary algorithm calculates vitamin D synthesis based on your skin type, age, clothing, and current UV conditions. Based on Dr. Michael Holick\'s peer-reviewed research.',
+        'Our proprietary algorithm calculates vitamin D synthesis based on your skin type, age, clothing, and current UV conditions.',
       color: 'bg-secondary/20',
       iconColor: 'text-secondary',
     },
@@ -366,7 +372,7 @@ function Features() {
       icon: Clock,
       title: 'Smart Sun Sessions',
       description:
-        'Start a timed session and watch your vitamin D accumulate in real-time. See your IU count, burn risk countdown, and clothing coverage—all in one elegant interface.',
+        'Start a timed session and watch your vitamin D accumulate in real-time. See your IU count, sunburn risk, and clothing coverage—all in one elegant interface.',
       color: 'bg-primary/15',
       iconColor: 'text-accent',
     },
@@ -374,23 +380,15 @@ function Features() {
       icon: CloudSun,
       title: '48-Hour D-Window Forecast™',
       description:
-        'Our MOAT feature: Get intelligent predictions for the best sun exposure windows over the next 2 days. Bask analyzes hourly UV forecasts and cloud cover to recommend optimal 1-3 hour windows.',
+        'Get intelligent predictions for the best sun exposure windows over the next 2 days. Bask analyzes hourly UV forecasts and cloud cover to recommend optimal 1-3 hour windows.',
       color: 'bg-destructive/10',
       iconColor: 'text-destructive',
-    },
-    {
-      icon: Shield,
-      title: 'Never Burn',
-      description:
-        'Built-in biological saturation model caps recommendations at your personalized burn threshold. See real-time burn risk indicators and get alerts before you exceed safe exposure.',
-      color: 'bg-secondary/20',
-      iconColor: 'text-secondary',
     },
     {
       icon: Heart,
       title: 'Apple Health Integration',
       description:
-        'Bidirectional sync: Read "Time in Daylight" to estimate passive vitamin D and write your vitamin D supplement intake so other health apps can see your complete nutritional data.',
+        'Read "Time in Daylight" to estimate passive vitamin D and write your vitamin D supplement intake so other health apps can see your complete nutritional data.',
       color: 'bg-primary/15',
       iconColor: 'text-accent',
     },
@@ -407,7 +405,7 @@ function Features() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
+          <div className="text-primary font-heading mb-4 text-sm font-semibold tracking-wider uppercase">
             Why Bask?
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
@@ -427,7 +425,9 @@ function Features() {
               whileHover={{ y: -8 }}
               className="glass rounded-2xl p-8 transition-shadow hover:shadow-lg"
             >
-              <div className={`${feature.color} mb-4 inline-flex rounded-xl p-3`}>
+              <div
+                className={`${feature.color} mb-4 inline-flex rounded-xl p-3`}
+              >
                 <feature.icon className={`h-6 w-6 ${feature.iconColor}`} />
               </div>
               <h3 className="font-heading text-foreground mb-2 text-xl font-bold">
@@ -457,23 +457,20 @@ function HowItWorks() {
       step: '02',
       title: 'Get Real-Time Guidance',
       description:
-        'Our D-Engine™ analyzes current UV index, cloud cover, and your profile to recommend safe sun session durations. Watch your vitamin D accumulate in real-time (IU per minute).',
+        'Our D-Engine analyzes current UV index, cloud cover, and your profile to recommend safe sun session durations. Watch your vitamin D accumulate in real-time (IU per minute).',
       icon: Target,
     },
     {
       step: '03',
       title: 'Track & Optimize',
       description:
-        'Log sun sessions, supplements, and cofactors (K2, magnesium). See your Bask Ring progress, streaks, and trends. Export physician reports for medical appointments.',
+        'Log sun sessions, supplements, and cofactors (K2, magnesium). See your Bask Ring progress, streaks, and trends.',
       icon: TrendingUp,
     },
   ];
 
   return (
-    <section
-      id="science"
-      className="bg-muted/30 px-6 py-24 md:px-12 lg:px-24"
-    >
+    <section id="science" className="bg-muted/30 px-6 py-24 md:px-12 lg:px-24">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -483,7 +480,7 @@ function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
+          <div className="text-primary font-heading mb-4 text-sm font-semibold tracking-wider uppercase">
             Science-backed methodology
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
@@ -504,11 +501,11 @@ function HowItWorks() {
             >
               {/* Connecting line (desktop only) */}
               {idx < steps.length - 1 && (
-                <div className="absolute top-16 left-1/2 hidden h-0.5 w-full border-t-2 border-dashed border-primary/30 md:block" />
+                <div className="border-primary/30 absolute top-16 left-1/2 hidden h-0.5 w-full border-t-2 border-dashed md:block" />
               )}
 
               {/* Step number */}
-              <div className="text-primary relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/20 font-heading text-2xl font-bold">
+              <div className="text-primary from-primary/20 to-accent/20 font-heading relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br text-2xl font-bold">
                 {step.step}
               </div>
 
@@ -540,25 +537,25 @@ function FAQ() {
       id: 'faq-1',
       question: 'What is Bask?',
       answer:
-        'Bask is an iOS app that helps you track vitamin D from sun exposure and supplements. It uses real-time UV data and personalized calculations to recommend safe sun exposure times and supplement doses.',
+        'Bask is an iOS app that helps you track vitamin D from sun exposure and supplements. It uses real-time UV data and personalized calculations to recommend safe sun exposure times.',
     },
     {
       id: 'faq-2',
       question: 'How accurate are the vitamin D calculations?',
       answer:
-        'Bask uses Dr. Michael Holick\'s peer-reviewed formula, which is the gold standard in photobiology. However, individual variation exists due to factors like sunscreen, altitude, pollution, and genetics. Treat estimates as guidelines, not absolutes.',
+        "Bask uses Dr. Michael Holick's peer-reviewed formula, which is the gold standard in photobiology. However, individual variation exists due to factors like sunscreen, altitude, pollution, and genetics. Treat estimates as guidelines, not absolutes.",
     },
     {
       id: 'faq-3',
       question: 'Will Bask prevent me from burning?',
       answer:
-        'Bask includes burn risk indicators and caps recommendations at your personalized burn threshold. However, you are responsible for your own safety. Always monitor your skin and leave the sun if you feel uncomfortable.',
+        'Bask includes sunburn risk indicators and caps recommendations at your personalized burn threshold. However, you are responsible for your own safety. Always monitor your skin and leave the sun if you feel uncomfortable.',
     },
     {
       id: 'faq-4',
       question: 'What is the D-Window Forecast?',
       answer:
-        'Our proprietary feature that analyzes 48 hours of UV and cloud cover data to recommend the best 1-3 hour window for sun exposure. Get alerts before optimal windows open.',
+        'Our feature that analyzes 48 hours of UV and cloud cover data to recommend the best 1-3 hour window for sun exposure. Get alerts before optimal windows open.',
     },
     {
       id: 'faq-5',
@@ -570,7 +567,7 @@ function FAQ() {
       id: 'faq-6',
       question: 'Is my health data private?',
       answer:
-        'Yes. All personal data is stored locally on your device using encrypted SQLite. We do not transmit your health data to our servers.',
+        'Yes. All personal data is stored locally on your device. We do not transmit your health data to our servers.',
     },
     {
       id: 'faq-7',
@@ -580,7 +577,7 @@ function FAQ() {
     },
     {
       id: 'faq-8',
-      question: 'What\'s the Shadow Rule?',
+      question: "What's the Shadow Rule?",
       answer:
         'Below UV index 3, UVB rays are scattered by the atmosphere, so you produce zero vitamin D (but still get UVA damage). Bask only credits vitamin D when UV ≥ 3.',
     },
@@ -588,7 +585,7 @@ function FAQ() {
       id: 'faq-9',
       question: 'Is Bask free?',
       answer:
-        'Bask offers a free tier with core features. Premium plans (monthly, yearly, lifetime) unlock advanced features like D-Window Forecast and physician report export.',
+        'Bask offers a free tier with core features. Premium plans (monthly, yearly) unlock advanced features like D-Window Forecast and notifications.',
     },
     {
       id: 'faq-10',
@@ -609,7 +606,7 @@ function FAQ() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
+          <div className="text-primary font-heading mb-4 text-sm font-semibold tracking-wider uppercase">
             Questions?
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
@@ -630,7 +627,7 @@ function FAQ() {
             >
               <button
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
-                className="text-foreground flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-primary/5"
+                className="text-foreground hover:bg-primary/5 flex w-full items-center justify-between p-6 text-left transition-colors"
               >
                 <span className="font-heading pr-4 text-lg font-semibold">
                   {faq.question}
@@ -650,7 +647,7 @@ function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="text-muted-foreground border-border border-t px-6 pb-6 pt-4 leading-relaxed">
+                    <div className="text-muted-foreground border-border border-t px-6 pt-4 pb-6 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -724,7 +721,7 @@ function Pricing() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <div className="text-primary font-heading mb-4 text-sm font-semibold uppercase tracking-wider">
+          <div className="text-primary font-heading mb-4 text-sm font-semibold tracking-wider uppercase">
             Simple Pricing
           </div>
           <h2 className="font-heading text-foreground mx-auto max-w-3xl text-4xl font-bold md:text-5xl">
@@ -747,7 +744,7 @@ function Pricing() {
               }`}
             >
               {plan.highlighted && (
-                <div className="bg-primary text-primary-foreground -mt-8 -mx-8 mb-6 px-4 py-2 text-center text-sm font-semibold">
+                <div className="bg-primary text-primary-foreground -mx-8 -mt-8 mb-6 px-4 py-2 text-center text-sm font-semibold">
                   Most Popular
                 </div>
               )}
@@ -756,13 +753,20 @@ function Pricing() {
                 {plan.name}
               </h3>
               <div className="mb-6">
-                <span className="text-foreground text-4xl font-bold">{plan.price}</span>
-                <span className="text-muted-foreground text-sm">/{plan.period}</span>
+                <span className="text-foreground text-4xl font-bold">
+                  {plan.price}
+                </span>
+                <span className="text-muted-foreground text-sm">
+                  /{plan.period}
+                </span>
               </div>
 
               <ul className="mb-8 space-y-3">
                 {plan.features.map((feature, fidx) => (
-                  <li key={fidx} className="text-muted-foreground flex items-start gap-2 text-sm">
+                  <li
+                    key={fidx}
+                    className="text-muted-foreground flex items-start gap-2 text-sm"
+                  >
                     <Sun className="text-primary mt-0.5 h-4 w-4 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>
@@ -802,7 +806,7 @@ function Contact() {
 
     // Save to localStorage
     const messages = JSON.parse(
-      localStorage.getItem('contactMessages') || '[]'
+      localStorage.getItem('contactMessages') || '[]',
     );
     messages.push({
       ...formData,
@@ -831,26 +835,24 @@ function Contact() {
           <div className="absolute top-0 right-0 h-64 w-64 translate-x-1/3 -translate-y-1/3 rounded-full bg-white/10 blur-3xl" />
           <div className="absolute bottom-0 left-0 h-64 w-64 -translate-x-1/3 translate-y-1/3 rounded-full bg-white/10 blur-3xl" />
 
-          <div className="relative z-10">
+          <div className="relative z-10 flex flex-col items-center">
             <h2 className="text-primary-foreground font-heading mb-4 text-4xl font-bold md:text-5xl">
               Get Your Personalized Solar Plan
             </h2>
             <p className="text-primary-foreground/90 mx-auto mb-8 max-w-2xl text-lg">
-              Download Bask — Free on iOS. Start tracking your vitamin D and optimizing your sun exposure today.
+              Download Bask — Free on iOS. Start tracking your vitamin D and
+              optimizing your sun exposure today.
             </p>
             <motion.a
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-foreground text-background inline-flex items-center gap-3 rounded-2xl px-8 py-4 font-medium shadow-lg transition-shadow hover:shadow-xl"
             >
-              <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-              </svg>
-              <div className="text-left">
-                <div className="text-xs opacity-80">Download on the</div>
-                <div className="text-lg font-semibold">App Store</div>
-              </div>
+              <img
+                src="/images/black.svg"
+                alt="Download on the App Store"
+                className="h-14 w-auto"
+              />
             </motion.a>
           </div>
         </motion.div>
@@ -862,7 +864,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="mb-12 text-center"
           >
             <h3 className="font-heading text-foreground mb-4 text-3xl font-bold">
               Get in Touch
@@ -895,7 +897,10 @@ function Contact() {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="glass space-y-6 rounded-2xl p-8"
+              >
                 <div>
                   <label
                     htmlFor="name"
@@ -911,7 +916,7 @@ function Contact() {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     required
-                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   />
                 </div>
 
@@ -930,7 +935,7 @@ function Contact() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     required
-                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   />
                 </div>
 
@@ -949,7 +954,7 @@ function Contact() {
                     }
                     required
                     rows={5}
-                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    className="bg-card border-input focus:border-primary focus:ring-primary w-full rounded-xl border px-4 py-3 transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                   />
                 </div>
 
@@ -984,13 +989,14 @@ function Footer() {
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Track your vitamin D and sun exposure with intelligent UV monitoring. Personalized guidance for optimal health, safely.
+              Track your vitamin D and sun exposure with intelligent UV
+              monitoring. Personalized guidance for optimal health, safely.
             </p>
           </div>
 
           {/* Links Column */}
           <div className="md:pl-12">
-            <h4 className="text-foreground mb-4 font-heading font-semibold">
+            <h4 className="text-foreground font-heading mb-4 font-semibold">
               Product
             </h4>
             <ul className="space-y-2">
@@ -1026,26 +1032,32 @@ function Footer() {
                   Pricing
                 </a>
               </li>
+              <li>
+                <a
+                  href="/blog"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Download Column */}
           <div>
-            <h4 className="text-foreground mb-4 font-heading font-semibold">
+            <h4 className="text-foreground font-heading mb-4 font-semibold">
               Download
             </h4>
-            <a
-              href="#"
-              className="bg-foreground text-background mb-6 inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium shadow-sm transition-shadow hover:shadow-md"
-            >
-              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-              </svg>
-              <span>App Store</span>
+            <a href="#">
+              <img
+                src="/images/black.svg"
+                alt="Download on the App Store"
+                className="mb-6 h-10 w-auto"
+              />
             </a>
 
             {/* Social Links */}
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -1067,7 +1079,7 @@ function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -1091,14 +1103,18 @@ function Footer() {
             </a>
           </div>
           <p className="text-muted-foreground flex items-center gap-2 text-sm">
-            Made with <Sun className="text-primary h-4 w-4" /> in California
+            Made with <Sun className="text-primary h-4 w-4" /> in Las Vegas, NV
           </p>
         </div>
 
         {/* Medical Disclaimer */}
-        <div className="text-muted-foreground mt-8 border-t border-border pt-8 text-center text-xs">
+        <div className="text-muted-foreground border-border mt-8 border-t pt-8 text-center text-xs">
           <p className="mx-auto max-w-4xl leading-relaxed">
-            <strong>Medical Disclaimer:</strong> Bask is not a medical device. The app is for informational purposes only and does not provide medical advice. Consult a licensed healthcare provider before making changes to your vitamin D supplementation or sun exposure habits. Excessive sun exposure increases skin cancer risk.
+            <strong>Medical Disclaimer:</strong> Bask is not a medical device.
+            The app is for informational purposes only and does not provide
+            medical advice. Consult a licensed healthcare provider before making
+            changes to your vitamin D supplementation or sun exposure habits.
+            Excessive sun exposure increases skin cancer risk.
           </p>
         </div>
       </div>
@@ -1114,7 +1130,7 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <FAQ />
-      <Pricing />
+      {/* <Pricing /> */}
       <Contact />
       <Footer />
     </div>

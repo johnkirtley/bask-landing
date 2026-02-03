@@ -1,0 +1,267 @@
+---
+import { Image } from 'astro:assets';
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  heroImage: ImageMetadata;
+  readingTime?: string;
+  slug: string;
+}
+
+const { title, description, pubDate, heroImage, readingTime, slug } = Astro.props;
+
+const siteUrl = Astro.site?.href || '';
+const postUrl = `${siteUrl.replace(/\/$/, '')}/blog/${slug}`;
+const heroImageUrl = `${siteUrl.replace(/\/$/, '')}${heroImage.src}`;
+
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(pubDate);
+
+const isoDate = pubDate.toISOString();
+---
+
+<Layout title={`${title} | Bask Blog`} description={description} canonicalPath={`/blog/${slug}`}>
+  <Fragment slot="head">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={postUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={heroImageUrl} />
+    <meta property="article:published_time" content={isoDate} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={postUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={heroImageUrl} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: description,
+      image: heroImageUrl,
+      datePublished: isoDate,
+      author: {
+        '@type': 'Organization',
+        name: 'Bask',
+        url: siteUrl,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bask',
+        url: siteUrl,
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': postUrl,
+      },
+      ...(readingTime && { timeRequired: readingTime }),
+    })} />
+  </Fragment>
+
+  <article class="min-h-screen bg-background">
+    <!-- Hero Section -->
+    <div class="relative w-full h-[60vh] min-h-[400px] max-h-[600px] overflow-hidden">
+      <Image
+        src={heroImage}
+        alt={title}
+        class="w-full h-full object-cover"
+        widths={[400, 800, 1200, 1600]}
+        sizes="100vw"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="max-w-3xl mx-auto px-6 -mt-32 relative z-10">
+      <!-- Article Header -->
+      <header class="mb-12">
+        <div class="glass rounded-xl p-8 md:p-12">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+            {title}
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <time datetime={isoDate} class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              {formattedDate}
+            </time>
+
+            {readingTime && (
+              <>
+                <span class="text-border">•</span>
+                <span class="flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  {readingTime}
+                </span>
+              </>
+            )}
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <div class="blog-content max-w-none mb-24">
+        <slot />
+      </div>
+
+      <!-- Back to Blog Link -->
+      <div class="mb-24">
+        <a
+          href="/blog"
+          class="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors font-medium"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          Back to Blog
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  .blog-content {
+    color: hsl(var(--foreground));
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  .blog-content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .blog-content p {
+    color: hsl(var(--foreground) / 0.9);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-content a {
+    color: hsl(var(--primary));
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary) / 0.3);
+    transition: all 0.2s;
+  }
+
+  .blog-content a:hover {
+    color: hsl(var(--accent));
+    text-decoration-color: hsl(var(--accent) / 0.5);
+  }
+
+  .blog-content strong {
+    color: hsl(var(--foreground));
+    font-weight: 600;
+  }
+
+  .blog-content ul,
+  .blog-content ol {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .blog-content ul {
+    list-style-type: disc;
+  }
+
+  .blog-content ol {
+    list-style-type: decimal;
+  }
+
+  .blog-content li {
+    color: hsl(var(--foreground) / 0.9);
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-content blockquote {
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: hsl(var(--foreground) / 0.8);
+  }
+
+  .blog-content code {
+    background-color: hsl(var(--muted));
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: ui-monospace, monospace;
+    color: hsl(var(--accent));
+  }
+
+  .blog-content pre {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+  }
+
+  .blog-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: hsl(var(--foreground));
+  }
+
+  .blog-content img {
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .blog-content hr {
+    border-color: hsl(var(--border));
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+interface Props {
+  headers: string[];
+}
+
+const { headers } = Astro.props;
+---
+
+<div class="comparison-table-wrapper my-12 overflow-x-auto">
+  <div class="glass rounded-2xl shadow-lg border border-border min-w-full">
+    <table class="min-w-full">
+      <thead>
+        <tr class="bg-primary/10">
+          {
+            headers.map((header) => (
+              <th class="px-6 py-4 text-left font-heading font-semibold text-foreground border-b border-border first:rounded-tl-2xl last:rounded-tr-2xl">
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        <slot />
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .comparison-table-wrapper :global(tr) {
+    transition: background-color 0.2s ease;
+  }
+
+  .comparison-table-wrapper :global(tbody tr:hover) {
+    background-color: hsl(35 100% 64% / 0.05);
+  }
+
+  .comparison-table-wrapper :global(tbody tr) {
+    border-bottom: 1px solid hsl(33 10% 88%);
+  }
+
+  .comparison-table-wrapper :global(tbody tr:last-child) {
+    border-bottom: none;
+  }
+
+  .comparison-table-wrapper :global(tbody td) {
+    padding: 1.5rem 1.5rem;
+    color: hsl(173 10% 19%);
+    vertical-align: top;
+  }
+
+  .comparison-table-wrapper :global(tbody td:first-child) {
+    font-weight: 600;
+    color: hsl(35 100% 64%);
+  }
+
+  .comparison-table-wrapper :global(tbody tr:last-child td:first-child) {
+    border-bottom-left-radius: 1rem;
+  }
+
+  .comparison-table-wrapper :global(tbody tr:last-child td:last-child) {
+    border-bottom-right-radius: 1rem;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .comparison-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .comparison-table-wrapper table {
+      min-width: 800px;
+    }
+  }
+</style>

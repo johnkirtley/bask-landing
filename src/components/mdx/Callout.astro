@@ -1,0 +1,51 @@
+---
+interface Props {
+  type?: 'info' | 'warning' | 'success' | 'danger';
+  title?: string;
+}
+
+const { type = 'info', title } = Astro.props;
+
+const icons = {
+  info: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>`,
+  warning: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>`,
+  success: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+  danger: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>`,
+};
+
+const styles = {
+  info: 'bg-secondary/20 border-secondary text-foreground',
+  warning: 'bg-amber-500/10 border-amber-500/30 text-foreground',
+  success: 'bg-emerald-500/10 border-emerald-500/30 text-foreground',
+  danger: 'bg-destructive/10 border-destructive/30 text-foreground',
+};
+
+const iconColors = {
+  info: 'text-secondary',
+  warning: 'text-amber-500',
+  success: 'text-emerald-500',
+  danger: 'text-destructive',
+};
+---
+
+<div class={`callout border-l-4 rounded-lg p-6 my-8 ${styles[type]}`}>
+  <div class="flex gap-4">
+    <div class={`flex-shrink-0 ${iconColors[type]}`} set:html={icons[type]} />
+    <div class="flex-1">
+      {title && <div class="font-heading font-semibold text-lg mb-2">{title}</div>}
+      <div class="callout-content text-foreground/90">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .callout-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .callout-content :global(p) {
+    margin-bottom: 0.75rem;
+  }
+</style>

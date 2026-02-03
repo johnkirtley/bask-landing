@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout
+  title="Blog | Bask - Vitamin D & Sun Health Insights"
+  description="Explore articles about vitamin D, sun exposure, and health insights from the Bask team. Learn about the science behind vitamin D synthesis and safe sun practices."
+  canonicalPath="/blog"
+>
+  <div class="min-h-screen bg-background">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 md:py-32">
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6">
+            Bask Blog
+          </h1>
+          <p class="text-xl md:text-2xl text-muted-foreground">
+            Insights on vitamin D, sun health, and the science behind safe sun exposure
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="max-w-6xl mx-auto px-6 pb-24">
+      {posts.length === 0 ? (
+        <div class="text-center py-16">
+          <p class="text-xl text-muted-foreground">No posts yet. Check back soon!</p>
+        </div>
+      ) : (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => {
+            const formattedDate = new Intl.DateTimeFormat('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            }).format(post.data.pubDate);
+
+            return (
+              <article class="group">
+                <a href={`/blog/${post.id}`} class="block">
+                  <div class="glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                    <!-- Hero Image -->
+                    <div class="relative aspect-[16/9] overflow-hidden bg-muted">
+                      <Image
+                        src={post.data.heroImage}
+                        alt={post.data.title}
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        widths={[400, 600]}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-6">
+                      <!-- Meta -->
+                      <div class="flex items-center gap-3 text-sm text-muted-foreground mb-4">
+                        <time datetime={post.data.pubDate.toISOString()}>
+                          {formattedDate}
+                        </time>
+                        {post.data.readingTime && (
+                          <>
+                            <span class="text-border">•</span>
+                            <span>{post.data.readingTime}</span>
+                          </>
+                        )}
+                      </div>
+
+                      <!-- Title -->
+                      <h2 class="text-2xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                        {post.data.title}
+                      </h2>
+
+                      <!-- Description -->
+                      <p class="text-foreground/80 leading-relaxed line-clamp-3">
+                        {post.data.description}
+                      </p>
+
+                      <!-- Read More Link -->
+                      <div class="mt-6 flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
+                        <span>Read More</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            );
+          })}
+        </div>
+      )}
+    </section>
+  </div>
+</Layout>

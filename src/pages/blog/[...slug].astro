@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+import Callout from '../../components/mdx/Callout.astro';
+import ImageCaption from '../../components/mdx/ImageCaption.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPost
+  title={post.data.title}
+  description={post.data.description}
+  pubDate={post.data.pubDate}
+  heroImage={post.data.heroImage}
+  readingTime={post.data.readingTime}
+  slug={post.id}
+>
+  <Content components={{ Callout, ImageCaption, ComparisonTable }} />
+</BlogPost>
