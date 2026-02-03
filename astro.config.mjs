@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
-  site: 'https://bask.app',
+  site: 'https://getbask.app',
   integrations: [react(), mdx(), sitemap()],
   vite: { plugins: [tailwindcss()] },
   markdown: {
