@@ -7,13 +7,25 @@ import Layout from '../layouts/Layout.astro';
   description="Privacy Policy for Bask - Vitamin D & Sun Tracker for iOS"
   canonicalPath="/privacy"
 >
-  <main class="bg-background text-foreground min-h-screen px-6 py-24 md:px-12 lg:px-24">
+  <main
+    class="bg-background text-foreground min-h-screen px-6 py-24 md:px-12 lg:px-24"
+  >
     <div class="mx-auto max-w-3xl">
-      <a href="/" class="text-primary hover:text-accent mb-8 inline-flex items-center gap-2 text-sm font-medium transition-colors">
+      <a
+        href="/"
+        class="text-accent hover:text-primary mb-8 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+      >
         ← Back to Home
       </a>
 
-      <h1 class="font-heading text-foreground mb-4 text-4xl font-bold md:text-5xl">
+      <div class="bask-eyebrow mb-6">
+        <span class="bask-eyebrow-dot"></span>
+        Legal
+      </div>
+
+      <h1
+        class="font-heading text-foreground mb-4 text-4xl font-semibold md:text-5xl"
+      >
         Privacy Policy
       </h1>
       <p class="text-muted-foreground mb-12 text-sm">
@@ -22,120 +34,264 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="prose-legal space-y-10">
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">1. Introduction</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            1. Introduction
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            Bask ("we," "our," or "us") operates the Bask mobile application (the "App"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App.
+            Bask ("we," "our," or "us") operates the Bask mobile application
+            (the "App"). This Privacy Policy explains how we collect, use,
+            disclose, and safeguard your information when you use our App.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">2. Information We Collect</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            2. Information We Collect
+          </h2>
 
-          <h3 class="font-heading text-foreground mb-2 mt-4 text-lg font-medium">2.1 Personal Information You Provide</h3>
+          <h3
+            class="font-heading text-foreground mt-4 mb-2 text-lg font-medium"
+          >
+            2.1 Personal Information You Provide
+          </h3>
           <p class="text-muted-foreground leading-relaxed">
             During onboarding, we collect:
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li><strong>Biological Profile:</strong> Age, weight, weight unit preference</li>
-            <li><strong>Skin & Eye Color:</strong> Visual color selection (6 skin tones, 5 eye colors)</li>
-            <li><strong>Sun Reaction Assessment:</strong> Always burns / Burns then tans / Rarely burns</li>
-            <li><strong>Outdoor Time Assessment:</strong> Daily outdoor time ranges</li>
-            <li><strong>Supplementation Status:</strong> Daily / Occasionally / None</li>
-            <li><strong>Blood Test Baseline (Optional):</strong> 25(OH)D level (ng/mL or nmol/L), test date</li>
-            <li><strong>Primary Goals (Multi-select):</strong> Optimizing Vitamin D Levels, Safe Tanning & Burn Prevention, Circadian Rhythm & Better Sleep, Longevity & Natural Immunity</li>
+            <li>
+              <strong>Biological Profile:</strong> Age, weight, weight unit preference
+            </li>
+            <li>
+              <strong>Skin & Eye Color:</strong> Visual color selection (6 skin tones,
+              5 eye colors)
+            </li>
+            <li>
+              <strong>Sun Reaction Assessment:</strong> Always burns / Burns then
+              tans / Rarely burns
+            </li>
+            <li>
+              <strong>Outdoor Time Assessment:</strong> Daily outdoor time ranges
+            </li>
+            <li>
+              <strong>Supplementation Status:</strong> Daily / Occasionally / None
+            </li>
+            <li>
+              <strong>Blood Test Baseline (Optional):</strong> 25(OH)D level (ng/mL
+              or nmol/L), test date
+            </li>
+            <li>
+              <strong>Primary Goals (Multi-select):</strong> Optimizing Vitamin D
+              Levels, Safe Tanning & Burn Prevention, Circadian Rhythm & Better Sleep,
+              Longevity & Natural Immunity
+            </li>
           </ul>
 
-          <h3 class="font-heading text-foreground mb-2 mt-4 text-lg font-medium">2.2 Automatically Collected Information</h3>
+          <h3
+            class="font-heading text-foreground mt-4 mb-2 text-lg font-medium"
+          >
+            2.2 Automatically Collected Information
+          </h3>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li><strong>Location Data (When In Use):</strong> We access your precise location to fetch real-time UV index and weather data for your area. Location is only used when the app is active.</li>
-            <li><strong>HealthKit Data (If Authorized):</strong>
-              <ul class="mt-2 list-circle space-y-1 pl-6">
-                <li><strong>Read:</strong> "Time in Daylight" to automatically track sun exposure</li>
-                <li><strong>Write:</strong> Dietary vitamin D to sync your supplement intake with Apple Health</li>
+            <li>
+              <strong>Location Data (When In Use):</strong> We access your precise
+              location to fetch real-time UV index and weather data for your area.
+              Location is only used when the app is active.
+            </li>
+            <li>
+              <strong>HealthKit Data (If Authorized):</strong>
+              <ul class="list-circle mt-2 space-y-1 pl-6">
+                <li>
+                  <strong>Read:</strong> "Time in Daylight" to automatically track
+                  sun exposure
+                </li>
+                <li>
+                  <strong>Write:</strong> Dietary vitamin D to sync your supplement
+                  intake with Apple Health
+                </li>
               </ul>
             </li>
-            <li><strong>Usage Data:</strong> We collect data about your sun exposure sessions, supplement logs, and cofactor tracking (stored locally on your device).</li>
+            <li>
+              <strong>Usage Data:</strong> We collect data about your sun exposure
+              sessions, supplement logs, and cofactor tracking (stored locally on
+              your device).
+            </li>
           </ul>
 
-          <h3 class="font-heading text-foreground mb-2 mt-4 text-lg font-medium">2.3 Third-Party Services</h3>
+          <h3
+            class="font-heading text-foreground mt-4 mb-2 text-lg font-medium"
+          >
+            2.3 Third-Party Services
+          </h3>
           <p class="text-muted-foreground leading-relaxed">
             We integrate with:
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li><strong>Apple WeatherKit:</strong> For real-time UV index, weather forecasts, and solar event data. Subject to Apple's Privacy Policy.</li>
-            <li><strong>RevenueCat:</strong> For in-app subscription management. Subject to RevenueCat's Privacy Policy.</li>
-            <li><strong>Apple HealthKit:</strong> For bidirectional sync of vitamin D and daylight data. Subject to Apple's Privacy Policy.</li>
+            <li>
+              <strong>Apple WeatherKit:</strong> For real-time UV index, weather forecasts,
+              and solar event data. Subject to Apple's Privacy Policy.
+            </li>
+            <li>
+              <strong>RevenueCat:</strong> For in-app subscription management. Subject
+              to RevenueCat's Privacy Policy.
+            </li>
+            <li>
+              <strong>Apple HealthKit:</strong> For bidirectional sync of vitamin
+              D and daylight data. Subject to Apple's Privacy Policy.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">3. How We Use Your Information</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            3. How We Use Your Information
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
             We use your information to:
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li><strong>Personalize Recommendations:</strong> Calculate vitamin D synthesis based on your skin type, age, weight, and clothing</li>
-            <li><strong>Provide Real-Time UV Data:</strong> Fetch accurate UV index for your location</li>
-            <li><strong>Track Progress:</strong> Store your sun exposure sessions, supplements, and cofactors</li>
-            <li><strong>Generate Reports:</strong> Create physician reports for medical appointments</li>
-            <li><strong>Send Notifications:</strong> Alert you before optimal D-Windows (if you opt in)</li>
-            <li><strong>Improve the App:</strong> Analyze aggregated, anonymized usage data to enhance features</li>
+            <li>
+              <strong>Personalize Recommendations:</strong> Calculate vitamin D synthesis
+              based on your skin type, age, weight, and clothing
+            </li>
+            <li>
+              <strong>Provide Real-Time UV Data:</strong> Fetch accurate UV index
+              for your location
+            </li>
+            <li>
+              <strong>Track Progress:</strong> Store your sun exposure sessions, supplements,
+              and cofactors
+            </li>
+            <li>
+              <strong>Generate Reports:</strong> Create physician reports for medical
+              appointments
+            </li>
+            <li>
+              <strong>Send Notifications:</strong> Alert you before optimal D-Windows
+              (if you opt in)
+            </li>
+            <li>
+              <strong>Improve the App:</strong> Analyze aggregated, anonymized usage
+              data to enhance features
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">4. Data Storage & Security</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            4. Data Storage & Security
+          </h2>
           <ul class="text-muted-foreground list-disc space-y-2 pl-6">
-            <li><strong>Local Storage:</strong> All personal data is stored <strong>locally on your device</strong> using SQLite. We do <strong>not</strong> transmit your personal health data to our servers.</li>
-            <li><strong>Cloud Backup:</strong> If you use iCloud backup, your device data may be included in your iCloud backups (controlled by your iOS settings).</li>
-            <li><strong>Security Measures:</strong> We use industry-standard encryption and security practices to protect your data.</li>
+            <li>
+              <strong>Local Storage:</strong> All personal data is stored <strong
+                >locally on your device</strong
+              > using SQLite. We do <strong>not</strong> transmit your personal health
+              data to our servers.
+            </li>
+            <li>
+              <strong>Cloud Backup:</strong> If you use iCloud backup, your device
+              data may be included in your iCloud backups (controlled by your iOS
+              settings).
+            </li>
+            <li>
+              <strong>Security Measures:</strong> We use industry-standard encryption
+              and security practices to protect your data.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">5. Data Sharing & Disclosure</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            5. Data Sharing & Disclosure
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            We <strong>do not sell</strong> your personal data. We may share data in the following limited circumstances:
+            We <strong>do not sell</strong> your personal data. We may share data
+            in the following limited circumstances:
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li><strong>With Your Consent:</strong> If you export a physician report, you control where it's shared.</li>
-            <li><strong>Service Providers:</strong> We use Apple WeatherKit and RevenueCat to provide core features (subject to their privacy policies).</li>
-            <li><strong>Legal Obligations:</strong> We may disclose data if required by law or to protect our rights.</li>
+            <li>
+              <strong>With Your Consent:</strong> If you export a physician report,
+              you control where it's shared.
+            </li>
+            <li>
+              <strong>Service Providers:</strong> We use Apple WeatherKit and RevenueCat
+              to provide core features (subject to their privacy policies).
+            </li>
+            <li>
+              <strong>Legal Obligations:</strong> We may disclose data if required
+              by law or to protect our rights.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">6. Your Rights & Choices</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            6. Your Rights & Choices
+          </h2>
           <ul class="text-muted-foreground list-disc space-y-2 pl-6">
-            <li><strong>Access & Deletion:</strong> You can delete your onboarding data by using "Redo Onboarding" in Settings, which resets your profile.</li>
-            <li><strong>Location Permissions:</strong> You can revoke location access in iOS Settings > Privacy & Security > Location Services > Bask.</li>
-            <li><strong>HealthKit Permissions:</strong> You can revoke HealthKit access in iOS Settings > Privacy & Security > Health > Bask.</li>
-            <li><strong>Notification Permissions:</strong> You can disable notifications in iOS Settings > Notifications > Bask.</li>
+            <li>
+              <strong>Access & Deletion:</strong> You can delete your onboarding data
+              by using "Redo Onboarding" in Settings, which resets your profile.
+            </li>
+            <li>
+              <strong>Location Permissions:</strong> You can revoke location access
+              in iOS Settings > Privacy & Security > Location Services > Bask.
+            </li>
+            <li>
+              <strong>HealthKit Permissions:</strong> You can revoke HealthKit access
+              in iOS Settings > Privacy & Security > Health > Bask.
+            </li>
+            <li>
+              <strong>Notification Permissions:</strong> You can disable notifications
+              in iOS Settings > Notifications > Bask.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">7. Children's Privacy</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            7. Children's Privacy
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            Bask is not intended for users under 13. We do not knowingly collect data from children under 13. If you believe we have collected data from a child, contact us at <a href="mailto:support@getbask.app" class="text-primary hover:text-accent transition-colors">support@getbask.app</a>.
+            Bask is not intended for users under 13. We do not knowingly collect
+            data from children under 13. If you believe we have collected data
+            from a child, contact us at <a
+              href="mailto:support@getbask.app"
+              class="text-accent hover:text-primary transition-colors"
+              >support@getbask.app</a
+            >.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">8. Changes to This Policy</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            8. Changes to This Policy
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            We may update this Privacy Policy from time to time. Changes will be posted in the App with an updated "Last Updated" date.
+            We may update this Privacy Policy from time to time. Changes will be
+            posted in the App with an updated "Last Updated" date.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">9. Contact Us</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            9. Contact Us
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
             If you have questions about this Privacy Policy, contact us at:
           </p>
           <div class="text-muted-foreground mt-3 leading-relaxed">
-            <p>Email: <a href="mailto:support@getbask.app" class="text-primary hover:text-accent transition-colors">support@getbask.app</a></p>
-            <p>Website: <a href="https://bask.io/privacy" class="text-primary hover:text-accent transition-colors">bask.io/privacy</a></p>
+            <p>
+              Email: <a
+                href="mailto:support@getbask.app"
+                class="text-accent hover:text-primary transition-colors"
+                >support@getbask.app</a>
+            </p>
+            <p>
+              Website: <a
+                href="https://getbask.app/privacy"
+                class="text-accent hover:text-primary transition-colors"
+                >getbask.app/privacy</a>
+            </p>
           </div>
         </section>
       </div>

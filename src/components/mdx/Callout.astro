@@ -32,7 +32,11 @@ const iconColors = {
   <div class="flex gap-4">
     <div class={`flex-shrink-0 ${iconColors[type]}`} set:html={icons[type]} />
     <div class="flex-1">
-      {title && <div class="font-heading font-semibold text-lg mb-2">{title}</div>}
+      {
+        title && (
+          <div class="font-heading mb-2 text-lg font-semibold">{title}</div>
+        )
+      }
       <div class="callout-content text-foreground/90">
         <slot />
       </div>

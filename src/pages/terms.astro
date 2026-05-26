@@ -7,13 +7,25 @@ import Layout from '../layouts/Layout.astro';
   description="Terms of Service for Bask - Vitamin D & Sun Tracker for iOS"
   canonicalPath="/terms"
 >
-  <main class="bg-background text-foreground min-h-screen px-6 py-24 md:px-12 lg:px-24">
+  <main
+    class="bg-background text-foreground min-h-screen px-6 py-24 md:px-12 lg:px-24"
+  >
     <div class="mx-auto max-w-3xl">
-      <a href="/" class="text-primary hover:text-accent mb-8 inline-flex items-center gap-2 text-sm font-medium transition-colors">
+      <a
+        href="/"
+        class="text-accent hover:text-primary mb-8 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+      >
         ← Back to Home
       </a>
 
-      <h1 class="font-heading text-foreground mb-4 text-4xl font-bold md:text-5xl">
+      <div class="bask-eyebrow mb-6">
+        <span class="bask-eyebrow-dot"></span>
+        Legal
+      </div>
+
+      <h1
+        class="font-heading text-foreground mb-4 text-4xl font-semibold md:text-5xl"
+      >
         Terms of Service
       </h1>
       <p class="text-muted-foreground mb-12 text-sm">
@@ -22,45 +34,93 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="prose-legal space-y-10">
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">1. Acceptance of Terms</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            1. Acceptance of Terms
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            By downloading, installing, or using the Bask mobile application (the "App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, do not use the App.
+            By downloading, installing, or using the Bask mobile application
+            (the "App"), you agree to be bound by these Terms of Service
+            ("Terms"). If you do not agree, do not use the App.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">2. Medical Disclaimer</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            2. Medical Disclaimer
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            <strong>IMPORTANT: BASK IS NOT A MEDICAL DEVICE. THE APP IS FOR INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.</strong>
+            <strong
+              >IMPORTANT: BASK IS NOT A MEDICAL DEVICE. THE APP IS FOR
+              INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY.</strong
+            >
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li>The App provides <strong>estimates</strong> of vitamin D synthesis based on scientific models (Holick's formula), but these are <strong>not medical advice</strong>.</li>
-            <li><strong>Do not</strong> rely solely on the App for medical decisions. Consult a licensed healthcare provider before making changes to your vitamin D supplementation or sun exposure habits.</li>
-            <li>The App is <strong>not</strong> a substitute for professional medical advice, diagnosis, or treatment.</li>
-            <li><strong>Skin Cancer Risk:</strong> Excessive sun exposure increases skin cancer risk. Always follow safe sun practices. Bask includes burn risk indicators, but you are responsible for your own safety.</li>
-            <li><strong>Supplement Safety:</strong> Vitamin D toxicity is rare but possible at very high doses (>10,000 IU/day for extended periods). Consult a doctor before taking high-dose supplements.</li>
+            <li>
+              The App provides <strong>estimates</strong> of vitamin D synthesis based
+              on scientific models (Holick's formula), but these are <strong
+                >not medical advice</strong
+              >.
+            </li>
+            <li>
+              <strong>Do not</strong> rely solely on the App for medical decisions.
+              Consult a licensed healthcare provider before making changes to your
+              vitamin D supplementation or sun exposure habits.
+            </li>
+            <li>
+              The App is <strong>not</strong> a substitute for professional medical
+              advice, diagnosis, or treatment.
+            </li>
+            <li>
+              <strong>Skin Cancer Risk:</strong> Excessive sun exposure increases
+              skin cancer risk. Always follow safe sun practices. Bask includes burn
+              risk indicators, but you are responsible for your own safety.
+            </li>
+            <li>
+              <strong>Supplement Safety:</strong> Vitamin D toxicity is rare but possible
+              at very high doses (>10,000 IU/day for extended periods). Consult a
+              doctor before taking high-dose supplements.
+            </li>
           </ul>
           <p class="text-muted-foreground mt-3 leading-relaxed">
-            <strong>By accepting the Medical Disclaimer during onboarding, you acknowledge these risks.</strong>
+            <strong
+              >By accepting the Medical Disclaimer during onboarding, you
+              acknowledge these risks.</strong
+            >
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">3. Accuracy of Information</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            3. Accuracy of Information
+          </h2>
           <ul class="text-muted-foreground list-disc space-y-2 pl-6">
-            <li><strong>UV Data:</strong> We use Apple WeatherKit for real-time UV data. While generally accurate, weather services may occasionally provide incorrect or delayed data.</li>
-            <li><strong>Vitamin D Calculations:</strong> Our D-Engine™ is based on peer-reviewed research, but individual variation exists. Factors like sunscreen, altitude, pollution, and genetics can affect actual vitamin D synthesis.</li>
-            <li><strong>Blood Test Integration:</strong> If you enter a blood test baseline, you are responsible for accuracy. We do not verify lab results.</li>
+            <li>
+              <strong>UV Data:</strong> We use Apple WeatherKit for real-time UV data.
+              While generally accurate, weather services may occasionally provide
+              incorrect or delayed data.
+            </li>
+            <li>
+              <strong>Vitamin D Calculations:</strong> Our D-Engine™ is based on peer-reviewed
+              research, but individual variation exists. Factors like sunscreen, altitude,
+              pollution, and genetics can affect actual vitamin D synthesis.
+            </li>
+            <li>
+              <strong>Blood Test Integration:</strong> If you enter a blood test baseline,
+              you are responsible for accuracy. We do not verify lab results.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">4. User Responsibilities</h2>
-          <p class="text-muted-foreground leading-relaxed">
-            You agree to:
-          </p>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            4. User Responsibilities
+          </h2>
+          <p class="text-muted-foreground leading-relaxed">You agree to:</p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li>Provide accurate information during onboarding (age, weight, skin type)</li>
+            <li>
+              Provide accurate information during onboarding (age, weight, skin
+              type)
+            </li>
             <li>Use the App responsibly and not exceed safe sun exposure</li>
             <li>Not rely on the App as medical advice</li>
             <li>Comply with all applicable laws</li>
@@ -68,32 +128,58 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">5. Subscriptions & Payments</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            5. Subscriptions & Payments
+          </h2>
           <ul class="text-muted-foreground list-disc space-y-2 pl-6">
-            <li><strong>Premium Plans:</strong> The App offers optional paid subscriptions (monthly, yearly) via RevenueCat and Apple's In-App Purchase system.</li>
-            <li><strong>Billing:</strong> Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period.</li>
-            <li><strong>Refunds:</strong> Managed by Apple's App Store. Contact Apple for refund requests.</li>
-            <li><strong>Changes to Pricing:</strong> We reserve the right to change subscription pricing with advance notice.</li>
+            <li>
+              <strong>Premium Plans:</strong> The App offers optional paid subscriptions
+              (monthly, yearly) via RevenueCat and Apple's In-App Purchase system.
+            </li>
+            <li>
+              <strong>Billing:</strong> Subscriptions auto-renew unless canceled at
+              least 24 hours before the end of the current period.
+            </li>
+            <li>
+              <strong>Refunds:</strong> Managed by Apple's App Store. Contact Apple
+              for refund requests.
+            </li>
+            <li>
+              <strong>Changes to Pricing:</strong> We reserve the right to change
+              subscription pricing with advance notice.
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">6. Intellectual Property</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            6. Intellectual Property
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            The App, including all text, graphics, logos, and software, is owned by Bask and protected by copyright and trademark laws. You may not copy, modify, distribute, or reverse-engineer the App.
+            The App, including all text, graphics, logos, and software, is owned
+            by Bask and protected by copyright and trademark laws. You may not
+            copy, modify, distribute, or reverse-engineer the App.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">7. Limitation of Liability</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            7. Limitation of Liability
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
             <strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong>
           </p>
           <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
-            <li>Bask is provided "as is" without warranties of any kind, express or implied.</li>
-            <li>We are <strong>not liable</strong> for:
-              <ul class="mt-2 list-circle space-y-1 pl-6">
-                <li>Sunburns, skin damage, or health issues resulting from App use</li>
+            <li>
+              Bask is provided "as is" without warranties of any kind, express
+              or implied.
+            </li>
+            <li>
+              We are <strong>not liable</strong> for:
+              <ul class="list-circle mt-2 space-y-1 pl-6">
+                <li>
+                  Sunburns, skin damage, or health issues resulting from App use
+                </li>
                 <li>Inaccurate UV data or vitamin D calculations</li>
                 <li>Data loss or technical issues</li>
                 <li>Any indirect, incidental, or consequential damages</li>
@@ -106,41 +192,67 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">8. Indemnification</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            8. Indemnification
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            You agree to indemnify and hold harmless Bask, its developers, and affiliates from any claims, damages, or expenses arising from your use of the App or violation of these Terms.
+            You agree to indemnify and hold harmless Bask, its developers, and
+            affiliates from any claims, damages, or expenses arising from your
+            use of the App or violation of these Terms.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">9. Termination</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            9. Termination
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            We may terminate or suspend your access to the App at any time, with or without cause, with or without notice.
+            We may terminate or suspend your access to the App at any time, with
+            or without cause, with or without notice.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">10. Governing Law</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            10. Governing Law
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            These Terms are governed by the laws of the State of California, United States. Any disputes will be resolved in the courts of California.
+            These Terms are governed by the laws of the State of California,
+            United States. Any disputes will be resolved in the courts of
+            California.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">11. Changes to Terms</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            11. Changes to Terms
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
-            We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.
+            We may update these Terms from time to time. Continued use of the
+            App after changes constitutes acceptance of the new Terms.
           </p>
         </section>
 
         <section>
-          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">12. Contact Us</h2>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            12. Contact Us
+          </h2>
           <p class="text-muted-foreground leading-relaxed">
             If you have questions about these Terms, contact us at:
           </p>
           <div class="text-muted-foreground mt-3 leading-relaxed">
-            <p>Email: <a href="mailto:support@getbask.app" class="text-primary hover:text-accent transition-colors">support@getbask.app</a></p>
-            <p>Website: <a href="https://bask.io/terms" class="text-primary hover:text-accent transition-colors">bask.io/terms</a></p>
+            <p>
+              Email: <a
+                href="mailto:support@getbask.app"
+                class="text-accent hover:text-primary transition-colors"
+                >support@getbask.app</a>
+            </p>
+            <p>
+              Website: <a
+                href="https://getbask.app/terms"
+                class="text-accent hover:text-primary transition-colors"
+                >getbask.app/terms</a>
+            </p>
           </div>
         </section>
       </div>

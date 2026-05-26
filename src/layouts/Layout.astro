@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = 'Bask - Vitamin D & Sun Tracker for iOS',
-  description = 'Bask: Personalized vitamin D tracking with real-time UV monitoring. Get safe sun exposure recommendations based on your skin type, age, and location. Export reports for your doctor. iOS app with Apple Health sync.',
+  description = 'Bask translates UV into estimated vitamin D synthesis, forecasts your daily D-windows, and tracks live sun sessions. Download free on iOS.',
   canonicalPath = '',
   noindex = false,
 } = Astro.props;
@@ -23,7 +23,7 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#FFB347" />
+    <meta name="theme-color" content="#FFC93C" />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -34,7 +34,7 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..800&family=DM+Sans:wght@400..600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=JetBrains+Mono:wght@600&family=Nunito:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -44,7 +44,8 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
         '@context': 'https://schema.org',
         '@type': 'MobileApplication',
         name: 'Bask',
-        description: 'Bask is an iOS app that helps users track vitamin D from sun exposure and supplements. Using real-time UV data and personalized calculations based on skin type and age, Bask recommends safe sun exposure times and supplement doses. Built on Dr. Michael Holick\'s peer-reviewed photobiology research, Bask integrates with Apple Health and WeatherKit for seamless tracking.',
+        description:
+          'Bask is an iOS app that translates UV index into estimated vitamin D synthesis (IU), forecasts daily D-windows, and tracks live sun sessions. Built on peer-reviewed photobiology research with Apple Health sync.',
         applicationCategory: 'HealthApplication',
         operatingSystem: 'iOS',
         offers: {
@@ -64,68 +65,64 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
 
 <style is:global>
   @import 'tailwindcss';
+  @import '../styles/bask.css';
 
   @custom-variant hover (&:hover);
 
   @theme inline {
-    --color-background: hsl(var(--background));
-    --color-foreground: hsl(var(--foreground));
-    --color-card: hsl(var(--card));
-    --color-card-foreground: hsl(var(--card-foreground));
-    --color-popover: hsl(var(--popover));
-    --color-popover-foreground: hsl(var(--popover-foreground));
-    --color-primary: hsl(var(--primary));
-    --color-primary-foreground: hsl(var(--primary-foreground));
-    --color-secondary: hsl(var(--secondary));
-    --color-secondary-foreground: hsl(var(--secondary-foreground));
-    --color-muted: hsl(var(--muted));
-    --color-muted-foreground: hsl(var(--muted-foreground));
-    --color-accent: hsl(var(--accent));
-    --color-accent-foreground: hsl(var(--accent-foreground));
-    --color-destructive: hsl(var(--destructive));
-    --color-destructive-foreground: hsl(var(--destructive-foreground));
-    --color-border: hsl(var(--border));
-    --color-input: hsl(var(--input));
-    --color-ring: hsl(var(--ring));
+    --color-background: var(--bask-bg);
+    --color-foreground: var(--bask-text);
+    --color-card: var(--bask-card);
+    --color-card-foreground: var(--bask-text);
+    --color-popover: var(--bask-card);
+    --color-popover-foreground: var(--bask-text);
+    --color-primary: var(--bask-sun);
+    --color-primary-foreground: var(--bask-text);
+    --color-secondary: var(--bask-sky);
+    --color-secondary-foreground: var(--bask-text);
+    --color-muted: var(--bask-bgAlt);
+    --color-muted-foreground: var(--bask-muted);
+    --color-accent: var(--bask-honey);
+    --color-accent-foreground: var(--bask-text);
+    --color-destructive: var(--bask-coral);
+    --color-destructive-foreground: #fff;
+    --color-border: var(--bask-line);
+    --color-input: var(--bask-line);
+    --color-ring: var(--bask-sun);
 
     --radius-sm: 0.5rem;
     --radius-md: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
 
-    --font-sans: 'DM Sans', sans-serif;
-    --font-heading: 'Outfit', sans-serif;
+    --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    --font-heading:
+      'Bricolage Grotesque', 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    --font-display:
+      'Bricolage Grotesque', 'Nunito', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
   }
 
   :root {
-    --background: 33 19% 93%;
-    --foreground: 173 10% 19%;
-
-    --primary: 35 100% 64%;
-    --primary-foreground: 173 10% 19%;
-
-    --secondary: 182 37% 76%;
-    --secondary-foreground: 173 10% 19%;
-
-    --card: 60 20% 97%;
-    --card-foreground: 173 10% 19%;
-
-    --popover: 60 20% 97%;
-    --popover-foreground: 173 10% 19%;
-
-    --muted: 33 19% 93%;
-    --muted-foreground: 220 6% 46%;
-
-    --accent: 35 100% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 24 86% 51%;
+    --background: 40 100% 95%;
+    --foreground: 30 38% 12%;
+    --primary: 43 100% 61%;
+    --primary-foreground: 30 38% 12%;
+    --secondary: 197 52% 67%;
+    --secondary-foreground: 30 38% 12%;
+    --card: 45 100% 98%;
+    --card-foreground: 30 38% 12%;
+    --popover: 45 100% 98%;
+    --popover-foreground: 30 38% 12%;
+    --muted: 40 100% 91%;
+    --muted-foreground: 30 17% 35%;
+    --accent: 35 80% 54%;
+    --accent-foreground: 30 38% 12%;
+    --destructive: 12 100% 68%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 33 10% 88%;
-    --input: 33 10% 88%;
-    --ring: 35 100% 64%;
-
+    --border: 38 44% 84%;
+    --input: 38 44% 84%;
+    --ring: 43 100% 61%;
     --radius: 1rem;
   }
 
@@ -181,22 +178,9 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(255, 253, 247, 0.85);
+    border: 1px solid var(--bask-line);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-  }
-
-  .grain {
-    position: relative;
-  }
-
-  .grain::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none;
-    opacity: 0.5;
   }
 </style>
