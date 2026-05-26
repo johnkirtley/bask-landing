@@ -20,6 +20,9 @@ import {
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+const APP_STORE_URL =
+  'https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235';
+
 const navLinks = [
   { href: '#features', label: 'Features', id: 'features' },
   { href: '#science', label: 'Science', id: 'science' },
@@ -89,7 +92,12 @@ function Navigation() {
               )}
             </a>
           ))}
-          <a href="" className="flex items-center gap-2 py-2.5">
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 py-2.5"
+          >
             <img
               src="/images/black.svg"
               alt="Download on the App Store"
@@ -133,7 +141,9 @@ function Navigation() {
                 </a>
               ))}
               <a
-                href=""
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2 flex items-center justify-center gap-2 py-3 font-medium"
               >
@@ -255,7 +265,9 @@ function Hero() {
 
           {/* App Store Button */}
           <motion.a
-            href="#"
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -844,7 +856,9 @@ function Contact() {
               optimizing your sun exposure today.
             </p>
             <motion.a
-              href="#"
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -1048,7 +1062,11 @@ function Footer() {
             <h4 className="text-foreground font-heading mb-4 font-semibold">
               Download
             </h4>
-            <a href="#">
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="/images/black.svg"
                 alt="Download on the App Store"
