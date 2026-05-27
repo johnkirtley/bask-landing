@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeaderboardPage from '../components/leaderboard/LeaderboardPage';
+
+const supabaseUrl =
+  import.meta.env.PUBLIC_SUPABASE_URL ??
+  import.meta.env.NEXT_PUBLIC_SUPABASE_URL ??
+  '';
+const supabaseAnonKey =
+  import.meta.env.PUBLIC_SUPABASE_ANON_KEY ??
+  import.meta.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+  '';
+---
+
+<Layout
+  title="Touch Grass Leaderboard | Bask"
+  description="See who is getting the most sun-exposure IU today and this week. Opt in from the Bask app to join the Touch Grass Leaderboard."
+  canonicalPath="/leaderboard-test"
+  ogTitle="Touch Grass Leaderboard | Bask"
+  ogImageAlt="Bask Touch Grass Leaderboard — compete for the most sun-exposure IU."
+>
+  <LeaderboardPage
+    client:load
+    supabaseUrl={supabaseUrl}
+    supabaseAnonKey={supabaseAnonKey}
+  />
+</Layout>
