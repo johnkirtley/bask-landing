@@ -4,17 +4,38 @@ interface Props {
   description?: string;
   canonicalPath?: string;
   noindex?: boolean;
+  ogImage?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
+  ogImageAlt?: string;
+  ogType?: 'website' | 'article';
+  ogTitle?: string;
 }
+
+const DEFAULT_OG_IMAGE = '/og/bask-og-touch-grass.png';
+const DEFAULT_OG_IMAGE_WIDTH = 1024;
+const DEFAULT_OG_IMAGE_HEIGHT = 537;
 
 const {
   title = 'Bask - Vitamin D & Sun Tracker for iOS',
   description = 'Bask translates UV into estimated vitamin D synthesis, forecasts your daily D-windows, and tracks live sun sessions. Download free on iOS.',
   canonicalPath = '',
   noindex = false,
+  ogImage = DEFAULT_OG_IMAGE,
+  ogImageWidth = DEFAULT_OG_IMAGE_WIDTH,
+  ogImageHeight = DEFAULT_OG_IMAGE_HEIGHT,
+  ogImageAlt = 'Bask: Touch grass, but make it science. Vitamin D and sun tracker for iOS.',
+  ogType = 'website',
+  ogTitle,
 } = Astro.props;
 
 const siteUrl = Astro.site?.href || '';
-const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
+const baseUrl = siteUrl.replace(/\/$/, '');
+const canonicalUrl = `${baseUrl}${canonicalPath}`;
+const ogImageUrl = ogImage.startsWith('http')
+  ? ogImage
+  : `${baseUrl}${ogImage.startsWith('/') ? ogImage : `/${ogImage}`}`;
+const socialTitle = ogTitle ?? title;
 ---
 
 <!doctype html>
@@ -30,6 +51,23 @@ const canonicalUrl = `${siteUrl.replace(/\/$/, '')}${canonicalPath}`;
     <link rel="canonical" href={canonicalUrl} />
 
     <title>{title}</title>
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Bask" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content={String(ogImageWidth)} />
+    <meta property="og:image:height" content={String(ogImageHeight)} />
+    <meta property="og:image:alt" content={ogImageAlt} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -14,10 +14,34 @@ export const APP_STORE_URL =
   'https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235';
 
 const navLinks = [
+  { href: '#quiz', label: 'Risk quiz' },
   { href: '#how', label: 'How it works' },
   { href: '#features', label: 'Features' },
   { href: '#faq', label: 'FAQ' },
 ];
+
+const tickerMessages = [
+  '2,400+ sun sessions tracked this week',
+  'Live D-window forecasts for 50+ cities',
+  '42% of adults may be vitamin D deficient',
+];
+
+function SocialProofTicker() {
+  const items = [...tickerMessages, ...tickerMessages];
+
+  return (
+    <div className="bask-ticker" aria-label="Live activity">
+      <div className="bask-ticker-track">
+        {items.map((msg, i) => (
+          <span className="bask-ticker-item" key={`${msg}-${i}`}>
+            <span className="bask-ticker-dot" aria-hidden="true" />
+            {msg}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -99,19 +123,16 @@ function Hero() {
       </div>
       <div className="bask-hero-grid">
         <div className="bask-hero-copy">
-          <div className="bask-eyebrow">
-            <span
-              className="bask-eyebrow-dot"
-              style={{ background: 'var(--bask-coral)' }}
-            />
-            New · Now on the App Store
+          <div className="bask-eyebrow bask-eyebrow--green">
+            <span className="bask-eyebrow-dot" />
+            Touch grass, but make it science
           </div>
           <h1 className="bask-h1">
             The sun is medicine. Most of yours <em>doesn&apos;t count.</em>
           </h1>
           <p className="bask-sub">
             Bask reads the UV index, your skin, your clothing, and the angle of
-            the sun — then tells you exactly when stepping outside actually
+            the sun, then tells you exactly when stepping outside actually
             produces vitamin D, and when it&apos;s just light.
           </p>
           <div className="bask-cta-row">
@@ -223,25 +244,25 @@ function Hook() {
 function HowItWorks() {
   const items = [
     {
-      tag: '01 · D-Engine',
-      title: 'From UV to IU.',
-      copy: "Most apps show you UV. Bask shows you the vitamin D you're actually making — translated from UV, your skin type (Fitzpatrick I–VI), age, clothing, cloud cover, and biological saturation.",
-      Mock: PhoneRing,
+      tag: '01 · D-Window Forecast',
+      title: 'Know when to step outside.',
+      copy: 'Bask reads tomorrow\'s UV and cloud forecast and finds the exact window when synthesis is possible. "Step outside between 12:40 and 1:25pm: 22 minutes hits your daily goal."',
+      Mock: PhoneForecast,
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-0',
     },
     {
-      tag: '02 · D-Window Forecast',
-      title: 'Know when to step outside.',
-      copy: 'Bask reads tomorrow\'s UV and cloud forecast and finds the exact window when synthesis is possible. "Step outside between 12:40 and 1:25pm — 22 minutes hits your daily goal."',
-      Mock: PhoneForecast,
+      tag: '02 · D-Engine',
+      title: 'From UV to IU.',
+      copy: "Most apps show you UV. Bask shows you the vitamin D you're actually making, translated from UV, your skin type (Fitzpatrick I–VI), age, clothing, cloud cover, and biological saturation.",
+      Mock: PhoneRing,
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-1',
     },
     {
       tag: '03 · Live Bask Sessions',
       title: 'Track sun like a workout.',
-      copy: 'Start a session, pocket your phone. Bask tracks IU gained, time elapsed, and burn risk in real time — on your Lock Screen and Dynamic Island.',
+      copy: 'Start a session, pocket your phone. Bask tracks IU gained, time elapsed, and burn risk in real time, on your Lock Screen and Dynamic Island.',
       Mock: PhoneSession,
       mascotExpression: 'cheer' as const,
       mascotClass: 'bask-how-mascot-2',
@@ -295,7 +316,7 @@ function Features() {
     {
       k: '🎯',
       t: 'One ring, one goal',
-      d: 'Sun and supplements counted toward the same daily target — not separate dashboards.',
+      d: 'Sun and supplements counted toward the same daily target, not separate dashboards.',
     },
     {
       k: '🔮',
@@ -315,7 +336,7 @@ function Features() {
     {
       k: '🧂',
       t: 'Cofactor tracking',
-      d: 'Magnesium and K2 logged alongside D — because D alone is half the picture.',
+      d: 'Magnesium and K2 logged alongside D, because D alone is half the picture.',
     },
     {
       k: '❤',
@@ -420,11 +441,253 @@ function Compare() {
   );
 }
 
+function DeficiencyQuiz() {
+  type QuizAnswers = {
+    location: number | null;
+    sunscreen: number | null;
+    indoor: number | null;
+  };
+
+  const questions = [
+    {
+      id: 'location' as const,
+      q: 'Where do you live?',
+      options: [
+        { label: 'South, below 37°N (LA, Miami, Phoenix)', score: 0 },
+        { label: 'Mid-latitude, around 37°N (SF, DC, Madrid)', score: 1 },
+        { label: 'North, above 45°N (Seattle, NYC, London)', score: 2 },
+      ],
+    },
+    {
+      id: 'sunscreen' as const,
+      q: 'How often do you wear sunscreen outside?',
+      options: [
+        { label: 'Rarely or never', score: 0 },
+        { label: 'Sometimes, face only or partial coverage', score: 1 },
+        { label: 'Always, full coverage, SPF 30+', score: 2 },
+      ],
+    },
+    {
+      id: 'indoor' as const,
+      q: 'How much time do you spend indoors on weekdays?',
+      options: [
+        { label: 'Under 4 hours, mostly outside', score: 0 },
+        { label: '4–8 hours, mix of inside and out', score: 1 },
+        { label: '8+ hours (desk job, commute, indoors)', score: 2 },
+      ],
+    },
+  ];
+
+  const [step, setStep] = useState(0);
+  const [answers, setAnswers] = useState<QuizAnswers>({
+    location: null,
+    sunscreen: null,
+    indoor: null,
+  });
+  const [showResult, setShowResult] = useState(false);
+
+  const current = questions[step];
+  const currentAnswer = answers[current?.id ?? 'location'];
+  const totalScore =
+    (answers.location ?? 0) + (answers.sunscreen ?? 0) + (answers.indoor ?? 0);
+
+  const results = [
+    {
+      max: 2,
+      level: 'low' as const,
+      title: 'Lower risk, but windows still matter',
+      copy: "Your habits look decent, but even sunny days can produce zero IU if the angle is wrong or you're behind glass. Bask shows you exactly when your sun actually counts.",
+    },
+    {
+      max: 4,
+      level: 'moderate' as const,
+      title: 'Moderate risk, your sun may not be enough',
+      copy: 'A few factors are working against you. You might be outside daily and still miss the narrow D-window. Bask forecasts when to step out, and when to supplement instead.',
+    },
+    {
+      max: 6,
+      level: 'high' as const,
+      title: 'Higher risk, worth paying attention',
+      copy: "Latitude, coverage, and indoor time stack up fast. Most people in your profile assume their sun counts. It often doesn't. Bask tells you the exact minutes that do.",
+    },
+  ];
+
+  const result =
+    results.find((r) => totalScore <= r.max) ?? results[results.length - 1];
+
+  function selectOption(score: number) {
+    if (!current) return;
+    setAnswers((prev) => ({ ...prev, [current.id]: score }));
+  }
+
+  function next() {
+    if (currentAnswer === null) return;
+    if (step < questions.length - 1) {
+      setStep(step + 1);
+    } else {
+      setShowResult(true);
+    }
+  }
+
+  function back() {
+    if (showResult) {
+      setShowResult(false);
+      setStep(questions.length - 1);
+    } else if (step > 0) {
+      setStep(step - 1);
+    }
+  }
+
+  function reset() {
+    setStep(0);
+    setAnswers({ location: null, sunscreen: null, indoor: null });
+    setShowResult(false);
+  }
+
+  return (
+    <section id="quiz" className="bask-section bask-quiz">
+      <div className="bask-section-inner">
+        <div className="bask-section-head bask-hook-head">
+          <div className="bask-eyebrow bask-eyebrow--green">
+            <span className="bask-eyebrow-dot" />
+            60-second check
+          </div>
+          <h2 className="bask-h2">
+            Could you be <em>vitamin D deficient?</em>
+          </h2>
+          <p className="bask-lede">
+            Three quick questions. No blood test required, just an honest look
+            at your sun habits.
+          </p>
+        </div>
+
+        <div className="bask-quiz-card">
+          {!showResult ? (
+            <>
+              <div className="bask-quiz-progress" aria-hidden="true">
+                {questions.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`bask-quiz-step ${i < step ? 'done' : ''} ${i === step ? 'active' : ''}`}
+                  />
+                ))}
+              </div>
+              <p className="bask-quiz-q">
+                {step + 1}. {current.q}
+              </p>
+              <div className="bask-quiz-options" role="radiogroup">
+                {current.options.map((opt, i) => (
+                  <button
+                    key={opt.label}
+                    type="button"
+                    className={`bask-quiz-opt ${currentAnswer === opt.score ? 'selected' : ''}`}
+                    onClick={() => selectOption(opt.score)}
+                    role="radio"
+                    aria-checked={currentAnswer === opt.score}
+                  >
+                    <span className="bask-quiz-opt-key">
+                      {String.fromCharCode(65 + i)}
+                    </span>
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
+              <div className="bask-quiz-actions">
+                {step > 0 ? (
+                  <button
+                    type="button"
+                    className="bask-quiz-back"
+                    onClick={back}
+                  >
+                    ← Back
+                  </button>
+                ) : (
+                  <span />
+                )}
+                <button
+                  type="button"
+                  className="bask-quiz-next"
+                  onClick={next}
+                  disabled={currentAnswer === null}
+                >
+                  {step < questions.length - 1 ? 'Next →' : 'See my score'}
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="bask-quiz-result">
+              <div className="bask-quiz-score">
+                <span
+                  className={`bask-quiz-score-num bask-quiz-score-num--${result.level}`}
+                >
+                  {totalScore}
+                </span>
+                <span className="bask-quiz-score-label">/ 6 risk score</span>
+              </div>
+              <h3 className="bask-quiz-result-title">{result.title}</h3>
+              <p className="bask-quiz-result-copy">{result.copy}</p>
+              <a
+                className="bask-cta-primary"
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AppleLogo />
+                Find your D-window for free
+              </a>
+              <p className="bask-quiz-disclaimer">
+                Educational estimate only, not a diagnosis. For blood levels,
+                ask your doctor for a 25(OH)D test.
+              </p>
+              <button type="button" className="bask-quiz-retry" onClick={reset}>
+                Retake quiz
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FounderStory() {
+  return (
+    <section id="founder" className="bask-section bask-founder">
+      <div className="bask-section-inner">
+        <div className="bask-section-head bask-hook-head">
+          <div className="bask-eyebrow">
+            <span
+              className="bask-eyebrow-dot"
+              style={{ background: 'var(--bask-honey)' }}
+            />
+            Why I built this
+          </div>
+        </div>
+        <div className="bask-founder-card">
+          <div className="bask-founder-photo" aria-hidden="true">
+            ?
+          </div>
+          <div>
+            <p className="bask-founder-name">Founder Name</p>
+            <p className="bask-founder-role">Creator of Bask · Placeholder</p>
+            <p className="bask-founder-quote">
+              I was depressed. I got bloodwork back at <em>18 ng/mL</em>. I was
+              outside every day. It helped, but I had no idea how much of that
+              sun actually counted. So I built Bask to answer the one question
+              no other app could: <em>is it counting?</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FAQ() {
   const items = [
     {
       q: 'Can I actually get vitamin D from the sun in winter?',
-      a: "Depends on latitude. North of about 37°N, UVB often doesn't reach the surface from November to March. Bask shows you exactly when synthesis is possible — and when it isn't, recommends supplementation.",
+      a: "Depends on latitude. North of about 37°N, UVB often doesn't reach the surface from November to March. Bask shows you exactly when synthesis is possible, and when it isn't, recommends supplementation.",
     },
     {
       q: 'Does sunscreen block vitamin D?',
@@ -432,7 +695,7 @@ function FAQ() {
     },
     {
       q: "Isn't this just another UV app?",
-      a: "No. UV apps tell you when you'll burn. Bask tells you when sun produces vitamin D — a different (and often much shorter) window.",
+      a: "No. UV apps tell you when you'll burn. Bask tells you when sun produces vitamin D, a different (and often much shorter) window.",
     },
     {
       q: 'Is my data shared?',
@@ -514,7 +777,7 @@ function CTA() {
             rel="noopener noreferrer"
           >
             <AppleLogo size={20} />
-            Download — Free on iOS
+            Download free on iOS
           </a>
         </div>
         <div className="bask-cta-note">
@@ -563,7 +826,7 @@ function Footer() {
         <div className="bask-footer-bottom">
           <span>© 2026 Bask</span>
           <span>
-            Educational tool — not a diagnostic device. For deficiency testing,
+            Educational tool, not a diagnostic device. For deficiency testing,
             see your doctor.
           </span>
         </div>
@@ -575,13 +838,16 @@ function Footer() {
 export default function LandingPage() {
   return (
     <div className="bask-root">
+      <SocialProofTicker />
       <Navigation />
       <Hero />
       <Hook />
+      <DeficiencyQuiz />
       <HowItWorks />
       <Features />
       {/* <Compare /> */}
       <FAQ />
+      {/* <FounderStory /> */}
       <CTA />
       <Footer />
     </div>
