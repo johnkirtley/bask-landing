@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
         Privacy Policy
       </h1>
       <p class="text-muted-foreground mb-12 text-sm">
-        Last updated: January 30, 2026
+        Last updated: May 27, 2026
       </p>
 
       <div class="prose-legal space-y-10">
@@ -138,7 +138,73 @@ import Layout from '../layouts/Layout.astro';
               <strong>Apple HealthKit:</strong> For bidirectional sync of vitamin
               D and daylight data. Subject to Apple's Privacy Policy.
             </li>
+            <li>
+              <strong>Supabase:</strong> For the optional community leaderboard — to
+              store anonymous profiles and aggregate sun session stats. Only data you
+              opt in to share is sent (see Section 2.4). Subject to <a
+                href="https://supabase.com/privacy"
+                class="text-accent hover:text-primary transition-colors"
+                >Supabase's Privacy Policy</a
+              >. We do not use Supabase for core app health data unless you join the
+              leaderboard.
+            </li>
           </ul>
+
+          <h3
+            class="font-heading text-foreground mt-4 mb-2 text-lg font-medium"
+          >
+            2.4 Community Leaderboard (Opt-In Only)
+          </h3>
+          <p class="text-muted-foreground leading-relaxed">
+            The App includes an optional community leaderboard feature. It is <strong
+              >off by default</strong
+            >. No data is sent to our servers for the leaderboard unless you explicitly
+            opt in via Settings → Community.
+          </p>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            When opted in, the App uploads limited data to Supabase after each
+            completed manual sun session. This data is used to calculate aggregate
+            rankings on our public leaderboard site at <a
+              href="https://getbask.app/touch-grass-leaderboard"
+              class="text-accent hover:text-primary transition-colors"
+              >getbask.app/touch-grass-leaderboard</a
+            >. Raw session logs are not publicly readable — only aggregate rankings
+            (daily and weekly totals, anonymous display name, and optional location
+            labels) are shown.
+          </p>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            <strong>Data sent to Supabase (only when opted in):</strong>
+          </p>
+          <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
+            <li>
+              A random public user ID and write token (stored locally on your device;
+              not linked to your Apple ID, email, or name)
+            </li>
+            <li>Your chosen anonymous display name (e.g., "swift-meadow")</li>
+            <li>
+              Per completed sun session: estimated sun IU and duration (supplements
+              excluded)
+            </li>
+            <li>
+              Optional coarse location labels, if you choose to add them: country,
+              region/state, and city (user-entered — never GPS coordinates)
+            </li>
+          </ul>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            <strong>Data never sent to Supabase:</strong>
+          </p>
+          <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
+            <li>Real name, email, or Apple ID</li>
+            <li>Precise GPS coordinates</li>
+            <li>Skin type, age, weight, or blood test results</li>
+            <li>Supplement logs or cofactor logs</li>
+            <li>HealthKit data</li>
+            <li>Full session history beyond leaderboard aggregates</li>
+          </ul>
+          <p class="text-muted-foreground mt-3 leading-relaxed">
+            Sun IU values shown on the leaderboard are <strong>estimates</strong>,
+            not medical measurements. <strong>Estimates only · Not medical advice.</strong>
+          </p>
         </section>
 
         <section>
@@ -170,8 +236,8 @@ import Layout from '../layouts/Layout.astro';
               (if you opt in)
             </li>
             <li>
-              <strong>Improve the App:</strong> Analyze aggregated, anonymized usage
-              data to enhance features
+              <strong>Leaderboard (if opted in):</strong> Upload session aggregates
+              and display anonymous rankings on the public leaderboard
             </li>
           </ul>
         </section>
@@ -182,15 +248,25 @@ import Layout from '../layouts/Layout.astro';
           </h2>
           <ul class="text-muted-foreground list-disc space-y-2 pl-6">
             <li>
-              <strong>Local Storage:</strong> All personal data is stored <strong
+              <strong>Local-First Storage:</strong> Your profile, sun exposure sessions,
+              supplements, cofactors, and settings are stored <strong
                 >locally on your device</strong
-              > using SQLite. We do <strong>not</strong> transmit your personal health
-              data to our servers.
+              > using SQLite. By default, we do not transmit your personal health data
+              to our servers.
+            </li>
+            <li>
+              <strong>Server Storage (Opt-In Only):</strong> If you opt into the community
+              leaderboard, limited leaderboard data is stored on Supabase as described
+              in Section 2.4.
             </li>
             <li>
               <strong>Cloud Backup:</strong> If you use iCloud backup, your device
               data may be included in your iCloud backups (controlled by your iOS
               settings).
+            </li>
+            <li>
+              <strong>No Sale of Personal Data:</strong> We do not sell your personal
+              data.
             </li>
             <li>
               <strong>Security Measures:</strong> We use industry-standard encryption
@@ -213,8 +289,18 @@ import Layout from '../layouts/Layout.astro';
               you control where it's shared.
             </li>
             <li>
-              <strong>Service Providers:</strong> We use Apple WeatherKit and RevenueCat
-              to provide core features (subject to their privacy policies).
+              <strong>Leaderboard (with consent):</strong> If you opt into the community
+              leaderboard, anonymous leaderboard data is stored on Supabase and aggregate
+              rankings may appear on <a
+                href="https://leaderboard.getbask.app"
+                class="text-accent hover:text-primary transition-colors"
+                >leaderboard.getbask.app</a
+              >.
+            </li>
+            <li>
+              <strong>Service Providers:</strong> We use Apple WeatherKit, RevenueCat,
+              and Supabase (for the opt-in leaderboard only) to provide core features
+              (subject to their privacy policies).
             </li>
             <li>
               <strong>Legal Obligations:</strong> We may disclose data if required
@@ -227,11 +313,41 @@ import Layout from '../layouts/Layout.astro';
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
             6. Your Rights & Choices
           </h2>
-          <ul class="text-muted-foreground list-disc space-y-2 pl-6">
+          <p class="text-muted-foreground leading-relaxed">
+            You can manage your data through the following options in the App:
+          </p>
+          <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
             <li>
-              <strong>Access & Deletion:</strong> You can delete your onboarding data
-              by using "Redo Onboarding" in Settings, which resets your profile.
+              <strong>Redo Onboarding</strong> (Settings → Danger Zone): Resets your
+              onboarding answers and shows the welcome flow again.
             </li>
+            <li>
+              <strong>Delete All Data</strong> (Settings → Danger Zone): Permanently
+              deletes all local sessions, supplements, cofactors, profile, and settings.
+              If you were opted into the leaderboard, also use "Delete my leaderboard
+              data" in Settings → Community to remove server-side rankings, or contact
+              us at <a
+                href="mailto:support@getbask.app"
+                class="text-accent hover:text-primary transition-colors"
+                >support@getbask.app</a
+              >.
+            </li>
+            <li>
+              <strong>Turn off leaderboard</strong> (Settings → Community → toggle
+              off): Stops uploading new sessions and hides you from public rankings.
+              Your server-side profile is retained so you can rejoin later.
+            </li>
+            <li>
+              <strong>Delete leaderboard data</strong> (Settings → Community → "Delete
+              my leaderboard data"): Permanently removes your server-side leaderboard
+              profile, sessions, and aggregates. Local leaderboard credentials are also
+              cleared.
+            </li>
+          </ul>
+          <p class="text-muted-foreground mt-4 leading-relaxed">
+            You can also manage system permissions outside the App:
+          </p>
+          <ul class="text-muted-foreground mt-3 list-disc space-y-2 pl-6">
             <li>
               <strong>Location Permissions:</strong> You can revoke location access
               in iOS Settings > Privacy & Security > Location Services > Bask.
@@ -249,7 +365,32 @@ import Layout from '../layouts/Layout.astro';
 
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
-            7. Children's Privacy
+            7. Data Retention
+          </h2>
+          <ul class="text-muted-foreground list-disc space-y-2 pl-6">
+            <li>
+              <strong>Local data:</strong> Retained on your device until you delete
+              it via the App or uninstall the App.
+            </li>
+            <li>
+              <strong>Leaderboard server data:</strong> Retained while you are opted
+              in or have paused participation (leaderboard toggled off). Deleted when
+              you choose "Delete my leaderboard data" in Settings → Community.
+            </li>
+            <li>
+              <strong>Inactive accounts:</strong> We retain leaderboard data until
+              you delete it or request deletion at <a
+                href="mailto:support@getbask.app"
+                class="text-accent hover:text-primary transition-colors"
+                >support@getbask.app</a
+              >.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
+            8. Children's Privacy
           </h2>
           <p class="text-muted-foreground leading-relaxed">
             Bask is not intended for users under 13. We do not knowingly collect
@@ -264,17 +405,17 @@ import Layout from '../layouts/Layout.astro';
 
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
-            8. Changes to This Policy
+            9. Changes to This Policy
           </h2>
           <p class="text-muted-foreground leading-relaxed">
             We may update this Privacy Policy from time to time. Changes will be
-            posted in the App with an updated "Last Updated" date.
+            posted on this page and in the App with an updated "Last Updated" date.
           </p>
         </section>
 
         <section>
           <h2 class="font-heading text-foreground mb-3 text-xl font-semibold">
-            9. Contact Us
+            10. Contact Us
           </h2>
           <p class="text-muted-foreground leading-relaxed">
             If you have questions about this Privacy Policy, contact us at:
