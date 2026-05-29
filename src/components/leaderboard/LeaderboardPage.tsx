@@ -170,12 +170,12 @@ function LeaderboardTable({
 
   return (
     <div className="bask-lb-table-shell">
-      <div className="bask-lb-table-head" aria-hidden="true">
-        <span>Rank</span>
-        <span>Name</span>
+      <div className="bask-lb-table-head">
+        <span className="bask-lb-head-rank">Rank</span>
+        <span className="bask-lb-head-name">Name</span>
         <span className="bask-lb-col-location">Country</span>
-        <span>Sun time</span>
-        <span>IU</span>
+        <span className="bask-lb-head-sun">Sun time</span>
+        <span className="bask-lb-head-iu">IU</span>
       </div>
       <ol className="bask-lb-table-body">
         {entries.map((entry) => {
