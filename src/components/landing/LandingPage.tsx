@@ -1,14 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Cloud, SunGlyph, SunMascot } from './Mascot';
-import {
-  AppleLogo,
-  FactIcon,
-  PhoneForecast,
-  PhoneMockup,
-  PhoneRing,
-  PhoneSession,
-} from './PhoneMockups';
+import { AppleLogo, FactIcon, PhoneMockup } from './PhoneMockups';
 
 export const APP_STORE_URL =
   'https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235';
@@ -247,7 +240,9 @@ function HowItWorks() {
       tag: '01 · D-Window Forecast',
       title: 'Know when to step outside.',
       copy: 'Bask reads tomorrow\'s UV and cloud forecast and finds the exact window when synthesis is possible. "Step outside between 12:40 and 1:25pm: 22 minutes hits your daily goal."',
-      Mock: PhoneForecast,
+      screenshot: '/images/landing/1.png',
+      screenshotAlt:
+        'Bask D-window forecast showing today and tomorrow best windows',
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-0',
     },
@@ -255,7 +250,8 @@ function HowItWorks() {
       tag: '02 · D-Engine',
       title: 'From UV to IU.',
       copy: "Most apps show you UV. Bask shows you the vitamin D you're actually making, translated from UV, your skin type (Fitzpatrick I–VI), age, clothing, cloud cover, and biological saturation.",
-      Mock: PhoneRing,
+      screenshot: '/images/landing/2.png',
+      screenshotAlt: 'Bask home screen with daily IU progress ring',
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-1',
     },
@@ -263,7 +259,8 @@ function HowItWorks() {
       tag: '03 · Live Bask Sessions',
       title: 'Track sun like a workout.',
       copy: 'Start a session, pocket your phone. Bask tracks IU gained, time elapsed, and burn risk in real time, on your Lock Screen and Dynamic Island.',
-      Mock: PhoneSession,
+      screenshot: '/images/landing/3.png',
+      screenshotAlt: 'Bask live session tracker with UV and burn risk',
       mascotExpression: 'cheer' as const,
       mascotClass: 'bask-how-mascot-2',
     },
@@ -293,9 +290,10 @@ function HowItWorks() {
                 <p className="bask-body">{it.copy}</p>
               </div>
               <div className="bask-how-mock">
-                <PhoneMockup>
-                  <it.Mock />
-                </PhoneMockup>
+                <PhoneMockup
+                  screenshot={it.screenshot}
+                  screenshotAlt={it.screenshotAlt}
+                />
                 <SunMascot
                   size={70}
                   expression={it.mascotExpression}

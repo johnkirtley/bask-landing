@@ -799,6 +799,18 @@
   align-items: center;
 }
 
+.bask-phone-screen--screenshot {
+  padding: 14px 0 0;
+}
+
+.bask-phone-screenshot {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 .bask-mock {
   flex: 1;
   display: flex;

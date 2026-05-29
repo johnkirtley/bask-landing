@@ -39,21 +39,36 @@ const StatusBarIcons = () => (
 
 export function PhoneMockup({
   children,
+  screenshot,
+  screenshotAlt = '',
   tint = '#FFF6E6',
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  screenshot?: string;
+  screenshotAlt?: string;
   tint?: string;
 }) {
   return (
     <div className="bask-phone">
       <div className="bask-phone-shell">
         <div className="bask-phone-notch" />
-        <div className="bask-phone-screen" style={{ background: tint }}>
+        <div
+          className={`bask-phone-screen${screenshot ? ' bask-phone-screen--screenshot' : ''}`}
+          style={screenshot ? undefined : { background: tint }}
+        >
           <div className="bask-phone-statusbar">
             <span>9:41</span>
             <StatusBarIcons />
           </div>
-          {children}
+          {screenshot ? (
+            <img
+              src={screenshot}
+              alt={screenshotAlt}
+              className="bask-phone-screenshot"
+            />
+          ) : (
+            children
+          )}
         </div>
       </div>
     </div>
