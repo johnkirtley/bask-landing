@@ -1847,7 +1847,7 @@
 }
 
 .bask-lb-hero-copy .bask-sub {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .bask-lb-hero-mascot {
@@ -1878,7 +1878,7 @@
 .bask-lb-toolbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 18px;
@@ -2057,7 +2057,10 @@
 .bask-lb-table-head,
 .bask-lb-row {
   display: grid;
-  grid-template-columns: 72px minmax(140px, 1.4fr) minmax(120px, 1fr) 96px 88px;
+  grid-template-columns: 72px minmax(140px, 1.6fr) minmax(120px, 1fr) minmax(
+      88px,
+      auto
+    );
   gap: 12px;
   align-items: center;
 }
@@ -2069,6 +2072,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--bask-muted);
+}
+
+.bask-lb-col-streak {
+  text-align: right;
 }
 
 .bask-lb-table-body {
@@ -2156,6 +2163,14 @@
 .bask-lb-name-meta {
   display: block;
   margin-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bask-muted);
+}
+
+.bask-lb-name-stats {
+  display: block;
+  margin-top: 2px;
   font-size: 12px;
   font-weight: 600;
   color: var(--bask-muted);
@@ -2204,20 +2219,20 @@
   margin-top: 4px;
 }
 
-.bask-lb-sun {
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--bask-text);
+.bask-lb-streak {
+  text-align: right;
 }
 
-.bask-lb-iu {
+.bask-lb-streak-current {
   font-family: var(--font-display);
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--bask-honey);
-  text-align: right;
+}
+
+.bask-lb-row--top .bask-lb-streak-current {
+  color: var(--bask-honey);
 }
 
 .bask-lb-empty {
@@ -2335,7 +2350,7 @@
 
   .bask-lb-table-head,
   .bask-lb-row {
-    grid-template-columns: 56px minmax(120px, 1.3fr) 84px 72px;
+    grid-template-columns: 56px minmax(120px, 1.3fr) minmax(72px, auto);
   }
 
   .bask-lb-col-location {
@@ -2374,10 +2389,6 @@
   .bask-lb-table-head,
   .bask-lb-row {
     grid-template-columns: 48px 1fr auto;
-    grid-template-areas:
-      'rank name iu'
-      'rank meta iu';
-    row-gap: 4px;
   }
 
   .bask-lb-table-head {
@@ -2385,9 +2396,20 @@
     font-size: 11px;
   }
 
+  .bask-lb-table-head .bask-lb-head-rank,
+  .bask-lb-table-head .bask-lb-head-name {
+    visibility: hidden;
+  }
+
+  .bask-lb-row {
+    grid-template-areas: 'rank name streak';
+    align-items: start;
+  }
+
   .bask-lb-head-rank,
   .bask-lb-rank {
     grid-area: rank;
+    align-self: center;
   }
 
   .bask-lb-head-name,
@@ -2395,24 +2417,14 @@
     grid-area: name;
   }
 
-  .bask-lb-head-sun,
-  .bask-lb-sun {
-    grid-area: meta;
-    font-size: 12px;
-    color: var(--bask-muted);
-  }
-
-  .bask-lb-head-iu,
-  .bask-lb-iu {
-    grid-area: iu;
-    font-size: 20px;
-  }
-
-  .bask-lb-head-iu {
-    font-family: var(--font-sans);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--bask-muted);
+  .bask-lb-col-streak,
+  .bask-lb-streak {
+    grid-area: streak;
     text-align: right;
+    align-self: center;
+  }
+
+  .bask-lb-streak-current {
+    font-size: 22px;
   }
 }

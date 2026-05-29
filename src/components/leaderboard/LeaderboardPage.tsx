@@ -6,13 +6,13 @@ import { AppleLogo } from '../landing/PhoneMockups';
 import {
   formatIU,
   formatRelativeUpdated,
+  formatStreak,
   formatSunMinutes,
-  getBoundsForPeriod,
+  getAllTimeBounds,
   getLatestUpdatedAt,
   getRankMedal,
   hasVisibleLocation,
   type LeaderboardEntry,
-  type LeaderboardPeriod,
 } from '../../lib/leaderboard';
 import { LocationDisplay } from './LocationDisplay';
 
@@ -122,7 +122,8 @@ function LeaderboardHero() {
           </h1>
           <p className="bask-sub">Live rankings from Bask users who opt in.</p>
           <p className="bask-sub">
-            Based on IU streak being achieved, not just total IU or sun minutes.
+            <strong>Based on daily goal streak being achieved,</strong> not just
+            total IU or sun minutes.
           </p>
         </div>
         <div className="bask-lb-hero-mascot">
@@ -174,8 +175,7 @@ function LeaderboardTable({
         <span className="bask-lb-head-rank">Rank</span>
         <span className="bask-lb-head-name">Name</span>
         <span className="bask-lb-col-location">Country</span>
-        <span className="bask-lb-head-sun">Sun time</span>
-        <span className="bask-lb-head-iu">IU</span>
+        <span className="bask-lb-col-streak">Streak</span>
       </div>
       <ol className="bask-lb-table-body">
         {entries.map((entry) => {
@@ -200,12 +200,16 @@ function LeaderboardTable({
                 <span className="bask-lb-name-text">
                   {entry.anonymous_name}
                 </span>
-                {entry.session_count > 0 && (
-                  <span className="bask-lb-name-meta">
-                    {entry.session_count}{' '}
-                    {entry.session_count === 1 ? 'session' : 'sessions'}
-                  </span>
-                )}
+                <span className="bask-lb-name-meta">
+                  {entry.session_count}{' '}
+                  {entry.session_count === 1 ? 'session' : 'sessions'}
+                </span>
+                <span className="bask-lb-name-meta">
+                  Time in sun: {formatSunMinutes(entry.total_sun_minutes)}
+                </span>
+                <span className="bask-lb-name-meta">
+                  Total IU gained: {formatIU(entry.total_iu)}
+                </span>
                 {hasVisibleLocation(entry) && (
                   <span className="bask-lb-location-mobile">
                     <LocationDisplay entry={entry} compact />
@@ -215,10 +219,11 @@ function LeaderboardTable({
               <div className="bask-lb-col-location">
                 <LocationDisplay entry={entry} />
               </div>
-              <div className="bask-lb-sun">
-                {formatSunMinutes(entry.total_sun_minutes)}
+              <div className="bask-lb-streak">
+                <span className="bask-lb-streak-current">
+                  {formatStreak(entry.current_streak)}
+                </span>
               </div>
-              <div className="bask-lb-iu">{formatIU(entry.total_iu)}</div>
             </li>
           );
         })}
@@ -321,7 +326,6 @@ export default function LeaderboardPage({
   supabaseUrl,
   supabaseAnonKey,
 }: LeaderboardPageProps) {
-  const [period, setPeriod] = useState<LeaderboardPeriod>('week');
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [fetchState, setFetchState] = useState<FetchState>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -348,7 +352,7 @@ export default function LeaderboardPage({
     setFetchState((current) => (current === 'success' ? 'success' : 'loading'));
     setErrorMessage(null);
 
-    const { start, end } = getBoundsForPeriod(period);
+    const { start, end } = getAllTimeBounds();
 
     const { data, error } = await supabase.rpc('get_leaderboard', {
       p_start: start,
@@ -368,7 +372,7 @@ export default function LeaderboardPage({
     setEntries((data ?? []) as LeaderboardEntry[]);
     setFetchState('success');
     setNow(Date.now());
-  }, [period, supabase]);
+  }, [supabase]);
 
   useEffect(() => {
     void fetchLeaderboard();
@@ -401,8 +405,6 @@ export default function LeaderboardPage({
       ? 'Refreshing…'
       : null;
 
-  const periodLabel = period === 'allTime' ? 'All time' : 'This week';
-
   return (
     <div className="bask-root">
       <Navigation />
@@ -412,51 +414,24 @@ export default function LeaderboardPage({
         <div className="bask-section-inner bask-lb-inner">
           <div className="bask-lb-panel">
             <div className="bask-lb-toolbar">
-              <div
-                className="bask-lb-tabs"
-                role="tablist"
-                aria-label="Leaderboard period"
+              <button
+                type="button"
+                className="bask-lb-refresh"
+                onClick={() => void fetchLeaderboard()}
+                disabled={fetchState === 'loading' || !configReady}
               >
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={period === 'week'}
-                  className={`bask-lb-tab ${period === 'week' ? 'active' : ''}`}
-                  onClick={() => setPeriod('week')}
-                >
-                  This Week
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={period === 'allTime'}
-                  className={`bask-lb-tab ${period === 'allTime' ? 'active' : ''}`}
-                  onClick={() => setPeriod('allTime')}
-                >
-                  All Time
-                </button>
-              </div>
-
-              <div className="bask-lb-controls">
-                <button
-                  type="button"
-                  className="bask-lb-refresh"
-                  onClick={() => void fetchLeaderboard()}
-                  disabled={fetchState === 'loading' || !configReady}
-                >
-                  <RefreshCw
-                    size={16}
-                    className={fetchState === 'loading' ? 'bask-lb-spin' : ''}
-                  />
-                  Refresh
-                </button>
-              </div>
+                <RefreshCw
+                  size={16}
+                  className={fetchState === 'loading' ? 'bask-lb-spin' : ''}
+                />
+                Refresh
+              </button>
             </div>
 
             <div className="bask-lb-meta-row">
               <div className="bask-lb-meta-chip">
                 <span className="bask-lb-live-dot" aria-hidden="true" />
-                Live {periodLabel.toLowerCase()} rankings
+                Live streak rankings
               </div>
               {updatedLabel && (
                 <div className="bask-lb-meta-updated">{updatedLabel}</div>

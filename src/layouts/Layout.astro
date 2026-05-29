@@ -94,6 +94,17 @@ const socialTitle = ogTitle ?? title;
       })}
     />
 
+    {import.meta.env.PROD && (
+      <>
+        <link rel="preconnect" href="https://cloud.umami.is" />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="9d90c222-65f3-4f0e-b1c9-d198080cb7d0"
+        />
+      </>
+    )}
+
     <slot name="head" />
   </head>
   <body>

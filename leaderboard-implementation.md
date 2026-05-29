@@ -18,8 +18,8 @@ Build a **live public leaderboard section** on the existing marketing site **get
 | Leaderboard name         | Touch Grass Leaderboard                                                                                                           |
 | Data source              | Supabase Postgres via a public RPC                                                                                                |
 | Privacy model            | Users opt in from the app. Only anonymous names + aggregate sun stats are public. Raw session logs are **not** publicly readable. |
-| Ranking metric           | Total estimated **sun-exposure IU** (supplements excluded)                                                                        |
-| Secondary metric         | **Sun minutes** (aggregate time in sun)                                                                                           |
+| Ranking metric           | **Current streak** — consecutive days hitting daily Vitamin D goals (IU goal achieved)                                            |
+| Display stats (all-time) | **Sun-exposure IU**, **sun minutes**, and **session count** for the all-time date range (supplements excluded)                    |
 | Reference implementation | `bask/leaderboard-site/` in the Bask repo (`index.html`, `app.js`, `styles.css`)                                                  |
 
 ---
@@ -29,7 +29,7 @@ Build a **live public leaderboard section** on the existing marketing site **get
 Before the marketing site can fetch data:
 
 1. Create a Supabase project (or use an existing one).
-2. Open **SQL Editor** and run the full schema from [`../supabase/schema.sql`](../supabase/schema.sql).
+2. Open **SQL Editor** and run the full schema from [`../supabase/schema.sql`](../supabase/schema.sql), then apply streak ranking migrations in [`supabase/migrations/`](supabase/migrations/) (e.g. `20260528120000_get_leaderboard_rank_by_streak.sql`).
 3. Add env vars to the marketing site deploy:
 
    ```
@@ -92,53 +92,36 @@ interface LeaderboardEntry {
   region_label: string | null; // state/region
   city_label: string | null;
   location_precision: 'none' | 'country' | 'region' | 'city';
-  total_iu: number; // aggregate IU for the date range
-  total_sun_minutes: number; // aggregate sun time in minutes
-  session_count: number;
+  current_streak: number; // consecutive days hitting daily IU goal
+  longest_streak: number; // personal best streak
+  total_iu: number; // all-time aggregate IU for p_start..p_end
+  total_sun_minutes: number; // all-time aggregate sun time in minutes
+  session_count: number; // all-time session count
   last_updated_at: string; // ISO timestamp — use for "Updated Xm ago"
-  rank: number; // 1 = top
+  rank: number; // 1 = top (by current_streak DESC)
 }
 ```
+
+**Ranking:** `current_streak` DESC, then `longest_streak` DESC, then `last_updated_at` ASC. The date range (`p_start` / `p_end`) only affects aggregate stats, not rank order.
 
 ---
 
 ## Date Range Helpers (UTC)
 
-All date boundaries use **UTC midnight**.
+All date boundaries use **UTC midnight**. The marketing site always passes **all-time** bounds for aggregate stats (`total_iu`, `total_sun_minutes`, `session_count`).
 
-### Today
-
-```javascript
-function getTodayBounds() {
-  const now = new Date();
-  const start = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
-  );
-  const end = new Date(start.getTime() + 24 * 60 * 60 * 1000);
-  return {
-    start: start.toISOString().slice(0, 10), // "2026-05-26"
-    end: end.toISOString().slice(0, 10), // "2026-05-27"
-  };
-}
-```
-
-### This week (Monday 00:00 UTC → next Monday 00:00 UTC)
+### All time (`2020-01-01` → tomorrow UTC)
 
 ```javascript
-function getWeekBounds() {
+const ALL_TIME_START = '2020-01-01';
+
+function getAllTimeBounds() {
   const now = new Date();
-  const day = now.getUTCDay();
-  const mondayOffset = day === 0 ? -6 : 1 - day;
-  const start = new Date(
-    Date.UTC(
-      now.getUTCFullYear(),
-      now.getUTCMonth(),
-      now.getUTCDate() + mondayOffset,
-    ),
+  const end = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1),
   );
-  const end = new Date(start.getTime() + 7 * 24 * 60 * 60 * 1000);
   return {
-    start: start.toISOString().slice(0, 10),
+    start: ALL_TIME_START,
     end: end.toISOString().slice(0, 10),
   };
 }
@@ -158,7 +141,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 );
 
-const { start, end } = getTodayBounds();
+const { start, end } = getAllTimeBounds();
 
 const { data, error } = await supabase.rpc('get_leaderboard', {
   p_start: start,
@@ -181,9 +164,9 @@ See [`app.js`](app.js) for a complete vanilla JS example using `@supabase/supaba
 
 Build a leaderboard UI section with:
 
-1. **Tabs:** “Today” and “This Week” (swap date bounds, re-fetch)
+1. **No period tabs** — single list ranked by current streak with all-time stats
 2. **Optional country filter** dropdown (pass `p_country_code`)
-3. **Table columns:** Rank, Name, Location, Sun Time, IU
+3. **Table columns:** Rank, Name (sessions + sun time + IU as secondary lines), Location, Streak (hero value on the right; all-time aggregates)
 4. **Auto-refresh** every 60 seconds (leaderboard should feel live)
 5. **Empty state:** “No sessions yet. Be the first to touch grass.”
 6. **CTA:** “Join the leaderboard in the Bask app” → App Store / getbask.app download
@@ -265,10 +248,11 @@ Add a dedicated section or page (e.g. `/leaderboard` or a homepage block) styled
 ## Acceptance Criteria
 
 - [ ] Fetches via `get_leaderboard` RPC only
-- [ ] Today and This Week views work with correct UTC date bounds
+- [ ] All-time date bounds used for aggregate stats
+- [ ] Ranked by `current_streak` (requires streak migration applied)
 - [ ] Country filter works
 - [ ] Auto-refreshes every 60s
-- [ ] Renders rank, anonymous name, optional location, sun minutes, IU
+- [ ] Renders rank, anonymous name (sessions + sun + IU under name), optional location, streak hero on the right (all-time)
 - [ ] Handles empty/error states gracefully
 - [ ] Includes App Store / download CTA
 - [ ] Matches getbask.app visual style

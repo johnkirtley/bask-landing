@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
         Privacy Policy
       </h1>
       <p class="text-muted-foreground mb-12 text-sm">
-        Last updated: May 27, 2026
+        Last updated: May 28, 2026
       </p>
 
       <div class="prose-legal space-y-10">
@@ -115,6 +115,12 @@ import Layout from '../layouts/Layout.astro';
               sessions, supplement logs, and cofactor tracking (stored locally on
               your device).
             </li>
+            <li>
+              <strong>Analytics & Performance Data:</strong> We collect limited, non-health
+              usage and performance data through PostHog to understand how the App is
+              used and to monitor stability (e.g., feature usage events, app version,
+              device/OS type, crash and performance metrics).
+            </li>
           </ul>
 
           <h3
@@ -133,6 +139,15 @@ import Layout from '../layouts/Layout.astro';
             <li>
               <strong>RevenueCat:</strong> For in-app subscription management. Subject
               to RevenueCat's Privacy Policy.
+            </li>
+            <li>
+              <strong>PostHog:</strong> For app usage analytics and performance monitoring.
+              PostHog receives non-health event and diagnostic data as described in Section
+              2.2. Subject to <a
+                href="https://posthog.com/privacy"
+                class="text-accent hover:text-primary transition-colors"
+                >PostHog's Privacy Policy</a
+              >.
             </li>
             <li>
               <strong>Apple HealthKit:</strong> For bidirectional sync of vitamin
@@ -239,6 +254,10 @@ import Layout from '../layouts/Layout.astro';
               <strong>Leaderboard (if opted in):</strong> Upload session aggregates
               and display anonymous rankings on the public leaderboard
             </li>
+            <li>
+              <strong>Improve the App:</strong> Analyze aggregate usage patterns and
+              performance metrics to fix bugs, improve reliability, and prioritize features
+            </li>
           </ul>
         </section>
 
@@ -299,8 +318,9 @@ import Layout from '../layouts/Layout.astro';
             </li>
             <li>
               <strong>Service Providers:</strong> We use Apple WeatherKit, RevenueCat,
-              and Supabase (for the opt-in leaderboard only) to provide core features
-              (subject to their privacy policies).
+              PostHog (for app usage analytics and performance monitoring), and Supabase
+              (for the opt-in leaderboard only) to provide core features (subject to
+              their privacy policies).
             </li>
             <li>
               <strong>Legal Obligations:</strong> We may disclose data if required
@@ -376,6 +396,11 @@ import Layout from '../layouts/Layout.astro';
               <strong>Leaderboard server data:</strong> Retained while you are opted
               in or have paused participation (leaderboard toggled off). Deleted when
               you choose "Delete my leaderboard data" in Settings → Community.
+            </li>
+            <li>
+              <strong>Analytics data:</strong> PostHog retains event and performance
+              data according to PostHog's retention settings. This data is not linked
+              to your health profile or personal identity.
             </li>
             <li>
               <strong>Inactive accounts:</strong> We retain leaderboard data until
