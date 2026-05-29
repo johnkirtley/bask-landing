@@ -7,6 +7,9 @@ import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
   site: 'https://getbask.app',
+  redirects: {
+    '/leaderboard-test': '/leaderboard',
+  },
   integrations: [react(), mdx(), sitemap()],
   vite: { plugins: [tailwindcss()] },
   markdown: {

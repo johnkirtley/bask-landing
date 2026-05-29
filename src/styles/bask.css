@@ -79,6 +79,7 @@
   line-height: 1.6;
   color: var(--bask-muted);
   text-wrap: pretty;
+  margin-bottom: 18px;
 }
 
 .bask-lede {
@@ -1925,39 +1926,6 @@
   flex-wrap: wrap;
 }
 
-.bask-lb-filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--bask-muted);
-}
-
-.bask-lb-filter select {
-  appearance: none;
-  border: 1px solid color-mix(in srgb, var(--bask-line) 80%, transparent);
-  background: var(--bask-bg);
-  color: var(--bask-text);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 700;
-  padding: 10px 34px 10px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--bask-muted) 50%),
-    linear-gradient(135deg, var(--bask-muted) 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) calc(50% - 2px),
-    calc(100% - 12px) calc(50% - 2px);
-  background-size:
-    6px 6px,
-    6px 6px;
-  background-repeat: no-repeat;
-}
-
-.bask-lb-filter select:focus-visible,
 .bask-lb-tab:focus-visible,
 .bask-lb-refresh:focus-visible,
 .bask-lb-retry:focus-visible {
@@ -2194,9 +2162,46 @@
 }
 
 .bask-lb-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14px;
   font-weight: 600;
   color: var(--bask-muted);
+  min-width: 0;
+}
+
+.bask-lb-location--compact {
+  font-size: 12px;
+  gap: 5px;
+}
+
+.bask-lb-location--compact .bask-lb-flag {
+  width: 14px;
+  height: 14px;
+}
+
+.bask-lb-location-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bask-lb-location-empty {
+  color: var(--bask-muted);
+}
+
+.bask-lb-flag {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bask-lb-location-mobile {
+  display: none;
+  margin-top: 4px;
 }
 
 .bask-lb-sun {
@@ -2336,6 +2341,10 @@
   .bask-lb-col-location {
     display: none;
   }
+
+  .bask-lb-location-mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {
@@ -2359,16 +2368,7 @@
   }
 
   .bask-lb-controls {
-    justify-content: space-between;
-  }
-
-  .bask-lb-filter {
-    flex: 1;
-  }
-
-  .bask-lb-filter select {
-    flex: 1;
-    min-width: 0;
+    justify-content: flex-end;
   }
 
   .bask-lb-table-head {

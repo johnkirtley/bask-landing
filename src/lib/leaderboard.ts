@@ -11,7 +11,7 @@ export interface LeaderboardEntry {
   rank: number;
 }
 
-export type LeaderboardPeriod = 'today' | 'week';
+export type LeaderboardPeriod = 'week' | 'allTime';
 
 export interface DateBounds {
   start: string;
@@ -46,46 +46,7 @@ const COUNTRY_NAMES: Record<string, string> = {
   MX: 'Mexico',
 };
 
-export const COUNTRY_FILTER_OPTIONS = [
-  { value: '', label: 'All countries' },
-  { value: 'US', label: 'United States' },
-  { value: 'CA', label: 'Canada' },
-  { value: 'GB', label: 'United Kingdom' },
-  { value: 'AU', label: 'Australia' },
-  { value: 'NZ', label: 'New Zealand' },
-  { value: 'DE', label: 'Germany' },
-  { value: 'FR', label: 'France' },
-  { value: 'ES', label: 'Spain' },
-  { value: 'IT', label: 'Italy' },
-  { value: 'NL', label: 'Netherlands' },
-  { value: 'SE', label: 'Sweden' },
-  { value: 'NO', label: 'Norway' },
-  { value: 'DK', label: 'Denmark' },
-  { value: 'FI', label: 'Finland' },
-  { value: 'IE', label: 'Ireland' },
-  { value: 'CH', label: 'Switzerland' },
-  { value: 'AT', label: 'Austria' },
-  { value: 'BE', label: 'Belgium' },
-  { value: 'PT', label: 'Portugal' },
-  { value: 'JP', label: 'Japan' },
-  { value: 'KR', label: 'South Korea' },
-  { value: 'SG', label: 'Singapore' },
-  { value: 'IN', label: 'India' },
-  { value: 'BR', label: 'Brazil' },
-  { value: 'MX', label: 'Mexico' },
-] as const;
-
-export function getTodayBounds(): DateBounds {
-  const now = new Date();
-  const start = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
-  );
-  const end = new Date(start.getTime() + 24 * 60 * 60 * 1000);
-  return {
-    start: start.toISOString().slice(0, 10),
-    end: end.toISOString().slice(0, 10),
-  };
-}
+const ALL_TIME_START = '2020-01-01';
 
 export function getWeekBounds(): DateBounds {
   const now = new Date();
@@ -105,25 +66,31 @@ export function getWeekBounds(): DateBounds {
   };
 }
 
+export function getAllTimeBounds(): DateBounds {
+  const now = new Date();
+  const end = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1),
+  );
+  return { start: ALL_TIME_START, end: end.toISOString().slice(0, 10) };
+}
+
 export function getBoundsForPeriod(period: LeaderboardPeriod): DateBounds {
-  return period === 'today' ? getTodayBounds() : getWeekBounds();
+  return period === 'allTime' ? getAllTimeBounds() : getWeekBounds();
+}
+
+export function getCountryName(code: string): string {
+  return COUNTRY_NAMES[code] ?? code;
+}
+
+export function hasVisibleLocation(entry: LeaderboardEntry): boolean {
+  return Boolean(entry.country_code);
 }
 
 export function formatLocation(entry: LeaderboardEntry): string {
-  if (
-    entry.location_precision === 'city' &&
-    entry.city_label &&
-    entry.region_label
-  ) {
-    return `${entry.city_label}, ${entry.region_label}`;
+  if (!entry.country_code) {
+    return '—';
   }
-  if (entry.location_precision === 'region' && entry.region_label) {
-    return entry.region_label;
-  }
-  if (entry.location_precision === 'country' && entry.country_code) {
-    return COUNTRY_NAMES[entry.country_code] ?? entry.country_code;
-  }
-  return '—';
+  return getCountryName(entry.country_code);
 }
 
 export function formatIU(value: number): string {

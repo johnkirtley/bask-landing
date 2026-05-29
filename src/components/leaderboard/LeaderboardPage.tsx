@@ -4,17 +4,17 @@ import { Menu, RefreshCw, X } from 'lucide-react';
 import { Cloud, SunGlyph, SunMascot } from '../landing/Mascot';
 import { AppleLogo } from '../landing/PhoneMockups';
 import {
-  COUNTRY_FILTER_OPTIONS,
   formatIU,
-  formatLocation,
   formatRelativeUpdated,
   formatSunMinutes,
   getBoundsForPeriod,
   getLatestUpdatedAt,
   getRankMedal,
+  hasVisibleLocation,
   type LeaderboardEntry,
   type LeaderboardPeriod,
 } from '../../lib/leaderboard';
+import { LocationDisplay } from './LocationDisplay';
 
 export const APP_STORE_URL =
   'https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235';
@@ -70,7 +70,11 @@ function Navigation() {
       </div>
       <div className={`bask-nav-mobile ${menuOpen ? 'open' : ''}`}>
         {navLinks.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+          >
             {link.label}
           </a>
         ))}
@@ -114,11 +118,11 @@ function LeaderboardHero() {
             Touch Grass Leaderboard
           </div>
           <h1 className="bask-h1">
-            Who&apos;s getting the most <em>real sun IU</em>?
+            Who&apos;s hitting their <em>Vitamin D goals</em>?
           </h1>
+          <p className="bask-sub">Live rankings from Bask users who opt in.</p>
           <p className="bask-sub">
-            Live rankings from Bask users who opt in. Supplements never count.
-            Anonymous by default. Location optional.
+            Based on IU streak being achieved, not just total IU or sun minutes.
           </p>
         </div>
         <div className="bask-lb-hero-mascot">
@@ -169,7 +173,7 @@ function LeaderboardTable({
       <div className="bask-lb-table-head" aria-hidden="true">
         <span>Rank</span>
         <span>Name</span>
-        <span className="bask-lb-col-location">Location</span>
+        <span className="bask-lb-col-location">Country</span>
         <span>Sun time</span>
         <span>IU</span>
       </div>
@@ -193,16 +197,23 @@ function LeaderboardTable({
                 )}
               </div>
               <div className="bask-lb-name">
-                <span className="bask-lb-name-text">{entry.anonymous_name}</span>
+                <span className="bask-lb-name-text">
+                  {entry.anonymous_name}
+                </span>
                 {entry.session_count > 0 && (
                   <span className="bask-lb-name-meta">
                     {entry.session_count}{' '}
                     {entry.session_count === 1 ? 'session' : 'sessions'}
                   </span>
                 )}
+                {hasVisibleLocation(entry) && (
+                  <span className="bask-lb-location-mobile">
+                    <LocationDisplay entry={entry} compact />
+                  </span>
+                )}
               </div>
-              <div className="bask-lb-location bask-lb-col-location">
-                {formatLocation(entry)}
+              <div className="bask-lb-col-location">
+                <LocationDisplay entry={entry} />
               </div>
               <div className="bask-lb-sun">
                 {formatSunMinutes(entry.total_sun_minutes)}
@@ -230,9 +241,10 @@ function JoinCTA() {
           </h2>
           <p className="bask-body">
             Opt in from{' '}
-            <strong>Bask → Settings → Community → Touch Grass Leaderboard</strong>.
-            Anonymous by default. Supplements never count. Location is optional
-            and never uses GPS.
+            <strong>
+              Bask → Settings → Community → Touch Grass Leaderboard
+            </strong>
+            . Anonymous by default. Location is optional and never uses GPS.
           </p>
           <div className="bask-cta-row">
             <a
@@ -249,9 +261,9 @@ function JoinCTA() {
         <div className="bask-lb-join-card">
           <div className="bask-lb-join-card-title">How it works</div>
           <ul className="bask-lb-join-steps">
-            <li>Track a live sun session in Bask</li>
-            <li>Opt in from Community settings</li>
-            <li>Climb the board with real sun IU</li>
+            <li>Opt in from the Bask app settings</li>
+            <li>Track a live sun session in the app</li>
+            <li>Climb the board by achieving your daily Vitamin D goals</li>
           </ul>
         </div>
       </div>
@@ -309,8 +321,7 @@ export default function LeaderboardPage({
   supabaseUrl,
   supabaseAnonKey,
 }: LeaderboardPageProps) {
-  const [period, setPeriod] = useState<LeaderboardPeriod>('today');
-  const [countryCode, setCountryCode] = useState('');
+  const [period, setPeriod] = useState<LeaderboardPeriod>('week');
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [fetchState, setFetchState] = useState<FetchState>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -334,9 +345,7 @@ export default function LeaderboardPage({
       return;
     }
 
-    setFetchState((current) =>
-      current === 'success' ? 'success' : 'loading',
-    );
+    setFetchState((current) => (current === 'success' ? 'success' : 'loading'));
     setErrorMessage(null);
 
     const { start, end } = getBoundsForPeriod(period);
@@ -345,7 +354,7 @@ export default function LeaderboardPage({
       p_start: start,
       p_end: end,
       p_limit: 50,
-      p_country_code: countryCode || null,
+      p_country_code: null,
     });
 
     if (error) {
@@ -359,7 +368,7 @@ export default function LeaderboardPage({
     setEntries((data ?? []) as LeaderboardEntry[]);
     setFetchState('success');
     setNow(Date.now());
-  }, [countryCode, period, supabase]);
+  }, [period, supabase]);
 
   useEffect(() => {
     void fetchLeaderboard();
@@ -392,7 +401,7 @@ export default function LeaderboardPage({
       ? 'Refreshing…'
       : null;
 
-  const periodLabel = period === 'today' ? 'Today' : 'This week';
+  const periodLabel = period === 'allTime' ? 'All time' : 'This week';
 
   return (
     <div className="bask-root">
@@ -411,39 +420,24 @@ export default function LeaderboardPage({
                 <button
                   type="button"
                   role="tab"
-                  aria-selected={period === 'today'}
-                  className={`bask-lb-tab ${period === 'today' ? 'active' : ''}`}
-                  onClick={() => setPeriod('today')}
-                >
-                  Today
-                </button>
-                <button
-                  type="button"
-                  role="tab"
                   aria-selected={period === 'week'}
                   className={`bask-lb-tab ${period === 'week' ? 'active' : ''}`}
                   onClick={() => setPeriod('week')}
                 >
                   This Week
                 </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={period === 'allTime'}
+                  className={`bask-lb-tab ${period === 'allTime' ? 'active' : ''}`}
+                  onClick={() => setPeriod('allTime')}
+                >
+                  All Time
+                </button>
               </div>
 
               <div className="bask-lb-controls">
-                <label className="bask-lb-filter">
-                  <span className="bask-lb-filter-label">Country</span>
-                  <select
-                    value={countryCode}
-                    onChange={(event) => setCountryCode(event.target.value)}
-                    aria-label="Filter by country"
-                  >
-                    {COUNTRY_FILTER_OPTIONS.map((option) => (
-                      <option key={option.value || 'all'} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-
                 <button
                   type="button"
                   className="bask-lb-refresh"
@@ -494,8 +488,7 @@ export default function LeaderboardPage({
             />
 
             <p className="bask-lb-disclaimer">
-              Estimates only · Not medical advice · Supplements excluded ·
-              Anonymous opt-in
+              Estimates only · Not medical advice · Anonymous opt-in
             </p>
           </div>
         </div>
