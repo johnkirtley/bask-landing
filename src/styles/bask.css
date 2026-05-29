@@ -2371,10 +2371,7 @@
     justify-content: flex-end;
   }
 
-  .bask-lb-table-head {
-    display: none;
-  }
-
+  .bask-lb-table-head,
   .bask-lb-row {
     grid-template-columns: 48px 1fr auto;
     grid-template-areas:
@@ -2383,22 +2380,39 @@
     row-gap: 4px;
   }
 
+  .bask-lb-table-head {
+    padding: 0 14px 8px;
+    font-size: 11px;
+  }
+
+  .bask-lb-head-rank,
   .bask-lb-rank {
     grid-area: rank;
   }
 
+  .bask-lb-head-name,
   .bask-lb-name {
     grid-area: name;
   }
 
+  .bask-lb-head-sun,
   .bask-lb-sun {
     grid-area: meta;
     font-size: 12px;
     color: var(--bask-muted);
   }
 
+  .bask-lb-head-iu,
   .bask-lb-iu {
     grid-area: iu;
     font-size: 20px;
+  }
+
+  .bask-lb-head-iu {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--bask-muted);
+    text-align: right;
   }
 }
