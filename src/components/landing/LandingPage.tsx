@@ -11,6 +11,7 @@ const navLinks = [
   { href: '#how', label: 'How it works' },
   { href: '#features', label: 'Features' },
   { href: '#faq', label: 'FAQ' },
+  { href: '/leaderboard', label: 'Leaderboard' },
 ];
 
 const tickerMessages = [
@@ -808,6 +809,7 @@ function Footer() {
             <div className="bask-footer-h">App</div>
             <a href="#how">How it works</a>
             <a href="#features">Features</a>
+            <a href="/leaderboard">Leaderboard</a>
             <a href="#download">Download</a>
           </div>
           <div>
