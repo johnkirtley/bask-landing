@@ -31,8 +31,9 @@ type FetchState = 'idle' | 'loading' | 'success' | 'error' | 'config';
 function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; current?: boolean }[] = [
     { href: '/', label: 'Home' },
+    { href: '/leaderboard', label: 'Leaderboard', current: true },
     { href: '/blog', label: 'Blog' },
   ];
 
@@ -45,7 +46,11 @@ function Navigation() {
         </a>
         <div className="bask-nav-links">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a
+              key={link.href}
+              href={link.href}
+              aria-current={link.current ? 'page' : undefined}
+            >
               {link.label}
             </a>
           ))}
@@ -74,6 +79,7 @@ function Navigation() {
             key={link.href}
             href={link.href}
             onClick={() => setMenuOpen(false)}
+            aria-current={link.current ? 'page' : undefined}
           >
             {link.label}
           </a>
@@ -297,6 +303,9 @@ function Footer() {
           <div>
             <div className="bask-footer-h">App</div>
             <a href="/">Home</a>
+            <a href="/leaderboard" aria-current="page">
+              Leaderboard
+            </a>
             <a href={APP_STORE_URL}>Download</a>
           </div>
           <div>
