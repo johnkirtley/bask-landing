@@ -15,8 +15,8 @@ const navLinks = [
 
 const tickerMessages = [
   '2,400+ sun sessions tracked this week',
-  'Live D-window forecasts for 50+ cities',
-  '42% of adults may be vitamin D deficient',
+  'Live forecasts for 50+ cities',
+  'More than 4 in 10 adults are low on vitamin D',
 ];
 
 function SocialProofTicker() {
@@ -121,12 +121,12 @@ function Hero() {
             Touch grass, but make it science
           </div>
           <h1 className="bask-h1">
-            The sun is medicine. Most of yours <em>doesn&apos;t count.</em>
+            Tired all the time, low mood, and no idea why?
           </h1>
           <p className="bask-sub">
-            Bask reads the UV index, your skin, your clothing, and the angle of
-            the sun, then tells you exactly when stepping outside actually
-            produces vitamin D, and when it&apos;s just light.
+            It could be low vitamin D. As little as 10 minutes of sun can help,
+            but not all sunlight counts. Bask tells you the perfect time to step
+            out.
           </p>
           <div className="bask-cta-row">
             <a
@@ -136,34 +136,34 @@ function Hero() {
               rel="noopener noreferrer"
             >
               <AppleLogo />
-              Download for iOS
+              Download free for iOS
             </a>
-            <a className="bask-cta-ghost" href="#how">
-              See how it works
+            <a className="bask-cta-ghost" href="#quiz">
+              See if this is you
               <span>→</span>
             </a>
           </div>
           <div className="bask-hero-meta">
-            <div className="bask-stars">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <span key={i}>★</span>
-              ))}
-            </div>
-            <span>4.8</span>
+            <span>Free</span>
             <span className="bask-meta-dot">·</span>
-            <span>Data stays on your iPhone</span>
+            <span>iPhone</span>
+            <span className="bask-meta-dot">·</span>
+            <span>No account needed</span>
           </div>
         </div>
         <div className="bask-hero-mascot">
           <div className="bask-floaters">
             <div className="bask-floater bask-floater-1">
-              <div className="bask-floater-num">+12 IU</div>
-              <div className="bask-floater-lbl">per minute</div>
+              <div className="bask-floater-num">Great time for sun</div>
+              <div className="bask-floater-lbl">20 min to Vitamin D goal</div>
             </div>
             <div className="bask-floater bask-floater-2">
-              <span style={{ color: 'var(--bask-coral)' }}>●</span> Live · 14:22
+              <span style={{ color: 'var(--bask-coral)' }}>●</span> Window ·
+              1:22pm to 4:00pm
             </div>
-            <div className="bask-floater bask-floater-3">☁ 22% clouds</div>
+            <div className="bask-floater bask-floater-3">
+              ☁ Light clouds · UV reduced by 25%
+            </div>
           </div>
           <SunMascot size={360} expression="happy" />
         </div>
@@ -175,19 +175,19 @@ function Hero() {
 function Hook() {
   const facts = [
     {
-      icon: 'window' as const,
-      title: 'Sunny window. Zero IU.',
-      copy: "UVB doesn't pass through glass. That 9am desk sun? Light, not synthesis.",
+      icon: 'sunAngle' as const,
+      title: "Sunny doesn't mean useful.",
+      copy: 'Vitamin D needs strong enough UV at the right sun angle. If the sun is low, it can be bright outside and still make little to none.',
     },
     {
-      icon: 'spf' as const,
-      title: 'SPF 30 blocks 95%.',
-      copy: "Most sunscreens cut UVB synthesis to almost nothing. Bask knows where you're covered.",
+      icon: 'window' as const,
+      title: 'Sun through a window? Useless.',
+      copy: 'Glass blocks almost all of the rays your body needs. That sun at your desk does nothing.',
     },
     {
       icon: 'clock' as const,
-      title: '4pm in November. Zero IU.',
-      copy: "North of 37°N, the sun's angle blocks UVB for half the year. You can't tell. We can.",
+      title: 'Winter sun barely works.',
+      copy: 'Depending on where you live, the sun can sit too low for months to make much of anything.',
     },
   ];
 
@@ -200,13 +200,11 @@ function Hook() {
             The problem
           </div>
           <h2 className="bask-h2">
-            Most people think <em>sun = vitamin D</em>. It&apos;s not that
-            simple.
+            You eat well. You sleep enough. So why are you still dragging?
           </h2>
           <p className="bask-lede">
-            An estimated <strong>42% of US adults</strong> are vitamin D
-            deficient. Most don&apos;t know it. Most are getting sun and
-            assuming it counts.
+            It might be low vitamin D. Your body makes it from sunlight, but
+            most of what you actually get doesn&apos;t count.
           </p>
         </div>
         <div className="bask-hook-grid">
@@ -225,7 +223,7 @@ function Hook() {
               Bask doesn&apos;t just track sunlight.
             </div>
             <div className="bask-pull-line">
-              It tracks <em>synthesis</em>.
+              Bask makes sure your sun <em>actually counts.</em>
             </div>
           </div>
         </div>
@@ -237,28 +235,28 @@ function Hook() {
 function HowItWorks() {
   const items = [
     {
-      tag: '01 · D-Window Forecast',
-      title: 'Know when to step outside.',
-      copy: 'Bask reads tomorrow\'s UV and cloud forecast and finds the exact window when synthesis is possible. "Step outside between 12:40 and 1:25pm: 22 minutes hits your daily goal."',
+      tag: '01 · Best time',
+      title: 'Know the best time to go outside.',
+      copy: 'Bask checks the weather and finds your window. "Head out around 1:00. Twenty minutes covers you today." No more wondering if it\'s even worth it.',
       screenshot: '/images/landing/1.png',
       screenshotAlt:
-        'Bask D-window forecast showing today and tomorrow best windows',
+        'Bask forecast showing today and tomorrow best sunlight windows',
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-0',
     },
     {
-      tag: '02 · D-Engine',
-      title: 'From UV to IU.',
-      copy: "Most apps show you UV. Bask shows you the vitamin D you're actually making, translated from UV, your skin type (Fitzpatrick I–VI), age, clothing, cloud cover, and biological saturation.",
+      tag: '02 · Sun that counts',
+      title: 'Know if your sun actually counted.',
+      copy: "Most apps just show you the weather. Bask tells you whether you really got what you needed, based on your skin, what you're wearing, and the clouds.",
       screenshot: '/images/landing/2.png',
       screenshotAlt: 'Bask home screen with daily IU progress ring',
       mascotExpression: 'happy' as const,
       mascotClass: 'bask-how-mascot-1',
     },
     {
-      tag: '03 · Live Bask Sessions',
-      title: 'Track sun like a workout.',
-      copy: 'Start a session, pocket your phone. Bask tracks IU gained, time elapsed, and burn risk in real time, on your Lock Screen and Dynamic Island.',
+      tag: '03 · Live sessions',
+      title: 'Track your time outside like a workout.',
+      copy: "Tap start, put your phone away. Bask keeps time and gives you a heads-up before you've had too much.",
       screenshot: '/images/landing/3.png',
       screenshotAlt: 'Bask live session tracker with UV and burn risk',
       mascotExpression: 'cheer' as const,
@@ -278,7 +276,7 @@ function HowItWorks() {
             How Bask works
           </div>
           <h2 className="bask-h2">
-            Three systems, one question: <em>is it counting?</em>
+            The easiest way to make sunlight work for you.
           </h2>
         </div>
         <div className="bask-how-stack">
@@ -313,48 +311,49 @@ function Features() {
   const features = [
     {
       k: '🎯',
-      t: 'One ring, one goal',
-      d: 'Sun and supplements counted toward the same daily target, not separate dashboards.',
+      t: 'One simple goal',
+      d: 'Sun and any vitamin D supplements both count toward the same daily target.',
     },
     {
       k: '🔮',
-      t: 'Forecast before you commit',
-      d: 'See whether tomorrow is worth planning around, or whether you should just supplement.',
+      t: 'Plan ahead',
+      d: "See if tomorrow's worth going out for, or if you should supplement instead.",
     },
     {
       k: '⏱',
       t: 'Real-time sessions',
-      d: 'Track sun like a workout. Know when to stop before you burn.',
+      d: 'Know exactly when to head back in before you burn.',
     },
     {
       k: '💊',
-      t: 'Context-aware supplements',
-      d: 'Log 1,000 / 2,000 / 5,000 IU doses. Bask reconciles them against your sun progress.',
+      t: 'Took a supplement? Log it',
+      d: 'Bask adds it to your day automatically.',
     },
     {
       k: '🧂',
-      t: 'Cofactor tracking',
-      d: 'Magnesium and K2 logged alongside D, because D alone is half the picture.',
+      t: 'The helpers that matter',
+      d: 'Track magnesium and K2, the two things that help your body actually use vitamin D.',
     },
     {
       k: '❤',
-      t: 'HealthKit integration',
-      d: 'Pulls Time in Daylight from Apple Health. Writes supplement logs back.',
+      t: 'Works with Apple Health',
+      d: 'Syncs Vitamin D supplementation and Time in Daylight Apple Health metrics.',
     },
     {
       k: '📊',
-      t: 'History & insights',
-      d: 'Streaks, weekly averages, calendar view, 30-day and 90-day trends on Pro.',
+      t: 'See your progress',
+      d: 'Streaks, weekly averages, and longer trends on Pro.',
     },
     {
       k: '🔔',
-      t: 'Pre-window pings',
-      d: 'Pro users get notified before each optimal window opens.',
+      t: 'Never miss a good window',
+      d: 'Pro nudges you before the best time each day.',
     },
     {
       k: '🔒',
-      t: 'Lives on your phone',
-      d: 'Data stays local. No accounts, no cloud, no tracking, no selling.',
+      t: 'Stays on your phone',
+      d: "No account, no cloud, and nothing's ever sold.",
+      hideOnMobile: true,
     },
   ];
 
@@ -367,13 +366,16 @@ function Features() {
               className="bask-eyebrow-dot"
               style={{ background: 'var(--bask-sky)' }}
             />
-            Everything inside
+            What you get
           </div>
           <h2 className="bask-h2">What you get with Bask</h2>
         </div>
         <div className="bask-feature-grid">
           {features.map((f) => (
-            <div className="bask-feature" key={f.t}>
+            <div
+              className={`bask-feature ${f.hideOnMobile ? 'bask-feature--mobile-hidden' : ''}`}
+              key={f.t}
+            >
               <div className="bask-feature-k" aria-hidden="true">
                 {f.k}
               </div>
@@ -451,18 +453,18 @@ function DeficiencyQuiz() {
       id: 'location' as const,
       q: 'Where do you live?',
       options: [
-        { label: 'South, below 37°N (LA, Miami, Phoenix)', score: 0 },
-        { label: 'Mid-latitude, around 37°N (SF, DC, Madrid)', score: 1 },
-        { label: 'North, above 45°N (Seattle, NYC, London)', score: 2 },
+        { label: 'South or sunny most of the year', score: 0 },
+        { label: 'Mixed seasons, sun varies by month', score: 1 },
+        { label: 'Farther north, long winters or weak sun', score: 2 },
       ],
     },
     {
       id: 'sunscreen' as const,
-      q: 'How often do you wear sunscreen outside?',
+      q: 'When you are outside, how much uncovered skin gets direct sun?',
       options: [
-        { label: 'Rarely or never', score: 0 },
-        { label: 'Sometimes, face only or partial coverage', score: 1 },
-        { label: 'Always, full coverage, SPF 30+', score: 2 },
+        { label: 'Plenty, usually arms or legs uncovered', score: 0 },
+        { label: 'Some, usually face and hands only', score: 1 },
+        { label: 'Very little, covered up or SPF 30+ most days', score: 2 },
       ],
     },
     {
@@ -494,13 +496,13 @@ function DeficiencyQuiz() {
       max: 2,
       level: 'low' as const,
       title: 'Lower risk, but windows still matter',
-      copy: "Your habits look decent, but even sunny days can produce zero IU if the angle is wrong or you're behind glass. Bask shows you exactly when your sun actually counts.",
+      copy: "Your habits look decent, but even sunny days can produce zero vitamin D if the angle is wrong or you're behind glass. Bask shows you exactly when your sun actually counts.",
     },
     {
       max: 4,
       level: 'moderate' as const,
       title: 'Moderate risk, your sun may not be enough',
-      copy: 'A few factors are working against you. You might be outside daily and still miss the narrow D-window. Bask forecasts when to step out, and when to supplement instead.',
+      copy: 'A few factors are working against you. You might be outside daily and still miss the right sunlight window. Bask forecasts when to step out, and when to supplement instead.',
     },
     {
       max: 6,
@@ -551,11 +553,12 @@ function DeficiencyQuiz() {
             60-second check
           </div>
           <h2 className="bask-h2">
-            Could you be <em>vitamin D deficient?</em>
+            Could low vitamin D be why you feel this way?
           </h2>
           <p className="bask-lede">
-            Three quick questions. No blood test required, just an honest look
-            at your sun habits.
+            You&apos;re not alone. <strong>More than 4 in 10 adults</strong> are
+            running low. Answer three quick questions to see your Vitamin D risk
+            score.
           </p>
         </div>
 
@@ -631,7 +634,7 @@ function DeficiencyQuiz() {
                 rel="noopener noreferrer"
               >
                 <AppleLogo />
-                Find your D-window for free
+                Find my optimal window in Bask
               </a>
               <p className="bask-quiz-disclaimer">
                 Educational estimate only, not a diagnosis. For blood levels,
@@ -684,24 +687,20 @@ function FounderStory() {
 function FAQ() {
   const items = [
     {
-      q: 'Can I actually get vitamin D from the sun in winter?',
-      a: "Depends on latitude. North of about 37°N, UVB often doesn't reach the surface from November to March. Bask shows you exactly when synthesis is possible, and when it isn't, recommends supplementation.",
-    },
-    {
-      q: 'Does sunscreen block vitamin D?',
-      a: 'SPF 30 blocks roughly 95% of UVB. Bask factors clothing and sunscreen coverage into your IU estimate, so the number on your ring matches what you actually made.',
+      q: 'Can I really get vitamin D from the sun in winter?',
+      a: "It depends on where you live. For a good chunk of the year in many places, the sun sits too low to make much vitamin D. Bask shows you when it's actually working, and when you're better off taking a supplement.",
     },
     {
       q: "Isn't this just another UV app?",
-      a: "No. UV apps tell you when you'll burn. Bask tells you when sun produces vitamin D, a different (and often much shorter) window.",
+      a: 'UV apps tell you how strong the sun is. Bask tells you something more useful: whether the sun is actually doing anything for you, based on your skin, your clothes, and the clouds. It also tells you the best time to step out.',
     },
     {
       q: 'Is my data shared?',
-      a: 'No. Bask stores your data locally on your device. HealthKit sync is opt-in and stays inside Apple Health.',
+      a: 'By default, no. Everything stays on your phone, with no account and nothing sold. If you opt in to the community leaderboard, Bask sends limited leaderboard data only: a random public user ID, your anonymous display name, completed sun-session IU and duration, and optional coarse location labels you enter yourself. No HealthKit data, supplement logs, precise GPS, real name, email, skin type, or blood test results are sent.',
     },
     {
       q: 'Does Bask diagnose deficiency?',
-      a: 'No. Bask is an educational and tracking tool. It helps you have informed conversations with your doctor and supports better habits over time. For diagnosis, get a 25(OH)D blood test.',
+      a: 'No. Bask is an educational tool, not a medical device. If you think you might be low, a simple blood test from your doctor is the only way to know for sure.',
     },
   ];
 
@@ -720,8 +719,8 @@ function FAQ() {
           </div>
           <h2 className="bask-h2">Questions, answered.</h2>
           <p className="bask-body" style={{ maxWidth: '34ch' }}>
-            Bask is built by people who think sun deserves the same precision as
-            sleep, glucose, and HRV. If you&apos;ve got a question we missed,{' '}
+            Clear answers on sunlight, vitamin D, privacy, and what Bask can and
+            can&apos;t tell you. If you&apos;ve got a question we missed,{' '}
             <a href="mailto:support@getbask.app">support@getbask.app</a>.
           </p>
         </div>
@@ -762,10 +761,11 @@ function CTA() {
           <SunMascot size={140} expression="cheer" />
         </div>
         <h2 className="bask-h2 bask-cta-h">
-          The sun is your most powerful, free, undertracked input.
+          The easiest fix for feeling tired might be free.
         </h2>
         <p className="bask-body bask-cta-body">
-          Download Bask and start counting what counts.
+          It&apos;s sunlight, and most people just don&apos;t get it right. Bask
+          helps you change that, starting today.
         </p>
         <div className="bask-cta-row" style={{ justifyContent: 'center' }}>
           <a
@@ -775,12 +775,10 @@ function CTA() {
             rel="noopener noreferrer"
           >
             <AppleLogo size={20} />
-            Download free on iOS
+            Download free for iOS
           </a>
         </div>
-        <div className="bask-cta-note">
-          Free to use · iPhone · iOS 17+ · No account needed
-        </div>
+        <div className="bask-cta-note">Free · iPhone · No account needed</div>
       </div>
     </section>
   );
@@ -800,7 +798,7 @@ function Footer() {
             <span>Bask</span>
           </div>
           <div className="bask-footer-tag">
-            Sunlight intelligence for vitamin D.
+            The easiest way to make sunlight count.
           </div>
         </div>
         <div className="bask-footer-cols">

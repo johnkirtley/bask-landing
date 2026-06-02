@@ -249,7 +249,46 @@ export function PhoneSession() {
   );
 }
 
-function FactIcon({ kind }: { kind: 'window' | 'spf' | 'clock' }) {
+function FactIcon({
+  kind,
+}: {
+  kind: 'sunAngle' | 'window' | 'spf' | 'clock';
+}) {
+  if (kind === 'sunAngle') {
+    return (
+      <svg
+        width="56"
+        height="56"
+        viewBox="0 0 56 56"
+        className="bask-fact-icon"
+      >
+        <circle cx="18" cy="16" r="7" fill="var(--bask-sun)" />
+        <path
+          d="M8 42 H48"
+          fill="none"
+          stroke="var(--bask-text)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M18 16 L38 42"
+          fill="none"
+          stroke="var(--bask-honey)"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M28 42 Q30 34 38 30"
+          fill="none"
+          stroke="var(--bask-text)"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+        <circle cx="38" cy="42" r="3" fill="var(--bask-coral)" />
+      </svg>
+    );
+  }
+
   if (kind === 'window') {
     return (
       <svg

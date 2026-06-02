@@ -521,6 +521,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 9999;
 }
 
 .bask-floater {
@@ -625,7 +626,7 @@
 
 .bask-hook-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -1670,6 +1671,10 @@
 
   .bask-feature-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .bask-feature--mobile-hidden {
+    display: none !important;
   }
 
   .bask-compare-hint {
