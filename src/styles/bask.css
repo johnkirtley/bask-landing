@@ -30,7 +30,7 @@
 .bask-h1 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(44px, 5.8vw, 86px);
+  font-size: clamp(44px, 4.8vw, 86px);
   line-height: 1.02;
   letter-spacing: -0.035em;
   margin: 0 0 24px;

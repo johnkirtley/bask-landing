@@ -296,7 +296,7 @@ function Footer() {
             <span>Bask</span>
           </div>
           <div className="bask-footer-tag">
-            Sunlight intelligence for vitamin D.
+            Sunlight intelligence for Vitamin D.
           </div>
         </div>
         <div className="bask-footer-cols">

@@ -17,7 +17,7 @@ const navLinks = [
 const tickerMessages = [
   '2,400+ sun sessions tracked this week',
   'Live forecasts for 50+ cities',
-  'More than 4 in 10 adults are low on vitamin D',
+  'More than 4 in 10 adults are low on Vitamin D',
 ];
 
 function SocialProofTicker() {
@@ -125,9 +125,8 @@ function Hero() {
             Tired all the time, low mood, and no idea why?
           </h1>
           <p className="bask-sub">
-            It could be low vitamin D. As little as 10 minutes of sun can help,
-            but not all sunlight counts. Bask tells you the perfect time to step
-            out.
+            Low Vitamin D could be part of it. Your body only makes Vitamin D
+            when the sun is strong enough. Bask shows you when it counts.
           </p>
           <div className="bask-cta-row">
             <a
@@ -178,17 +177,17 @@ function Hook() {
     {
       icon: 'sunAngle' as const,
       title: "Sunny doesn't mean useful.",
-      copy: 'Vitamin D needs strong enough UV at the right sun angle. If the sun is low, it can be bright outside and still make little to none.',
+      copy: 'Vitamin D needs strong enough UVB (the sun rays that make Vitamin D) at the right sun angle. If the sun is low, it can be bright outside and still make little to none.',
     },
     {
       icon: 'window' as const,
-      title: 'Sun through a window? Useless.',
-      copy: 'Glass blocks almost all of the rays your body needs. That sun at your desk does nothing.',
+      title: "Sun through a window doesn\'t make Vitamin D.",
+      copy: 'Glass blocks the UVB your body needs for Vitamin D, so desk sunlight feels good but does not count toward production.',
     },
     {
       icon: 'clock' as const,
       title: 'Winter sun barely works.',
-      copy: 'Depending on where you live, the sun can sit too low for months to make much of anything.',
+      copy: 'Depending on where you live, the sun can sit too low for months to help your body make much Vitamin D.',
     },
   ];
 
@@ -204,7 +203,7 @@ function Hook() {
             You eat well. You sleep enough. So why are you still dragging?
           </h2>
           <p className="bask-lede">
-            It might be low vitamin D. Your body makes it from sunlight, but
+            It might be low Vitamin D. Your body makes it from sunlight, but
             most of what you actually get doesn&apos;t count.
           </p>
         </div>
@@ -313,17 +312,17 @@ function Features() {
     {
       k: '🎯',
       t: 'One simple goal',
-      d: 'Sun and any vitamin D supplements both count toward the same daily target.',
+      d: 'Sun and any Vitamin D supplements both count toward the same daily target.',
     },
     {
       k: '🔮',
       t: 'Plan ahead',
-      d: "See if tomorrow's worth going out for, or if you should supplement instead.",
+      d: 'See whether tomorrow looks like a good sun day, or whether logging supplements may make more sense.',
     },
     {
       k: '⏱',
       t: 'Real-time sessions',
-      d: 'Know exactly when to head back in before you burn.',
+      d: 'Get a heads-up when it may be time to head back in.',
     },
     {
       k: '💊',
@@ -333,12 +332,12 @@ function Features() {
     {
       k: '🧂',
       t: 'The helpers that matter',
-      d: 'Track magnesium and K2, the two things that help your body actually use vitamin D.',
+      d: 'Track magnesium and K2, the two things that help your body actually use Vitamin D.',
     },
     {
       k: '❤',
       t: 'Works with Apple Health',
-      d: 'Syncs Vitamin D supplementation and Time in Daylight Apple Health metrics.',
+      d: 'Sync Vitamin D supplements and Time in Daylight with Apple Health.',
     },
     {
       k: '📊',
@@ -497,7 +496,7 @@ function DeficiencyQuiz() {
       max: 2,
       level: 'low' as const,
       title: 'Lower risk, but windows still matter',
-      copy: "Your habits look decent, but even sunny days can produce zero vitamin D if the angle is wrong or you're behind glass. Bask shows you exactly when your sun actually counts.",
+      copy: "Your habits look decent, but even sunny days can produce zero Vitamin D if the angle is wrong or you're behind glass. Bask shows you exactly when your sun actually counts.",
     },
     {
       max: 4,
@@ -554,7 +553,7 @@ function DeficiencyQuiz() {
             60-second check
           </div>
           <h2 className="bask-h2">
-            Could low vitamin D be why you feel this way?
+            Could low Vitamin D be why you feel this way?
           </h2>
           <p className="bask-lede">
             You&apos;re not alone. <strong>More than 4 in 10 adults</strong> are
@@ -688,8 +687,8 @@ function FounderStory() {
 function FAQ() {
   const items = [
     {
-      q: 'Can I really get vitamin D from the sun in winter?',
-      a: "It depends on where you live. For a good chunk of the year in many places, the sun sits too low to make much vitamin D. Bask shows you when it's actually working, and when you're better off taking a supplement.",
+      q: 'Can I really get Vitamin D from the sun in winter?',
+      a: "It depends on where you live. For a good chunk of the year in many places, the sun sits too low to make much Vitamin D. Bask shows you when it's actually working, and when you're better off taking a supplement.",
     },
     {
       q: "Isn't this just another UV app?",
@@ -720,7 +719,7 @@ function FAQ() {
           </div>
           <h2 className="bask-h2">Questions, answered.</h2>
           <p className="bask-body" style={{ maxWidth: '34ch' }}>
-            Clear answers on sunlight, vitamin D, privacy, and what Bask can and
+            Clear answers on sunlight, Vitamin D, privacy, and what Bask can and
             can&apos;t tell you. If you&apos;ve got a question we missed,{' '}
             <a href="mailto:support@getbask.app">support@getbask.app</a>.
           </p>
