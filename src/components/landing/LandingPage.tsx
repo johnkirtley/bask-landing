@@ -126,7 +126,7 @@ function Hero() {
           </h1>
           <p className="bask-sub">
             Low Vitamin D could be part of it. Your body only makes Vitamin D
-            when the sun is strong enough. Bask shows you when it counts.
+            when the sun is strong enough. Bask tells you when to step outside.
           </p>
           <div className="bask-cta-row">
             <a
