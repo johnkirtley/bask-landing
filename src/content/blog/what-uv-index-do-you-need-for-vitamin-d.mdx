@@ -1,0 +1,147 @@
+---
+title: 'What UV Index Do You Need to Make Vitamin D? (The Magic Number Is 3)'
+description: 'Your skin only makes vitamin D when the UV index hits 3 or higher, because below that the sun sits too low for UVB to reach the ground. Here is why 3 is the threshold and how to use it.'
+pubDate: 2026-06-05
+heroImage: ./_images/hero-placeholder.png
+---
+
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
+
+You need a UV index of at least **3** for your skin to make vitamin D. Below that, the sun sits too low in the sky for UVB rays, the specific wavelength your body turns into vitamin D, to make it through the atmosphere to the ground. Above 3, production speeds up as the number climbs, but so does your burn risk, which is why a higher UV index is not automatically better.
+
+That's the whole rule in one line. The rest of this page explains why 3 is the cutoff, what the UV index is actually measuring, and how to put it to use without doing any math.
+
+## Why the magic number is 3
+
+The UV index is a forecast of how strong ultraviolet radiation will be at ground level, on a scale that starts at 0 and runs past 11. When the number is below 3, the sun is low enough that its UVB is scattered and absorbed on the long, slanted path through the atmosphere before it reaches you. The UVA still gets through (more on that gap below), but UVA doesn't make vitamin D. So you can stand in bright, pleasant sunshine at a UV index of 2 and make essentially none.
+
+At a UV index of 3 or higher, enough UVB survives the trip to kick off vitamin D production in your skin. This is why the threshold shows up everywhere in the science: it's not a round number someone picked, it's roughly where UVB starts reaching the ground in usable amounts.
+
+<Callout type="info" title="The one-line version">
+  UV index below 3: little to no vitamin D, no matter how long you stay out. UV
+  index 3 or above: your skin can make vitamin D, and the higher the number, the
+  faster it works (and the faster you burn).
+</Callout>
+
+## What the UV index actually measures (UVA vs UVB)
+
+Sunlight reaches you as a mix of ultraviolet wavelengths. The two that matter here are UVB and UVA, and they do very different jobs.
+
+UVB is the shorter wavelength. It hits the surface of your skin, it's the main cause of sunburn, and it's the only kind that drives vitamin D production. UVA is the longer wavelength. It penetrates deeper, drives tanning and long-term skin aging, and it's far less affected by the sun's angle, which is why you can feel warmth and even tan at times of day when you're making no vitamin D at all.
+
+The UV index rolls both of these into a single number, weighting the wavelengths by how much they affect human skin. The key thing to understand is that the index tracks total UV strength, while only the UVB slice of it makes vitamin D. When the sun is low, the UVB slice shrinks fastest, which is exactly why the UV index drops below 3 in the early morning, late afternoon, and winter even when it still feels sunny.
+
+## UV index to vitamin D speed
+
+Here's roughly how the UV index maps to vitamin D production and burn risk for someone with arms and legs bare. Skin tone shifts these times a lot (darker skin needs longer), so treat this as a sense of the gradient, not a stopwatch.
+
+<ComparisonTable
+  headers={[
+    'UV index',
+    'Vitamin D production',
+    'Rough time for fair skin',
+    'Burn risk',
+  ]}
+>
+  <tr>
+    <td>0-2 (low)</td>
+    <td>Essentially none</td>
+    <td>Not happening</td>
+    <td>Very low</td>
+  </tr>
+  <tr>
+    <td>3-5 (moderate)</td>
+    <td>Yes, steady</td>
+    <td>~15-30 min</td>
+    <td>Low to moderate</td>
+  </tr>
+  <tr>
+    <td>6-7 (high)</td>
+    <td>Yes, faster</td>
+    <td>~10-20 min</td>
+    <td>Moderate, protect after</td>
+  </tr>
+  <tr>
+    <td>8-10 (very high)</td>
+    <td>Fast</td>
+    <td>~5-15 min</td>
+    <td>High, burns quickly</td>
+  </tr>
+  <tr>
+    <td>11+ (extreme)</td>
+    <td>Fast</td>
+    <td>A few minutes</td>
+    <td>Very high, minutes to burn</td>
+  </tr>
+</ComparisonTable>
+
+Notice that the vitamin D you can make tops out, but the burn risk keeps climbing. That's the heart of the next section.
+
+## Why a high UV index doesn't mean "more is better"
+
+It's tempting to read the table and think a UV index of 10 is the jackpot. It isn't, for two reasons.
+
+First, your skin self-limits how much vitamin D it makes. Once production ramps up, your body starts breaking down the excess, so past a certain point extra sun adds no extra vitamin D. You can read more about that built-in cap in the [cornerstone guide on how much sun you need](/blog/how-much-sun-do-you-need-for-vitamin-d).
+
+Second, while your vitamin D plateaus, your burn risk does not. At UV 9 or higher, fair skin can start burning in minutes, and a burn gives you zero bonus vitamin D while doing real damage. So a very high UV index doesn't mean make more vitamin D, it means get your short dose and then cover up faster. The sweet spot for most people is a moderate UV index of 3 to 6, where you have time to make your vitamin D before burn risk becomes the bigger concern.
+
+<Callout type="warning" title="High UV is a deadline, not a bonus">
+  When the UV index is 8 or higher, think of it as a countdown. You'll make your
+  vitamin D quickly, but you'll also hit your burn limit quickly. Shade,
+  clothing, or sunscreen after your window isn't optional at those levels.
+</Callout>
+
+## How to check today's UV index
+
+You don't need special equipment. A few easy options:
+
+The weather app on your phone almost always lists a UV index for your location, usually as an hourly forecast, so you can see when it crosses 3 and when it peaks. Most weather websites and the US EPA's SunWise resources publish the same forecast. And if you want the no-screen version, there's the shadow rule: when your shadow is shorter than you are tall, the sun is high enough that the UV index is likely 3 or more. That trick is covered in the [main sun-and-vitamin-D guide](/blog/how-much-sun-do-you-need-for-vitamin-d).
+
+The catch with a plain forecast is that it tells you the UV index but not what to do with it. It won't factor in your skin type, how much skin you've got bare, or when you've had enough. That's the gap a dedicated tracker fills.
+
+## How Bask uses the UV index to time your sessions
+
+Bask reads your local UV index continuously rather than as a once-a-day number. It watches for the moment the index crosses 3, so you know when your vitamin D window actually opens, then combines that live reading with your skin type and how much skin you're exposing to tell you how long you've got before you've made your dose or risk burning.
+
+So instead of glancing at a forecast and guessing, you get a running answer: not yet, go now, you're done. It's the UV index turned into a personal timer. If you want to see how Bask stacks up against other trackers that work this way, the [2026 app comparison](/blog/best-apps-to-track-vitamin-d-2026) breaks it down.
+
+<Callout type="info" title="Catch the moment it crosses 3">
+  Bask reads your local UV index minute by minute, so you know the exact moment
+  it climbs past 3 and your skin can start making vitamin D, no chart-watching
+  required.
+</Callout>
+
+## Frequently asked questions
+
+**Can you get vitamin D at UV index 2?**
+Barely, if at all. At a UV index of 2 the sun is usually too low for meaningful UVB to reach the ground, so production is minimal. If your forecast is stuck at 2 all day (common in winter or early/late in the day), sunlight isn't a reliable vitamin D source and food or a supplement is the better bet.
+
+**Does UV index 10 make vitamin D faster?**
+Faster, yes, but not more. You'll hit your skin's vitamin D ceiling quickly at UV 10, and everything after that is just burn risk with no added benefit. High UV means take a shorter session, not a longer one.
+
+**Is the UV index the same as temperature?**
+No, and this trips people up constantly. UV index measures ultraviolet strength, not heat. A cold, clear winter day can have a low UV index, and a hazy warm day can still carry a high one. You can't feel UVB, so warmth is a bad guide to whether you're making vitamin D.
+
+**What UV index causes sunburn?**
+Burn risk rises across the scale, but it becomes a real concern from about UV 6 and a fast one at 8 or higher, where fair skin can redden within minutes. The same UVB that makes vitamin D causes the burn, which is why timing matters more as the number climbs.
+
+## Where to go next
+
+- The full picture: [How much sun do you need for vitamin D?](/blog/how-much-sun-do-you-need-for-vitamin-d)
+- Timing your day: [The best time of day to get vitamin D from the sun](/blog/best-time-of-day-to-get-vitamin-d)
+- The science of synthesis: [Understanding vitamin D synthesis](/blog/understanding-vitamin-d-synthesis)
+
+## Sources
+
+- [US EPA, "UV Index Scale"](https://www.epa.gov/sunsafety/uv-index-scale-0): the 0 to 11+ scale and exposure categories.
+- [US EPA, "Calculating the UV Index"](https://19january2021snapshot.epa.gov/sunsafety/calculating-uv-index-0_.html): the index weights wavelengths across UVB (280-314 nm) and UVA (315-400 nm).
+- [NIH Office of Dietary Supplements, Vitamin D Fact Sheet](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/): UVB as the driver of cutaneous vitamin D synthesis.
+- [World Health Organization, "The ultraviolet (UV) index"](https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index): how the index is defined and used for sun protection.
+
+<Callout type="warning" title="A note on medical advice">
+  This article is educational, not medical advice. If you have a history of skin
+  cancer, take photosensitizing medication, are pregnant, or are treating a known
+  deficiency, talk to a clinician and consider a blood test to know your actual
+  level.
+</Callout>
