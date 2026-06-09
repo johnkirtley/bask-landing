@@ -29,7 +29,7 @@ A working blueprint for the full content program. Everything is organized into *
 
 # PILLAR 1 — How Much Sun Do You Need for Vitamin D?
 
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/how-much-sun-do-you-need-for-vitamin-d.mdx`. Humanized; sourced to NIH ODS, EPA, Webb/Holick 1988, Linus Pauling Institute. Children still pending.
+> ✅ **WRITTEN — published 2026-05-18.** Draft at `src/content/blog/how-much-sun-do-you-need-for-vitamin-d.mdx`. Humanized; sourced to NIH ODS, EPA, Webb/Holick 1988, Linus Pauling Institute. Children still pending.
 
 **Role:** Cornerstone page. This is the single most important asset in the program — highest Bask relevance and the cleanest LLM-citation shape. Everything in this cluster links back here.
 
@@ -59,7 +59,7 @@ A working blueprint for the full content program. Everything is organized into *
 ## Pillar 1 children
 
 ### 1.1 — What UV Index Do You Need to Make Vitamin D?
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/what-uv-index-do-you-need-for-vitamin-d.mdx`. Humanized; sourced to EPA, NIH ODS, WHO. Links up to cornerstone, sideways to 1.2.
+> ✅ **WRITTEN — published 2026-05-21.** Draft at `src/content/blog/what-uv-index-do-you-need-for-vitamin-d.mdx`. Humanized; sourced to EPA, NIH ODS, WHO. Links up to cornerstone, sideways to 1.2.
 - **Type:** Child (high priority — closest to Bask's core mechanic)
 - **Primary keyword:** what UV index for vitamin D · **Secondary:** UV index vitamin D, minimum UV index vitamin D, UV index 3 vitamin D
 - **Intent:** Calculation/technical — biohackers and app-adjacent searchers.
@@ -77,7 +77,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **CTA:** "Bask reads your local UV index minute by minute so you know the moment it crosses 3."
 
 ### 1.2 — The Best Time of Day to Get Vitamin D From the Sun
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/best-time-of-day-to-get-vitamin-d.mdx`. Humanized; sourced to NIH ODS, EPA, Webb/Holick 1988. Links up to cornerstone, sideways to 1.1.
+> ✅ **WRITTEN — published 2026-05-26.** Draft at `src/content/blog/best-time-of-day-to-get-vitamin-d.mdx`. Humanized; sourced to NIH ODS, EPA, Webb/Holick 1988. Links up to cornerstone, sideways to 1.1.
 - **Type:** Child (high priority)
 - **Primary keyword:** best time of day to get vitamin D from sun · **Secondary:** best time for vitamin D, midday sun vitamin D, is morning sun good for vitamin D
 - **Intent:** Practical timing.
@@ -127,7 +127,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Note:** The quiz is a dwell-time and engagement asset — build it to output "your type + your sun number + try Bask."
 
 ### 1.5 — Can You Get Vitamin D on a Cloudy Day?
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/can-you-get-vitamin-d-on-a-cloudy-day.mdx`. Humanized; EPA cloud figures, NIH ODS, WHO. Linked into cornerstone + cluster.
+> ✅ **WRITTEN — published 2026-05-29.** Draft at `src/content/blog/can-you-get-vitamin-d-on-a-cloudy-day.mdx`. Humanized; EPA cloud figures, NIH ODS, WHO. Linked into cornerstone + cluster.
 - **Type:** Child
 - **Primary keyword:** can you get vitamin D on a cloudy day · **Secondary:** vitamin D cloudy day, vitamin D overcast, do clouds block UV
 - **Intent:** Informational/practical.
@@ -144,7 +144,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** US EPA "Learn About the UV Index" cloud transmission figures.
 
 ### 1.6 — Can You Get Vitamin D Through a Window?
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/can-you-get-vitamin-d-through-a-window.mdx`. Humanized; Utah Health, NIH ODS, Skin Cancer Foundation. Linked into cornerstone + cluster.
+> ✅ **WRITTEN — published 2026-06-03.** Draft at `src/content/blog/can-you-get-vitamin-d-through-a-window.mdx`. Humanized; Utah Health, NIH ODS, Skin Cancer Foundation. Linked into cornerstone + cluster.
 - **Type:** Child (high evergreen volume)
 - **Primary keyword:** can you get vitamin D through a window · **Secondary:** vitamin D through glass, vitamin D car window, does glass block UVB
 - **Intent:** Myth-check.
@@ -160,7 +160,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Sunscreen child; Best Time of Day.
 
 ### 1.7 — Does Sunscreen Block Vitamin D? What the Research Actually Says
-> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/does-sunscreen-block-vitamin-d.mdx`. Humanized; Skin Cancer Foundation, NIH ODS, Prevent Cancer Foundation. Linked into cornerstone + cluster.
+> ✅ **WRITTEN — published 2026-06-06.** Draft at `src/content/blog/does-sunscreen-block-vitamin-d.mdx`. Humanized; Skin Cancer Foundation, NIH ODS, Prevent Cancer Foundation. Linked into cornerstone + cluster.
 - **Type:** Child (high interest)
 - **Primary keyword:** does sunscreen block vitamin D · **Secondary:** SPF and vitamin D, can you get vitamin D with sunscreen on
 - **Intent:** Informational — resolving a perceived conflict.
