@@ -127,6 +127,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Note:** The quiz is a dwell-time and engagement asset — build it to output "your type + your sun number + try Bask."
 
 ### 1.5 — Can You Get Vitamin D on a Cloudy Day?
+> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/can-you-get-vitamin-d-on-a-cloudy-day.mdx`. Humanized; EPA cloud figures, NIH ODS, WHO. Linked into cornerstone + cluster.
 - **Type:** Child
 - **Primary keyword:** can you get vitamin D on a cloudy day · **Secondary:** vitamin D cloudy day, vitamin D overcast, do clouds block UV
 - **Intent:** Informational/practical.
@@ -143,6 +144,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** US EPA "Learn About the UV Index" cloud transmission figures.
 
 ### 1.6 — Can You Get Vitamin D Through a Window?
+> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/can-you-get-vitamin-d-through-a-window.mdx`. Humanized; Utah Health, NIH ODS, Skin Cancer Foundation. Linked into cornerstone + cluster.
 - **Type:** Child (high evergreen volume)
 - **Primary keyword:** can you get vitamin D through a window · **Secondary:** vitamin D through glass, vitamin D car window, does glass block UVB
 - **Intent:** Myth-check.
@@ -158,6 +160,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Sunscreen child; Best Time of Day.
 
 ### 1.7 — Does Sunscreen Block Vitamin D? What the Research Actually Says
+> ✅ **WRITTEN — published 2026-06-05.** Draft at `src/content/blog/does-sunscreen-block-vitamin-d.mdx`. Humanized; Skin Cancer Foundation, NIH ODS, Prevent Cancer Foundation. Linked into cornerstone + cluster.
 - **Type:** Child (high interest)
 - **Primary keyword:** does sunscreen block vitamin D · **Secondary:** SPF and vitamin D, can you get vitamin D with sunscreen on
 - **Intent:** Informational — resolving a perceived conflict.
