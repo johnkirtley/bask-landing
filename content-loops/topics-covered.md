@@ -14,6 +14,7 @@ topic with a genuinely different angle, note the angle.
 | does-sunscreen-block-vitamin-d | Does Sunscreen Block Vitamin D | P1.7 | does sunscreen block vitamin D | 2026-06-06 | PUBLISHED |
 | best-apps-to-track-vitamin-d-2026 | Best Apps to Track Vitamin D 2026 | P4 pillar | best vitamin D app | 2026-02-02 | PUBLISHED |
 | understanding-vitamin-d-synthesis | Understanding Vitamin D Synthesis | (off-plan science explainer) | vitamin D synthesis | 2026-02-02 | PUBLISHED |
+| how-long-to-sit-in-sun-for-vitamin-d | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3 | how long to sit in sun for vitamin D | 2026-06-20 | NEEDS REVIEW |
 
 ## Notes / gaps for future cycles
 - **Pillar 2 (Deficiency: symptoms, levels, dosage) — not started.** Highest informational volume; long-term authority play. Not seasonally urgent.
