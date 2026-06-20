@@ -14,11 +14,11 @@ topic with a genuinely different angle, note the angle.
 | does-sunscreen-block-vitamin-d | Does Sunscreen Block Vitamin D | P1.7 | does sunscreen block vitamin D | 2026-06-06 | PUBLISHED |
 | best-apps-to-track-vitamin-d-2026 | Best Apps to Track Vitamin D 2026 | P4 pillar | best vitamin D app | 2026-02-02 | PUBLISHED |
 | understanding-vitamin-d-synthesis | Understanding Vitamin D Synthesis | (off-plan science explainer) | vitamin D synthesis | 2026-02-02 | PUBLISHED |
-| how-long-to-sit-in-sun-for-vitamin-d | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3 | how long to sit in sun for vitamin D | 2026-06-20 | READY TO PUBLISH |
+| how-long-to-sit-in-sun-for-vitamin-d | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3 | how long to sit in sun for vitamin D | 2026-06-20 | PUBLISHED |
 
 ## Notes / gaps for future cycles
 - **Pillar 2 (Deficiency: symptoms, levels, dosage) — not started.** Highest informational volume; long-term authority play. Not seasonally urgent.
 - **Pillar 3 (Winter / latitude) — not started.** Per the plan, publish Sept–Oct to lead the Feb demand peak. Do NOT front-load in summer.
-- **Pillar 1 remaining children — not started:** 1.3 (by skin type), 1.4 (Fitzpatrick quiz), 1.8 (shade), 1.9 (15 minutes), 1.10 (solar noon), 1.11 (morning), 1.12 (too much sun), 1.13 (angle/shadow rule), 1.14 (tanning beds).
+- **Pillar 1 remaining children — not started:** 1.4 (Fitzpatrick quiz), 1.8 (shade), 1.9 (15 minutes), 1.10 (solar noon), 1.11 (morning), 1.12 (too much sun), 1.13 (angle/shadow rule), 1.14 (tanning beds). *(P1.3 "by skin type" shipped 2026-06-20.)*
 - **Author byline gap:** Published posts have no named author in frontmatter. Operating Principles require a named author per post for E-E-A-T. Flag for Copywriter/Developer to backfill.
 - **Directory mismatch:** Spec calls for `content-loops/performance/`; repo has empty `content-loops/analytics/`. No performance data exists yet either way → discovery cycles until populated.
