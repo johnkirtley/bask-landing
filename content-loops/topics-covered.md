@@ -16,6 +16,8 @@ topic with a genuinely different angle, note the angle.
 | understanding-vitamin-d-synthesis | Understanding Vitamin D Synthesis | (off-plan science explainer) | vitamin D synthesis | 2026-02-02 | PUBLISHED |
 | how-long-to-sit-in-sun-for-vitamin-d | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3 | how long to sit in sun for vitamin D | 2026-06-20 | READY TO PUBLISH |
 
+| best-uv-index-for-tanning | What UV Index Is Best for Tanning | tanning/summer cluster (links to P1) | best UV index for tanning | (pending) | NEEDS REVIEW |
+
 ## Notes / gaps for future cycles
 - **Pillar 2 (Deficiency: symptoms, levels, dosage) — not started.** Highest informational volume; long-term authority play. Not seasonally urgent.
 - **Pillar 3 (Winter / latitude) — not started.** Per the plan, publish Sept–Oct to lead the Feb demand peak. Do NOT front-load in summer.
