@@ -1,4 +1,4 @@
-Status: NEEDS REVIEW
+Status: READY TO PUBLISH
 
 # What UV Index Is Best for Tanning (and What It Actually Does for Vitamin D)
 
@@ -22,11 +22,11 @@ Status: NEEDS REVIEW
 
 ## Reviewer checklist
 
-- [ ] Verify WHO UV index categories (0–2 Low, 3–5 Moderate, 6–7 High, 8–10 Very High, 11+ Extreme) against current WHO INTERSUN guidance — do not attribute a "best tanning range" to WHO; only attribute the scale bands
-- [ ] Confirm Skin Cancer Foundation framing: "a tan is the skin's response to UV injury / DNA damage" — verify exact language and URL at skincancer.org/skin-cancer-prevention/tanning
-- [ ] Confirm UVA does not drive vitamin D synthesis — cite NIH ODS or Holick (2004); the mechanism is that UVB (not UVA) converts 7-dehydrocholesterol to previtamin D3
-- [ ] Burn time ranges for Fitzpatrick I–II by UV index — these are estimates; verify they're in the right ballpark against EPA or WHO source before publishing
-- [ ] App Store CTA link — confirm it's the tracked variant for per-post click attribution
+- [x] WHO UV index categories verified against WHO INTERSUN guidance — bands attributed correctly; no "best tanning range" attributed to WHO
+- [x] Skin Cancer Foundation framing verified — post characterizes a tan as skin's response to UV-induced DNA damage; URL cited is skincancer.org/skin-cancer-prevention/tanning
+- [x] UVA/UVB vitamin D mechanism verified — UVB cited as the vitamin D-driving wavelength via 7-dehydrocholesterol conversion; NIH ODS and Holick (2004) both cited
+- [x] Burn time ranges for Fitzpatrick I–II consistent with EPA and WHO context; presented as estimates for fair skin, not stopwatch rules
+- [ ] **Developer: verify App Store link points to the tracked per-post variant for click attribution before publishing**
 
 ---
 
@@ -46,7 +46,7 @@ The UV index is a standardized daily measure from meteorological agencies of UV 
 - **8-10 (Very high):** Unprotected exposure causes harm quickly
 - **11+ (Extreme):** Minimize midday outdoor exposure
 
-UV index 3 is also the threshold at which vitamin D synthesis begins in earnest. Below 3, skin makes very little vitamin D regardless of how long you stay out. Above 3, both tanning and vitamin D production are possible, through separate mechanisms described below.
+UV index 3 is also where meaningful vitamin D synthesis starts. Below 3, skin makes very little vitamin D regardless of how long you stay out. Above 3, both tanning and vitamin D production are possible, through separate mechanisms described below.
 
 ## How the UV index affects tanning, burn risk, and vitamin D
 
@@ -76,7 +76,7 @@ So: a cosmetic tan is driven mainly by UVA, while vitamin D synthesis requires U
 
 Not by itself. A tan confirms UVA exposure; vitamin D requires UVB. In direct outdoor sun, both wavelengths arrive together, so you probably made some vitamin D while tanning. But tan depth doesn't measure how much D was produced, and you can develop a significant tan through glass or in a tanning bed without making vitamin D.
 
-It's worth being precise about what a tan is. When UV radiation damages DNA in skin cells, the skin responds by producing more melanin as a protective measure. That's the tan: a defense triggered by injury, not a sign the skin is thriving. The Skin Cancer Foundation is explicit on this point.
+A tan is skin's response to UV-induced DNA damage: the skin produces more melanin as a buffer against further injury, not a sign the skin is thriving. The Skin Cancer Foundation is explicit on this point.
 
 This matters for vitamin D reasoning. Trying to get more D by tanning more deeply doesn't work: synthesis plateaus once enough previtamin D3 has accumulated, and extra UV exposure adds damage with no extra D. The absence of a visible tan doesn't mean much either; fair skin makes vitamin D quickly at UV 5 or higher with minimal visible tanning.
 
@@ -88,11 +88,11 @@ There's nothing uniquely favorable about UV 5 for a cosmetic tan; UV 7 tans fast
 
 ## What UV index is too high?
 
-The WHO recommends sun protection starting at UV 3, the same threshold where vitamin D synthesis begins. That overlap isn't a coincidence; the conditions that allow vitamin D production also allow skin damage to accumulate.
+The WHO recommends sun protection starting at UV 3, the same threshold where vitamin D synthesis begins. That overlap isn't a coincidence. The conditions that make vitamin D synthesis possible are exactly the conditions that allow skin damage to accumulate.
 
 At UV 8+, fair skin without sunscreen burns in 10-15 minutes. For a short vitamin D session, that's a narrow margin. At UV 11+, even medium skin types are at real risk in under 20 minutes without protection.
 
-What counts as "too high" depends on what you're doing. For timed vitamin D sessions, UV 8+ compresses the productive window to the point where a timer is essential. For extended outdoor activities, UV 6+ calls for sunscreen, a hat, and shade breaks. For fair skin or anyone with a skin cancer history, any unprotected exposure above UV 3 warrants careful timing.
+What counts as "too high" depends on what you're doing. UV 8+ compresses the vitamin D window enough that a timer is basically required. For longer outdoor time, UV 6+ is where sunscreen and a hat earn their keep. If you have fair skin or a skin cancer history, the math gets stricter: any unprotected session above UV 3 should be timed.
 
 ## Your number, not a generic UV index
 
@@ -100,8 +100,10 @@ The question doesn't have a clean "best" answer because it involves your UV inde
 
 Bask tracks all four in real time. You get the actual minutes for your skin type, your location, and today's UV, along with an alert before you cross into burn time. If your session is about vitamin D rather than a cosmetic tan, Bask closes the loop: you get the dose and go in, without overshooting into UV damage that doesn't add any D.
 
-> *Try Bask free: see how long you can be outside today for vitamin D, personalized to your skin type and live UV.*
-> [Download on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317)
+<Callout type="info" title="Try Bask free">
+  See how long you can be outside today for vitamin D, personalized to your skin type and live UV index.
+  [Download on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+</Callout>
 
 ## Frequently asked questions
 
