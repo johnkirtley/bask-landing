@@ -1,4 +1,4 @@
-Status: READY TO PUBLISH
+Status: PUBLISHED
 
 # What UV Index Is Best for Tanning (and What It Actually Does for Vitamin D)
 
