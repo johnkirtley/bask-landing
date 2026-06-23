@@ -17,6 +17,7 @@ topic with a genuinely different angle, note the angle.
 | how-long-to-sit-in-sun-for-vitamin-d | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3 | how long to sit in sun for vitamin D | 2026-06-20 | READY TO PUBLISH |
 | best-uv-index-for-tanning | What UV Index Is Best for Tanning | tanning/summer cluster (links to P1) | best UV index for tanning | 2026-06-21 | READY TO PUBLISH |
 | how-much-vitamin-d-in-15-minutes-of-sun | How Much Vitamin D in 15 Minutes of Sun | P1.9 | how much vitamin D in 15 minutes of sun | 2026-06-22 | NEEDS REVIEW |
+| can-you-get-too-much-vitamin-d-from-the-sun | Can You Get Too Much Vitamin D From the Sun | P1.12 | can you get too much vitamin D from the sun | 2026-06-23 | NEEDS REVIEW |
 
 ## Notes / gaps for future cycles
 - **Pillar 2 (Deficiency: symptoms, levels, dosage) — not started.** Highest informational volume; long-term authority play. Not seasonally urgent.
