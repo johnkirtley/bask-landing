@@ -1,153 +1,156 @@
 # Reddit Signal Scan — 2026-06-24
 
 **Agent:** 1 (Reddit Scanner)
-**Scan time:** 2026-06-24 16:45
-**Subreddits scanned:** r/vitamin-d, r/hubermanlab, r/supplements, r/depression, r/biohacking, r/remotework, r/Ultralight, r/nutrition, r/SkincareAddiction, r/mentalhealth, r/30PlusSkinCare
+**Scan time:** 2026-06-24 23:50
+**Subreddits scanned:** r/vitamin-d, r/hubermanlab, r/supplements, r/depression, r/biohacking
+**Data source:** Startpage search results (titles, snippets, permalinks)
 
 ---
 
 ## Top themes today
 
-### Theme 1: Sun vs. Supplements — Which Actually Works Better?
-**Signal strength:** High (981 upvotes, 179 comments in r/Supplements)
-**Found in:** r/Supplements, r/Biohackers, r/nutrition, r/30PlusSkinCare
+### Theme 1: Deficiency despite adequate sun exposure
+**Signal strength:** High
+**Found in:** r/vitamin-d, r/nutrition, r/ScientificNutrition, r/SkincareAddiction, r/Ultralight
 **What people are saying:**
-- "Vitamin D supplement vs sunlight, here's the results" — n=1 experiment: 5000 IU/day for 1 year got D to 67 ng/ml; 20 min sun, 90% naked, for 30 days got D to 96 ng/ml — r/Supplements, score 981, 179 comments (https://www.reddit.com/r/Supplements/comments/1izr6mv/)
-- "The few micrograms of vitamin D you ingest to make your blood work look as if you've been outside... doesn't have near the same benefits as actually getting your vitamin D up from sun exposure" — r/Biohackers, score 25 (https://www.reddit.com/r/Biohackers/comments/1kyet8g/)
-- "Vitamin D from sunlight is a bit confusing" — r/nutrition, score unknown (https://www.reddit.com/r/nutrition/comments/1fxc39p/)
-**Pain point:** People want sun-based vitamin D but don't know how much sun, when, or how much skin to expose — and fear skin cancer from trying.
-**Content angle:** Definitive guide to sun vs. supplements: what the evidence actually says, when each makes sense, and how to safely use both.
+- "Low vitamin D status despite abundant sun exposure" — r/ScientificNutrition, citing a 2007 study of 93 Hawaiian surfers with variable D levels
+- "My vitamin D was 8 ng/ml despite religious SPF use" — r/SkincareAddiction, May 2025
+- "Vitamin D Deficiency While Hiking 8–10h a Day" — r/Ultralight, May 2025, noting sun-protective clothing and darker skin as factors
+- "Can a Vit D level of 12 ng be corrected through just sun exposure?" — r/VitaminD, Mar 2025, with replies noting latitude and season matter
+- "Is getting a lot of sunlight enough to reverse a vitamin D deficiency?" — r/VitaminD, Jul 2022
+**Pain point:** People who get regular sun — even outdoor workers and hikers — still test deficient. They don't understand why, and existing tools don't explain the variables (skin type, time of day, UV index, glass, sunscreen, clothing).
+**Content angle:** "Why am I deficient if I get sun?" — map every reason to variables Bask tracks. This is Bask's most natural post. Cross-reference with P2.3 from the 06-23 research cycle.
 
-### Theme 2: The WFH Vitamin D Crisis
-**Signal strength:** High (338 upvotes, 381 comments in r/remotework)
-**Found in:** r/remotework, r/VitaminD, r/Biohackers
+### Theme 2: Morning sunlight vs. vitamin D — Huberman confusion
+**Signal strength:** High
+**Found in:** r/hubermanlab
 **What people are saying:**
-- "3 years WFH and my vitamin D is in the toilet — vitamin D = 12 ng/ml (yikes). The irony: I have more flexibility than ever but somehow get LESS sun than when I was stuck in an office cube" — r/remotework, score 338, 381 comments (https://www.reddit.com/r/remotework/comments/1kz21x2/)
-- "I live in California and it's sunny year round, I walk a lot... and yet I tested with a vitamin D deficiency" — r/Ultralight commenter
-- "My doctor in LA was seeing so much skin cancer that he pushed sunscreen and protective hats, clothing, etc. and put everyone on D3" — r/remotework commenter
-**Pain point:** Remote workers know they should go outside but don't — they scroll their phones at lunch, stay in by 5pm, and want practical systems, not "just go outside" advice.
-**Content angle:** "The WFH Vitamin D Survival Guide" — practical systems (alarm stacking, lunch outdoor scrolling, morning walks) that actually work for people who struggle to leave the house.
+- "Is morning sunlight really that effective?" — r/HubermanLab, Jan 2023, 38 votes, 63 comments questioning the protocol
+- "Huberman says it's best to get morning sunlight 30-60 mins after waking" — r/HubermanLab, Mar 2025
+- "How much sunlight do I need?" — r/HubermanLab, Feb 2024, cross-linked to vitamin D and supplements
+- "Sunlight within 30 min of waking: worth the hassle?" — r/HubermanLab, Apr 2026
+- "How late into the morning can I still get sunlight and feel the benefits?" — r/HubermanLab, Sep 2023
+**Pain point:** Massive confusion between Huberman's morning light protocol (circadian/mood) and vitamin D production (needs midday UVB). People conflate the two, or think morning light = vitamin D.
+**Content angle:** "Morning sunlight benefits vs. vitamin D: what each time of day actually does" — clarifies the confusion, positions Bask as the tool that knows which window you're in.
 
-### Theme 3: Morning Light Protocol Confusion
-**Signal strength:** High (multiple r/HubermanLab threads, 1000+ combined upvotes)
-**Found in:** r/HubermanLab
+### Theme 3: Supplement dosing debates — how much, when, sun vs pills
+**Signal strength:** High
+**Found in:** r/supplements, r/biohacking
 **What people are saying:**
-- "Sunlight within 30 min of waking: worth the hassle?" — r/HubermanLab, score 100+, April 2026 (https://www.reddit.com/r/HubermanLab/comments/1swskd1/)
-- "How much sunlight do I need?" — r/HubermanLab, score 100+, Feb 2024 (https://www.reddit.com/r/HubermanLab/comments/1atj0k3/)
-- "When Huberman says to get sunlight first thing..." — r/HubermanLab, Dec 2025 (https://www.reddit.com/r/HubermanLab/comments/1pazoir/)
-- "How late into the morning can I still get sunlight and feel the benefits?" — r/HubermanLab, Sep 2023 (https://www.reddit.com/r/HubermanLab/comments/16kw6zn/)
-**Pain point:** People follow Huberman but are confused about the specifics — how long, what time exactly, through windows?, does cloud cover matter?, does it count if it's just brightness not UV?
-**Content angle:** "The Morning Light Protocol: What Huberman Gets Right and What He Leaves Out" — clear, actionable morning light guide.
+- "Vitamin D supplement vs sunlight, here's the results" — r/Supplements, Feb 2025
+- "How come we are dosing significantly more vitamin D3 than..." — r/Supplements, Nov 2024, noting 15min midday sun = ~1000 IU
+- "Vitamin D dosage?" — r/Supplements, Jun 2026, debating 1000 vs 2000 IU
+- "Turns out 'the science' gave us a 20 times too low dose for vit D" — r/Supplements, Dec 2025
+- "Is it true vitamin D takes 4-6 weeks to feel the effects?" — r/Supplements, Sep 2024, with someone noting they feel better within 24 hours of sun
+- "Is 10000iu of Vitamin D3 safe?" — r/Supplements, Nov 2023
+**Pain point:** Wildly conflicting dosing advice. People don't know whether to trust sun alone, supplement, or both. The "feel better in 24 hours from sun" vs "4-6 weeks from pills" gap is underexplored.
+**Content angle:** "How much vitamin D from sun vs. supplements" — honest comparison with the real numbers. Bask = knowing your sun dose so you can supplement intelligently.
 
-### Theme 4: Skin Type Creates a Massive Vitamin D Gap
-**Signal strength:** Medium-High (recurring across r/Supplements, r/Biohackers)
-**Found in:** r/Supplements, r/Biohackers, r/VitaminD
+### Theme 4: Biohackers tracking UV and vitamin D — app mentions
+**Signal strength:** Medium-High
+**Found in:** r/biohacking
 **What people are saying:**
-- "Someone who's Fitzpatrick V-VI would definitely need more than 20 min in the Northern Hemisphere without supplemental vitamin D. Probably 40-60 min in that case" — r/Supplements commenter on the 981-point thread
-- "Regardless, 20min is not enough for melanated folk to absorb UVB for d production. We need closer to an hour and beyond" — r/Supplements commenter
-- "Europeans got as little vitamin D from the sun in ancient times, that enough died from vitamin D problems to create enough evolutionary pressure for lightening our skin color" — r/Biohackers commenter
-**Pain point:** Most vitamin D advice is written for light-skinned people — darker-skinned people have no reliable guidance on how much sun they actually need.
-**Content angle:** "Vitamin D and Skin Tone: What the Science Actually Says" — personalized sun exposure guidance by skin type.
+- "[N=1] Tracking UV exposure vs vitamin D levels — surprising results" — r/Biohackers, May 2025, someone building a systematic tracking approach
+- "Vitamin D — Max amount from sun per day?" — r/Biohackers, Apr 2026, discussing the skin's feedback mechanism
+- "Optimal vitamin D levels from sunlight alone (no supplements)" — r/Biohackers, Oct 2024
+- "How much vitamin D (IU) will a casual 10 minutes midday sun..." — r/Biohackers, Feb 2026
+- "[Experience Report] The free app Dminder seems to be extremely accurate" — r/Biohackers, Jul 2023
+- "Any other biohackers getting their vitamin D only from the sun?" — r/Biohackers, Sep 2023, using Dminder
+**Pain point:** Biohackers are actively experimenting with sun tracking and want tools. Dminder is the only app mentioned. High install intent — these are quantified-self users who want data.
+**Content angle:** Competitive intelligence — Dminder is the incumbent. Write "Best vitamin D tracking app 2026" or "Dminder vs. Bask" comparison.
 
-### Theme 5: The Benefits of Sun That Supplements Can't Replicate
-**Signal strength:** Medium-High (122 upvotes, 39 comments in r/Biohackers)
-**Found in:** r/Biohackers, r/depression, r/mentalhealth
+### Theme 5: Sunlight and depression — mood connection
+**Signal strength:** Medium
+**Found in:** r/depression, r/mentalhealth, r/minnesota, r/pittsburgh
 **What people are saying:**
-- "Vitamin D is a biomarker for the multifaceted benefits of sun exposure. Benefits not replicated by supplement: immune regulation, circadian rhythm, nitric oxide release, serotonin, POMC, melanocyte stimulating hormone, urocanic acid" — r/Biohackers commenter (https://www.reddit.com/r/Biohackers/comments/1kyet8g/)
-- "The indoor environment is foreign to our biology. Before the Industrial Revolution almost everyone was outside for most of every day" — r/Biohackers commenter
-- "Benefits of sunlight beyond Vitamin D and risks of sun avoidance" — RCT found infants with more UV developed less eczema by age 2.5 — r/Biohackers, Apr 2026 (https://www.reddit.com/r/Biohackers/comments/1sos5q6/)
-**Pain point:** People reduce sun to "vitamin D pills vs. sun for vitamin D" and miss the bigger picture — sun does many things pills can't.
-**Content angle:** "Why the Sun Is More Than Vitamin D" — the non-D benefits of sun exposure (circadian, mood, NO release, skin health, immune regulation).
-
-### Theme 6: Outdoor Athletes Still Get Deficient
-**Signal strength:** Medium (338 upvotes combined across r/Ultralight and r/remotework)
-**Found in:** r/Ultralight, r/VitaminD
-**What people are saying:**
-- "Vitamin D Deficiency While Hiking 8–10h a Day? Here's What I Found" — even with full days on trail, protective clothing + sunscreen + darker skin = deficiency — r/Ultralight (https://www.reddit.com/r/Ultralight/comments/1kd37tl/)
-- "I was extremely vit D deficient (20 ng/mL) when I got tested just a few months after finishing the PCT" — r/Ultralight commenter
-- "Vitamin D levels got lower despite year of daily sun exposure" — r/VitaminD, Jul 2025 (https://www.reddit.com/r/VitaminD/comments/1mdj6zv/)
-**Pain point:** People assume outdoor = enough vitamin D. Protective clothing, sunscreen, latitude, and skin type can mean deficiency even for hikers, runners, and outdoor workers.
-**Content angle:** "I'm Outside All Day and Still Deficient" — why outdoor athletes need to think about vitamin D differently.
+- "Does anybody notice that being in the sun helps?" — r/depression, Jul 2018, mood improvement reported
+- "Taking vitamin D pills cured my depression" — r/mentalhealth, Jan 2022, with caveat that deficiency can worsen symptoms
+- "Vitamin D supplementation seems to alleviate depressive symptoms" — r/science, Aug 2022, citing research
+- "Seasonal depression is hitting" — r/TheGirlSurvivalGuide, Dec 2022, vitamin D changing someone's seasonal depression
+- "What do you guys do to counter the grey/no sun depression?" — r/minnesota, Jan 2023, overcast days killing energy
+- "Light therapy, vitamin D, anything else to counteract the dreariness?" — r/Washington, Mar 2025
+**Pain point:** People connect sun/mood but don't know the mechanism. Morning light (circadian) vs. midday sun (vitamin D) vs. bright light therapy (SAD) are conflated.
+**Content angle:** "Vitamin D, sunlight, and depression: what actually helps" — honest, evidence-based breakdown that separates the three mechanisms.
 
 ---
 
 ## Notable threads
 
-1. **"Vitamin D supplement vs sunlight, here's the results"** — r/Supplements, Feb 2025, 981 upvotes, 179 comments. N=1 experiment comparing 1 year of 5000 IU/day supplements (D=67) vs. 30 days of morning sun in swim trunks (D=96). Massive engagement around sunscreen blocking D, skin type factors, and geographic variation. (https://www.reddit.com/r/Supplements/comments/1izr6mv/)
+1. **"Vitamin D supplement vs sunlight, here's the results"** — r/Supplements. Direct comparison with real data. Relevant: people want numbers, not theory.
 
-2. **"[N=1] Tracking UV exposure vs vitamin D levels — surprising results"** — r/Biohackers, May 2025, 122 upvotes, 39 comments. Data-driven person tracking UV meter + blood tests every 8 weeks. Key finding: 15 min at UV 6+ > 2 hours at UV 2. Cloud cover reduces effectiveness >50%. People craving systematic tracking solutions. (https://www.reddit.com/r/Biohackers/comments/1kyet8g/)
+2. **"[N=1] Tracking UV exposure vs vitamin D levels — surprising results"** — r/Biohackers. Someone building their own tracking system. Relevant: high install intent, exactly Bask's audience.
 
-3. **"3 years WFH and my vitamin D is in the toilet"** — r/remotework, May 2025, 338 upvotes, 381 comments. D=12 ng/ml. OP admits lunch scrolling and weekend indoor habits. Comments overwhelmingly: "go outside" or "take supplements" — OP explicitly rejected both as too simple. High engagement from people with the same problem. (https://www.reddit.com/r/remotework/comments/1kz21x2/)
+3. **"Vitamin D Deficiency While Hiking 8–10h a Day"** — r/Ultralight. Outdoor enthusiast still deficient due to clothing and sunscreen. Relevant: shows sun-protective behavior creates deficiency risk.
 
-4. **"Vitamin D Deficiency While Hiking 8–10h a Day"** — r/Ultralight, May 2025. Hiker's wife was deficient despite 70+ days/year of hiking over 10 years. Protective clothing and sunscreen block UVB even during all-day outdoor activity. (https://www.reddit.com/r/Ultralight/comments/1kd37tl/)
+4. **"Is morning sunlight really that effective?"** — r/HubermanLab. 38 votes, 63 comments questioning the protocol. Relevant: the morning vs midday confusion is real and widespread.
 
-5. **"Sunlight within 30 min of waking: worth the hassle?"** — r/HubermanLab, Apr 2026. People debating whether the morning light protocol is worth it. Some report real benefits; others skeptical without studies. Confusion about timing specifics. (https://www.reddit.com/r/HubermanLab/comments/1swskd1/)
+5. **"My vitamin D was 8 ng/ml despite religious SPF use"** — r/SkincareAddiction. Someone with dangerously low D from sunscreen use. Relevant: the sunscreen-vitamin D tension is high-engagement.
 
-6. **"How much vitamin D (IU) will a casual 10 minutes midday sun..."** — r/Biohackers, Feb 2026. Practical question about midday sun dosing. Key insight: solar noon (10am-2pm) when shadow < height = only time meaningful D is made. (https://www.reddit.com/r/Biohackers/comments/1r80nzh/)
+6. **"3 years WFH and my vitamin D is in the toilet"** — r/remotework. Remote worker deficiency from indoor lifestyle. Relevant: huge audience segment (WFH workers) with direct Bask fit.
 
-7. **"[Sun Care] My vitamin D was 8 ng/ml despite religious SPF use"** — r/SkincareAddiction, May 2025. SPF user with severe deficiency. Debate about whether sunscreen blocks D production. (https://www.reddit.com/r/SkincareAddiction/comments/1kvtj7b/)
+7. **"The free app Dminder seems to be extremely accurate"** — r/Biohackers. Positive Dminder review. Relevant: competitive intelligence — Dminder is the name people know.
 
-8. **"Benefits of sunlight beyond Vitamin D and risks of sun avoidance"** — r/Biohackers, Apr 2026. RCT on infants + UV = less eczema. Discussion of non-D benefits of sun. (https://www.reddit.com/r/Biohackers/comments/1sos5q6/)
-
-9. **"Does the first hour of rising sun produce vitamin D?"** — r/Biohackers, Jun 2026. Common misconception debunked: early morning sun has too little UVB. D production only happens when sun is high angle (shadow shorter than height). (https://www.reddit.com/r/Biohackers/comments/1u98dup/)
-
-10. **"Vitamin D levels got lower despite year of daily sun exposure"** — r/VitaminD, Jul 2025. People frustrated that daily sun wasn't enough — latitude, time of year, clothing, and skin type all matter. (https://www.reddit.com/r/VitaminD/comments/1mdj6zv/)
+8. **"Vitamin D deficiency makes sun exposure rewarding"** — r/todayilearned. Evolutionary mechanism interesting angle. Relevant: shareable, curiosity-driven content hook.
 
 ---
 
 ## Pain points & struggles (raw)
 
-- "I have more flexibility than ever but somehow get LESS sun than when I was stuck in an office cube" — r/remotework
-- "I'm in New England so I'll be taking my vitamin D thank you very much" — r/Supplements (regional helplessness)
-- "Vitamin D from sunlight is a bit confusing" — r/nutrition
-- "Is it true vitamin D takes 4-6 weeks to feel the effects of supplementation? Why do I feel better within 24 hours of being in the sun?" — r/Supplements
-- "I live in California and it's sunny year round, I walk a lot... and yet I tested with a vitamin D deficiency" — r/Ultralight
-- "I was extremely vit D deficient (20 ng/mL) when I got tested just a few months after finishing the PCT" — r/Ultralight
-- "The indoor environment is foreign to our biology" — r/Biohackers
-- "Vitamin D levels got lower despite year of daily sun exposure" — r/VitaminD
-- "Does sun exposure really replace Vitamin D? I don't feel it" — r/Supplements
-- "Being outside with casual sunlight is also pretty worthless. A bit of sun on your face and arms will make enough D to ward off rickets, but no more" — r/VitaminD
-- "My doctor told me to take 8000UI daily. After 18 months I was up to 66. It's a slow process" — r/Ultralight
-- "I noticed how much better I feel after being outside in the sun. My mood drastically improves" — r/depression
-- "Vitamin D has literally changed my life. I take two a day all year and my seasonal depression dropped drastically" — r/TheGirlSurvivalGuide
-- "10 minutes of overhead unclouded sunlight, in a swimsuit, gives you an entire day's worth of Vit D" — r/remotework commenter
-- "You can basically only produce vitamin D when the sun is at a high angle (mid day) where your shadow is shorter than your actual height" — r/Biohackers
-- "SPF15 blocks our vitamin D synthesis more than 90%" — r/Supplements commenter citing research
-- "I don't know if anyone has mentioned this, but don't automatically assume low vitamin D is purely due to lack of sunlight. Low vit D can also be contributed to malabsorption issues" — r/remotework
-- "We need the sun. Not if you wear decent sunscreen" — r/remotework
-- "My Vitamin D level was that low too and I had to take high dosage Vitamin D for months. I walk 4-6 days a week now for at least 20-30 mins each day. Problem solved" — r/remotework
+- Outdoor workers and hikers still testing deficient despite heavy sun — don't understand why
+- Confusion about whether morning sunlight provides vitamin D (it doesn't — needs midday UVB)
+- Wildly conflicting dosing advice: 1000, 2000, 5000, 10000 IU — people don't know who to trust
+- Fear of skin cancer preventing people from getting any sun at all, leading to deficiency
+- WFH workers realizing their indoor lifestyle is tanking their vitamin D
+- People feeling better within 24 hours of sun but 4-6 weeks from supplements — why?
+- Sunscreen users discovering it may be blocking their vitamin D production
+- Dark skin requiring 2-6x more sun exposure — equity gap in vitamin D guidance
+- People using Dminder but wanting better alternatives or more features
+- Winter depression sufferers unsure whether to use light therapy, vitamin D, or both
+- Biohackers building their own tracking systems because no app does what they need
 
 ---
 
 ## Content opportunities for Agent 2
 
-1. **"Why Sun Beats Supplements for Vitamin D (And When Supplements Win)"** — The 981-upvote thread shows massive engagement on this topic. Bask can position as the tool that helps people safely use sun exposure as their primary D strategy, with supplements as backup.
+1. **"Why am I vitamin D deficient if I get sun?"** — maps to Theme 1. High signal, multiple threads across 5+ subreddits. Soft SERP (no authority wall on this phrasing). Honest answer = variables Bask tracks. Natural install driver. Cross-reference with P2.3 from 06-23 research.
 
-2. **"The WFH Vitamin D Playbook"** — 338 upvotes and 381 comments on people struggling to get sun while remote working. Huge audience. Bask could own this niche with practical, non-preachy guidance + the app as the tracking mechanism.
+2. **"Morning sunlight vs. vitamin D: what each time of day actually does"** — Theme 2. Clarifies the Huberman confusion. High engagement in r/HubermanLab. Positions Bask as the tool that knows which window you're in.
 
-3. **"Morning Light 101: What Huberman Gets Right and What He Leaves Out"** — HubermanLab subreddit is massive and confused about specifics. Bask can be the authoritative, simple guide to morning light timing and intensity.
+3. **"How much vitamin D from sun vs. supplements"** — Theme 3. Evergreen comparison query with real data from r/Supplements. Honest answer depends on variables = Bask's value.
 
-4. **"Vitamin D by Skin Type: A Personalized Sun Guide"** — Recurring pain point across multiple subs. No one is giving clear, personalized guidance for different Fitzpatrick types. Bask could own this with UV-index-aware recommendations.
+4. **"Best vitamin D tracking app 2026" or "Dminder vs. Bask"** — Theme 4. People are actively searching for tools. Competitive positioning opportunity. Dminder is the only name mentioned.
 
-5. **"Beyond Vitamin D: 6 Things the Sun Does That Pills Can't"** — Strong signal from r/Biohackers. Sun > supplements for reasons beyond D (circadian, mood, NO, immune). Bask's messaging can lead with this broader value prop.
+5. **"Vitamin D and depression: what actually helps"** — Theme 5. Separates circadian light, vitamin D, and light therapy — three mechanisms people conflate. Honest framing = trust and authority.
 
 ---
 
 ## Sources
 
-- https://www.reddit.com/r/Supplements/comments/1izr6mv/vitamin_d_supplement_vs_sunlight_heres_the_results/
-- https://www.reddit.com/r/Biohackers/comments/1kyet8g/n1_tracking_uv_exposure_vs_vitamin_d_levels/
-- https://www.reddit.com/r/remotework/comments/1kz21x2/3_years_wfh_and_my_vitamin_d_is_in_the_toilet_how/
-- https://www.reddit.com/r/Ultralight/comments/1kd37tl/vitamin_d_deficiency_while_hiking_810h_a_day/
-- https://www.reddit.com/r/HubermanLab/comments/1swskd1/sunlight_within_30_min_of_waking_worth_the_hassle/
-- https://www.reddit.com/r/Biohackers/comments/1snn2pp/vitamin_d_max_amount_from_sun_per_day/
+- https://www.reddit.com/r/ScientificNutrition/comments/p68hvz/low_vitamin_d_status_despite_abundant_sun/
 - https://www.reddit.com/r/SkincareAddiction/comments/1kvtj7b/sun_care_my_vitamin_d_was_8_ngml_despite/
-- https://www.reddit.com/r/Biohackers/comments/1sos5q6/benefits_of_sunlight_beyond_vitamin_d_and_risks/
-- https://www.reddit.com/r/Biohackers/comments/1u98dup/does_the_first_hour_of_rising_sun_produce_vitamin/
-- https://www.reddit.com/r/VitaminD/comments/1mdj6zv/vitamin_d_levels_got_lower_despite_year_of_daily/
-- https://www.reddit.com/r/Supplements/comments/16k033i/does_sun_exposure_really_replace_vitamin_d_i_dont/
-- https://www.reddit.com/r/depression/comments/8xvlrh/does_anybody_notice_that_being_in_the_sun_helps/
-- https://www.reddit.com/r/HubermanLab/comments/1atj0k3/how_much_sunlight_do_i_need/
 - https://www.reddit.com/r/nutrition/comments/1fxc39p/vitamin_d_from_sunlight_is_a_bit_confusing/
-- https://www.reddit.com/r/Biohackers/comments/1r80nzh/how_much_vitamin_d_iu_will_a_casual_10_minutes/
-- https://www.reddit.com/r/Biohackers/comments/1hhbi30/sunlight_is_the_ultimate_hack/
+- https://www.reddit.com/r/Ultralight/comments/1kd37tl/vitamin_d_deficiency_while_hiking_810h_a_day/
+- https://www.reddit.com/r/VitaminD/comments/1ji0yx5/can_a_vit_d_level_of_12_ng_be_corrected_through/
+- https://www.reddit.com/r/30PlusSkinCare/comments/14x4wlm/what_are_your_thoughts_on_intentionally_getting_a/
+- https://www.reddit.com/r/Supplements/comments/16k033i/does_sun_exposure_really_replace_vitamin_d_i_dont/
+- https://www.reddit.com/r/HubermanLab/comments/1014ou3/is_morning_sunlight_really_that_effective/
+- https://www.reddit.com/r/HubermanLab/comments/1j9kvud/huberman_says_its_best_to_get_morning_sunlight/
+- https://www.reddit.com/r/HubermanLab/comments/1swskd1/sunlight_within_30_min_of_waking_worth_the_hassle/
+- https://www.reddit.com/r/HubermanLab/comments/16kw6zn/how_late_into_the_morning_can_i_still_get/
+- https://www.reddit.com/r/Supplements/comments/1izr6mv/vitamin_d_supplement_vs_sunlight_heres_the_results/
+- https://www.reddit.com/r/Supplements/comments/1gs0r0t/how_come_we_are_dosing_significantly_more_vitamin/
+- https://www.reddit.com/r/Supplements/comments/1tzzlqu/vitamin_d_dosage/
+- https://www.reddit.com/r/Supplements/comments/1ph9u3a/turns_out_the_science_gave_us_a_20_times_too_low/
+- https://www.reddit.com/r/Supplements/comments/1fihane/is_it_true_vitamin_d_takes_46_weeks_to_feel_the/
+- https://www.reddit.com/r/Biohackers/comments/1kyet8g/n1_tracking_uv_exposure_vs_vitamin_d_levels/
+- https://www.reddit.com/r/Biohackers/comments/1snn2pp/vitamin_d_max_amount_from_sun_per_day/
+- https://www.reddit.com/r/Biohackers/comments/1g23kg9/optimal_vitamin_d_levels_from_sunlight_alone_no/
+- https://www.reddit.com/r/Biohackers/comments/14wvjv0/experience_report_the_free_app_dminder_seems_to/
+- https://www.reddit.com/r/Biohackers/comments/16rbe6k/any_other_biohackers_getting_their_vitamin_d_only/
+- https://www.reddit.com/r/depression/comments/8xvlrh/does_anybody_notice_that_being_in_the_sun_helps/
+- https://www.reddit.com/r/mentalhealth/comments/ry8xbu/taking_vitamin_d_pills_cured_my_depression/
+- https://www.reddit.com/r/science/comments/wnddia/vitamin_d_supplementation_seems_to_alleviate/
+- https://www.reddit.com/r/TheGirlSurvivalGuide/comments/zeds5k/seasonal_depression_is_hitting/
+- https://www.reddit.com/r/minnesota/comments/109hf8m/what_do_you_guys_do_to_counter_the_greyno_sun/
+- https://www.reddit.com/r/Washington/comments/1jnf20t/light_therapy_vitamin_d_anything_else_to/
+- https://www.reddit.com/r/remotework/comments/1kz21x2/3_years_wfh_and_my_vitamin_d_is_in_the_toilet_how/
