@@ -1,1 +1,8 @@
-{"scannedDates":["2026-06-24"],"lastRun":"2026-06-24T12:00:00Z"}
+{
+  "lastRun": "2026-06-24",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-06-24.md",
+  "themesFound": 6,
+  "threadsScanned": 10,
+  "subredditsScanned": ["r/vitamin-d", "r/hubermanlab", "r/supplements", "r/depression", "r/biohacking", "r/remotework", "r/Ultralight", "r/nutrition", "r/SkincareAddiction", "r/mentalhealth", "r/30PlusSkinCare"],
+  "status": "success"
+}
