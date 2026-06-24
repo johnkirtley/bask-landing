@@ -1,8 +1,8 @@
 {
-  "lastScan": "2026-06-24",
-  "lastRun": "2026-06-24",
-  "totalScans": 1,
-  "themesFound": 6,
-  "threadsFound": 44,
+  "lastScanDate": "2026-06-24",
+  "lastScanTime": "2026-06-24T16:50:00Z",
+  "themesFound": 5,
+  "subredditsScanned": ["r/vitamin-d", "r/hubermanlab", "r/supplements", "r/depression", "r/biohacking"],
+  "totalThreadsReviewed": 20,
   "status": "success"
 }
