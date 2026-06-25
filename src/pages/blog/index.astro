@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
+import placeholderHero from '../../content/blog/_images/hero-placeholder.png';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -56,6 +57,7 @@ const posts = (await getCollection('blog')).sort(
         ) : (
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => {
+              const heroImage = post.data.heroImage ?? placeholderHero;
               const formattedDate = new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -68,7 +70,7 @@ const posts = (await getCollection('blog')).sort(
                     <div class="glass border-border overflow-hidden rounded-2xl border transition-all duration-300 hover:shadow-xl">
                       <div class="bg-muted relative aspect-[16/9] overflow-hidden">
                         <Image
-                          src={post.data.heroImage}
+                          src={heroImage}
                           alt={post.data.title}
                           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                           widths={[400, 600]}
