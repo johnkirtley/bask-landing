@@ -27,13 +27,13 @@ This file sets the bar. The two worked examples below are real and finished. Onc
 
 > Manchester sits at 53.5 degrees north, which gives it a vitamin D winter from roughly October to March. For those months the midday sun never climbs high enough, so the window on the table effectively closes and diet or a supplement does the work. The bigger local catch is the cloud. Manchester is one of the wettest big cities in England, and a grey, fully overcast sky can cut the UVB by most of what the clear-sky numbers promise. The minutes on this page assume the sun is actually out, which here is the exception as much as the rule from late autumn. On a clear spring or summer midday, you've got good options for open sky: Heaton Park in the north is one of the largest municipal parks in Europe, Platt Fields in Fallowfield is flat and open, and the waterfront at Salford Quays gives you unobstructed sky away from tall buildings. The rule of thumb here: when the sun does break through between April and September, take it.
 
-*(Word count: ~165. Real facts: latitude, winter range, rainfall reputation, three named real locations.)*
+_(Word count: ~165. Real facts: latitude, winter range, rainfall reputation, three named real locations.)_
 
 ## Worked example 2 — Seattle (47.6°N)
 
 > Seattle's vitamin D problem isn't really its latitude, it's the cloud. At 47.6 degrees north the sun does clear the threshold for a usable window most of the year, closing only from about November to February. The catch is that Seattle spends a huge share of the year under marine-layer overcast, and heavy cloud can strip out up to 90 percent of the UVB that the clean numbers assume. So the practical vitamin D season here is shorter than the solar math suggests: the reliable stretch is roughly late June through September, when the grey finally lifts. When it does, locals know to chase it. Green Lake gives you an open loop with sky on all sides, Gas Works Park sits high on the water with no tree cover, and Alki Beach faces southwest across Puget Sound for afternoon light. The honest version of Seattle sun advice: the window is real, but it's the clear days inside it that count, and there are fewer of those than anywhere else on this list.
 
-*(Word count: ~175. Real facts: latitude, marine-layer cloud, summer-dry pattern, three named real locations.)*
+_(Word count: ~175. Real facts: latitude, marine-layer cloud, summer-dry pattern, three named real locations.)_
 
 ---
 

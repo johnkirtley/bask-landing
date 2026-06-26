@@ -53,7 +53,7 @@ export function PhoneMockup({
       <div className="bask-phone-shell">
         <div className="bask-phone-notch" />
         <div
-          className={`bask-phone-screen${screenshot ? ' bask-phone-screen--screenshot' : ''}`}
+          className={`bask-phone-screen${screenshot ? 'bask-phone-screen--screenshot' : ''}`}
           style={screenshot ? undefined : { background: tint }}
         >
           <div className="bask-phone-statusbar">
@@ -249,11 +249,7 @@ export function PhoneSession() {
   );
 }
 
-function FactIcon({
-  kind,
-}: {
-  kind: 'sunAngle' | 'window' | 'spf' | 'clock';
-}) {
+function FactIcon({ kind }: { kind: 'sunAngle' | 'window' | 'spf' | 'clock' }) {
   if (kind === 'sunAngle') {
     return (
       <svg

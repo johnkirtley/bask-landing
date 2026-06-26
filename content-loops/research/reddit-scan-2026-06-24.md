@@ -9,60 +9,70 @@
 ## Top themes today
 
 ### Theme 1: The WFH Vitamin D Crisis
+
 **Signal strength:** High
 **Found in:** r/remotework, r/VitaminD, r/Biohackers
 **What people are saying:**
+
 - "3 years WFH and my vitamin D is in the toilet — Vitamin D = 12 ng/ml (yikes). The irony: I have more flexibility than ever but somehow get LESS sun than when I was stuck in an office cube." — r/remotework, score 346, 381 comments (https://www.reddit.com/r/remotework/comments/1kz21x2/)
 - "Lunch breaks spent at kitchen counter scrolling phone" — r/remotework, score 346, 381 comments
 - "This sounds more like depression than WFH struggles" — r/remotework, score 10, 2 comments
 - "I've been remote 5 years. Walk 4-6 days a week now for at least 20-30 mins each day. Problem solved." — r/remotework, score 6, 1 comment
-**Pain point:** Remote workers have more schedule flexibility than office workers but paradoxically get less sun, leading to severe deficiency. They know they should go outside but don't build the habit.
-**Content angle:** "The WFH Vitamin D Trap" — why flexibility backfires, and a simple system to fix it. Perfect Bask content: sun timing as a non-negotiable daily practice.
+  **Pain point:** Remote workers have more schedule flexibility than office workers but paradoxically get less sun, leading to severe deficiency. They know they should go outside but don't build the habit.
+  **Content angle:** "The WFH Vitamin D Trap" — why flexibility backfires, and a simple system to fix it. Perfect Bask content: sun timing as a non-negotiable daily practice.
 
 ### Theme 2: Morning Sunlight Timing Confusion
+
 **Signal strength:** High
 **Found in:** r/HubermanLab, r/Biohackers
 **What people are saying:**
+
 - "Early morning sun resets your circadian rhythm but does not produce a huge amount of Vitamin D. That will happen closer to noon when the sun is highest. These are two separate things, both revolving around the sun." — r/Biohackers, score 17, 18 comments (https://www.reddit.com/r/Biohackers/comments/1u98dup/)
 - "You can basically only produce vitamin D when the sun is at a high angle (mid day) where your shadow is shorter than your actual height." — r/Biohackers, score 9, 1 comment
 - "theres about 5-10 things that actually work and this is one of them. the rest of the stuff helps but not by much" — r/HubermanLab, score 165, 33 comments (https://www.reddit.com/r/HubermanLab/comments/1swskd1/)
 - "sunlight within 30 min of waking: worth the hassle? ... it definitely helped me. It just takes a few minutes and it's a great way to start each day." — r/HubermanLab, score 105, 121 comments
 - "I get up at 3:45 in the winter and 2:45 starting in May. No one is getting sunlight within 30 minutes of those times." — r/HubermanLab, score 9, 6 comments
-**Pain point:** People conflate morning sunlight (circadian rhythm) with midday sun (vitamin D production). The Huberman protocol is popular but confusing — people don't know which time window matters for what.
-**Content angle:** "Morning Sun vs. Midday Sun: What Each Actually Does" — clear, myth-busting content explaining the two distinct sun windows. Bask can position itself as the tool that tells you exactly when to go out for each goal.
+  **Pain point:** People conflate morning sunlight (circadian rhythm) with midday sun (vitamin D production). The Huberman protocol is popular but confusing — people don't know which time window matters for what.
+  **Content angle:** "Morning Sun vs. Midday Sun: What Each Actually Does" — clear, myth-busting content explaining the two distinct sun windows. Bask can position itself as the tool that tells you exactly when to go out for each goal.
 
 ### Theme 3: Supplement Dosing Confusion and Distrust of RDA
+
 **Signal strength:** High
 **Found in:** r/Supplements, r/VitaminD, r/Biohackers
 **What people are saying:**
+
 - "Every medical source says adults should only be getting 500-600 IU. So why can I not find a single supplement less than 5000 IU?" — r/Supplements, score 7, 36 comments (https://www.reddit.com/r/Supplements/comments/1tzzlqu/)
 - "The RDA for a few things is actually based on the minimum daily amount necessary to avoid severe illness, not an amount that optimizes health outcomes." — r/Supplements, score 0, 1 comment
 - "Your body handles the sun and vitamin D supplements way differently. With sun exposure, your body actually regulates how much vitamin D it produces... The skin hits a hard ceiling after about 15-30 minutes." — r/Supplements, score 13, 1 comment
 - "10,000 IU/day minimum FTROYL" — r/Supplements, score 1, 3 comments
 - "I do 15000 IU a day with K2 mk7 and magnesium glycinate and aim to be around 80ng/ml" — r/Supplements, score 3, 4 comments
-**Pain point:** Massive confusion between official RDA (600 IU) and what the wellness community actually recommends (5K-15K IU). People don't know who to trust and are dosing blind without blood work.
-**Content angle:** "The Vitamin D Dosing Gap: Why Official Numbers Don't Match Reality" — authoritative content explaining the RDA controversy, safe ranges, and why sun timing matters more than pill counting.
+  **Pain point:** Massive confusion between official RDA (600 IU) and what the wellness community actually recommends (5K-15K IU). People don't know who to trust and are dosing blind without blood work.
+  **Content angle:** "The Vitamin D Dosing Gap: Why Official Numbers Don't Match Reality" — authoritative content explaining the RDA controversy, safe ranges, and why sun timing matters more than pill counting.
 
 ### Theme 4: Sun Exposure N=1 Tracking and Inconsistency
+
 **Signal strength:** Medium-High
 **Found in:** r/Biohackers
 **What people are saying:**
+
 - "15 mins at UV index 6+ = better D levels than 2 hours at UV index 2. Cloud cover reduces effectiveness way more than I expected (more than 50%). My optimal seems to be 20-25 mins, 3x/week at UV 4+. Anything over 30 mins shows no additional benefit." — r/Biohackers, score 121, 39 comments (https://www.reddit.com/r/Biohackers/comments/1kyet8g/)
 - "Vitamin D is a biomarker for the multifaceted benefits of sun exposure. The few micrograms of vitamin D you ingest to make your blood work look as if you've been outside... doesn't have near the same benefits as actually getting your vitamin D up from sun exposure." — r/Biohackers, score 24, 15 comments
 - "Weather, work schedule, motivation all mess with my optimal routine. Anyone else tried to systematically optimize this?" — r/Biohackers, score 121, 39 comments
-**Pain point:** Biohackers want to optimize sun exposure but can't maintain consistency. They track obsessively but lack a reliable daily system. UV index alone isn't enough — cloud cover, timing, and skin exposure all matter.
-**Content angle:** "The Sun Exposure Tracking Problem: Why Apps Fail and What Actually Works" — positions Bask as the missing tool that makes consistent sun timing effortless.
+  **Pain point:** Biohackers want to optimize sun exposure but can't maintain consistency. They track obsessively but lack a reliable daily system. UV index alone isn't enough — cloud cover, timing, and skin exposure all matter.
+  **Content angle:** "The Sun Exposure Tracking Problem: Why Apps Fail and What Actually Works" — positions Bask as the missing tool that makes consistent sun timing effortless.
 
 ### Theme 5: The Sun vs. Supplement Debate
+
 **Signal strength:** Medium
 **Found in:** r/Supplements, r/Biohackers, r/nutrition
 **What people are saying:**
+
 - "Sunlight is some of the best medicine on the planet! Vitamin D is a hormone needed for our bodies wellbeing and a host of other inner processes." — r/Biohackers, score 14, 1 comment (https://www.reddit.com/r/Biohackers/comments/1fkp3us/)
 - "The benefits of raising D by UV light not seen with the supplement: immune regulation, setting circadian rhythm, nitric oxide release immediately lowering blood pressure, infrared light for mitochondrial function..." — r/Biohackers, score 24, 15 comments
 - "Neither is better than the other. The vitamin D from sun exposure, food, and supplements is biologically inert." — r/nutrition, score 1, 1 comment
 - "Does sun exposure really replace Vitamin D? I don't feel it." — r/Supplements, score 10, 16 comments (https://www.reddit.com/r/Supplements/comments/16k033i/)
-**Pain point:** People sense that sun exposure provides benefits beyond vitamin D (mood, circadian rhythm, nitric oxide) but can't articulate why. Supplements feel like a poor substitute but are the default when sun isn't accessible.
-**Content angle:** "Why Sunshine Isn't Just Vitamin D" — the broader case for sun exposure that supplements can't replicate. This is core Bask territory.
+  **Pain point:** People sense that sun exposure provides benefits beyond vitamin D (mood, circadian rhythm, nitric oxide) but can't articulate why. Supplements feel like a poor substitute but are the default when sun isn't accessible.
+  **Content angle:** "Why Sunshine Isn't Just Vitamin D" — the broader case for sun exposure that supplements can't replicate. This is core Bask territory.
 
 ---
 

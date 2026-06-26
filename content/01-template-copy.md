@@ -52,11 +52,11 @@ Explains the window and why it moves. This is where the latitude story lives.
 
 **`{winter_paragraph}` has two versions the dev selects on:**
 
-*If the city has vitamin D winter months:*
+_If the city has vitamin D winter months:_
 
 > From {winter_months}, the sun in {city} never climbs past that 45-degree mark, even at noon. For those weeks the window is effectively closed. You can stand outside all day and make almost none. This isn't a {city} quirk, it's physics at {latitude}° latitude, and it's the main reason vitamin D levels dip in late winter here. It's also why a lot of people this far north consider a supplement through the dark months.
 
-*If the city has no vitamin D winter:*
+_If the city has no vitamin D winter:_
 
 > {city} sits low enough in latitude ({latitude}°) that the midday sun clears the 45-degree mark year-round, so there's a usable window every month. It narrows in winter, but it doesn't close.
 
@@ -96,30 +96,30 @@ One light line. Not a scary wall. Per C7.
 
 ## Variable glossary (maps to dev data model D2)
 
-| Variable in copy | Source field (D2) | Notes |
-| --- | --- | --- |
-| `{city}`, `{region}`, `{country}` | `city`, `region`, `country` | Use region for disambiguation in title/H1 |
-| `{latitude}` | `latitude` | Show as whole or one-decimal degrees |
-| `{window_start}`, `{window_end}` | `vitamin_d_window_by_month` | Current-season month; local 12h time |
-| `{window_months}` | derived from `vitamin_d_window_by_month` | Plain-language span, e.g. "March through October" |
-| `{winter_months}` | `vitamin_d_winter_months` | Plain-language span; empty triggers the no-winter variant |
-| `{solar_noon}` | `solar_noon_by_month` | Current-season month |
-| `{skin_type_label}` | from `minutes_for_vitamin_d_by_skin_type` key | Plain-language Fitzpatrick label (see table below) |
-| `{minutes}` | `minutes_for_vitamin_d_by_skin_type` | Current-season midday value for the chosen representative skin type |
-| `{burn_minutes}` | `burn_time_by_skin_type` | Same skin type and UV as `{minutes}` |
-| `{typical_uv}` | `typical_uv_by_month` | Current-season midday UV index |
-| `{solar_noon}` | `solar_noon_by_month` | |
-| `{nearby_cities}` | internal-linking set | Used in links, not body copy here |
+| Variable in copy                  | Source field (D2)                             | Notes                                                               |
+| --------------------------------- | --------------------------------------------- | ------------------------------------------------------------------- |
+| `{city}`, `{region}`, `{country}` | `city`, `region`, `country`                   | Use region for disambiguation in title/H1                           |
+| `{latitude}`                      | `latitude`                                    | Show as whole or one-decimal degrees                                |
+| `{window_start}`, `{window_end}`  | `vitamin_d_window_by_month`                   | Current-season month; local 12h time                                |
+| `{window_months}`                 | derived from `vitamin_d_window_by_month`      | Plain-language span, e.g. "March through October"                   |
+| `{winter_months}`                 | `vitamin_d_winter_months`                     | Plain-language span; empty triggers the no-winter variant           |
+| `{solar_noon}`                    | `solar_noon_by_month`                         | Current-season month                                                |
+| `{skin_type_label}`               | from `minutes_for_vitamin_d_by_skin_type` key | Plain-language Fitzpatrick label (see table below)                  |
+| `{minutes}`                       | `minutes_for_vitamin_d_by_skin_type`          | Current-season midday value for the chosen representative skin type |
+| `{burn_minutes}`                  | `burn_time_by_skin_type`                      | Same skin type and UV as `{minutes}`                                |
+| `{typical_uv}`                    | `typical_uv_by_month`                         | Current-season midday UV index                                      |
+| `{solar_noon}`                    | `solar_noon_by_month`                         |                                                                     |
+| `{nearby_cities}`                 | internal-linking set                          | Used in links, not body copy here                                   |
 
 ### Plain-language skin labels (for `{skin_type_label}`)
 
-| Fitzpatrick | Body-copy label |
-| --- | --- |
-| I | very fair skin that always burns |
-| II | fair skin that burns easily |
-| III | medium skin that sometimes burns |
-| IV | olive or light brown skin that rarely burns |
-| V | brown skin that rarely burns |
-| VI | deep brown or black skin |
+| Fitzpatrick | Body-copy label                             |
+| ----------- | ------------------------------------------- |
+| I           | very fair skin that always burns            |
+| II          | fair skin that burns easily                 |
+| III         | medium skin that sometimes burns            |
+| IV          | olive or light brown skin that rarely burns |
+| V           | brown skin that rarely burns                |
+| VI          | deep brown or black skin                    |
 
 For the answer-first opening, pick one representative skin type per page (suggest Type II or III for northern pilot cities, since that's the largest local audience and the most-searched intent). The table covers all six.

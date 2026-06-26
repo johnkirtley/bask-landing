@@ -10,7 +10,10 @@ interface LocationDisplayProps {
   compact?: boolean;
 }
 
-export function LocationDisplay({ entry, compact = false }: LocationDisplayProps) {
+export function LocationDisplay({
+  entry,
+  compact = false,
+}: LocationDisplayProps) {
   const label = formatLocation(entry);
   if (label === '—') {
     return <span className="bask-lb-location-empty">—</span>;

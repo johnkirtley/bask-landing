@@ -22,7 +22,7 @@ Status: NEEDS REVIEW
 
 ## Reviewer checklist
 
-- [ ] Verify the Holick full-body 1-MED figure (10,000–25,000 IU) against primary source: Holick MF, "Sunlight and vitamin D for bone health..." *Am J Clin Nutr* 2004;80(6 Suppl):1678S–88S
+- [ ] Verify the Holick full-body 1-MED figure (10,000–25,000 IU) against primary source: Holick MF, "Sunlight and vitamin D for bone health..." _Am J Clin Nutr_ 2004;80(6 Suppl):1678S–88S
 - [ ] Confirm NIH ODS RDA: 600 IU/day (adults 19–70), 800 IU/day (adults 71+); Upper Tolerable Intake Level 4,000 IU/day
 - [ ] Verify self-limiting mechanism (previtamin D3 → lumisterol/tachysterol) against Nutrients 2025 PMC11821240
 - [ ] The IU ranges in the table are estimates derived from the Holick full-body data scaled for arm/leg surface area and fractional MED — confirm they are presented clearly as estimates, not clinical measurements
@@ -51,13 +51,15 @@ Vitamin D synthesis runs on UVB light, specifically the UVB wavelengths between 
 The table below gives rough estimates for someone with arms and legs exposed. These are derived from Holick's foundational full-body exposure data, scaled down to account for typical bare arm/leg surface area (roughly 25–30% of total body surface). They are estimates, not precise clinical measurements. Your actual output depends on your exact skin type, geographic location, time of day, and cloud cover.
 
 <ComparisonTable
-  headers={[
-    'Skin type (Fitzpatrick)',
-    'UV 5 (moderate)',
-    'UV 7 (high)',
-    'UV 9+ (very high)',
-  ]}
+headers={[
+'Skin type (Fitzpatrick)',
+'UV 5 (moderate)',
+'UV 7 (high)',
+'UV 9+ (very high)',
+]}
+
 >
+
   <tr>
     <td>I–II (very fair to fair, burns easily)</td>
     <td>~300–800 IU</td>
@@ -78,7 +80,7 @@ The table below gives rough estimates for someone with arms and legs exposed. Th
   </tr>
 </ComparisonTable>
 
-*Arms and legs bare; UV index must be 3 or higher for any meaningful synthesis.*
+_Arms and legs bare; UV index must be 3 or higher for any meaningful synthesis._
 
 A few things jump out from this table. The UV index column matters at least as much as skin type. And the dark-skin row at moderate UV conditions is sobering: 15 minutes at UV 5 for someone with Fitzpatrick V–VI skin produces somewhere around 30 to 150 IU — a small fraction of the daily recommended intake of 600 IU, let alone enough to build or maintain healthy levels.
 
@@ -102,12 +104,14 @@ This is not a reason to dismiss sun as a vitamin D source. It's a reason to be p
 The NIH recommends 600 IU per day for adults aged 19–70, and 800 IU per day for adults 71 and older. The upper tolerable intake level from all sources is 4,000 IU per day.
 
 <ComparisonTable
-  headers={[
-    'Source',
-    'Approximate vitamin D (IU)',
-    'Notes',
-  ]}
+headers={[
+'Source',
+'Approximate vitamin D (IU)',
+'Notes',
+]}
+
 >
+
   <tr>
     <td>15 min sun, fair skin, UV 7, arms/legs</td>
     <td>~800–2,500 IU</td>
@@ -166,7 +170,7 @@ The self-limiting nature of sun-driven vitamin D synthesis is one of the genuine
 
 Vitamin D toxicity only comes from high-dose supplementation. The sun route is self-correcting.
 
-What is *not* self-limiting is UV damage to skin cells. Once you've hit your vitamin D ceiling, additional time in the sun adds sunburn, photoaging, and skin cancer risk, not vitamin D. The case for timing your sessions, rather than simply staying out longer, is that the upside stops while the downside keeps growing. For a fuller treatment of this topic, see [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
+What is _not_ self-limiting is UV damage to skin cells. Once you've hit your vitamin D ceiling, additional time in the sun adds sunburn, photoaging, and skin cancer risk, not vitamin D. The case for timing your sessions, rather than simply staying out longer, is that the upside stops while the downside keeps growing. For a fuller treatment of this topic, see [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
 
 <Callout type="info" title="Know when you're done">
   Bask flags the point where your vitamin D window closes — so you can head in
@@ -205,10 +209,10 @@ Yes, substantially. At solar noon, the sun is at its highest angle and UVB passe
 ## Sources
 
 1. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Recommended dietary allowances, upper tolerable intake levels, and sun exposure guidance.
-2. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." *Am J Clin Nutr.* 2004;80(6 Suppl):1678S–88S. Full-body 1-MED output figures and melanin effects on synthesis rate.
-3. ["Illuminating the Connection: Cutaneous Vitamin D3 Synthesis" (*Nutrients*, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). The photochemical self-limiting mechanism (previtamin D3 to lumisterol/tachysterol).
+2. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." _Am J Clin Nutr._ 2004;80(6 Suppl):1678S–88S. Full-body 1-MED output figures and melanin effects on synthesis rate.
+3. ["Illuminating the Connection: Cutaneous Vitamin D3 Synthesis" (_Nutrients_, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). The photochemical self-limiting mechanism (previtamin D3 to lumisterol/tachysterol).
 4. [Linus Pauling Institute, Oregon State University, "Vitamin D and Skin Health"](https://lpi.oregonstate.edu/mic/health-disease/skin-health/vitamin-D). Skin type, melanin, and synthesis efficiency.
-5. Forrest KY, Stuhldreher WL. "Prevalence and correlates of vitamin D deficiency in US adults." *Nutr Res.* 2011;31(1):48–54. Deficiency prevalence by skin tone.
+5. Forrest KY, Stuhldreher WL. "Prevalence and correlates of vitamin D deficiency in US adults." _Nutr Res._ 2011;31(1):48–54. Deficiency prevalence by skin tone.
 
 ---
 
@@ -222,5 +226,5 @@ Yes, substantially. At solar noon, the sun is at its highest angle and UVB passe
 
 ---
 
-*Post file lives at: `content-loops/posts/how-much-vitamin-d-in-15-minutes-of-sun.md`*
-*When ready to publish, Developer creates `src/content/blog/how-much-vitamin-d-in-15-minutes-of-sun.mdx`*
+_Post file lives at: `content-loops/posts/how-much-vitamin-d-in-15-minutes-of-sun.md`_
+_When ready to publish, Developer creates `src/content/blog/how-much-vitamin-d-in-15-minutes-of-sun.mdx`_

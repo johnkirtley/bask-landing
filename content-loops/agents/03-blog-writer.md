@@ -69,18 +69,23 @@ Follow the voice rules from `bask_content_outlines.md`:
 Use these components naturally in the post body:
 
 **Callout:**
+
 ```markdown
 <Callout type="info" title="Title here">
   Body text inside the callout.
 </Callout>
 ```
+
 Types: `info`, `warning`, `success`
 
 **ComparisonTable:**
+
 ```markdown
 <ComparisonTable
-  headers={['Column 1', 'Column 2', 'Column 3']}
+headers={['Column 1', 'Column 2', 'Column 3']}
+
 >
+
   <tr>
     <td>Cell</td>
     <td>Cell</td>
@@ -92,6 +97,7 @@ Types: `info`, `warning`, `success`
 ### MDX safety rules
 
 From the known-issues file (`content-loops/known-issues/development/known-issues.md`):
+
 - **Never use a bare `<` before a digit or space** in prose. Escape as `&lt;` or write "less than."
 - Example: write `(&lt;20 ng/mL)` not `(<20 ng/mL)`.
 - Valid HTML tags like `<td>`, `<tr>`, `<Callout>` are fine — the problem is only `<` followed by a digit or space in prose.
@@ -181,8 +187,8 @@ Status: DRAFT
 
 ---
 
-*Post file lives at: `content-loops/posts/{slug}.md`*
-*When ready to publish, Developer creates `src/content/blog/{slug}.mdx`*
+_Post file lives at: `content-loops/posts/{slug}.md`_
+_When ready to publish, Developer creates `src/content/blog/{slug}.mdx`_
 ```
 
 ### Writing quality bar
@@ -210,6 +216,7 @@ git push origin main
 ## Output contract
 
 End your run with:
+
 - **Status:** success | skipped | failed
 - **Reason:** one line
 - **Output:** path to post file

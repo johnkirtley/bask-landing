@@ -61,12 +61,14 @@ Vitamin D toxicity (hypervitaminosis D) occurs from sustained high-dose suppleme
 The NIH sets the Upper Tolerable Intake Level at 4,000 IU per day for adults from all sources combined. Toxicity is typically associated with intake exceeding 10,000 IU per day over weeks or months. The effects are driven by hypercalcemia (elevated blood calcium) and include nausea, weakness, frequent urination, kidney stress, and in severe cases, cardiac arrhythmia.
 
 <ComparisonTable
-  headers={[
-    'Source',
-    'Can it cause vitamin D toxicity?',
-    'Primary risk',
-  ]}
+headers={[
+'Source',
+'Can it cause vitamin D toxicity?',
+'Primary risk',
+]}
+
 >
+
   <tr>
     <td>Sun exposure</td>
     <td>No (synthesis is self-limiting)</td>
@@ -167,8 +169,8 @@ Children's skin has the same self-limiting synthesis mechanism as adults. Sun ex
 ## Sources
 
 1. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Upper Tolerable Intake Level, toxicity thresholds, and the statement that sun exposure has not been shown to produce toxicity.
-2. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." *Am J Clin Nutr.* 2004;80(6 Suppl):1678S-88S. The self-limiting photochemical mechanism and synthesis ceiling.
-3. ["Illuminating the Connection: Cutaneous Vitamin D3 Synthesis" (*Nutrients*, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). Detailed photochemistry of the previtamin D3 to lumisterol/tachysterol pathway.
+2. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." _Am J Clin Nutr._ 2004;80(6 Suppl):1678S-88S. The self-limiting photochemical mechanism and synthesis ceiling.
+3. ["Illuminating the Connection: Cutaneous Vitamin D3 Synthesis" (_Nutrients_, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). Detailed photochemistry of the previtamin D3 to lumisterol/tachysterol pathway.
 4. [Skin Cancer Foundation, "Skin Cancer Facts & Statistics"](https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/). Melanoma mortality and skin cancer prevalence figures.
 5. [WHO, "Ultraviolet radiation and health"](https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation-and-health). UV exposure risks and cumulative UV damage.
 
@@ -183,5 +185,5 @@ Children's skin has the same self-limiting synthesis mechanism as adults. Sun ex
 
 ---
 
-*Post file lives at: `content-loops/posts/can-you-get-too-much-vitamin-d-from-the-sun.md`*
-*When ready to publish, Developer creates `src/content/blog/can-you-get-too-much-vitamin-d-from-the-sun.mdx`*
+_Post file lives at: `content-loops/posts/can-you-get-too-much-vitamin-d-from-the-sun.md`_
+_When ready to publish, Developer creates `src/content/blog/can-you-get-too-much-vitamin-d-from-the-sun.mdx`_

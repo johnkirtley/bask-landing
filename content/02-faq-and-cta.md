@@ -16,12 +16,14 @@ Questions 1, 4, and 5 are fully templated (same answer every city). Questions 2,
 No. Standard glass blocks almost all UVB, the wavelength your skin needs to make vitamin D, so sitting by a sunny window does nothing for your levels. You'll still get UVA through the glass, which ages skin without any of the upside. To make vitamin D you need direct sun on bare skin, outdoors.
 
 **Q: Can you get vitamin D from the sun in winter in {city}?**
-*(Per-city: the dev selects one of the two answers below based on `vitamin_d_winter_months`.)*
+_(Per-city: the dev selects one of the two answers below based on `vitamin_d_winter_months`.)_
 
-*Has a vitamin D winter:*
+_Has a vitamin D winter:_
+
 > Not from about {winter_months}. The midday sun in {city} stays too low for the UVB to get through, so your skin makes little to none for those weeks no matter how long you're out. This is why late-winter levels drop here, and why a lot of people this far north supplement through the dark months.
 
-*No vitamin D winter:*
+_No vitamin D winter:_
+
 > Yes. {city} is far enough south that the midday sun stays high enough all year, so there's a usable window even in winter. It's shorter and weaker than summer, so you'll need a bit longer outside, but it doesn't close.
 
 **Q: What time of day is best for vitamin D in {city}?**
@@ -37,7 +39,7 @@ Barely, in practice. In the lab, high-SPF sunscreen applied perfectly cuts vitam
 It depends how thick the cloud is. Heavy overcast can filter out up to 90 percent of UVB, which nearly stops vitamin D production, while thin or broken cloud lets a good amount through and just means you need longer outside. Bright haze still works; a dark, fully overcast sky mostly doesn't. {city}'s typical cloud cover is covered in the local section above.
 
 **Q: Can you make too much vitamin D from the sun in {city}?**
-*(Light per-city flavor optional; the core answer is templated.)*
+_(Light per-city flavor optional; the core answer is templated.)_
 
 No, you can't overdose on vitamin D from sunlight. Your skin caps how much it makes and breaks down the excess, so the risk from staying out isn't too much vitamin D, it's sunburn. That's the real limit, and it's why the burn time on this page matters more than chasing extra minutes. (Supplements are different; you can take too much in pill form.)
 
@@ -55,4 +57,4 @@ Soft and useful, never pushy. The page already gave away the static answer for f
 
 > **Stop guessing at the sun.** Bask tracks your sessions, reads the live UV for {city}, and tells you when you've made your vitamin D and when to cover up, before you burn. The benefit, not the damage. [Get Bask for iPhone and Android](https://getbask.app).
 
-*Dev note: confirm the canonical CTA URL and the App Store / Play Store deep links. If install attribution wants a tracked link, swap the href but keep the visible text.*
+_Dev note: confirm the canonical CTA URL and the App Store / Play Store deep links. If install attribution wants a tracked link, swap the href but keep the visible text._

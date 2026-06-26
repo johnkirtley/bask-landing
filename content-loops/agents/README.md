@@ -20,13 +20,13 @@ Each stage is a separate scheduled job. Stages are **pull-based** — each looks
 
 ## Schedule
 
-| Job | Cron | Runs | Model |
-|-----|------|------|-------|
-| Reddit Scanner | `0 7 * * *` | Every day at 7:00 AM | mimo-v2.5 (cheap) |
-| Publisher | `0 9 * * *` | Every day at 9:00 AM | mimo-v2.5 (cheap) |
-| Topic Strategist | `0 11 * * *` | Every day at 11:00 AM | glm-5.2 (premium) |
-| Blog Writer | `0 15 * * 1,3,5` | Mon, Wed, Fri at 3:00 PM | glm-5.2 (premium) |
-| Humanizer Reviewer | `0 19 * * *` | Every day at 7:00 PM | glm-5.2 (premium) |
+| Job                | Cron             | Runs                     | Model             |
+| ------------------ | ---------------- | ------------------------ | ----------------- |
+| Reddit Scanner     | `0 7 * * *`      | Every day at 7:00 AM     | mimo-v2.5 (cheap) |
+| Publisher          | `0 9 * * *`      | Every day at 9:00 AM     | mimo-v2.5 (cheap) |
+| Topic Strategist   | `0 11 * * *`     | Every day at 11:00 AM    | glm-5.2 (premium) |
+| Blog Writer        | `0 15 * * 1,3,5` | Mon, Wed, Fri at 3:00 PM | glm-5.2 (premium) |
+| Humanizer Reviewer | `0 19 * * *`     | Every day at 7:00 PM     | glm-5.2 (premium) |
 
 ## File flow
 
@@ -94,6 +94,7 @@ run_job --name "bask-reddit-scan"
 ### Pause the pipeline
 
 Delete or disable the scheduled jobs:
+
 ```bash
 delete_job --name "bask-reddit-scan"
 delete_job --name "bask-topic-strategy"
@@ -105,6 +106,7 @@ delete_job --name "bask-publisher"
 ### Reset state
 
 Clear the state files to force reprocessing:
+
 ```bash
 for f in content-loops/.state/*.json; do echo '{"processed":[],"lastRun":null}' > "$f"; done
 ```
@@ -112,6 +114,7 @@ for f in content-loops/.state/*.json; do echo '{"processed":[],"lastRun":null}' 
 ### Override a status
 
 Edit the `Status:` line in any `content-loops/posts/*.md` file:
+
 - Set to `READY TO PUBLISH` to force-publish on next Publisher run
 - Set to `DRAFT` to force-humanize on next Humanizer run
 - Set to `PUBLISHED` to exclude from all processing

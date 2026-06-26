@@ -48,13 +48,13 @@ Three practical groups cover most people:
 
 ### How long to sit in the sun, by skin type and UV index
 
-| Skin type (Fitzpatrick) | UV 3 | UV 5 | UV 7 | UV 9+ |
-|---|---|---|---|---|
-| I–II (very fair to fair, burns easily) | ~15–20 min | ~10–15 min | ~5–10 min | ~5 min — narrow window, burn risk is real |
-| III–IV (medium to olive, tans readily) | ~25–30 min | ~15–20 min | ~10–15 min | ~10 min |
-| V–VI (brown to dark, rarely burns) | ~45–60+ min | ~30–40 min | ~20–30 min | ~15–25 min |
+| Skin type (Fitzpatrick)                | UV 3        | UV 5       | UV 7       | UV 9+                                     |
+| -------------------------------------- | ----------- | ---------- | ---------- | ----------------------------------------- |
+| I–II (very fair to fair, burns easily) | ~15–20 min  | ~10–15 min | ~5–10 min  | ~5 min — narrow window, burn risk is real |
+| III–IV (medium to olive, tans readily) | ~25–30 min  | ~15–20 min | ~10–15 min | ~10 min                                   |
+| V–VI (brown to dark, rarely burns)     | ~45–60+ min | ~30–40 min | ~20–30 min | ~15–25 min                                |
 
-*Arms and legs bare; UV index ≥3 required for meaningful synthesis.*
+_Arms and legs bare; UV index ≥3 required for meaningful synthesis._
 
 These ranges are consistent with NIH ODS guidance on skin-tone effects and with foundational research by Holick on melanin's role as a natural SPF. Treat them as solid starting estimates rather than stopwatch-precise rules — individual factors like age, how much skin is actually bare, and cloud cover shift your real number.
 
@@ -77,7 +77,7 @@ By the time your skin turns pink, you have crossed into sunburn territory and st
 
 ### Bask CTA
 
-> *Try Bask free — see your daily vitamin D window, personalized to your skin type and location.*
+> _Try Bask free — see your daily vitamin D window, personalized to your skin type and location._
 > App Store link: https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317
 
 ### FAQ
@@ -98,4 +98,4 @@ By the time your skin turns pink, you have crossed into sunburn territory and st
 
 ---
 
-*Post file lives at: `src/content/blog/how-long-to-sit-in-sun-for-vitamin-d.mdx`*
+_Post file lives at: `src/content/blog/how-long-to-sit-in-sun-for-vitamin-d.mdx`_

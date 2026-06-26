@@ -15,45 +15,45 @@ English-first markets, strong vitamin D winter, solid search demand. This alone 
 
 ### UK & Ireland (11)
 
-| City | Slug | Lat (°N) | Est. vit D winter | Note |
-| --- | --- | --- | --- | --- |
-| London | `london-england` | 51.5 | ~Oct–Mar | Highest search volume in the set |
-| Manchester | `manchester-england` | 53.5 | ~Oct–Mar | |
-| Birmingham | `birmingham-england` | 52.5 | ~Oct–Mar | |
-| Leeds | `leeds-england` | 53.8 | ~Oct–Mar | |
-| Liverpool | `liverpool-england` | 53.4 | ~Oct–Mar | |
-| Newcastle | `newcastle-england` | 55.0 | ~Sep–Mar | |
-| Sheffield | `sheffield-england` | 53.4 | ~Oct–Mar | |
-| Glasgow | `glasgow-scotland` | 55.9 | ~Sep–Mar | |
-| Edinburgh | `edinburgh-scotland` | 56.0 | ~Sep–Mar | |
-| Cardiff | `cardiff-wales` | 51.5 | ~Oct–Mar | |
-| Belfast | `belfast-northern-ireland` | 54.6 | ~Sep–Mar | |
-| Dublin | `dublin-ireland` | 53.3 | ~Oct–Mar | Ireland, strong deficiency angle |
+| City       | Slug                       | Lat (°N) | Est. vit D winter | Note                             |
+| ---------- | -------------------------- | -------- | ----------------- | -------------------------------- |
+| London     | `london-england`           | 51.5     | ~Oct–Mar          | Highest search volume in the set |
+| Manchester | `manchester-england`       | 53.5     | ~Oct–Mar          |                                  |
+| Birmingham | `birmingham-england`       | 52.5     | ~Oct–Mar          |                                  |
+| Leeds      | `leeds-england`            | 53.8     | ~Oct–Mar          |                                  |
+| Liverpool  | `liverpool-england`        | 53.4     | ~Oct–Mar          |                                  |
+| Newcastle  | `newcastle-england`        | 55.0     | ~Sep–Mar          |                                  |
+| Sheffield  | `sheffield-england`        | 53.4     | ~Oct–Mar          |                                  |
+| Glasgow    | `glasgow-scotland`         | 55.9     | ~Sep–Mar          |                                  |
+| Edinburgh  | `edinburgh-scotland`       | 56.0     | ~Sep–Mar          |                                  |
+| Cardiff    | `cardiff-wales`            | 51.5     | ~Oct–Mar          |                                  |
+| Belfast    | `belfast-northern-ireland` | 54.6     | ~Sep–Mar          |                                  |
+| Dublin     | `dublin-ireland`           | 53.3     | ~Oct–Mar          | Ireland, strong deficiency angle |
 
-*(That's 12 — Dublin tips UK&I to 12; total Tier 1 below counts it.)*
+_(That's 12 — Dublin tips UK&I to 12; total Tier 1 below counts it.)_
 
 ### Canada (6)
 
-| City | Slug | Lat (°N) | Est. vit D winter | Note |
-| --- | --- | --- | --- | --- |
-| Toronto | `toronto-ontario` | 43.7 | ~Nov–Feb | Largest CA market |
-| Vancouver | `vancouver-british-columbia` | 49.3 | ~Oct–Feb | Heavy cloud angle is strong here |
-| Montreal | `montreal-quebec` | 45.5 | ~Oct–Feb | |
-| Calgary | `calgary-alberta` | 51.0 | ~Oct–Mar | |
-| Edmonton | `edmonton-alberta` | 53.5 | ~Oct–Mar | Classic vitamin D research city |
-| Ottawa | `ottawa-ontario` | 45.4 | ~Oct–Feb | |
+| City      | Slug                         | Lat (°N) | Est. vit D winter | Note                             |
+| --------- | ---------------------------- | -------- | ----------------- | -------------------------------- |
+| Toronto   | `toronto-ontario`            | 43.7     | ~Nov–Feb          | Largest CA market                |
+| Vancouver | `vancouver-british-columbia` | 49.3     | ~Oct–Feb          | Heavy cloud angle is strong here |
+| Montreal  | `montreal-quebec`            | 45.5     | ~Oct–Feb          |                                  |
+| Calgary   | `calgary-alberta`            | 51.0     | ~Oct–Mar          |                                  |
+| Edmonton  | `edmonton-alberta`           | 53.5     | ~Oct–Mar          | Classic vitamin D research city  |
+| Ottawa    | `ottawa-ontario`             | 45.4     | ~Oct–Feb          |                                  |
 
 ### Northern US (7)
 
-| City | Slug | Lat (°N) | Est. vit D winter | Note |
-| --- | --- | --- | --- | --- |
-| Seattle | `seattle-washington` | 47.6 | ~Nov–Feb | Cloud cover angle is the story |
-| Portland | `portland-oregon` | 45.5 | ~Nov–Feb | Disambiguate from Portland, ME |
-| Minneapolis | `minneapolis-minnesota` | 45.0 | ~Nov–Feb | |
-| Chicago | `chicago-illinois` | 41.9 | ~Nov–Jan | |
-| Boston | `boston-massachusetts` | 42.4 | ~Nov–Feb | Holick's classic study city |
-| Detroit | `detroit-michigan` | 42.3 | ~Nov–Jan | |
-| Anchorage | `anchorage-alaska` | 61.2 | ~Oct–Mar | Extreme case, very shareable data |
+| City        | Slug                    | Lat (°N) | Est. vit D winter | Note                              |
+| ----------- | ----------------------- | -------- | ----------------- | --------------------------------- |
+| Seattle     | `seattle-washington`    | 47.6     | ~Nov–Feb          | Cloud cover angle is the story    |
+| Portland    | `portland-oregon`       | 45.5     | ~Nov–Feb          | Disambiguate from Portland, ME    |
+| Minneapolis | `minneapolis-minnesota` | 45.0     | ~Nov–Feb          |                                   |
+| Chicago     | `chicago-illinois`      | 41.9     | ~Nov–Jan          |                                   |
+| Boston      | `boston-massachusetts`  | 42.4     | ~Nov–Feb          | Holick's classic study city       |
+| Detroit     | `detroit-michigan`      | 42.3     | ~Nov–Jan          |                                   |
+| Anchorage   | `anchorage-alaska`      | 61.2     | ~Oct–Mar          | Extreme case, very shareable data |
 
 **Tier 1 total: 25 cities** (12 UK&I + 6 CA + 7 US).
 
@@ -63,18 +63,18 @@ English-first markets, strong vitamin D winter, solid search demand. This alone 
 
 Northern Europe with high English proficiency and severe winters. Search demand is partly local-language, so the English pages won't pull the same volume as Tier 1, but the data is the most dramatic in the set and the deficiency story is well documented. Good for the scale-up batch, not day one.
 
-| City | Slug | Lat (°N) | Est. vit D winter | Note |
-| --- | --- | --- | --- | --- |
-| Reykjavik | `reykjavik-iceland` | 64.1 | ~Oct–Mar | Longest winter in the set, flagship data |
-| Helsinki | `helsinki-finland` | 60.2 | ~Oct–Mar | |
-| Oslo | `oslo-norway` | 59.9 | ~Oct–Mar | |
-| Stockholm | `stockholm-sweden` | 59.3 | ~Oct–Mar | |
-| Copenhagen | `copenhagen-denmark` | 55.7 | ~Sep–Mar | |
-| Amsterdam | `amsterdam-netherlands` | 52.4 | ~Oct–Mar | High English proficiency |
-| Aberdeen | `aberdeen-scotland` | 57.1 | ~Sep–Mar | Most northern UK metro, strong data |
-| Winnipeg | `winnipeg-manitoba` | 49.9 | ~Oct–Mar | Coldest-clear angle |
-| Buffalo | `buffalo-new-york` | 42.9 | ~Nov–Jan | Lake-effect cloud |
-| Milwaukee | `milwaukee-wisconsin` | 43.0 | ~Nov–Feb | |
+| City       | Slug                    | Lat (°N) | Est. vit D winter | Note                                     |
+| ---------- | ----------------------- | -------- | ----------------- | ---------------------------------------- |
+| Reykjavik  | `reykjavik-iceland`     | 64.1     | ~Oct–Mar          | Longest winter in the set, flagship data |
+| Helsinki   | `helsinki-finland`      | 60.2     | ~Oct–Mar          |                                          |
+| Oslo       | `oslo-norway`           | 59.9     | ~Oct–Mar          |                                          |
+| Stockholm  | `stockholm-sweden`      | 59.3     | ~Oct–Mar          |                                          |
+| Copenhagen | `copenhagen-denmark`    | 55.7     | ~Sep–Mar          |                                          |
+| Amsterdam  | `amsterdam-netherlands` | 52.4     | ~Oct–Mar          | High English proficiency                 |
+| Aberdeen   | `aberdeen-scotland`     | 57.1     | ~Sep–Mar          | Most northern UK metro, strong data      |
+| Winnipeg   | `winnipeg-manitoba`     | 49.9     | ~Oct–Mar          | Coldest-clear angle                      |
+| Buffalo    | `buffalo-new-york`      | 42.9     | ~Nov–Jan          | Lake-effect cloud                        |
+| Milwaukee  | `milwaukee-wisconsin`   | 43.0     | ~Nov–Feb          |                                          |
 
 **Tier 1 + Tier 2 total: 35 cities** — within the 25–40 target.
 

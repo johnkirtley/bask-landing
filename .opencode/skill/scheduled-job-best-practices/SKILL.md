@@ -13,7 +13,7 @@ Then write your task below it.
 
 ## Core Principles
 
-1. **No magic injection.** Do not assume placeholders like __TODAY__ exist. Compute runtime values using tools (bash) during the run.
+1. **No magic injection.** Do not assume placeholders like **TODAY** exist. Compute runtime values using tools (bash) during the run.
 2. **Non-interactive.** Scheduled jobs must not rely on QR codes, manual logins, or confirmation dialogs.
 3. **Idempotent.** Make reruns safe (maintain a seen/state file; avoid duplicate messages).
 4. **Observable.** Print a short summary at the end with status + outputs.
@@ -25,21 +25,21 @@ If you need local dates, compute them at runtime.
 
 ### macOS
 
-~~~bash
+```bash
 TODAY="$(date +%F)"
 TOMORROW="$(date -v+1d +%F)"
-~~~
+```
 
 ### Linux
 
-~~~bash
+```bash
 TODAY="$(date +%F)"
 TOMORROW="$(date -d 'tomorrow' +%F)"
-~~~
+```
 
 ### Portable snippet
 
-~~~bash
+```bash
 if [ "$(uname)" = "Darwin" ]; then
   TODAY="$(date +%F)"
   TOMORROW="$(date -v+1d +%F)"
@@ -47,7 +47,7 @@ else
   TODAY="$(date +%F)"
   TOMORROW="$(date -d 'tomorrow' +%F)"
 fi
-~~~
+```
 
 If timezone matters, set TZ explicitly (example: TZ=America/Los_Angeles date +%F).
 

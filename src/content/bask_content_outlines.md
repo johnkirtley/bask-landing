@@ -9,6 +9,7 @@ A working blueprint for the full content program. Everything is organized into *
 **Hub-and-spoke logic:** Each pillar is a long, comprehensive page that targets a broad term and links down to its children. Each child targets one specific long-tail query, answers it deeply, and links back up to its pillar plus sideways to 2–3 siblings. This is what builds topical authority and feeds Google + LLMs a tight, interlinked cluster.
 
 **The standard post skeleton** (every article uses this unless noted):
+
 1. **Snippet answer** — 2–4 sentences at the very top that directly answer the title question with a number or yes/no. This is the block that wins featured snippets and gets quoted by ChatGPT/Perplexity. Write it so it stands alone.
 2. **Short intro** — why this matters, who's asking (1 paragraph, no fluff).
 3. **Body sections** — question-style H2s, at least one table, one "what changes this" bulleted list.
@@ -19,6 +20,7 @@ A working blueprint for the full content program. Everything is organized into *
 **Voice rules:** Write like a knowledgeable friend, not a brochure. Short sentences. Real numbers. No "in today's fast-paced world," no "unlock," no "delve," no "it's important to note." Cite sources plainly. Admit uncertainty where the science is mixed.
 
 **The four pillars:**
+
 - **Pillar 1 — How Much Sun Do You Need for Vitamin D** (the calculation cluster; Bask's core moat)
 - **Pillar 2 — Vitamin D Deficiency: Symptoms, Levels & What to Do**
 - **Pillar 3 — Vitamin D in Winter & by Latitude** (seasonal/geographic)
@@ -39,9 +41,11 @@ A working blueprint for the full content program. Everything is organized into *
 **Target length:** 2,500–3,500 words (comprehensive pillar)
 
 **Snippet answer (draft):**
+
 > Most light-skinned people make enough vitamin D from roughly 10–30 minutes of midday sun on bare arms and legs a few times a week, but the real number depends on four things: the UV index (you need at least 3), your skin tone, how much skin is exposed, and your latitude and the season. Darker skin can need 2–6 times longer. Below about 35° latitude in winter, the sun is too low to produce any vitamin D at all.
 
 **Outline:**
+
 - **H2: The short answer (and why "10–30 minutes" is misleading)** — give the range, then immediately explain it's useless without context.
 - **H2: The four things that decide your number** — UV index, skin type (Fitzpatrick), skin exposed, latitude/season. One sentence each, each linking to its child article.
 - **H2: A minutes-by-UV-index-and-skin-type table** — the centerpiece. Rows = Fitzpatrick I–VI, columns = UV 3, 5, 7, 9+. This table is the asset LLMs will lift.
@@ -59,7 +63,9 @@ A working blueprint for the full content program. Everything is organized into *
 ## Pillar 1 children
 
 ### 1.1 — What UV Index Do You Need to Make Vitamin D?
+
 > ✅ **WRITTEN — published 2026-05-21.** Draft at `src/content/blog/what-uv-index-do-you-need-for-vitamin-d.mdx`. Humanized; sourced to EPA, NIH ODS, WHO. Links up to cornerstone, sideways to 1.2.
+
 - **Type:** Child (high priority — closest to Bask's core mechanic)
 - **Primary keyword:** what UV index for vitamin D · **Secondary:** UV index vitamin D, minimum UV index vitamin D, UV index 3 vitamin D
 - **Intent:** Calculation/technical — biohackers and app-adjacent searchers.
@@ -77,7 +83,9 @@ A working blueprint for the full content program. Everything is organized into *
 - **CTA:** "Bask reads your local UV index minute by minute so you know the moment it crosses 3."
 
 ### 1.2 — The Best Time of Day to Get Vitamin D From the Sun
+
 > ✅ **WRITTEN — published 2026-05-26.** Draft at `src/content/blog/best-time-of-day-to-get-vitamin-d.mdx`. Humanized; sourced to NIH ODS, EPA, Webb/Holick 1988. Links up to cornerstone, sideways to 1.1.
+
 - **Type:** Child (high priority)
 - **Primary keyword:** best time of day to get vitamin D from sun · **Secondary:** best time for vitamin D, midday sun vitamin D, is morning sun good for vitamin D
 - **Intent:** Practical timing.
@@ -94,6 +102,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; UV Index; Solar Noon child; Morning Sunlight (Pillar 3); Calculator.
 
 ### 1.3 — How Long to Sit in the Sun for Vitamin D, by Skin Type
+
 - **Type:** Child
 - **Primary keyword:** how long to sit in sun for vitamin D · **Secondary:** sun exposure for vitamin D by skin type, vitamin D dark skin sun, melanin vitamin D
 - **Intent:** Calculation.
@@ -110,6 +119,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Fitzpatrick child; UV Index; Calculator.
 
 ### 1.4 — Fitzpatrick Skin Type & Vitamin D: Find Your Type and Your Sun Number
+
 - **Type:** Child (add interactive quiz)
 - **Primary keyword:** Fitzpatrick skin type · **Secondary:** Fitzpatrick scale, skin type chart, what is my skin type
 - **Intent:** Informational + self-assessment.
@@ -127,7 +137,9 @@ A working blueprint for the full content program. Everything is organized into *
 - **Note:** The quiz is a dwell-time and engagement asset — build it to output "your type + your sun number + try Bask."
 
 ### 1.5 — Can You Get Vitamin D on a Cloudy Day?
+
 > ✅ **WRITTEN — published 2026-05-29.** Draft at `src/content/blog/can-you-get-vitamin-d-on-a-cloudy-day.mdx`. Humanized; EPA cloud figures, NIH ODS, WHO. Linked into cornerstone + cluster.
+
 - **Type:** Child
 - **Primary keyword:** can you get vitamin D on a cloudy day · **Secondary:** vitamin D cloudy day, vitamin D overcast, do clouds block UV
 - **Intent:** Informational/practical.
@@ -144,7 +156,9 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** US EPA "Learn About the UV Index" cloud transmission figures.
 
 ### 1.6 — Can You Get Vitamin D Through a Window?
+
 > ✅ **WRITTEN — published 2026-06-03.** Draft at `src/content/blog/can-you-get-vitamin-d-through-a-window.mdx`. Humanized; Utah Health, NIH ODS, Skin Cancer Foundation. Linked into cornerstone + cluster.
+
 - **Type:** Child (high evergreen volume)
 - **Primary keyword:** can you get vitamin D through a window · **Secondary:** vitamin D through glass, vitamin D car window, does glass block UVB
 - **Intent:** Myth-check.
@@ -160,7 +174,9 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Sunscreen child; Best Time of Day.
 
 ### 1.7 — Does Sunscreen Block Vitamin D? What the Research Actually Says
+
 > ✅ **WRITTEN — published 2026-06-06.** Draft at `src/content/blog/does-sunscreen-block-vitamin-d.mdx`. Humanized; Skin Cancer Foundation, NIH ODS, Prevent Cancer Foundation. Linked into cornerstone + cluster.
+
 - **Type:** Child (high interest)
 - **Primary keyword:** does sunscreen block vitamin D · **Secondary:** SPF and vitamin D, can you get vitamin D with sunscreen on
 - **Intent:** Informational — resolving a perceived conflict.
@@ -177,6 +193,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** EPA/dermatology SPF transmission figures; real-world application studies.
 
 ### 1.8 — Can You Get Vitamin D in the Shade?
+
 - **Type:** Child (long-tail, fast win)
 - **Primary keyword:** can you get vitamin D in the shade · **Secondary:** vitamin D direct sunlight, vitamin D under umbrella
 - **Intent:** Informational.
@@ -192,6 +209,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Cloudy Day; Sunscreen.
 
 ### 1.9 — How Much Vitamin D Can You Get in 15 Minutes of Sun?
+
 - **Type:** Child (long-tail, ideal AI-Overview shape)
 - **Primary keyword:** how much vitamin D in 15 minutes of sun · **Secondary:** vitamin D 10 minutes sun, IU vitamin D per minute sun
 - **Intent:** Calculation.
@@ -207,6 +225,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Sun vs Supplements; Calculator; How Long by Skin Type.
 
 ### 1.10 — What Time Does the Sun Stop Making Vitamin D? (Solar Noon Explained)
+
 - **Type:** Child (long-tail timing)
 - **Primary keyword:** what time vitamin D sun · **Secondary:** solar noon vitamin D, can you get vitamin D in the evening, vitamin D after 3pm
 - **Intent:** Timing/calculation.
@@ -222,6 +241,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Best Time of Day; Angle of Sun; Pillar 3.
 
 ### 1.11 — Can You Get Vitamin D in the Morning?
+
 - **Type:** Child (long-tail; clears a common confusion)
 - **Primary keyword:** can you get vitamin D in the morning · **Secondary:** morning sun vitamin D, early sun vitamin D
 - **Intent:** Informational.
@@ -237,6 +257,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Best Time of Day; Morning Sunlight (Pillar 3); Solar Noon.
 
 ### 1.12 — Can You Get Too Much Vitamin D From the Sun?
+
 - **Type:** Child (reassurance/safety myth-bust)
 - **Primary keyword:** can you get too much vitamin D from the sun · **Secondary:** vitamin D toxicity sun, sun vitamin D overdose
 - **Intent:** Safety/informational.
@@ -252,6 +273,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Sunscreen; Optimal Levels (Pillar 2); Dosage (Pillar 2).
 
 ### 1.13 — The Angle of the Sun & Vitamin D: Why the Shadow Rule Works
+
 - **Type:** Child (niche, high Bask-fit, low competition)
 - **Primary keyword:** vitamin D angle of sun · **Secondary:** shadow rule vitamin D, sun angle UVB, 45 degree sun vitamin D
 - **Intent:** Technical/informational.
@@ -267,6 +289,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 1; Solar Noon; Pillar 3; How Far From Equator.
 
 ### 1.14 — Do Tanning Beds Give You Vitamin D?
+
 - **Type:** Child (myth/safety; captures tanning-adjacent audience)
 - **Primary keyword:** do tanning beds give vitamin D · **Secondary:** tanning bed vitamin D, sunbed vitamin D, tanning vitamin D
 - **Intent:** Informational/safety.
@@ -293,9 +316,11 @@ A working blueprint for the full content program. Everything is organized into *
 **Target length:** 2,500–3,500 words (pillar)
 
 **Snippet answer (draft):**
+
 > The most common signs of vitamin D deficiency are fatigue, bone or muscle aches, frequent illness, low mood, and hair thinning — but many people have no symptoms at all, which is why it's so common. Deficiency is defined as a blood 25(OH)D level below 20 ng/mL. A blood test is the only way to confirm it; the fix is usually more sunlight, vitamin D–rich food, or a supplement.
 
 **Outline:**
+
 - **H2: The short answer + who's most at risk** (older adults, darker skin, indoor lifestyles, high latitudes, obesity).
 - **H2: The full symptom checklist** — fatigue, bone/muscle pain, frequent infections, low mood/depression, hair loss, slow healing. Each with a one-line "why."
 - **H2: The silent problem — why most deficiency has no symptoms.**
@@ -313,6 +338,7 @@ A working blueprint for the full content program. Everything is organized into *
 ## Pillar 2 children
 
 ### 2.1 — How Much Vitamin D Do You Need Per Day? (RDA, Optimal Levels & the 2024 Guidelines)
+
 - **Type:** Child (high volume)
 - **Primary keyword:** how much vitamin D per day · **Secondary:** how much vitamin D should I take, vitamin D dosage, vitamin D IU per day
 - **Intent:** Informational/decision (dose).
@@ -330,6 +356,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** NIH ODS; Endocrine Society 2024 guideline (Demay et al., JCEM).
 
 ### 2.2 — Optimal Vitamin D Levels: What Should Your 25(OH)D Number Be?
+
 - **Type:** Child
 - **Primary keyword:** optimal vitamin D level · **Secondary:** what should vitamin D level be, vitamin D ng/mL chart, normal vitamin D range
 - **Intent:** Informational (post-blood-test).
@@ -347,6 +374,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Sources:** NIH ODS thresholds; VITAL trial; Endocrine Society 2024.
 
 ### 2.3 — Vitamin D Deficiency and Fatigue: Is Your Tiredness Linked to Low D?
+
 - **Type:** Child (high-volume symptom long-tail)
 - **Primary keyword:** vitamin D deficiency fatigue · **Secondary:** can low vitamin D cause tiredness, vitamin D and energy, low vitamin D exhaustion
 - **Intent:** Symptom/informational.
@@ -363,6 +391,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 2; Optimal Levels; Pillar 3 (SAD); Pillar 1.
 
 ### 2.4 — Vitamin D From Sun vs. Supplements: Which Is Better?
+
 - **Type:** Child (core to Bask's value prop)
 - **Primary keyword:** vitamin D from sun vs supplements · **Secondary:** sun or supplements vitamin D, is sunlight better than vitamin D pills
 - **Intent:** Decision/informational.
@@ -379,6 +408,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 2; Dosage; Without the Sun; Pillar 1; Pillar 3.
 
 ### 2.5 — How to Get Vitamin D Without the Sun (Foods, Supplements & Lamps)
+
 - **Type:** Child
 - **Primary keyword:** how to get vitamin D without sun · **Secondary:** vitamin D foods, foods high in vitamin D, vitamin D without sunlight
 - **Intent:** Informational (low-sun situations).
@@ -395,6 +425,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 2; Dosage; Sun vs Supplements; Pillar 3.
 
 ### 2.6 — Vitamin D Benefits: What the Evidence Actually Supports
+
 - **Type:** Child (authority/E-E-A-T anchor)
 - **Primary keyword:** vitamin D benefits · **Secondary:** benefits of vitamin D, what does vitamin D do, vitamin D immune system
 - **Intent:** Informational.
@@ -413,6 +444,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Compliance note:** Avoid overstated claims; this honesty is the ranking and citation advantage.
 
 ### 2.7 — Does Vitamin D From the Sun Last Longer Than Supplements?
+
 - **Type:** Child (long-tail, shareable)
 - **Primary keyword:** does sun vitamin D last longer · **Secondary:** how long does vitamin D from sun last, vitamin D stored in fat
 - **Intent:** Informational.
@@ -428,6 +460,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 2; Sun vs Supplements; Pillar 3; Pillar 1.
 
 ### 2.8 — Vitamin D and Testosterone: Does Sunlight Boost T?
+
 - **Type:** Child (targets the male-optimizer/biohacker segment)
 - **Primary keyword:** vitamin D testosterone · **Secondary:** does vitamin D increase testosterone, sunlight testosterone
 - **Intent:** Informational (optimizer audience).
@@ -455,9 +488,11 @@ A working blueprint for the full content program. Everything is organized into *
 **Target length:** 2,200–3,000 words (pillar)
 
 **Snippet answer (draft):**
+
 > For much of the world, no — you can't make vitamin D in winter. Above about 35° latitude (most of the US, Europe, and Canada), the winter sun sits too low for UVB to reach you from roughly October through March, a stretch sometimes called "vitamin D winter." During those months, food and supplements are the only reliable sources.
 
 **Outline:**
+
 - **H2: The short answer + the 35° rule.**
 - **H2: What "vitamin D winter" means and how long it lasts** (cite the ~126-day European average; London/Oslo UVB contrasts).
 - **H2: Find your vitamin D winter by latitude** — table or map by latitude band / major cities. Link to the by-city child.
@@ -475,6 +510,7 @@ A working blueprint for the full content program. Everything is organized into *
 ## Pillar 3 children
 
 ### 3.1 — When Can You Get Vitamin D in [City]? Vitamin D by Latitude
+
 - **Type:** Child (programmatic/template opportunity — high Bask-fit)
 - **Primary keyword:** vitamin D by latitude · **Secondary:** vitamin D winter [city], vitamin D Seattle/Boston/London/New York winter, 37 degrees latitude vitamin D
 - **Intent:** Local/informational.
@@ -492,6 +528,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Note:** Strong candidate for templated city pages (programmatic SEO) once the hub proves out.
 
 ### 3.2 — How to Get Enough Vitamin D in the Winter (A Practical Plan)
+
 - **Type:** Child (actionable companion to the pillar)
 - **Primary keyword:** how to get vitamin D in winter · **Secondary:** winter vitamin D tips, vitamin D supplement winter dose
 - **Intent:** Actionable/informational.
@@ -508,6 +545,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 3; Dosage; Without the Sun; Sun Lasts Longer.
 
 ### 3.3 — Vitamin D, Winter Depression & SAD: What Actually Helps
+
 - **Type:** Child (seasonal, emotionally driven)
 - **Primary keyword:** vitamin D seasonal affective disorder · **Secondary:** vitamin D winter depression, does vitamin D help SAD, winter blues vitamin D
 - **Intent:** Informational/health.
@@ -525,6 +563,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Compliance note:** Mental-health YMYL — include a "seek professional help" line; don't position the app as treatment.
 
 ### 3.4 — Morning Sunlight Benefits: Circadian Rhythm, Mood & Energy (Beyond Vitamin D)
+
 - **Type:** Child (rides the morning-light trend; expands the audience)
 - **Primary keyword:** morning sunlight benefits · **Secondary:** morning sun circadian rhythm, morning light mood, sunlight in eyes morning
 - **Intent:** Informational/wellness/biohacker.
@@ -542,6 +581,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Note:** Clearly separate circadian (eyes/light) from vitamin D (skin/UVB) — owning that distinction is the content gap.
 
 ### 3.5 — How Far From the Equator Can You Still Make Vitamin D Year-Round?
+
 - **Type:** Child (geographic; reinforces latitude authority)
 - **Primary keyword:** vitamin D equator · **Secondary:** latitude vitamin D year round, 35 degrees vitamin D, how far north vitamin D
 - **Intent:** Geographic/informational.
@@ -569,9 +609,11 @@ A working blueprint for the full content program. Everything is organized into *
 **Target length:** 2,000–2,800 words (pillar; expand the existing post)
 
 **Snippet answer (draft):**
+
 > The best vitamin D and sun tracking apps estimate how much vitamin D you're making in real time using your location, the live UV index, your skin type, and the time of day. Top options include Bask, dminder, SunSafe, Sunbeam, and SunSeek — each suited to slightly different users, from precise vitamin D tracking to general UV and burn safety.
 
 **Outline:**
+
 - **H2: The short answer + quick comparison table** (app, what it's best for, platform, price, key feature). Bask included fairly alongside the rest.
 - **H2: What a good vitamin D app should actually do** (live UV, latitude, skin type, exposure, supplement guidance, burn safety).
 - **H2: App-by-app rundown** — Bask, dminder, SunSafe, Sunbeam, SunSeek, plus Rays / Sun Day / QSun as relevant. 2–3 honest sentences each: strengths and who it's for.
@@ -587,6 +629,7 @@ A working blueprint for the full content program. Everything is organized into *
 ## Pillar 4 children
 
 ### 4.1 — dminder Alternatives: Vitamin D Apps Compared
+
 - **Type:** Child (high purchase intent, low competition)
 - **Primary keyword:** dminder alternatives · **Secondary:** apps like dminder, dminder vs, dminder review
 - **Intent:** Comparison/transactional.
@@ -603,6 +646,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Compliance note:** Keep factual and fair; verify each competitor's current features before publishing.
 
 ### 4.2 — Sunbeam vs. SunSafe vs. Bask: Which UV & Vitamin D App Is Right for You?
+
 - **Type:** Child (long-tail head-to-head; near-zero competition)
 - **Primary keyword:** Sunbeam vs SunSafe · **Secondary:** SunSafe vs Bask, Sunbeam vs Bask, [competitor] vs [competitor]
 - **Intent:** Comparison.
@@ -619,6 +663,7 @@ A working blueprint for the full content program. Everything is organized into *
 - **Internal links:** Pillar 4; dminder Alternatives; Accuracy child; Pillar 1.
 
 ### 4.3 — How Accurate Are Vitamin D Tracking Apps? (How They Estimate IU From Sunlight)
+
 - **Type:** Child (handles the #1 skeptic objection)
 - **Primary keyword:** are vitamin D apps accurate · **Secondary:** how do vitamin D apps work, vitamin D app vs blood test
 - **Intent:** Consideration/informational.
@@ -649,6 +694,7 @@ A working blueprint for the full content program. Everything is organized into *
 **Calculator output:** estimated minutes to a healthy dose + estimated IU + a burn-risk warning + "let Bask track this automatically" CTA.
 
 **Supporting guide outline (below the tool):**
+
 - **Snippet answer:** Enter your skin type, location, and the day's UV index, and this calculator estimates how many minutes of sun you need to make a healthy amount of vitamin D — and when you'd risk burning instead.
 - H2: How to use the calculator
 - H2: How the math works (the four variables — link Pillar 1)
@@ -672,6 +718,7 @@ A working blueprint for the full content program. Everything is organized into *
 **Stage 4 — Comparison + long-tail (ongoing):** Expand Pillar 4 + children 4.1, 4.2, 4.3, and batch-produce the remaining Tier 5 long-tail Q&As (1.8–1.14, 2.3–2.8, 3.5). These are quick to write and fast to rank/cite.
 
 **On every post, every time:**
+
 - Lead with the snippet answer. One direct, quotable answer near the top.
 - Question-style H2s, at least one table, one "what changes this" list.
 - FAQ block with schema markup (the single highest-leverage tactic for snippets + LLM citation).

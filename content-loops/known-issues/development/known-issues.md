@@ -5,8 +5,8 @@ deployment. **Scan this file before opening any PR** and apply the Pre-PR checkl
 below so we don't repeat a failed Vercel build. Add an entry whenever a new
 build/deploy issue is discovered.
 
-| ID | Category | Symptom / Error | Root cause | Fix / Prevention | First hit | Status |
-|----|----------|-----------------|------------|------------------|-----------|--------|
+| ID      | Category    | Symptom / Error                                                                                                                       | Root cause                                                                                                                                                                                                                  | Fix / Prevention                                                                                                                           | First hit  | Status           |
+| ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ---------------- |
 | DEV-001 | MDX / build | `astro build` fails with `[@mdx-js/rollup] Unexpected character '2' (U+0032) before name, expected a character that can start a name` | MDX v3 (`@astrojs/mdx` v4) treats `<` as the start of a JSX/HTML tag. A bare `<` immediately followed by a digit or space (e.g. `(<20 ng/mL)`) is read as an illegal tag name and aborts the build at the first occurrence. | Escape as `&lt;` (renders identically as `<`) or write it out ("less than 20"). Never use a bare `<` before a digit/space in `.mdx` prose. | 2026-06-20 | RESOLVED (PR #7) |
 
 ## Pre-PR checklist (run before every PR)

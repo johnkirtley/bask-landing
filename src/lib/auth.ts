@@ -2,7 +2,7 @@ export function getDiscordAuthorizationUrl(): string {
   const clientId = import.meta.env.PUBLIC_DISCORD_CLIENT_ID;
   const redirectUri = `${import.meta.env.PUBLIC_APP_URL}/api/auth/discord`;
   const scope = 'identify';
-  
+
   return `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=${scope}`;
 }
 

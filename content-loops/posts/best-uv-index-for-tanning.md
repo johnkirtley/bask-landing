@@ -52,13 +52,13 @@ UV index 3 is also where meaningful vitamin D synthesis starts. Below 3, skin ma
 
 Burn times assume Fitzpatrick I-II (fair) skin with no sunscreen. People with darker skin burn more slowly but also tan and produce vitamin D at a slower rate.
 
-| UV index | WHO band | Tanning pace | Approx. burn time (fair skin) | Vitamin D production |
-|---|---|---|---|---|
-| 1-2 | Low | Negligible | 2+ hours | Negligible |
-| 3-5 | Moderate | Slow | ~30-60 min | Real (UVB present) |
-| 6-7 | High | Moderate | ~15-25 min | Good; burn risk rising sharply |
-| 8-10 | Very high | Fast | ~10-15 min | High; unprotected window is short |
-| 11+ | Extreme | Very fast | Under 10 min | High; only brief sessions make sense |
+| UV index | WHO band  | Tanning pace | Approx. burn time (fair skin) | Vitamin D production                 |
+| -------- | --------- | ------------ | ----------------------------- | ------------------------------------ |
+| 1-2      | Low       | Negligible   | 2+ hours                      | Negligible                           |
+| 3-5      | Moderate  | Slow         | ~30-60 min                    | Real (UVB present)                   |
+| 6-7      | High      | Moderate     | ~15-25 min                    | Good; burn risk rising sharply       |
+| 8-10     | Very high | Fast         | ~10-15 min                    | High; unprotected window is short    |
+| 11+      | Extreme   | Very fast    | Under 10 min                  | High; only brief sessions make sense |
 
 As UV rises, every column accelerates: tanning, vitamin D synthesis, and burns. The gap between "made a useful vitamin D dose" and "now you're burning" shrinks as UV climbs. At UV 9 or 10, that window is 5-10 minutes for fair skin.
 
@@ -129,12 +129,12 @@ The evidence doesn't support it as a health practice. The Skin Cancer Foundation
 
 ## Sources
 
-1. [World Health Organization: Ultraviolet (UV) Index](https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index) — WHO UV index bands and protective action recommendations
+1. [World Health Organization: Ultraviolet (UV) Index](<https://www.who.int/news-room/questions-and-answers/item/radiation-the-ultraviolet-(uv)-index>) — WHO UV index bands and protective action recommendations
 2. [Skin Cancer Foundation: Tanning](https://www.skincancer.org/skin-cancer-prevention/tanning/) — characterization of a tan as skin's response to UV-induced injury
 3. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/) — UVB as the vitamin D-driving wavelength; skin exposure guidance
-4. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." *Am J Clin Nutr.* 2004;80(6 Suppl):1678S-88S — UVA vs UVB mechanisms; 7-dehydrocholesterol pathway; tanning vs vitamin D synthesis
+4. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." _Am J Clin Nutr._ 2004;80(6 Suppl):1678S-88S — UVA vs UVB mechanisms; 7-dehydrocholesterol pathway; tanning vs vitamin D synthesis
 5. [US EPA, "Learn About the UV Index"](https://www.epa.gov/sunsafety/learn-about-uv-index) — UV index scale and burn time context
 
 ---
 
-*Post file lives at: `content-loops/posts/best-uv-index-for-tanning.md`*
+_Post file lives at: `content-loops/posts/best-uv-index-for-tanning.md`_

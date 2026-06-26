@@ -27,6 +27,7 @@ TODAY="$(date +%F)"
 ## Target subreddits
 
 Primary (scan every run):
+
 - **r/vitamin-d** — vitamin D specifics, deficiency, supplementation
 - **r/hubermanlab** — health optimization, protocols, morning light, supplements
 - **r/supplements** — supplement questions, interactions, dosing
@@ -50,6 +51,7 @@ webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fbioha
 ```
 
 Also run broader searches to catch cross-subreddit discussions:
+
 ```
 webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+vitamin+D+deficiency+sun+exposure+2025&cat=web
 webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+vitamin+D+supplement+vs+sun+which+better&cat=web
@@ -64,6 +66,7 @@ webfetch: https://www.reddit.com/r/SUBREDDIT/comments/POST_ID/
 ```
 
 This gives you the original post text and comments. Focus on threads where:
+
 - The title matches a Bask-relevant topic (vitamin D, sun, supplements, mood)
 - The post has substantive self-text (not just a link)
 - There are engaged comments with real questions or struggles
@@ -109,13 +112,15 @@ Write to: `content-loops/research/reddit-scan-YYYY-MM-DD.md`
 ## Top themes today
 
 ### Theme 1: [short label]
+
 **Signal strength:** High / Medium / Low (based on post volume + engagement)
 **Found in:** r/sub1, r/sub2
 **What people are saying:**
+
 - "[quoted snippet]" — r/sub1, score X, N comments (permalink)
 - "[quoted snippet]" — r/sub2, score X, N comments (permalink)
-**Pain point:** [one sentence describing the underlying struggle]
-**Content angle:** [one sentence on how Bask could address this]
+  **Pain point:** [one sentence describing the underlying struggle]
+  **Content angle:** [one sentence on how Bask could address this]
 
 ### Theme 2: ...
 
@@ -177,6 +182,7 @@ git push origin main
 ## Output contract
 
 End your run with:
+
 - **Status:** success | skipped | failed
 - **Reason:** one line
 - **Output:** path to the scan file
