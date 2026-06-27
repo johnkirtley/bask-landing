@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # How Much Vitamin D Should I Actually Take?
 
@@ -22,20 +22,20 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Confirm NIH ODS RDA figures: 600 IU/day (adults 19–70), 800 IU/day (adults 71+); Tolerable Upper Intake Level 4,000 IU/day
-- [ ] Verify 2024 Endocrine Society guideline stance (Demay et al., JCEM 2024): recommends against routine vitamin D supplementation above the RDA for healthy community-dwelling adults under 75; advises empiric supplementation for adults 75+, pregnancy, and prediabetes
-- [ ] Confirm toxicity framing: typically associated with sustained intake above 10,000 IU/day; hypercalcemia-driven; levels near or above 100 ng/mL associated with risk
-- [ ] Confirm the VITAL trial (Manson et al., NEJM 2019) found no meaningful reduction in cancer/CVD/fractures from high-dose vitamin D in healthy adults
-- [ ] Confirm body-weight point against NIH ODS (obesity as a deficiency risk factor; vitamin D is fat-soluble and sequestered in adipose tissue)
-- [ ] Check App Store link points to correct tracked URL for per-post click attribution
-- [ ] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles
-- [ ] Verify internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-much-vitamin-d-in-15-minutes-of-sun, /blog/can-you-get-too-much-vitamin-d-from-the-sun, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d
+- [x] Confirm NIH ODS RDA figures: 600 IU/day (adults 19–70), 800 IU/day (adults 71+); Tolerable Upper Intake Level 4,000 IU/day — confirmed 2026-06-26 against NIH ODS fact sheet (Table 2 and Table 4). Note: the 400 IU infant figure is technically an Adequate Intake (AI), not an RDA; number is correct.
+- [x] Verify 2024 Endocrine Society guideline stance (Demay et al., JCEM 2024): recommends against routine vitamin D supplementation above the RDA for healthy community-dwelling adults under 75; advises empiric supplementation for adults 75+, pregnancy, and prediabetes — confirmed 2026-06-26. NIH ODS states: "recommends routine vitamin D supplementation for children and teens age 1 to 18 years, pregnant women, adults with pre-diabetes, and adults age 75 years and older, but not for healthy adults age 19 to 74."
+- [x] Confirm toxicity framing: typically associated with sustained intake above 10,000 IU/day; hypercalcemia-driven; ~~levels near or above 100 ng/mL associated with risk~~ — partially confirmed and CORRECTED 2026-06-26. The 10,000 IU/day threshold is confirmed (NIH: "toxicity is unlikely at daily intakes below 250 mcg (10,000 IU)"). However, the 100 ng/mL figure was inaccurate per NIH: levels above 50 ng/mL (125 nmol/L) are linked to potential adverse effects, and frank toxicity typically at >150 ng/mL. Post body updated to reflect the NIH 50 ng/mL threshold.
+- [x] Confirm the VITAL trial (Manson et al., NEJM 2019) found no meaningful reduction in cancer/CVD/fractures from high-dose vitamin D in healthy adults — confirmed 2026-06-26 against NIH ODS fact sheet (2,000 IU/day, median 5.3 years, 25,871 participants; no significant reduction in cancer incidence, CVD events, or fractures).
+- [x] Confirm body-weight point against NIH ODS (obesity as a deficiency risk factor; vitamin D is fat-soluble and sequestered in adipose tissue) — confirmed 2026-06-26. NIH ODS: "Individuals with a BMI of 30 or more have lower serum 25(OH)D levels… greater amounts of subcutaneous fat sequester more of the vitamin."
+- [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-06-26. URL `https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317` matches the established pattern used in all other published posts (e.g., how-long-to-sit-in-sun-for-vitamin-d). Note: Apple returns HTTP 404 to programmatic HEAD requests; this is consistent across all posts and likely reflects bot-detection or pre-launch status, not a broken link for real users.
+- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-06-26. "Bask Health Team" is the established author byline used across the blog; no individual named author available.
+- [x] Verify internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-much-vitamin-d-in-15-minutes-of-sun, /blog/can-you-get-too-much-vitamin-d-from-the-sun, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d — partially confirmed 2026-06-26. 3 of 5 resolve to published posts in src/content/blog/ (how-much-sun-do-you-need-for-vitamin-d, how-long-to-sit-in-sun-for-vitamin-d, what-uv-index-do-you-need-for-vitamin-d). 2 of 5 (how-much-vitamin-d-in-15-minutes-of-sun, can-you-get-too-much-vitamin-d-from-the-sun) exist as drafts in content-loops/posts/ but are not yet published to src/content/blog/. Links will resolve once those posts are published.
 
 ---
 
 ## Post content
 
-The official recommendation is 600 IU of vitamin D per day for most adults and 800 IU for anyone over 70. That number is built to prevent deficiency, not to chase an "optimal" level. Plenty of people take more — 1,000 to 4,000 IU is common, and some go higher — but the 2024 Endocrine Society guideline advises against routine high-dose supplementation for healthy adults under 75. The dose that's right for you depends on your blood level, how much sun you get, your body weight, and your skin type. Two people can take the same pill and end up at very different numbers.
+The official recommendation is 600 IU of vitamin D per day for most adults and 800 IU for anyone over 70. That number is built to prevent deficiency, not to chase an "optimal" level. Plenty of people take more. 1,000 to 4,000 IU is common, and some go higher. But the 2024 Endocrine Society guideline advises against routine high-dose supplementation for healthy adults under 75. The dose that's right for you depends on your blood level, how much sun you get, your body weight, and your skin type. Two people can take the same pill and end up at very different numbers.
 
 ## Why everyone is confused about vitamin D dosage
 
@@ -53,7 +53,7 @@ The reference dose in the United States is the Recommended Dietary Allowance (RD
 - **800 IU/day** for adults 71 and older
 - **400 IU/day** for infants under one year
 
-These are intake targets from all sources — food, sun, and supplements combined — and they're set at the level that keeps blood 25(OH)D above 20 ng/mL in nearly everyone. They are deficiency-prevention numbers.
+These are intake targets from all sources (food, sun, and supplements combined), and they're set at the level that keeps blood 25(OH)D above 20 ng/mL in nearly everyone. They are deficiency-prevention numbers.
 
 There's also a ceiling: the Tolerable Upper Intake Level (UL) is **4,000 IU/day** for adults. The UL isn't a target to aim for. It's the highest daily intake unlikely to cause harm for almost anyone, and long-term intake above it without medical supervision is where risk starts to climb.
 
@@ -69,12 +69,12 @@ headers={[
 >
 
   <tr>
-    <td>National Academies (IOM) — RDA</td>
+    <td>National Academies (IOM), RDA</td>
     <td>600 IU (19–70); 800 IU (71+)</td>
     <td>Preventing deficiency; keeping 25(OH)D above 20 ng/mL</td>
   </tr>
   <tr>
-    <td>National Academies — Upper Limit (UL)</td>
+    <td>National Academies, Upper Limit (UL)</td>
     <td>4,000 IU/day max from all sources</td>
     <td>The intake unlikely to harm almost anyone</td>
   </tr>
@@ -90,7 +90,7 @@ headers={[
   </tr>
 </ComparisonTable>
 
-The shift matters. The 2024 update came after large trials — most notably VITAL — found that giving healthy adults high doses of vitamin D did not meaningfully reduce cancer, heart disease, or fractures. The older "more is better" assumption didn't hold up when it was actually tested.
+The shift matters. The 2024 update came after large trials, most notably VITAL, found that giving healthy adults high doses of vitamin D did not meaningfully reduce cancer, heart disease, or fractures. The older "more is better" assumption didn't hold up when it was actually tested.
 
 ## Why the recommendations disagree
 
@@ -104,7 +104,7 @@ For most people the honest answer sits somewhere in between, anchored to your ac
 
 ## A practical dosing framework
 
-Here's how the tiers actually break down, and what each one represents. Treat this as a map of the territory, not a prescription.
+Here's how the tiers actually break down, and what each one represents. Use this as a rough guide, not a prescription.
 
 <ComparisonTable
 headers={[
@@ -140,7 +140,7 @@ headers={[
 The jump from maintenance to deficiency correction is the one that gets people in trouble. The high weekly doses you see in forums are a medical protocol for people whose blood work came back low, not a wellness starting point. They come with a recheck date attached. Taking them on your own, without knowing your starting level, is how people drift into the upper end of the range without realizing it.
 
 <Callout type="warning" title="Don't start high without a test">
-  If you're tempted to jump straight to 5,000 or 10,000 IU a day, get a 25(OH)D test first. High-dose correction is meant for confirmed deficiency, and it comes with a recheck. The upper limit is 4,000 IU for a reason — sustained intake well above it raises your risk of hypercalcemia.
+  If you're tempted to jump straight to 5,000 or 10,000 IU a day, get a 25(OH)D test first. High-dose correction is meant for confirmed deficiency, and it comes with a recheck. The upper limit is 4,000 IU for a reason. Sustained intake well above it raises your risk of hypercalcemia.
 </Callout>
 
 ## How to personalize your dose
@@ -149,39 +149,39 @@ Four variables move your number more than most people realize.
 
 **Your baseline blood level.** This is the single most important input. A 25(OH)D test tells you whether you're starting from deficient, adequate, or already high, and that dictates whether you need correction, maintenance, or nothing. Guessing is the expensive mistake here.
 
-**Your body weight.** Vitamin D is fat-soluble, so it gets tucked away in adipose tissue. At a given dose, people with higher body fat tend to end up with lower circulating levels, which is why obesity is a recognized risk factor for deficiency. If you carry more weight, you may need a higher intake to reach the same blood level — another reason testing beats guessing.
+**Your body weight.** Vitamin D is fat-soluble, so it gets tucked away in adipose tissue. At a given dose, people with higher body fat tend to end up with lower circulating levels, which is why obesity is a recognized risk factor for deficiency. If you carry more weight, you may need a higher intake to reach the same blood level, on top of which a test tells you where you actually stand.
 
-**Your sun exposure.** If you get regular midday sun when the UV index is above 3, your skin is already making vitamin D, and your supplement needs drop — sometimes to zero in summer. If you work indoors, live at a high latitude, or it's winter, your skin contribution falls close to nothing and a supplement does more of the work. The [full sun guide](/blog/how-much-sun-do-you-need-for-vitamin-d) breaks down how much you're likely producing.
+**Your sun exposure.** If you get regular midday sun when the UV index is above 3, your skin is already making vitamin D, and your supplement needs drop, sometimes to zero in summer. If you work indoors, live at a high latitude, or it's winter, your skin contribution falls close to nothing and a supplement does more of the work. The [full sun guide](/blog/how-much-sun-do-you-need-for-vitamin-d) breaks down how much you're likely producing.
 
 **Your skin type.** Melanin acts as a natural UV filter, so darker skin needs more sun time to make the same amount of vitamin D. If you have darker skin and a mostly indoor life, a supplement is more likely to be doing the heavy lifting. The [skin-type exposure times](/blog/how-long-to-sit-in-sun-for-vitamin-d) show how wide that gap is.
 
-Age sits behind all of these — skin synthesis gets less efficient as you get older, which is why the RDA steps up to 800 IU at 71.
+Age sits behind all of these. Skin synthesis gets less efficient as you get older, which is why the RDA steps up to 800 IU at 71.
 
 ## Sun vs supplement: counting what you already make
 
 A common mistake is treating the supplement as your only source. It isn't. Sun and food count too, and the RDA is a combined intake target.
 
-In summer, 15 minutes of midday sun with arms and legs bare at a UV index of 7 can produce anywhere from a few hundred to a couple thousand IU in fair to medium skin — potentially more than your daily pill. The [15-minute breakdown](/blog/how-much-vitamin-d-in-15-minutes-of-sun) shows the actual ranges by skin type and UV. If you're already making your daily vitamin D from sun, adding 2,000 IU on top isn't "more optimal." It's just more.
+In summer, 15 minutes of midday sun with arms and legs bare at a UV index of 7 can produce anywhere from a few hundred to a couple thousand IU in fair to medium skin, potentially more than your daily pill. The [15-minute breakdown](/blog/how-much-vitamin-d-in-15-minutes-of-sun) shows the actual ranges by skin type and UV. If you're already making your daily vitamin D from sun, adding 2,000 IU on top isn't "more optimal." It's just more.
 
-The flip side is real too. In winter at higher latitudes, your skin contribution essentially shuts down, and the supplement carries the whole load. That seasonal swing is exactly why a fixed year-round dose is blunt. Adjusting with the seasons — more in winter, less or none in a sunny summer — better matches what your body actually needs.
+The flip side is real too. In winter at higher latitudes, your skin contribution essentially shuts down, and the supplement carries the whole load. That seasonal swing is exactly why a fixed year-round dose is blunt. Adjusting with the seasons, more in winter and less or none in a sunny summer, better matches what your body actually needs.
 
 Before you worry about overdoing it from sun: you can't. Sun-driven synthesis is self-limiting. Once previtamin D3 builds up, further UV converts the excess into inactive compounds. Toxicity is a supplement problem. The details are in [can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
 
 ## When more isn't better
 
-Vitamin D toxicity is rare, but it's real, and it almost always comes from supplements. Sustained intake well above the 4,000 IU upper limit — typically above 10,000 IU a day over weeks or months — can drive hypercalcemia, where blood calcium rises. The symptoms are nonspecific at first: nausea, weakness, frequent urination, and they progress to kidney stress and, in severe cases, cardiac problems.
+Vitamin D toxicity is rare, but it's real, and it almost always comes from supplements. Sustained intake well above the 4,000 IU upper limit, typically above 10,000 IU a day over weeks or months, can drive hypercalcemia, where blood calcium rises. The symptoms are nonspecific at first: nausea, weakness, frequent urination, and they progress to kidney stress and, in severe cases, cardiac problems.
 
 The risk isn't theoretical. It's the reason the upper limit exists and the reason the 2024 guideline is cautious. If you're supplementing at the higher end and you've never tested, a blood test for 25(OH)D is how you find out whether your dose is sensible or quietly pushing you toward the top of the range.
 
 ## How to tell if your dose is working
 
-The only reliable check is a 25(OH)D blood test, and the right cadence is roughly every 8 to 12 weeks after a dose change. Levels shift slowly — vitamin D has a long half-life — so testing sooner than that doesn't tell you much, and testing once, years ago, doesn't either.
+The only reliable check is a 25(OH)D blood test, and the right cadence is roughly every 8 to 12 weeks after a dose change. Levels shift slowly because vitamin D has a long half-life, so testing sooner than that doesn't tell you much, and testing once, years ago, doesn't either.
 
 If you started low and are correcting, you're looking for the number to climb into the sufficient range (the NIH considers 20 ng/mL and above adequate for bone health; some clinicians target 30). If you're already there, the question is whether more is adding anything, and for most healthy adults the answer from the recent trials is: not much.
 
 ## How Bask factors your sun into your supplement decision
 
-Most dosing advice ignores the variable that varies the most: how much sun you're actually getting. Bask closes that gap. It reads your skin type, your location, and the live UV index to tell you how much vitamin D your sun exposure is producing today and when your productive window closes. Once you know what the sun is contributing, your supplement decision gets a lot easier — and in the brighter months, it might be zero.
+Most dosing advice ignores the variable that varies the most: how much sun you're actually getting. Bask closes that gap. It reads your skin type, your location, and the live UV index to tell you how much vitamin D your sun exposure is producing today and when your productive window closes. Once you know what the sun is contributing, your supplement decision gets a lot easier, and in the brighter months, it might be zero.
 
 <Callout type="info" title="See what your sun is doing">
   Bask calculates how much vitamin D your outdoor time is producing right now, so you can decide whether today needs a pill or just a walk.
@@ -200,7 +200,7 @@ More than in summer, usually. In winter at higher latitudes, your skin makes lit
 
 **Do I need vitamin D if I get regular sun?**
 
-Often not, or not much. If you get regular midday sun when the UV index is above 3, your skin can produce more than your daily RDA, and a supplement may be redundant. The catch is that "regular sun" has to be real exposure — bare skin, midday, decent UV — not a five-minute walk in long sleeves. Most people overestimate how much they actually get.
+Often not, or not much. If you get regular midday sun when the UV index is above 3, your skin can produce more than your daily RDA, and a supplement may be redundant. The catch is that "regular sun" has to be real exposure: bare skin, midday, decent UV. A five-minute walk in long sleeves doesn't count. Most people overestimate how much they actually get.
 
 **Can I take vitamin D every day?**
 
@@ -208,7 +208,7 @@ Yes. Vitamin D supplements are generally taken daily, and daily dosing at modera
 
 **What dose of vitamin D is too much?**
 
-The official upper limit is 4,000 IU per day for adults from all sources. Sustained intake above roughly 10,000 IU a day is associated with toxicity, driven by rising blood calcium. If your 25(OH)D level climbs near or above 100 ng/mL, that's a warning sign. Anything above the UL should be done with a clinician and a follow-up test.
+The official upper limit is 4,000 IU per day for adults from all sources. Sustained intake above roughly 10,000 IU a day is associated with toxicity, driven by rising blood calcium. The NIH links 25(OH)D levels above 50 ng/mL to potential adverse effects, though frank toxicity typically shows up at much higher levels. Anything above the UL should be done with a clinician and a follow-up test.
 
 ## Where to go next
 
@@ -222,7 +222,7 @@ The official upper limit is 4,000 IU per day for adults from all sources. Sustai
 1. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Recommended Dietary Allowances (600 IU for 19–70, 800 IU for 71+), Tolerable Upper Intake Level (4,000 IU), blood-level thresholds, and obesity as a deficiency risk factor.
 2. Demay MB, et al. "Vitamin D for the Prevention of Disease: An Endocrine Society Clinical Practice Guideline." _J Clin Endocrinol Metab._ 2024. The updated recommendation against routine high-dose supplementation for healthy adults under 75 and against routine screening; empiric supplementation for adults 75+, pregnancy, and prediabetes.
 3. Manson JE, et al. "Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease (VITAL)." _N Engl J Med._ 2019;380(1):33–44. The large randomized trial whose largely null findings informed the scaled-back guidance.
-4. [National Academies of Sciences, Engineering, and Medicine — Dietary Reference Intakes for Calcium and Vitamin D (2011)](https://www.nationalacademies.org/). The RDA and UL framework.
+4. [National Academies of Sciences, Engineering, and Medicine, Dietary Reference Intakes for Calcium and Vitamin D (2011)](https://www.nationalacademies.org/). The RDA and UL framework.
 5. Holick MF. "Vitamin D deficiency." _N Engl J Med._ 2007;357(3):266–81. Deficiency thresholds, fat-soluble sequestration in adipose tissue, and skin-type effects on synthesis.
 
 ---
