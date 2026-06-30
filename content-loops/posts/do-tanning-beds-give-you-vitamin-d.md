@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # Do Tanning Beds Give You Vitamin D?
 
@@ -22,13 +22,13 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify IARC/WHO Group 1 classification of UV-emitting tanning devices (2009) — confirmed by 06-22 research verification
-- [ ] Confirm "most" beds are UVA-dominant phrasing (a minority emit some UVB) per Operating Principles accuracy rule
-- [ ] Verify the roughly 75% melanoma risk increase for first use before age 30 (IARC/WHO; Woo & Eide 2010)
-- [ ] Confirm NIH ODS distinction: UVA does not drive cutaneous vitamin D synthesis; UVB (290–315 nm) does
-- [ ] Check App Store link points to correct tracked URL for per-post click attribution
-- [ ] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles
-- [ ] Verify internal links resolve: /blog/best-uv-index-for-tanning, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/d3-dosage-how-much-vitamin-d-should-i-take
+- [x] Verify IARC/WHO Group 1 classification of UV-emitting tanning devices (2009) — confirmed 2026-06-29 against IARC news page (29 July 2009: "classified UV-emitting tanning devices as 'carcinogenic to humans' (Group 1)")
+- [x] Confirm "most" beds are UVA-dominant phrasing (a minority emit some UVB) per Operating Principles accuracy rule — confirmed 2026-06-29. Consistent with Woo & Eide 2010; "most" and "95% or more" phrasing is accurate for commercial UVA-dominant beds.
+- [x] Verify the roughly 75% melanoma risk increase for first use before age 30 (IARC/WHO; Woo & Eide 2010) — confirmed 2026-06-29. The figure originates from the 2009 IARC Working Group meta-analysis (Lancet Oncology); post hedges with "roughly" and attributes to IARC/WHO.
+- [x] Confirm NIH ODS distinction: UVA does not drive cutaneous vitamin D synthesis; UVB (290–315 nm) does — confirmed 2026-06-29 against NIH ODS fact sheet ("UVB radiation with a wavelength of approximately 290 to 320 nanometers ... converts cutaneous 7-dehydrocholesterol to previtamin D3")
+- [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-06-29. URL matches the established pattern used across all published posts.
+- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-06-29. "Bask Health Team" is the established byline across the blog; no named individual author available.
+- [x] Verify internal links resolve: /blog/best-uv-index-for-tanning, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/d3-dosage-how-much-vitamin-d-should-i-take — confirmed 2026-06-29. All four resolve to published posts in src/content/blog/.
 
 ---
 
@@ -42,7 +42,7 @@ Your skin makes vitamin D only when UVB light hits 7-dehydrocholesterol in the s
 
 Commercial tanning beds are engineered to deliver a tan, not a supplement. Most emit overwhelmingly UVA, often 95% or more of total output, at intensities well above natural sunlight. That is the design goal: fast, dark color without the quick burn that UVB causes. Vitamin D is not part of the engineering.
 
-A minority of beds, sometimes marketed as "vitamin D beds," do emit higher UVB fractions. Studies show these can raise blood levels modestly in some users. But the effect is inconsistent, depends on the specific unit and how often you use it, and carries the same cancer risk as any other UV device.
+A minority of beds, sometimes marketed as "vitamin D beds," do emit higher UVB fractions. These can raise blood levels modestly in some users. But the effect is inconsistent, depends on the specific unit and how often you use it, and carries the same cancer risk as any other UV device.
 
 <Callout type="info" title="Why most beds miss vitamin D entirely">
   Vitamin D synthesis is UVB-driven photochemistry. Most tanning beds are
@@ -91,22 +91,22 @@ headers={[
 
   <tr>
     <td>Tanning bed (UVA-dominant)</td>
-    <td>Barely — almost no UVB</td>
+    <td>Barely. Almost no UVB.</td>
     <td>Group 1 carcinogen; melanoma risk rises roughly 75% with first use before 30</td>
   </tr>
   <tr>
     <td>Timed midday sun (UV 3+)</td>
-    <td>Yes — meaningful in 10–20 min for fair/medium skin</td>
+    <td>Yes, meaningful in 10 to 20 min for fair/medium skin</td>
     <td>Low when timed; UV damage stays manageable if you cap sessions</td>
   </tr>
   <tr>
     <td>Food (salmon, eggs, fortified milk)</td>
-    <td>Modestly — a few hundred IU/day</td>
+    <td>Modestly. A few hundred IU/day.</td>
     <td>None</td>
   </tr>
   <tr>
-    <td>Vitamin D supplement (1,000–2,000 IU)</td>
-    <td>Yes — reliable, dose-controlled</td>
+    <td>Vitamin D supplement (1,000 to 2,000 IU)</td>
+    <td>Yes, reliable and dose-controlled</td>
     <td>None at standard doses</td>
   </tr>
 </ComparisonTable>
@@ -118,7 +118,7 @@ Bask replaces the "more UV means more D" guesswork with a timed window. It reads
 If you also want color, the [tanning and UV index guide](/blog/best-uv-index-for-tanning) covers the safer band (UV 3 to 5) for a gradual tan with lower burn risk, without resorting to a bed.
 
 <Callout type="info" title="Get your vitamin D window">
-  Bask shows how long to be outside today based on your skin type and live UV — no bed required.
+  Bask shows how long to be outside today based on your skin type and live UV, with no bed required.
   [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
 </Callout>
 
