@@ -2,6 +2,12 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": ["opencode-scheduler"],
   "model": "zai-coding-plan/glm-5.2",
+  "permission": {
+    "skill": {
+      "humanizer": "allow",
+      "scheduled-job-best-practices": "allow"
+    }
+  },
   "agent": {
     "general": { "model": "openrouter/deepseek/deepseek-v4-flash" }
   }

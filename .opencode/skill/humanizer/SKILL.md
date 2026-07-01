@@ -1,6 +1,5 @@
 ---
 name: humanizer
-version: 2.7.0
 description: |
   Remove signs of AI-generated writing from text. Use when editing or reviewing
   text to make it sound more natural and human-written. Based on Wikipedia's
@@ -9,14 +8,9 @@ description: |
   attributions, em dash overuse, rule of three, AI vocabulary words, passive
   voice, negative parallelisms, and filler phrases.
 license: MIT
-compatibility: claude-code opencode
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Grep
-  - Glob
-  - AskUserQuestion
+compatibility: opencode
+metadata:
+  version: "2.7.0"
 ---
 
 # Humanizer: Remove AI Writing Patterns
