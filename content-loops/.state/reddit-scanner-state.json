@@ -1,8 +1,7 @@
 {
-  "lastScanDate": "2026-06-26",
-  "lastScanTime": "12:00 AM",
-  "themesFound": 7,
-  "subredditsScanned": 5,
-  "totalThreadsReviewed": 20,
+  "lastScan": "2026-07-01",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-01.md",
+  "themesFound": 5,
+  "sourcesCount": 20,
   "status": "success"
 }
