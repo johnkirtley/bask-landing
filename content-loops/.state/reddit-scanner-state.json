@@ -3,5 +3,6 @@
   "lastScanFile": "content-loops/research/reddit-scan-2026-07-01.md",
   "themesFound": 5,
   "sourcesCount": 20,
-  "status": "success"
+  "status": "success",
+  "gitCommit": "1d6fbee"
 }
