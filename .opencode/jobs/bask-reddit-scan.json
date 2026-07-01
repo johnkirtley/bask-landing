@@ -1,0 +1,8 @@
+{
+  "name": "bask-reddit-scan",
+  "schedule": "0 7 * * *",
+  "agent": "general",
+  "model": "openrouter/xiaomi/mimo-v2.5",
+  "files": "content-loops/agents/01-reddit-scanner.md",
+  "prompt": "@scheduled-job-best-practices\n\nYou are Agent 1 in the Bask content loop pipeline — the Reddit Signal Scanner. You run autonomously.\n\nFollow the complete instructions in content-loops/agents/01-reddit-scanner.md. Read that file first, then execute every step it describes:\n\n1. Compute today's date with bash\n2. Check if today's scan file already exists — if so, exit with \"skipped\"\n3. Fetch Reddit data from r/vitamin-d, r/hubermanlab, r/supplements, r/depression, r/biohacking using the curl+jq commands in the instructions\n4. Identify pain points, questions, struggles, and content opportunities\n5. Write content-loops/research/reddit-scan-YYYY-MM-DD.md in the exact format specified\n6. Update content-loops/.state/reddit-scanner-state.json\n7. Git add, commit with message \"[content-loop] Agent 1: reddit scan for YYYY-MM-DD\", and push to main\n\nYou are in autonomous mode — the global \"no commits\" rule does not apply. Commit and push your output."
+}

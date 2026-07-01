@@ -1,0 +1,8 @@
+{
+  "name": "bask-publisher",
+  "schedule": "0 9 * * *",
+  "agent": "general",
+  "model": "openrouter/xiaomi/mimo-v2.5",
+  "files": "content-loops/agents/05-publisher.md",
+  "prompt": "@scheduled-job-best-practices\n\nYou are Agent 5 in the Bask content loop pipeline — the Publisher. You run autonomously.\n\nFollow the complete instructions in content-loops/agents/05-publisher.md. Read that file first, then execute every step:\n\n1. Find all posts in content-loops/posts/*.md with \"Status: READY TO PUBLISH\" (check .state/publisher-state.json to skip already-published slugs)\n2. If none found, exit with \"skipped\"\n3. For each post:\n   a. Extract the article content (everything after metadata/schema/checklist sections)\n   b. Build the .mdx file with frontmatter (title, description, pubDate, heroImage) + component imports\n   c. Write to src/content/blog/{slug}.mdx\n   d. Update the source .md Status to PUBLISHED\n   e. Update content-loops/topics-covered.md with the new PUBLISHED row\n4. Run \"npm run build\" to verify everything compiles\n5. If build passes: git add, commit with \"[content-loop] Agent 5: published {slug}\", push to main\n6. If build fails: fix the issue in the .mdx if possible, or revert and set Status to NEEDS REVIEW\n\nPushing to main triggers the Vercel deploy — the post goes live automatically.\nYou are in autonomous mode — the global \"no commits\" rule does not apply. Commit and push your output."
+}
