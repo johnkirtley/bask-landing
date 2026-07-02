@@ -120,7 +120,7 @@ That's the case for timing your sessions rather than just staying out until you 
 <Callout type="info" title="Know when to head in">
   Bask flags when your vitamin D window closes so you can step inside
   instead of accumulating UV damage that adds nothing to your levels.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## How long is too long?

@@ -119,7 +119,7 @@ If you also want color, the [tanning and UV index guide](/blog/best-uv-index-for
 
 <Callout type="info" title="Get your vitamin D window">
   Bask shows how long to be outside today based on your skin type and live UV, with no bed required.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## Frequently asked questions

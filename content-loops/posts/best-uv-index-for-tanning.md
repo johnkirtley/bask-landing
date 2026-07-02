@@ -102,7 +102,7 @@ Bask tracks all four in real time. You get the actual minutes for your skin type
 
 <Callout type="info" title="Try Bask free">
   See how long you can be outside today for vitamin D, personalized to your skin type and live UV index.
-  [Download on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## Frequently asked questions

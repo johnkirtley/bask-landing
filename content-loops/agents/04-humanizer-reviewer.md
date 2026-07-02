@@ -78,6 +78,22 @@ grep -nP '<(?=[0-9 ])' content-loops/posts/*.md
 
 Any hit in prose (not in valid HTML tags like `<td>`, `<tr>`, `<Callout>`) must be fixed.
 
+## Step 3b: App download CTA check
+
+Every post must drive readers to install the app. Verify two things:
+
+1. **A download CTA exists.** The post must contain at least one `[Download Bask on the App Store](...)` link, ideally inside the final `<Callout type="info">` of the "How Bask helps" section. If missing, add it (see Agent 3's "App download CTA" rules).
+2. **The URL is the canonical one.** The link must point to exactly:
+   `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235`
+
+Check for the deprecated placeholder and fix any hit:
+
+```bash
+grep -nE 'id6741454317|bask-uv-vitamin-d-tracker' content-loops/posts/*.md
+```
+
+If the grep returns any match in the post body (not a deliberate deprecation note), replace the URL with the canonical one. Leave the reviewer checklist item unchecked and note the correction if you had to fix it.
+
 ## Step 4: Set status
 
 After humanizing + verifying:

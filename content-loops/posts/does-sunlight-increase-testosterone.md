@@ -27,7 +27,7 @@ Status: READY TO PUBLISH
 - [x] Verify the claim that "several larger trials since have found no effect in men with normal vitamin D" — the positive result is the outlier; flag the specific null RCTs (e.g., Tromsø/Jorde) before publish — confirmed 2026-07-01. Jorde et al. 2013 (Horm Metab Res, PMID 23686706), the Tromsø pooled analysis of 3 vitamin D RCTs (n=282, 20,000–40,000 IU/week for 6–12 months vs placebo): "no significant effect on serum total or free testosterone levels… in subjects without significant vitamin D deficiency, there is no increase in serum testosterone after high dose vitamin D supplementation." Added to Sources below.
 - [ ] Verify the seasonal-testosterone claim (population data show a late-summer/early-fall peak and winter nadir) against a named endocrinology source before publish — NOT independently verified 2026-07-01. The phenomenon is well-established and conservatively framed in the post ("Real but correlational"), and Svartberg (Norway) is the commonly cited source for seasonal variation, but the specific peak/nadir timing was not confirmed against a named source this run. Minor item; does not block publish. Recommend adding Svartberg et al. (J Clin Endocrinol Metab) as the named citation at publish time.
 - [x] Confirm NIH ODS vitamin D fundamentals: deficiency prevalence and that UVB (not UVA) drives cutaneous synthesis — confirmed 2026-07-01 by reference to the NIH ODS Vitamin D Fact Sheet (same source already verified 2026-06-26 in sibling post how-much-vitamin-d-should-i-take). UVB-driven cutaneous synthesis and ~modity-based deficiency prevalence are standard NIH ODS content; the ODS page returned HTTP 403 to programmatic fetch this run but the source is unchanged.
-- [x] Check App Store link points to the correct tracked URL for per-post click attribution — confirmed 2026-07-01. URL `https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317` matches the established pattern used across all published posts.
+- [x] Check App Store link points to the correct tracked URL for per-post click attribution — confirmed 2026-07-01. URL `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235` matches the established pattern used across all published posts.
 - [x] Confirm "Author: Bask Health Team" or update to a named author per E-E-A-T principles — confirmed 2026-07-01. "Bask Health Team" is the established byline used across the blog; no individual named author available.
 - [x] Verify internal links resolve: /blog/d3-dosage-how-much-vitamin-d-should-i-take, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d — confirmed 2026-07-01. All 4 resolve to published files in src/content/blog/.
 
@@ -121,7 +121,7 @@ If your sun is not usable, because of low-UV season, latitude, or fully indoor d
 <Callout type="info" title="Get your vitamin D window">
   See how many minutes your skin needs today, based on your skin type and the
   live UV index.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## Frequently asked questions

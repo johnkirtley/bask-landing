@@ -149,7 +149,7 @@ The numbers in the table above are useful context, but they're still generalizat
 
 <Callout type="info" title="Try Bask free">
   See how many minutes your skin needs today based on your skin type and live UV index.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## When 15 minutes is nowhere near enough
@@ -175,7 +175,7 @@ What is _not_ self-limiting is UV damage to skin cells. Once you've hit your vit
 <Callout type="info" title="Know when you're done">
   Bask flags the point where your vitamin D window closes — so you can head in
   rather than accumulating UV damage that adds nothing to your levels.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## Frequently asked questions

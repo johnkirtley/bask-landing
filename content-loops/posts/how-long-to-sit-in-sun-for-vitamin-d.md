@@ -78,7 +78,7 @@ By the time your skin turns pink, you have crossed into sunburn territory and st
 ### Bask CTA
 
 > _Try Bask free — see your daily vitamin D window, personalized to your skin type and location._
-> App Store link: https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317
+> App Store link: https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235
 
 ### FAQ
 

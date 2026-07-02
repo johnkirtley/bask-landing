@@ -27,7 +27,7 @@ Status: READY TO PUBLISH
 - [x] Confirm toxicity framing: typically associated with sustained intake above 10,000 IU/day; hypercalcemia-driven; ~~levels near or above 100 ng/mL associated with risk~~ — partially confirmed and CORRECTED 2026-06-26. The 10,000 IU/day threshold is confirmed (NIH: "toxicity is unlikely at daily intakes below 250 mcg (10,000 IU)"). However, the 100 ng/mL figure was inaccurate per NIH: levels above 50 ng/mL (125 nmol/L) are linked to potential adverse effects, and frank toxicity typically at >150 ng/mL. Post body updated to reflect the NIH 50 ng/mL threshold.
 - [x] Confirm the VITAL trial (Manson et al., NEJM 2019) found no meaningful reduction in cancer/CVD/fractures from high-dose vitamin D in healthy adults — confirmed 2026-06-26 against NIH ODS fact sheet (2,000 IU/day, median 5.3 years, 25,871 participants; no significant reduction in cancer incidence, CVD events, or fractures).
 - [x] Confirm body-weight point against NIH ODS (obesity as a deficiency risk factor; vitamin D is fat-soluble and sequestered in adipose tissue) — confirmed 2026-06-26. NIH ODS: "Individuals with a BMI of 30 or more have lower serum 25(OH)D levels… greater amounts of subcutaneous fat sequester more of the vitamin."
-- [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-06-26. URL `https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317` matches the established pattern used in all other published posts (e.g., how-long-to-sit-in-sun-for-vitamin-d). Note: Apple returns HTTP 404 to programmatic HEAD requests; this is consistent across all posts and likely reflects bot-detection or pre-launch status, not a broken link for real users.
+- [x] Check App Store link points to correct canonical URL — corrected 2026-07-02. URL updated to `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235` (the live listing, matches the landing page). The previous `id6741454317` slug was a stale placeholder that 404'd and has been replaced across all posts.
 - [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-06-26. "Bask Health Team" is the established author byline used across the blog; no individual named author available.
 - [x] Verify internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-much-vitamin-d-in-15-minutes-of-sun, /blog/can-you-get-too-much-vitamin-d-from-the-sun, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d — partially confirmed 2026-06-26. 3 of 5 resolve to published posts in src/content/blog/ (how-much-sun-do-you-need-for-vitamin-d, how-long-to-sit-in-sun-for-vitamin-d, what-uv-index-do-you-need-for-vitamin-d). 2 of 5 (how-much-vitamin-d-in-15-minutes-of-sun, can-you-get-too-much-vitamin-d-from-the-sun) exist as drafts in content-loops/posts/ but are not yet published to src/content/blog/. Links will resolve once those posts are published.
 
@@ -185,7 +185,7 @@ Most dosing advice ignores the variable that varies the most: how much sun you'r
 
 <Callout type="info" title="See what your sun is doing">
   Bask calculates how much vitamin D your outdoor time is producing right now, so you can decide whether today needs a pill or just a walk.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317) →
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
 ## Frequently asked questions

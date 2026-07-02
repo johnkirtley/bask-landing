@@ -102,6 +102,46 @@ From the known-issues file (`content-loops/known-issues/development/known-issues
 - Example: write `(&lt;20 ng/mL)` not `(<20 ng/mL)`.
 - Valid HTML tags like `<td>`, `<tr>`, `<Callout>` are fine — the problem is only `<` followed by a digit or space in prose.
 
+## App download CTA (mandatory)
+
+Every post must include a download link to the Bask app. This is non-negotiable — it's the whole point of the blog.
+
+### Canonical download URL
+
+Always use this exact URL (the live App Store listing for Bask - Vitamin D Sun Tracker):
+
+```
+https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235
+```
+
+**Never** use `https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317` (app ID `id6741454317`). That slug/ID is a stale placeholder that returns 404. If you copy a CTA from an older post, update the URL first.
+
+### Where the CTA goes
+
+End the "How [topic] relates to Bask" section with a `<Callout type="info">` containing the download link. Use this format:
+
+```markdown
+<Callout type="info" title="[short, topic-specific hook]">
+  [One sentence tying the post's angle to a specific app capability.]
+  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
+</Callout>
+```
+
+You may also repeat the link in "Where to go next" if it fits naturally.
+
+### How to tie the topic to the app
+
+Don't list features. Pick the **1–2 capabilities most relevant to this post's angle** and write a plain sentence about how they help with the thing the reader just read about. Never salesy. The real capabilities (from the live App Store listing) are:
+
+- **Best sun windows** — a 48-hour UV forecast of your optimal exposure times, with an alert right before your Vitamin D window opens. Use for "when to go outside" / "best time of day" topics.
+- **Time-to-sunburn timer** — a built-in sun session timer with burn-risk guidance so you don't overdo it. Use for "how long" / "safe exposure" / tanning topics.
+- **Real-time Vitamin D estimates** — IU estimates from live UV index, weather, skin type, and clothing. Use for "how much vitamin D" / dose / calculation topics.
+- **Vitamin D lab tracking + trends** — log blood-level results and see 7/30/90-day trends. Use for deficiency / levels / "is my vitamin D low" topics.
+- **Supplements + cofactors** — quick-log vitamin D doses; track magnesium and vitamin K2. Use for dosage / supplementation / cofactor topics.
+- **Privacy & integrations** — data stays on-device; optional Apple Health daylight sync and opt-in leaderboard. Mention only if privacy/consistency is the angle.
+
+Match the capability to the post. A "how long until sunburn" post should name the time-to-sunburn timer, not the supplement logger.
+
 ## Output file
 
 Write to: `content-loops/posts/{slug}.md`
@@ -200,7 +240,7 @@ Before you commit, verify your post meets these standards:
 3. **3-5 FAQ items** — question-format H2s or bold Q&As.
 4. **Internal links** — 3+ links to existing published posts. Use `/blog/slug` format.
 5. **Sources** — cite primary sources (NIH ODS, EPA, peer-reviewed studies). Include full URLs.
-6. **How Bask helps section** — one section connecting the topic to the app.
+6. **How Bask helps section** — one section connecting the topic to the app, ending with the mandatory download CTA (canonical URL `id6758405235`, see "App download CTA" above).
 7. **Medical disclaimer** — at the bottom for YMYL topics.
 8. **Target length** — match the blueprint's specified range (usually 800-2,000 words).
 9. **No AI-isms** — read your own draft and fix any patterns from the humanizer list: inflated symbolism, rule of three, em dash overuse, vague attributions, passive voice.
