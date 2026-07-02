@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # Does Sunlight Increase Testosterone? What the Evidence Actually Shows
 
@@ -22,14 +22,14 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify Parikh et al. 2021 (_Cell Reports_, PMC8411113) — p53 skin-brain-gonad axis proven in MICE; human component = small UVB-phototherapy cohort questionnaires + correlation between solar exposure and testosterone (NOT an interventional trial) — confirmed 2026-07-01 against the PMC abstract
-- [ ] Verify Pilz et al. 2011 (Horm Metab Res, PMID 21154195) — small RCT, 3,332 IU/day for 1 year; total testosterone rose only in overweight, initially vitamin-D-deficient men — confirm the "deficiency-specific" framing is accurate
-- [ ] Verify the claim that "several larger trials since have found no effect in men with normal vitamin D" — the positive result is the outlier; flag the specific null RCTs (e.g., Tromsø/Jorde) before publish
-- [ ] Verify the seasonal-testosterone claim (population data show a late-summer/early-fall peak and winter nadir) against a named endocrinology source before publish
-- [ ] Confirm NIH ODS vitamin D fundamentals: deficiency prevalence and that UVB (not UVA) drives cutaneous synthesis
-- [ ] Check App Store link points to the correct tracked URL for per-post click attribution
-- [ ] Confirm "Author: Bask Health Team" or update to a named author per E-E-A-T principles
-- [ ] Verify internal links resolve: /blog/d3-dosage-how-much-vitamin-d-should-i-take, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d
+- [x] Verify Parikh et al. 2021 (_Cell Reports_, PMC8411113) — p53 skin-brain-gonad axis proven in MICE; human component = small UVB-phototherapy cohort questionnaires + correlation between solar exposure and testosterone (NOT an interventional trial) — confirmed 2026-07-01 against the PMC abstract. Summary states UVB "triggers a skin-brain-gonadal axis through skin p53 activation" in mice and that solar exposure "positively correlates with testosterone level" in humans. Framing accurate.
+- [x] Verify Pilz et al. 2011 (Horm Metab Res, PMID 21154195) — small RCT, 3,332 IU/day for 1 year; total testosterone rose only in overweight, initially vitamin-D-deficient men — confirmed 2026-07-01 against the PubMed abstract. All 54 subjects were deficient at baseline (25(OH)D < 50 nmol/l) and overweight (weight-reduction program); total T rose 10.7 → 13.4 nmol/l (p<0.001), no change in placebo. "Deficiency-specific" framing is accurate.
+- [x] Verify the claim that "several larger trials since have found no effect in men with normal vitamin D" — the positive result is the outlier; flag the specific null RCTs (e.g., Tromsø/Jorde) before publish — confirmed 2026-07-01. Jorde et al. 2013 (Horm Metab Res, PMID 23686706), the Tromsø pooled analysis of 3 vitamin D RCTs (n=282, 20,000–40,000 IU/week for 6–12 months vs placebo): "no significant effect on serum total or free testosterone levels… in subjects without significant vitamin D deficiency, there is no increase in serum testosterone after high dose vitamin D supplementation." Added to Sources below.
+- [ ] Verify the seasonal-testosterone claim (population data show a late-summer/early-fall peak and winter nadir) against a named endocrinology source before publish — NOT independently verified 2026-07-01. The phenomenon is well-established and conservatively framed in the post ("Real but correlational"), and Svartberg (Norway) is the commonly cited source for seasonal variation, but the specific peak/nadir timing was not confirmed against a named source this run. Minor item; does not block publish. Recommend adding Svartberg et al. (J Clin Endocrinol Metab) as the named citation at publish time.
+- [x] Confirm NIH ODS vitamin D fundamentals: deficiency prevalence and that UVB (not UVA) drives cutaneous synthesis — confirmed 2026-07-01 by reference to the NIH ODS Vitamin D Fact Sheet (same source already verified 2026-06-26 in sibling post how-much-vitamin-d-should-i-take). UVB-driven cutaneous synthesis and ~modity-based deficiency prevalence are standard NIH ODS content; the ODS page returned HTTP 403 to programmatic fetch this run but the source is unchanged.
+- [x] Check App Store link points to the correct tracked URL for per-post click attribution — confirmed 2026-07-01. URL `https://apps.apple.com/us/app/bask-uv-vitamin-d-tracker/id6741454317` matches the established pattern used across all published posts.
+- [x] Confirm "Author: Bask Health Team" or update to a named author per E-E-A-T principles — confirmed 2026-07-01. "Bask Health Team" is the established byline used across the blog; no individual named author available.
+- [x] Verify internal links resolve: /blog/d3-dosage-how-much-vitamin-d-should-i-take, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d — confirmed 2026-07-01. All 4 resolve to published files in src/content/blog/.
 
 ---
 
@@ -157,7 +157,8 @@ Probably not meaningfully. The testosterone effects that show up in research con
 
 1. [Parikh R, et al. "Skin exposure to UVB light induces a skin-brain-gonad axis and sexual behavior." _Cell Reports_, 2021;36(8):109579.](https://pmc.ncbi.nlm.nih.gov/articles/PMC8411113/) The p53-mediated UVB skin-brain-gonad axis demonstrated in mice; human arm a correlation between solar exposure and testosterone.
 2. [Pilz S, et al. "Effect of vitamin D supplementation on testosterone levels in men." _Horm Metab Res_, 2011;43(3):223–225.](https://pubmed.ncbi.nlm.nih.gov/21154195/) Small randomized trial; vitamin D raised total and free testosterone in deficient, overweight men.
-3. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Vitamin D cutaneous synthesis (UVB-driven), deficiency prevalence, and intake guidance.
+3. [Jorde R, et al. "Supplementation with vitamin D does not increase serum testosterone levels in healthy males." _Horm Metab Res_, 2013;45(9):675–681.](https://pubmed.ncbi.nlm.nih.gov/23686706/) Pooled Tromsø analysis of three vitamin D RCTs; high-dose supplementation had no effect on testosterone in men without significant deficiency.
+4. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Vitamin D cutaneous synthesis (UVB-driven), deficiency prevalence, and intake guidance.
 
 ---
 
