@@ -1,9 +1,10 @@
 ---
 interface Props {
   headers: string[];
+  rows?: string[][];
 }
 
-const { headers } = Astro.props;
+const { headers, rows } = Astro.props;
 ---
 
 <div class="comparison-table-wrapper my-12 overflow-x-auto">
@@ -21,7 +22,15 @@ const { headers } = Astro.props;
         </tr>
       </thead>
       <tbody>
-        <slot />
+        {rows && rows.length > 0
+          ? rows.map((row) => (
+              <tr>
+                {row.map((cell) => (
+                  <td>{cell}</td>
+                ))}
+              </tr>
+            ))
+          : <slot />}
       </tbody>
     </table>
   </div>
