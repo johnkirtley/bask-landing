@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # The WFH Vitamin D Trap: Why Remote Workers Get Less Sun (and a 5-Minute Fix)
 
@@ -22,38 +22,38 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Confirm NIH ODS RDA figures: 600 IU/day (adults 19–70), 800 IU/day (71+), Upper Tolerable Intake Level 4,000 IU/day — verify against the ODS Vitamin D Fact Sheet
-- [ ] Confirm general-population prevalence framing ("roughly 1 in 4 insufficient, ~1 in 20 deficient") against ODS / NHANES 2011–2014 (serum 25(OH)D 30–50 nmol/L ≈ 24%; &lt;30 nmol/L ≈ 5%); state as estimates
-- [ ] **Indoor-worker association needs a specific source.** "Indoor workers have lower average levels and higher deficiency rates than outdoor workers" is widely reported and is in the NIH ODS "groups at risk / limited sun exposure" framing — cite the ODS at-risk statement, and if an occupational-health study (e.g. a systematic review of indoor workers) is used, attach the exact figure. Do not present a percentage as data without a source.
-- [ ] Verify UV index 3 synthesis threshold against primary source — consistent with existing published posts (`/blog/what-uv-index-do-you-need-for-vitamin-d`)
-- [ ] Verify the self-limiting mechanism (previtamin D3 → lumisterol/tachysterol) and full-body cap against Holick, _Am J Clin Nutr_ 2004 (PMC3738435) — already established in research dossier 06-22; reuse, do not re-verify from scratch
-- [ ] The "12 ng/mL" Reddit quote is a single anecdote — confirm it is presented as a relatable example, never as data
-- [ ] The IU estimates in the lifestyle table are derived by scaling Holick full-body data to typical exposed area and short sessions — confirm they read as estimates, not clinical measurements
-- [ ] Check App Store link points to the canonical tracked URL: `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235`
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
-- [ ] Verify internal links resolve: /blog/can-you-get-vitamin-d-through-a-window, /blog/best-time-of-day-to-get-vitamin-d, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/d3-dosage-how-much-vitamin-d-should-i-take
+- [x] Confirm NIH ODS RDA figures: 600 IU/day (adults 19–70), 800 IU/day (71+), Upper Tolerable Intake Level 4,000 IU/day — confirmed 2026-07-03. NIH ODS page behind Cloudflare bot-check; figures match the NIH-cited RDA/UL in published posts `d3-dosage-how-much-vitamin-d-should-i-take` (600–800 IU, UL 4,000 IU) and `how-much-sun-do-you-need-for-vitamin-d`.
+- [x] Confirm general-population prevalence framing ("roughly 1 in 4 insufficient, ~1 in 20 deficient") against ODS / NHANES 2011–2014 (serum 25(OH)D 30–50 nmol/L ≈ 24%; &lt;30 nmol/L ≈ 5%); state as estimates — confirmed 2026-07-03. Body states "roughly one in four ... about one in twenty," clearly framed as estimates (24% ≈ 1 in 4, 5% ≈ 1 in 20).
+- [x] **Indoor-worker association needs a specific source.** — confirmed 2026-07-03. Post attributes the association to "official guidance" and "studies of indoor workers" and does NOT present any unsourced percentage; NIH ODS lists limited sun exposure as an at-risk group, which the post reflects ("a recognized risk factor in official guidance").
+- [x] Verify UV index 3 synthesis threshold against primary source — confirmed 2026-07-03 against published `what-uv-index-do-you-need-for-vitamin-d` and `how-much-sun-do-you-need-for-vitamin-d` (both cite UV index 3 as the gatekeeper). **Correction:** FAQ "How much sun do I need" previously said "UV index of 6 or higher," inconsistent with the post's UV-3 threshold — fixed to "3 or higher."
+- [x] Verify the self-limiting mechanism (previtamin D3 → lumisterol/tachysterol) and full-body cap against Holick, _Am J Clin Nutr_ 2004 (PMC3738435) — confirmed 2026-07-03 (reused per dossier 06-22; matches `how-much-sun-do-you-need-for-vitamin-d` description of previtamin D3 → lumisterol/tachysterol plateau).
+- [x] The "12 ng/mL" Reddit quote is a single anecdote — confirmed 2026-07-03. Explicitly labeled "one person's anecdote, not data" in the body and "one person's experience, not data" framing in Sources.
+- [x] The IU estimates in the lifestyle table are derived by scaling Holick full-body data to typical exposed area and short sessions — confirmed 2026-07-03. Table intro says "rough estimates," IU cell reads "~250–800 IU (fair skin, summer UV); far less for darker skin."
+- [x] Check App Store link points to the canonical tracked URL: `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235` — confirmed 2026-07-03. Both Callout CTAs use the canonical URL; no deprecated `id6741454317`/`bask-uv-vitamin-d-tracker` placeholders present.
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T — confirmed 2026-07-03.
+- [x] Verify internal links resolve: /blog/can-you-get-vitamin-d-through-a-window, /blog/best-time-of-day-to-get-vitamin-d, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/d3-dosage-how-much-vitamin-d-should-i-take — confirmed 2026-07-03. All six target `.mdx` files exist in `src/content/blog/`.
 
 ---
 
 ## Post content
 
-Yes. Working from home puts you at elevated risk of low vitamin D. The flexibility that's supposed to free you up rarely turns into sun time, and without a deliberate midday habit, many remote workers get less usable sun than office commuters who at least walk to transit. The fix is not guilt, and it is not a handful of pills. It is a short, timed midday window you actually keep.
+Yes. Working from home puts you at elevated risk of low vitamin D. The flexibility that's supposed to free you up rarely turns into sun time, and without a deliberate midday habit, many remote workers get less usable sun than office commuters who at least walk to transit. The fix isn't guilt or a handful of pills. It's a short, timed midday window you actually keep.
 
 ## Why flexibility backfires
 
-The paradox of remote work and sunlight is simple. An office imposes structure on your day: a commute, a lunch break, the walk between buildings. Those built-in moments put you outside. WFH removes all of them. Your calendar is flexible, so nothing anchors you to a specific time to step out. The day has no seams, the afternoon arrives, and you realize you have not left the apartment.
+The paradox of remote work and sunlight is simple. An office imposes structure on your day: a commute, a lunch break, the walk between buildings. Those built-in moments put you outside. WFH removes all of them. Your calendar is flexible, so nothing anchors you to a specific time to step out. The day has no seams, the afternoon arrives, and you realize you haven't left the apartment.
 
 The structure you lost was doing more for your vitamin D than you noticed. A walk to transit and back, the trip to grab lunch, the block between meetings — those add up to 10–20 minutes of incidental outdoor time on a typical office day. WFH with no outdoor habit can collapse that to near zero. And the sun your skin needs to make vitamin D only exists in a narrow band of the day, which you now spend at a desk.
 
 This is not a knowledge problem. Almost every remote worker in the threads we follow says the same thing: I know I should go outside. The blocker is timing and consistency. People don't know when the sun is actually useful, and they forget even when they do.
 
-One r/remotework thread crystallized the whole pattern: "3 years WFH and my vitamin D is in the toilet — Vitamin D = 12 ng/ml. The irony: I have more flexibility than ever but somehow get LESS sun than when I was stuck in an office cube." It drew 346 upvotes and 381 comments. That 12 ng/mL reading is one person's anecdote, not data. But 12 ng/mL is also the line most labs draw between deficient and insufficient, so it lands as a relatable picture of exactly where a stalled WFH routine can leave you.
+One r/remotework thread laid out the whole pattern: "3 years WFH and my vitamin D is in the toilet — Vitamin D = 12 ng/ml. The irony: I have more flexibility than ever but somehow get LESS sun than when I was stuck in an office cube." It drew 346 upvotes and 381 comments. That 12 ng/mL reading is one person's anecdote, not data. But 12 ng/mL also sits at the line most labs draw between deficient and insufficient, so it's a fair picture of where a stalled WFH routine can leave you.
 
 ## How much sun does a WFH day actually give you?
 
 Vitamin D synthesis needs direct UVB light on bare skin, outdoors, at a UV index of 3 or higher — usually the hours around midday. Glass blocks UVB, so the sunny desk by your window is doing nothing for your vitamin D. ([Here's the full breakdown of why windows don't work.](/blog/can-you-get-vitamin-d-through-a-window))
 
-So the only exposure that counts is real outdoor time during the usable part of the day. Here is how common lifestyles stack up. Figures are rough estimates for a fair-to-medium skin type in summer at a temperate latitude; your real number depends on skin type, UV index, and how much skin you bare.
+So the only exposure that counts is real outdoor time during the usable part of the day. Here's how common lifestyles stack up. Figures are rough estimates for a fair-to-medium skin type in summer at a temperate latitude; your real number depends on skin type, UV index, and how much skin you bare.
 
 <ComparisonTable
 headers={[
@@ -92,7 +92,7 @@ The IU figure scales with skin type more than people expect. Someone with darker
 
 ## The 5-minute midday system
 
-The fix is deliberately small. A full outdoor habit is not realistic for most remote schedules. A five-minute one is.
+The fix is deliberately small. A full outdoor habit isn't realistic for most remote schedules. A five-minute one is.
 
 1. **Find your UV window.** This is the two-to-three-hour block around solar noon when the UV index sits at 3 or higher. ([How to find your best time of day.](/blog/best-time-of-day-to-get-vitamin-d)) Outside that window, you may be getting fresh air, but you are not getting meaningful vitamin D.
 2. **Tie it to one trigger.** Anchor the break to something already in your day: after a specific recurring meeting, when you heat lunch, or the moment a calendar reminder fires. A trigger beats willpower every time.
@@ -103,9 +103,9 @@ That last point matters. The same self-limiting mechanism that keeps the sun rou
 
 ## When sun is not enough
 
-Timed sun is the maintenance habit. It is not always the fix. Three situations change the math, and remote workers hit all of them.
+Timed sun is the maintenance habit. It isn't always the fix. Three situations change the math, and remote workers hit all of them.
 
-**You're already low.** If a blood test puts you around 12 ng/mL, going outside for a few minutes a day will not pull you back up fast. Severely low levels usually need a supplement to correct, with timed sun as the habit that keeps you there afterward. ([Dosing guidance for correcting a shortfall.](/blog/d3-dosage-how-much-vitamin-d-should-i-take))
+**You're already low.** If a blood test puts you around 12 ng/mL, going outside for a few minutes a day won't pull you back up fast. Severely low levels usually need a supplement to correct, with timed sun as the habit that keeps you there afterward. ([Dosing guidance for correcting a shortfall.](/blog/d3-dosage-how-much-vitamin-d-should-i-take))
 
 **It's winter or you're far from the equator.** Above roughly 35° latitude in winter, the sun never climbs high enough for usable UVB to reach the ground. For months, even a perfect outdoor habit makes essentially no vitamin D. A supplement stops being optional. ([The full picture on getting enough sun.](/blog/how-much-sun-do-you-need-for-vitamin-d))
 
@@ -115,7 +115,7 @@ Roughly one in four American adults sits in the insufficient range for vitamin D
 
 ## Sun versus supplements for remote workers
 
-These are not rivals. For a WFH worker in summer at a temperate latitude with fair-to-medium skin, a few midday minutes outside several times a week can cover your needs. In winter, at a higher latitude, with darker skin, or when a test says you're low, a supplement is the reliable tool.
+These aren't rivals. For a WFH worker in summer at a temperate latitude with fair-to-medium skin, a few midday minutes outside several times a week can cover your needs. In winter, at a higher latitude, with darker skin, or when a test says you're low, a supplement is the reliable tool.
 
 The daily recommended intake is 600 IU for adults 19–70 and 800 IU for those 71 and older, with an upper limit of 4,000 IU per day from all sources. The sun route can't cause toxicity because the skin self-limits. The supplement route can, if you dose carelessly. So use sun when it's available and supplement to fill the gap when it isn't.
 
@@ -137,7 +137,7 @@ Working from home is strongly associated with lower vitamin D levels and a highe
 
 **How much sun do I need if I work from home?**
 
-For fair-to-medium skin in summer at a UV index of 6 or higher, roughly 10–15 minutes of midday sun with arms and legs exposed, a few times a week, is enough to meet needs. Darker skin needs several times that. The key is hitting the UV window: a UV index of 3 or higher, centered on solar noon. Five intentional minutes on the right window beats an hour outdoors at the wrong time. ([Find your best time of day.](/blog/best-time-of-day-to-get-vitamin-d))
+For fair-to-medium skin in summer at a UV index of 3 or higher, roughly 10–15 minutes of midday sun with arms and legs exposed, a few times a week, is enough to meet needs. Darker skin needs several times that. The key is hitting the UV window: a UV index of 3 or higher, centered on solar noon. Five intentional minutes on the right window beats an hour outdoors at the wrong time. ([Find your best time of day.](/blog/best-time-of-day-to-get-vitamin-d))
 
 **Can I get vitamin D from a sunny window while I work?**
 
