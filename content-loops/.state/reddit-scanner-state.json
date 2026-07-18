@@ -1,8 +1,19 @@
 {
-  "lastScan": "2026-07-01",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-01.md",
+  "lastScan": "2026-07-18",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-18.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA; 2/3 queries successful)",
   "themesFound": 5,
   "sourcesCount": 20,
+  "newSignals": [
+    "dminder app mentioned organically as competitor (r/VitaminD)",
+    "sun-angle 50º rule + 290-300nm UVB zone mechanic (r/HubermanLab, r/IsItBullshit)",
+    "supplement arterial-calcification risk pushing back to sun (r/PeterAttia)",
+    "artificial light spec: 5000-5500K / 10K lux / 10 min (r/HubermanLab)",
+    "diet-as-precursor: sun needs dietary raw ingredients (r/nutrition)"
+  ],
+  "competitorMentions": ["dminder"],
   "status": "success",
-  "gitCommit": "1d6fbee"
+  "gitCommit": "pending"
 }
+</content>
+</invoke>
