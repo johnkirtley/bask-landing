@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import { remarkReadingTime } from './src/lib/remark-reading-time.mjs';
 
 export default defineConfig({
-  site: 'https://getbask.app',
+  site: 'https://www.getbask.app',
   redirects: {
     '/leaderboard-test': '/leaderboard',
   },
