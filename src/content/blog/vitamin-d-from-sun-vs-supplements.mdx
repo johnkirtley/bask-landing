@@ -1,40 +1,12 @@
-Status: PUBLISHED
-
-# Vitamin D From Sun vs. Supplements: Which Is Better?
-
-**Slug:** `vitamin-d-from-sun-vs-supplements`
-**Primary keyword:** vitamin d from sun vs supplements
-**Secondary keywords:** sun or supplements vitamin D · is sunlight better than vitamin D pills · does the sun give you enough vitamin D · sun vs supplement vitamin D · do I need vitamin D if I get sun
-**Pillar:** P2.4
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'Vitamin D From Sun vs. Supplements: Which Is Better?'
+description: 'Both work and the molecule is the same: vitamin D3. Sun is free but unreliable in winter and for darker skin. Supplements are consistent year-round. The best approach for most people is both.'
+pubDate: 2026-07-18
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all four FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the sun-vs-supplement trade-off table and the decision-framework table (the centerpiece asset)
-- **Callout components:** use for the "extra sunlight benefits" info callout, the Bask CTA block (info type), and the medical disclaimer (warning type)
-
----
-
-## Reviewer checklist
-
-- [x] Confirm NIH ODS: vitamin D made in skin and vitamin D from a supplement are the same D3 molecule; RDA 600 IU/day (19–70), 800 IU/day (71+); UL 4,000 IU/day — confirmed 2026-07-10 (values are standard IOM 2011 references; NIH ODS page returned 403 during verification but values are universally accepted)
-- [x] Verify Webb, Kline & Holick 1988 finding that above ~37° latitude, winter sunlight does not promote cutaneous vitamin D3 synthesis for several months — confirmed 2026-07-10 (PMID 2839537; Boston 42.2°N Nov–Feb, Edmonton 52°N Oct–Mar)
-- [x] Verify Binkley et al. 2007 ("low vitamin D status despite abundant sun exposure," JCEM) that abundant sun exposure does not guarantee adequate vitamin D — confirmed 2026-07-10 (PMID 17426097; 51% of Honolulu cohort had 25(OH)D under 30 ng/ml despite 28.9 h/wk sun exposure)
-- [x] Verify Endocrine Society 2024 guideline (Demay et al., JCEM) supplementation recommendations — confirmed 2026-07-10 (DOI 10.1210/clinem/dgae290; JCEM 109(8):1907–1947)
-- [x] Verify the nitric-oxide / blood-pressure research on sun benefits beyond vitamin D (Weller) — confirmed 2026-07-10 (Weller RB, Photochem Photobiol Sci 2020; claim is well-established, cited by Endocrine Society guideline)
-- [x] Confirm the "sun-derived D3 may last longer in blood" claim is presented as suggestive, not established (appropriately hedged) — confirmed 2026-07-10 ("some research suggests," "treat it as a possible edge... rather than a proven one")
-- [x] Check App Store link points to the correct tracked URL (id6758405235) for per-post click attribution — confirmed 2026-07-10
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T principles — confirmed 2026-07-10
-- [x] Verify internal links resolve: /blog/d3-dosage-how-much-vitamin-d-should-i-take, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/does-sunscreen-block-vitamin-d — confirmed 2026-07-10 (all four .mdx files exist)
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 Both work, and there's no meaningful chemical difference between them: once your skin makes vitamin D3 from sunlight, your body uses the exact same molecule as the D3 in a supplement pill. Sun is free and may keep your levels elevated for longer, but it's unreliable in winter, at higher latitudes, and for darker skin. Supplements are consistent, precisely dosed, and work year-round. For most people the best approach isn't either/or. It's sun when today's conditions are usable, plus a supplement to cover the gaps.
 
@@ -103,7 +75,9 @@ A 2007 study made the counterintuitive finding that people with abundant sun exp
 
 ## A simple decision framework
 
-Rather than choosing a side, use this table to decide which source applies to your situation right now.<ComparisonTable
+Rather than choosing a side, use this table to decide which source applies to your situation right now.
+
+<ComparisonTable
 headers={[
 'Your situation',
 'Can sun cover it?',
@@ -185,16 +159,9 @@ Maybe not, if you get regular midday sun on bare skin at a UV index of 3 or high
 4. Demay MB, et al. "Vitamin D for the prevention of disease: an Endocrine Society clinical practice guideline." _J Clin Endocrinol Metab._ 2024. Supplementation recommendations for the general population.
 5. Weller RB. "Sunlight has cardiovascular benefits independent of vitamin D." _Photochem Photobiol Sci._ 2020. UVA-triggered nitric oxide release and blood-pressure reduction.
 
----
-
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. If you are managing a diagnosed
   deficiency, are pregnant, take medications that interact with vitamin D, or have
   a history of skin cancer, talk to a clinician. A blood test for
   25-hydroxyvitamin D is the only reliable way to know your actual level.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/vitamin-d-from-sun-vs-supplements.md`_
-_When ready to publish, Developer creates `src/content/blog/vitamin-d-from-sun-vs-supplements.mdx`_

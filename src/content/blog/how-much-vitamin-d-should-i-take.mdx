@@ -1,39 +1,12 @@
-Status: PUBLISHED
-
-# How Much Vitamin D Should I Actually Take?
-
-**Slug:** `how-much-vitamin-d-should-i-take`
-**Primary keyword:** how much vitamin D should I take
-**Secondary keywords:** how much vitamin D per day · vitamin D dosage · vitamin D IU per day · how much vitamin D3 should I take · how much vitamin D to take daily
-**Pillar:** P2.1
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'How Much Vitamin D Should I Actually Take?'
+description: 'The official recommendation is 600 IU of vitamin D per day for most adults and 800 IU for anyone over 70. But the right dose depends on your blood level, sun exposure, body weight, and skin type.'
+pubDate: 2026-07-18
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all five FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the guidance-source comparison table (IOM vs 2024 Endocrine Society) and the dosing framework table
-- **Callout components:** use for the high-dose caution callout (warning type), the Bask CTA block (info type), and the medical disclaimer (warning type)
-
----
-
-## Reviewer checklist
-
-- [x] Confirm NIH ODS RDA figures: 600 IU/day (adults 19–70), 800 IU/day (adults 71+); Tolerable Upper Intake Level 4,000 IU/day — confirmed 2026-06-26 against NIH ODS fact sheet (Table 2 and Table 4). Note: the 400 IU infant figure is technically an Adequate Intake (AI), not an RDA; number is correct.
-- [x] Verify 2024 Endocrine Society guideline stance (Demay et al., JCEM 2024): recommends against routine vitamin D supplementation above the RDA for healthy community-dwelling adults under 75; advises empiric supplementation for adults 75+, pregnancy, and prediabetes — confirmed 2026-06-26. NIH ODS states: "recommends routine vitamin D supplementation for children and teens age 1 to 18 years, pregnant women, adults with pre-diabetes, and adults age 75 years and older, but not for healthy adults age 19 to 74."
-- [x] Confirm toxicity framing: typically associated with sustained intake above 10,000 IU/day; hypercalcemia-driven; ~~levels near or above 100 ng/mL associated with risk~~ — partially confirmed and CORRECTED 2026-06-26. The 10,000 IU/day threshold is confirmed (NIH: "toxicity is unlikely at daily intakes below 250 mcg (10,000 IU)"). However, the 100 ng/mL figure was inaccurate per NIH: levels above 50 ng/mL (125 nmol/L) are linked to potential adverse effects, and frank toxicity typically at >150 ng/mL. Post body updated to reflect the NIH 50 ng/mL threshold.
-- [x] Confirm the VITAL trial (Manson et al., NEJM 2019) found no meaningful reduction in cancer/CVD/fractures from high-dose vitamin D in healthy adults — confirmed 2026-06-26 against NIH ODS fact sheet (2,000 IU/day, median 5.3 years, 25,871 participants; no significant reduction in cancer incidence, CVD events, or fractures).
-- [x] Confirm body-weight point against NIH ODS (obesity as a deficiency risk factor; vitamin D is fat-soluble and sequestered in adipose tissue) — confirmed 2026-06-26. NIH ODS: "Individuals with a BMI of 30 or more have lower serum 25(OH)D levels… greater amounts of subcutaneous fat sequester more of the vitamin."
-- [x] Check App Store link points to correct canonical URL — corrected 2026-07-02. URL updated to `https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235` (the live listing, matches the landing page). The previous `id6741454317` slug was a stale placeholder that 404'd and has been replaced across all posts.
-- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-06-26. "Bask Health Team" is the established author byline used across the blog; no individual named author available.
-- [x] Verify internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-much-vitamin-d-in-15-minutes-of-sun, /blog/can-you-get-too-much-vitamin-d-from-the-sun, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d — partially confirmed 2026-06-26. 3 of 5 resolve to published posts in src/content/blog/ (how-much-sun-do-you-need-for-vitamin-d, how-long-to-sit-in-sun-for-vitamin-d, what-uv-index-do-you-need-for-vitamin-d). 2 of 5 (how-much-vitamin-d-in-15-minutes-of-sun, can-you-get-too-much-vitamin-d-from-the-sun) exist as drafts in content-loops/posts/ but are not yet published to src/content/blog/. Links will resolve once those posts are published.
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 The official recommendation is 600 IU of vitamin D per day for most adults and 800 IU for anyone over 70. That number is built to prevent deficiency, not to chase an "optimal" level. Plenty of people take more. 1,000 to 4,000 IU is common, and some go higher. But the 2024 Endocrine Society guideline advises against routine high-dose supplementation for healthy adults under 75. The dose that's right for you depends on your blood level, how much sun you get, your body weight, and your skin type. Two people can take the same pill and end up at very different numbers.
 
@@ -225,13 +198,6 @@ The official upper limit is 4,000 IU per day for adults from all sources. Sustai
 4. [National Academies of Sciences, Engineering, and Medicine, Dietary Reference Intakes for Calcium and Vitamin D (2011)](https://www.nationalacademies.org/). The RDA and UL framework.
 5. Holick MF. "Vitamin D deficiency." _N Engl J Med._ 2007;357(3):266–81. Deficiency thresholds, fat-soluble sequestration in adipose tissue, and skin-type effects on synthesis.
 
----
-
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. The right vitamin D dose depends on your blood level, health history, and risk factors. If you're managing a deficiency, considering high-dose supplementation, or take medications that interact with vitamin D or calcium, talk to a clinician. A 25(OH)D blood test is the only reliable way to know your actual level.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/how-much-vitamin-d-should-i-take.md`_
-_When ready to publish, Developer creates `src/content/blog/how-much-vitamin-d-should-i-take.mdx`_

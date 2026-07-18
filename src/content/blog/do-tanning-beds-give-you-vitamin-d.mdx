@@ -1,38 +1,12 @@
-Status: PUBLISHED
-
-# Do Tanning Beds Give You Vitamin D?
-
-**Slug:** `do-tanning-beds-give-you-vitamin-d`
-**Primary keyword:** do tanning beds give vitamin D
-**Secondary keywords:** tanning bed vitamin D · sunbed vitamin D · tanning vitamin D · is a tan a sign of vitamin D
-**Pillar:** P1.14
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'Do Tanning Beds Give You Vitamin D?'
+description: 'Mostly no. Tanning beds emit mainly UVA, not the UVB your body needs to make vitamin D. The WHO classifies them as Group 1 carcinogens, same as tobacco. No health authority recommends tanning beds for vitamin D.'
+pubDate: 2026-07-18
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all five FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the UVA-vs-UVB mechanism table and the safer-ways-to-raise-D table
-- **Callout components:** use for the "mostly UVA" mechanism callout (info type), the Group 1 carcinogen warning (warning type), the Bask CTA (info type), and the medical disclaimer (warning type)
-
----
-
-## Reviewer checklist
-
-- [x] Verify IARC/WHO Group 1 classification of UV-emitting tanning devices (2009) — confirmed 2026-06-29 against IARC news page (29 July 2009: "classified UV-emitting tanning devices as 'carcinogenic to humans' (Group 1)")
-- [x] Confirm "most" beds are UVA-dominant phrasing (a minority emit some UVB) per Operating Principles accuracy rule — confirmed 2026-06-29. Consistent with Woo & Eide 2010; "most" and "95% or more" phrasing is accurate for commercial UVA-dominant beds.
-- [x] Verify the roughly 75% melanoma risk increase for first use before age 30 (IARC/WHO; Woo & Eide 2010) — confirmed 2026-06-29. The figure originates from the 2009 IARC Working Group meta-analysis (Lancet Oncology); post hedges with "roughly" and attributes to IARC/WHO.
-- [x] Confirm NIH ODS distinction: UVA does not drive cutaneous vitamin D synthesis; UVB (290–315 nm) does — confirmed 2026-06-29 against NIH ODS fact sheet ("UVB radiation with a wavelength of approximately 290 to 320 nanometers ... converts cutaneous 7-dehydrocholesterol to previtamin D3")
-- [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-06-29. URL matches the established pattern used across all published posts.
-- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-06-29. "Bask Health Team" is the established byline across the blog; no named individual author available.
-- [x] Verify internal links resolve: /blog/best-uv-index-for-tanning, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/d3-dosage-how-much-vitamin-d-should-i-take — confirmed 2026-06-29. All four resolve to published posts in src/content/blog/.
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 Mostly no. Tanning beds emit mainly UVA, the wavelength that darkens skin and ages it, rather than the UVB your body needs to make vitamin D. A few high-UVB beds can raise vitamin D levels slightly, but not reliably and not enough to justify the trade-off: the World Health Organization classifies UV tanning devices as Group 1 carcinogens, the same category as tobacco. No health authority recommends tanning beds for vitamin D. And a tan is not proof you made any.
 
@@ -159,13 +133,6 @@ Technically a high-UVB bed can raise levels slightly when winter sun is too weak
 4. [Skin Cancer Foundation, "Skin Cancer Facts & Statistics"](https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/). Skin cancer prevalence and indoor tanning risk.
 5. [American Academy of Dermatology, survey on Gen Z sunburn and tanning risks](https://www.aad.org/news/gen-z-unfamiliar-sunburn-tanning-risks). Awareness and risk findings on indoor tanning.
 
----
-
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. If you have a known vitamin D deficiency, a personal or family history of skin cancer, or are choosing between sun, food, and supplements to manage your levels, talk to a clinician. A blood test for 25-hydroxyvitamin D is the only reliable way to know where you stand.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/do-tanning-beds-give-you-vitamin-d.md`_
-_When ready to publish, Developer creates `src/content/blog/do-tanning-beds-give-you-vitamin-d.mdx`_

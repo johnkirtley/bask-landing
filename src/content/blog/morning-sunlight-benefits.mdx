@@ -1,40 +1,12 @@
-Status: PUBLISHED
-
-# Morning Sunlight Benefits: Circadian Rhythm, Mood, and Energy (Beyond Vitamin D)
-
-**Slug:** `morning-sunlight-benefits`
-**Primary keyword:** morning sunlight benefits
-**Secondary keywords:** morning sun circadian rhythm · morning light mood · sunlight in eyes morning · morning light sleep
-**Pillar:** P3.4
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'Morning Sunlight Benefits: Circadian Rhythm, Mood, and Energy (Beyond Vitamin D)'
+description: "Morning sunlight sets your body's internal clock rather than making vitamin D. Getting bright daylight into your eyes within the first hour after waking helps lock your sleep cycle in place and sharpens daytime alertness."
+pubDate: 2026-07-18
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all five FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the "morning light vs. midday vitamin D sun" distinction table in "How morning light is different from vitamin D sun"
-- **Callout components:** use for the outdoor-vs-indoor brightness (lux) figures (`info`), the mental-health YMYL note (`warning`), the Bask download CTA (`info`), and the medical disclaimer (`warning`)
-
----
-
-## Reviewer checklist
-
-- [x] Verify the melanopsin / ipRGC → suprachiasmatic nucleus (master clock) pathway and the "clock drifts slightly longer than 24 hours, reset by morning light" framing against NIGMS Circadian Rhythms fact sheet — confirmed 2026-07-08 (NIGMS: SCN is the master clock, controls melatonin based on light eyes receive; light/dark are the biggest influence on rhythms)
-- [x] Verify Wright et al. 2013 camping study finding (natural light entrained the circadian clock; melatonin aligned to sunrise/sunset) against _Current Biology_ 2013;23(16):1554–1558 — confirmed 2026-07-08 (PMID 23910656; abstract: under natural light "internal circadian clock synchronizes to solar time" with biological night beginning at sunset, ending before wake near sunrise; Univ. of Colorado Boulder)
-- [x] Verify illuminance figures: direct sun ~32,000–100,000 lux; overcast day ~1,000–10,000 lux; typical indoor ~100–500 lux — confirm ranges are framed as approximations — confirmed 2026-07-08 (Wright 2013 Fig. 2 caption: indoor ~200 lux, sunrise/sunset ~10,000 lux, bright midday sky >100,000 lux; post frames all as approximations)
-- [x] Verify glass blocks UVB (no vitamin D) but transmits visible light (circadian signal survives) against published `can-you-get-vitamin-d-through-a-window` and the morning-UV-below-3 claim against `what-uv-index-do-you-need-for-vitamin-d` — confirmed 2026-07-08 (both claims match the two already-published blog posts)
-- [x] Verify 10,000-lux light therapy standard (~20–30 min, morning) for seasonal affective disorder against a clinical source; do not overstate morning sun as a depression treatment (mental-health YMYL) — confirmed 2026-07-08 (Terman & Terman 2005, PMID 16041296; abstract describes bright light therapy as active treatment for SAD and nonseasonal depression; post appropriately caveats it is not a standalone depression treatment and includes a warning Callout)
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T — confirmed 2026-07-08 (present in front matter)
-- [x] Check App Store link points to canonical URL `id6758405235` (no stale `id6741454317`) — confirmed 2026-07-08 (body CTA uses canonical id6758405235; stale id appears only in this checklist reference)
-- [x] Verify internal links resolve: /blog/best-time-of-day-to-get-vitamin-d, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/can-you-get-vitamin-d-through-a-window (all live in `src/content/blog/`) — confirmed 2026-07-08 (all four files exist)
-- [x] Future internal-link targets once published: `can-you-get-vitamin-d-in-the-morning` (P1.11) and the SAD / winter-depression post (P3.3) — confirmed 2026-07-08 (neither is linked in the body; correctly deferred until published)
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 Morning sunlight does something different from midday sun. Instead of making vitamin D, it sets your body's internal clock. Getting bright daylight into your eyes within the first hour or two after waking helps lock your sleep cycle in place and sharpens how alert you feel during the day. Those benefits come from visible light reaching your eyes, not from UVB on your skin, which is why early sun is great for your rhythm even though it makes almost no vitamin D.
 
@@ -192,16 +164,9 @@ No, and you shouldn't. You need bright outdoor light to reach your eyes, which h
 4. Terman M, Terman JS. "Light therapy for seasonal and nonseasonal depression: efficacy, protocol, safety, and side effects." _CNS Spectrums._ 2005;10(8):647–663. The 10,000-lux, ~30-minute morning protocol for bright light therapy.
 5. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). UVB-driven cutaneous synthesis, the UV-index and skin-exposure conditions required, and why sun angle and time of day gate vitamin D production.
 
----
-
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. If you have persistent sleep
   problems, low mood, or a suspected circadian rhythm disorder, talk to a
   clinician. Bright light therapy can affect certain conditions and medications,
   and a sleep or mental-health professional can help you use it safely.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/morning-sunlight-benefits.md`_
-_When ready to publish, Developer creates `src/content/blog/morning-sunlight-benefits.mdx`_
