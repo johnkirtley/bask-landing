@@ -1,19 +1,19 @@
 {
-  "lastScan": "2026-07-18",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-18.md",
-  "searchMethod": "DuckDuckGo (Startpage CAPTCHA; 2/3 queries successful)",
+  "lastScan": "2026-07-19",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-19.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all queries; DuckDuckGo CAPTCHA on 3rd query; 2/3 successful)",
   "themesFound": 5,
   "sourcesCount": 20,
   "newSignals": [
-    "dminder app mentioned organically as competitor (r/VitaminD)",
-    "sun-angle 50º rule + 290-300nm UVB zone mechanic (r/HubermanLab, r/IsItBullshit)",
-    "supplement arterial-calcification risk pushing back to sun (r/PeterAttia)",
-    "artificial light spec: 5000-5500K / 10K lux / 10 min (r/HubermanLab)",
-    "diet-as-precursor: sun needs dietary raw ingredients (r/nutrition)"
+    "2nd organic dminder mention with quantified IU estimate (~9k IU, 30 min each side) — r/VitaminD/190xpgq (competitor now installed+quoted, not hypothetical)",
+    "sun-vs-pills reframed around non-D benefits: nitric oxide + winter blood clots — r/HubermanLab/1d56w90 (NEW framing)",
+    "morning-light circadian cutoff time question — r/HubermanLab/16kw6zn, 14uqd3w (NEW protocol-execution angle)",
+    "latitude/cold/winter breaks Huberman protocol (Canada) — r/HubermanLab/18c4sfd (NEW geographic angle)",
+    "~60 ng/ml medical ceiling + 'don't assume abundant sun = adequate D' — r/ScientificNutrition/p68hvz (NEW citable stat)",
+    "skin-tone-driven 15-30 min dosing + chest/belly/back absorption — r/nutrition/cn6c1l (NEW skin-type angle)",
+    "sunscreen-vs-D tension reaching general r/ask subreddit — r/ask/1d0ymjq (debate widening beyond niche health subs)"
   ],
   "competitorMentions": ["dminder"],
   "status": "success",
-  "gitCommit": "d3f6ac9"
+  "gitCommit": "pending"
 }
-</content>
-</invoke>
