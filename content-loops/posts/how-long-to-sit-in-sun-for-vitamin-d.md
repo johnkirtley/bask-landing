@@ -1,4 +1,4 @@
-Status: READY TO PUBLISH
+Status: PUBLISHED
 
 # How Long to Sit in the Sun for Vitamin D: A Breakdown by Skin Type
 

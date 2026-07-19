@@ -1,4 +1,4 @@
-Status: READY TO PUBLISH
+Status: PUBLISHED
 
 # Does Sunlight Increase Testosterone? What the Evidence Actually Shows
 

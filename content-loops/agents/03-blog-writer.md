@@ -38,6 +38,7 @@ Check `.state/writer-state.json` for slugs already written. Also scan `content-l
 
 1. **The research brief** — `content-loops/research/research-YYYY-MM-DD.md`
    - Find the scoped topic section for your chosen topic. This gives you the keyword, intent, outline shape, sources to cite, and Bask fit framing.
+   - Read the **Autocomplete evidence** line. If it names a specific phrase (not `None`), use that exact phrase naturally in exactly one place: the H1/title, the snippet answer, an H2, or an FAQ question. Do not repeat it, do not stuff variants, and do not contort grammar. If the brief says `None`, skip this.
 
 2. **Blueprint** — `src/content/bask_content_outlines.md`
    - Find the matching pillar/cluster section. This gives you the detailed outline, snippet answer, H2 structure, FAQ questions, internal links, and target word count.
@@ -177,6 +178,7 @@ Status: DRAFT
 - [ ] [Specific verifiable claim] — verify against [source]
 - [ ] Check internal links resolve: [list all internal link paths]
 - [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [ ] Autocomplete phrase preserved: "[exact phrase]" placed in [title | snippet | H2 | FAQ] — only when the brief's Autocomplete evidence is not `None`; omit this line otherwise
 
 ---
 
@@ -244,6 +246,8 @@ Before you commit, verify your post meets these standards:
 7. **Medical disclaimer** — at the bottom for YMYL topics.
 8. **Target length** — match the blueprint's specified range (usually 800-2,000 words).
 9. **No AI-isms** — read your own draft and fix any patterns from the humanizer list: inflated symbolism, rule of three, em dash overuse, vague attributions, passive voice.
+
+Note: the autocomplete phrase (when present) is a wording constraint only. It is not a factual claim, not a medical claim, and not evidence of search performance. Never let it push you toward a claim you wouldn't otherwise make.
 
 ## Git workflow
 

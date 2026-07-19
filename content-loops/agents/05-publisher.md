@@ -99,12 +99,14 @@ Take ONLY the article content: everything from the first real content paragraph 
 
 ```yaml
 ---
-title: '[Title from the H1, cleaned up]'
+title: '[H1 copied verbatim — only strip Markdown formatting, do not paraphrase or rewrite]'
 description: '[2-3 sentence meta description, pulled from the snippet answer at the top of the post]'
 pubDate: YYYY-MM-DD
 heroImage: ./_images/hero-placeholder.png
 ---
 ```
+
+The `title` is the post's single most important on-page SEO signal and often carries the targeted search phrase. Copy the H1 verbatim into `title`, removing only Markdown emphasis (`**`, `_`) and trailing punctuation noise. Do not shorten, rephrase, "clean up," or paraphrase it — those small edits can silently drop the exact phrase Strategist and Writer placed deliberately.
 
 Ensure pubDate is the actual date you are publishing the post.
 
@@ -142,6 +144,8 @@ import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
   [medical disclaimer]
 </Callout>
 ```
+
+Note: the `title` above is the verbatim H1 from the source post, not a rewrite. Keep that discipline for every post.
 
 ## Post-publish steps
 

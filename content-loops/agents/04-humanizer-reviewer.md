@@ -50,6 +50,8 @@ Read 1-2 existing published posts (`src/content/blog/*.mdx`) for voice reference
 
 Rewrite, don't delete. If the original has five paragraphs, the humanized version has five paragraphs covering the same ground — just without the AI patterns.
 
+**Preserve the autocomplete phrase.** If the draft's reviewer checklist includes the "Autocomplete phrase preserved" item, the named phrase is intentional search language. Keep that exact wording in its current location (or move it to a more natural title/H2/FAQ position). Humanize the prose around it; do not paraphrase the phrase itself, and do not let it appear more than once.
+
 ## Step 2: Verify factual claims
 
 For each claim in the reviewer checklist, verify against the cited source. Use WebFetch or bash+curl to check:
@@ -64,6 +66,8 @@ For each checklist item:
 - If verified: change `- [ ]` to `- [x]` and add "confirmed YYYY-MM-DD"
 - If unverifiable: leave unchecked, add a note explaining what couldn't be confirmed
 - If wrong: fix the claim in the post body and note the correction
+
+For the **Autocomplete phrase preserved** item specifically: confirm the phrase still appears in the draft in the stated location, exactly once. Mark it `[x]` if so. If it was removed or paraphrased during humanizing, restore it before marking. Autocomplete does not verify any medical or factual claim — it only confirms wording survived.
 
 ## Step 3: MDX safety check
 
@@ -100,6 +104,7 @@ After humanizing + verifying:
 
 - **All checklist items verified OR only minor unverifiable items** → set `Status: READY TO PUBLISH`
 - **Any factual error found, or major claim unverifiable, or post is too short, or voice doesn't match** → set `Status: NEEDS REVIEW` and add a `## Reviewer notes` section explaining what needs attention.
+- **Missing or stuffed autocomplete phrase** (when the checklist item exists) → fix in place rather than flag, then proceed as above. Only escalate to NEEDS REVIEW if the phrase genuinely cannot be made to read naturally.
 
 Update the Status line at the top of the file:
 

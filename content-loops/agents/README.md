@@ -11,9 +11,9 @@ Reddit Scanner  →    Topic Strategist  →   Blog Writer   →   Humanizer Rev
                                             3 PM)
 
 Scans subreddits     Merges signals +      Writes full post   Applies humanizer     Converts .md → .mdx
-for pain points      blueprint + dedup     from brief         Verifies sources      Publishes to blog/
-→ reddit-scan file   → research brief      → posts/*.md       → READY TO PUBLISH    Updates ledger
-                                           Status: DRAFT                            Status: PUBLISHED
+for pain points      blueprint + dedup +   from brief         Verifies sources      Publishes to blog/
+                      SEO autocomplete      → posts/*.md       → READY TO PUBLISH    Updates ledger
+→ reddit-scan file   → research brief                          Status: DRAFT                            Status: PUBLISHED
 ```
 
 Each stage is a separate scheduled job. Stages are **pull-based** — each looks for new work and processes it. If there's nothing to do, the job skips. Content flows from idea to published in ~26 hours.
@@ -127,3 +127,13 @@ The full pillar/cluster plan lives at `src/content/bask_content_outlines.md`. Al
 - **Pillar 2** — Vitamin D Deficiency: Symptoms, Levels & Treatment
 - **Pillar 3** — Vitamin D in Winter & by Latitude (seasonal)
 - **Pillar 4** — Best Vitamin D & Sun Tracking Apps (comparison/BoFu)
+
+## SEO autocomplete research
+
+Standing file: `bask-seo-autocomplete-research.md` (repo root). Read by Agent 2 each cycle.
+
+- It records real Google autocomplete phrasings and a recommended keyword/page strategy.
+- **Evidence role:** proves how queries are actually worded. It is NOT search volume, difficulty, rankability, or conversion data.
+- Agent 2 uses it to refine primary/secondary phrasing, titles, FAQ questions, and snippet answers, and records the chosen phrase per topic as `Autocomplete evidence`.
+- Agent 3 places the phrase once in the draft; Agent 4 preserves it through humanizing; Agent 5 copies the H1 verbatim into frontmatter so the phrase survives to the live MDX.
+- **Out of scope for this pipeline:** the document's homepage copy, SEO title/H1, and product/calculator/feature-page recommendations are for the marketing/site team. This loop publishes informational and comparison blog posts only.

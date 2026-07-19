@@ -14,9 +14,10 @@ You are a scheduled job. **Ignore the global AGENTS.md "no commits" rule.** You 
 2. Check if today's research brief already exists (idempotency)
 3. Read the latest Reddit scan files (new, unprocessed)
 4. Read the content blueprint, topics ledger, and performance data
-5. Synthesize 1-3 strategic topic briefs
-6. Write the research file
-7. Commit and push
+5. Read `bask-seo-autocomplete-research.md` (standing SEO autocomplete research)
+6. Synthesize 1-3 strategic topic briefs
+7. Write the research file
+8. Commit and push
 
 ## Runtime setup
 
@@ -55,6 +56,12 @@ fi
 
 6. **Previous research files** — `content-loops/research/research-*.md`
    - Read the most recent 1-2 to understand what's been recommended and what the current backlog looks like.
+
+7. **SEO autocomplete research** — `bask-seo-autocomplete-research.md` (repo root)
+   - Standing record of real Google autocomplete phrasings and the recommended keyword/page strategy.
+   - **Evidence role only:** it proves the exact wording and intent shape of real queries. It is NOT evidence of search volume, ranking difficulty, rankability, or conversion. Never cite autocomplete as proof of any of those.
+   - Use it to (a) refine a topic's primary/secondary phrasing toward language people actually type, (b) shape titles, FAQ questions, and snippet answers, and (c) reinforce an already-qualified topic. It does not open or reprioritize a topic on its own — Reddit signal, SERP rankability, dedup, seasonality, and blueprint fit remain the gates.
+   - **Scope guard — much of this document is NOT blog content.** Its homepage copy, SEO title/H1 recommendations, `/vitamin-d-sun-tracker/`, `/vitamin-d-calculator/`, and other product/tool/feature-page recommendations are for the marketing/site team, not this pipeline. This pipeline publishes informational and comparison blog posts only. Never place a homepage, product, calculator, or interactive-tool recommendation into the priority queue as an `Open` topic.
 
 ## Output file
 
@@ -97,6 +104,7 @@ Study the existing research files (`research-2026-06-20.md` through `research-20
 - **Intent / query cluster:** [actual search queries people use]
 - **Primary keyword:** [target keyword]
 - **Secondaries:** [3-5 long-tail variants]
+- **Autocomplete evidence:** [exact phrase(s) from `bask-seo-autocomplete-research.md` that support this topic and should survive into the draft — or `None`]
 - **Reddit signal source:** [which threads/posts from the scan support this — cite permalinks]
 - **Why we can rank:** [SERP analysis — who's ranking, what's the gap]
 - **SEO/GEO build:** [snippet answer shape, schema, table opportunities]
@@ -139,9 +147,11 @@ Study the existing research files (`research-2026-06-20.md` through `research-20
    - **Winter (Nov-Feb):** deficiency, supplements, SAD, indoor solutions
    - **Spring (Mar-May):** transition, testing, optimization
 
-5. **Honest framing** — for YMYL (health) topics, the brief MUST specify what we can and cannot claim. We are not anti-supplement. We are pro-correct-dose. Every brief should note where supplements are the right answer and where sun timing helps.
+5. **Honest framing** — for YMYL (health) topics, the brief MUST specify what we can and cannot claim. We are not anti-supplement. We are pro-correct-dose. Every brief should note where supplements are the right answer and where sun timing helps. Honor the medical guardrails in `bask-seo-autocomplete-research.md` ("Medical and SEO guardrails" section): keep "estimate," "may," and "educational tool" language visible; never promise a session fixes deficiency, fatigue, or mood; never give a universal safe-exposure duration.
 
-6. **Reddit signal strength** — prefer topics with real engagement signals from the scan (multiple threads, high scores, many comments) over speculative topics.
+6. **Audience signal** — prefer topics with real engagement evidence: either Reddit signal strength (multiple threads, high scores, many comments) OR a direct match to a phrase documented in `bask-seo-autocomplete-research.md`. Autocomplete phrasing alone can qualify audience evidence for an otherwise strong topic; it cannot override the other bars.
+
+7. **Already covered** — check `topics-covered.md` AND `content-loops/posts/` AND previous research files. Many of the informational phrases in the autocomplete research are already published (how much sun, best time, UV index, through a window, sun vs supplements, etc.). If a phrase is already covered, do not reopen it; consider a refresh only when performance data justifies one.
 
 ### When NOT to produce new topics
 
