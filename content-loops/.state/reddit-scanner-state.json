@@ -1,19 +1,23 @@
 {
-  "lastScan": "2026-07-19",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-19.md",
+  "lastScan": "2026-07-20",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-20.md",
   "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all queries; DuckDuckGo CAPTCHA on 3rd query; 2/3 successful)",
-  "themesFound": 5,
-  "sourcesCount": 20,
+  "themesFound": 6,
+  "sourcesCount": 12,
   "newSignals": [
-    "2nd organic dminder mention with quantified IU estimate (~9k IU, 30 min each side) — r/VitaminD/190xpgq (competitor now installed+quoted, not hypothetical)",
-    "sun-vs-pills reframed around non-D benefits: nitric oxide + winter blood clots — r/HubermanLab/1d56w90 (NEW framing)",
-    "morning-light circadian cutoff time question — r/HubermanLab/16kw6zn, 14uqd3w (NEW protocol-execution angle)",
-    "latitude/cold/winter breaks Huberman protocol (Canada) — r/HubermanLab/18c4sfd (NEW geographic angle)",
-    "~60 ng/ml medical ceiling + 'don't assume abundant sun = adequate D' — r/ScientificNutrition/p68hvz (NEW citable stat)",
-    "skin-tone-driven 15-30 min dosing + chest/belly/back absorption — r/nutrition/cn6c1l (NEW skin-type angle)",
-    "sunscreen-vs-D tension reaching general r/ask subreddit — r/ask/1d0ymjq (debate widening beyond niche health subs)"
+    "NEW cofactor/dependency misconception: 'sun isn't vitamin D, it synthesizes D from dietary raw materials' — r/nutrition/qevazz (mechanistic explanation of recurring deficiency-despite-sun)",
+    "NEW co-stated 6000 IU daily cholecalciferol + sun claim — r/VitaminD/13p8cay (reinforces cofactor narrative + sun-pill combo)",
+    "NEW body-part-dosing misconception: palms-only exposure question — r/AskBiology/1487zz8 (contradicts 07-19 chest/belly/back claim; three conflicting body-part recipes now across subs)",
+    "NEW demographic widening: sunscreen-vs-D tension reaches r/beauty (younger/female-leaning audience weighing D vs skin aging) — r/beauty/17s0rpr; 'an hour a day' misconception",
+    "NEW Vitamin D Council citable quote on hand-computation difficulty (skin type+location+season+time) — r/nutrition/92n26u; clean source for 'this is hard by hand' framing",
+    "Huberman morning routine spreading to r/getdisciplined (general productivity sub) — r/getdisciplined/18jps4e (broader audience asking protocol-timing questions)"
   ],
   "competitorMentions": ["dminder"],
+  "recurringThemesHolding": [
+    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18)",
+    "Huberman protocol timing-window vagueness + geographic/winter failure (HOLDING since 07-19)",
+    "Deficiency despite daily sun + non-D benefits of sun (nitric oxide, winter blood clots) (HOLDING since 07-19)"
+  ],
   "status": "success",
-  "gitCommit": "5c1535c"
+  "gitCommit": "pending"
 }
