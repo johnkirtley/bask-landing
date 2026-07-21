@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: NEEDS REVIEW
 
 # dminder Alternatives: Which Vitamin D App Is Right for You?
 
@@ -22,18 +22,22 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Recheck platform, price, feature, and privacy details against each linked first-party listing on publication day
-- [ ] Confirm dminder's free tier, $9.99 annual plan, $24.99 lifetime plan, iOS/Android support, live NOAA ozone input, and 90-day free history against dminder's pricing and features pages
-- [ ] Confirm Bask, Sunbeam, SunSafe, and UVLens features and prices against their US App Store listings
-- [ ] Check internal links resolve: /blog/best-apps-to-track-vitamin-d-2026, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/vitamin-d-from-sun-vs-supplements
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
-- [ ] Autocomplete wording preserved in snippet only and used once
+- [x] Recheck platform, price, feature, and privacy details against each linked first-party listing on publication day (confirmed 2026-07-20)
+- [x] Confirm dminder's free tier, $9.99 annual plan, $24.99 lifetime plan, iOS/Android support, live NOAA ozone input, and 90-day free history against dminder's pricing and features pages (confirmed 2026-07-20)
+- [x] Confirm Bask, Sunbeam, SunSafe, and UVLens features and prices against their US App Store listings (confirmed 2026-07-20)
+- [x] Check internal links resolve: /blog/best-apps-to-track-vitamin-d-2026, /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/vitamin-d-from-sun-vs-supplements (confirmed 2026-07-20)
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T (confirmed 2026-07-20)
+- [x] Autocomplete wording preserved in snippet only and used once (confirmed 2026-07-20)
+
+## Reviewer notes
+
+- Corrected the dminder privacy comparison: its privacy policy says premium data can sync to Google Cloud, while free-tier data stays on the device. The post remains NEEDS REVIEW because a factual correction was required.
 
 ---
 
 ## Post content
 
-The best dminder alternative depends on what you want to track. Bask is the closest choice if you want a vitamin d sun tracker app that combines live IU estimates, clothing and skin inputs, burn guidance, supplement logs, and lab trends. Sunbeam is stronger for Apple Watch, widgets, and Apple Health; SunSafe leans toward tanning and sunscreen routines; UVLens is the simple free pick for UV forecasts and burn risk. dminder itself remains one of the strongest options, especially if you use Android or want detailed ozone-based calculations.
+The right dminder alternative depends on what you want to track. Bask is a close fit if you want a vitamin d sun tracker app with live IU estimates, clothing and skin inputs, burn guidance, supplement logs, and lab trends. Sunbeam is a better fit for Apple Watch, widgets, and Apple Health. SunSafe focuses on tanning and sunscreen routines, while UVLens keeps things simple with UV forecasts and burn-risk estimates. dminder is still a strong choice, especially if you use Android or want ozone-based calculations.
 
 <Callout type="info" title="How this comparison was checked">
   Features, prices, platforms, and privacy disclosures were reviewed against
@@ -43,9 +47,9 @@ The best dminder alternative depends on what you want to track. Bask is the clos
 
 ## The short answer: four current alternatives
 
-There is no clean winner because these apps solve different versions of the same problem.
+There is no single winner because these apps solve different versions of the same problem.
 
-Choose **Bask** if you want IU estimates from live UV, weather, skin type, and clothing alongside supplements, lab results, and 7, 30, and 90-day trends.
+Choose **Bask** if you want IU estimates from live UV, weather, skin type, and clothing, plus supplements, lab results, and 7, 30, and 90-day trends.
 
 Choose **Sunbeam** for Apple Watch, Time in Daylight, widgets, Siri, Apple Health, and personalized sunburn tracking.
 
@@ -55,11 +59,11 @@ Choose **UVLens** for a free UV forecast, skin assessment, burn estimate, and su
 
 ## Why look beyond dminder?
 
-dminder's 2026 version calculates a local D window using solar position, skin type, and live NOAA satellite ozone data. It tracks sun sessions, supplements, food, labs, and estimated vitamin D levels. The timer shows estimated IU and warns before predicted burn time. It runs on iOS and Android, with Apple Watch and Wear OS support.
+The current dminder version calculates a local D window using solar position, skin type, and live NOAA satellite ozone data. It tracks sun sessions, supplements, food, labs, and estimated vitamin D levels. The timer shows estimated IU and warns before predicted burn time. It runs on iOS and Android, with Apple Watch and Wear OS support.
 
-Its free plan is unusually capable: current calculations, burn warnings, 90 days of history, three lab results, iCloud sync, and watch features. Pro costs $9.99 per year or $24.99 once and adds unlimited history, projections, exports, and removes ads.
+The free plan includes current calculations, burn warnings, 90 days of history, three lab results, iCloud sync, and watch features. Pro costs $9.99 per year or $24.99 once. It adds unlimited history, projections, exports, and removes ads.
 
-Switch if you want a different workflow: clothing inputs and 48-hour alerts, tighter Apple Health integration, a simpler UV screen, or tanning guidance. No independent head-to-head test shows that one app is universally more accurate.
+Switch if you want a different workflow, such as clothing inputs and 48-hour alerts, tighter Apple Health integration, a simpler UV screen, or tanning guidance. I found no independent head-to-head test showing that one app is more accurate for everyone.
 
 ## dminder alternatives compared
 
@@ -79,7 +83,7 @@ headers={[
     <td>Detailed vitamin D tracking, lab calibration, Android users</td>
     <td>iOS, Android, Apple Watch, Wear OS</td>
     <td>Free; Pro $9.99/year or $24.99 lifetime</td>
-    <td>Developer says health and location data stay on device or in your own cloud; free tier contains ads</td>
+    <td>Free-tier data stays on the device; premium can sync data to iCloud or Google Cloud; free tier contains ads</td>
   </tr>
   <tr>
     <td>Bask</td>
@@ -111,17 +115,17 @@ headers={[
   </tr>
 </ComparisonTable>
 
-Every app here can be downloaded without paying, but some reserve exposure tracking, longer history, or personalized routines for a subscription. dminder and UVLens offer the clearest useful free paths.
+Every app here can be downloaded without paying, but some reserve exposure tracking, longer history, or personalized routines for a subscription. dminder and UVLens are the simplest free starting points.
 
 ## Best alternative by need
 
-**For an iPhone vitamin D routine: Bask.** Bask estimates IU from live UV, weather, skin type, and clothing, then logs supplements and lab results. Its 48-hour forecast helps you find a workable time to get outside.
+**For an iPhone vitamin D routine: Bask.** Bask estimates IU from live UV, weather, skin type, and clothing, then logs supplements and lab results. Its 48-hour forecast helps you find a workable time to go outside.
 
 **For Apple Watch and Apple Health: Sunbeam.** View forecasts on widgets and Apple Watch, start sessions with Siri or Shortcuts, and sync Time in Daylight and vitamin D with Apple Health. It also has a 10-day hourly UV forecast.
 
 **For tanning and sunscreen prompts: SunSafe.** SunSafe bases burn calculations and tanning routines on skin type, adds sunscreen reminders, and tracks exposure through Live Activities. Many personalized tools require Pro.
 
-**For basic burn-risk planning: UVLens.** It shows the day's UV pattern, estimates how long your skin can stay out without sunscreen, and handles reapplication reminders.
+**For basic burn-risk planning: UVLens.** It shows the day's UV pattern, estimates how long your skin can stay out without sunscreen, and sends reapplication reminders.
 
 **For Android: keep dminder.** Among the apps compared here, dminder is the verified full vitamin D tracker available on both iOS and Android. Switching only makes sense if another app's narrower feature set matters more than cross-platform access.
 
@@ -129,7 +133,7 @@ Every app here can be downloaded without paying, but some reserve exposure track
 
 Two apps can watch the same 20-minute session and report different IU. One may use the reported UV index while another also uses solar angle, ozone, weather, age, weight, skin type, or exposed body area. Apps may also define a daily target differently.
 
-These are model outputs, not measurements of what entered your bloodstream. Use one app consistently, enter honest skin and exposure details, and compare the trend with a 25-hydroxyvitamin D blood test if you are managing a deficiency. Our [guide to how much sun you need](/blog/how-much-sun-do-you-need-for-vitamin-d) explains why UV, skin type, season, and exposed area change the answer.
+These are model outputs, not measurements of what entered your bloodstream. Use one app consistently, enter honest skin and exposure details, and compare the trend with a 25-hydroxyvitamin D blood test if you are managing a deficiency. Our [guide to how much sun you need](/blog/how-much-sun-do-you-need-for-vitamin-d) explains why UV, skin type, season, and exposed area change the result.
 
 <Callout type="warning" title="An app estimate is not a blood test">
   Sun trackers estimate vitamin D production from environmental and personal
@@ -139,15 +143,15 @@ These are model outputs, not measurements of what entered your bloodstream. Use 
 
 ## How dminder compares with Bask
 
-dminder is stronger if you want Android support, live satellite ozone in the calculation, indoor UV-lamp sessions, food logging, or a long-established vitamin D model. Its free tier is also generous, and its annual Pro plan costs less than Bask's listed annual plan.
+dminder is stronger if you want Android support, live satellite ozone in the calculation, indoor UV-lamp sessions, food logging, or a long-established vitamin D model. Its free tier is generous, and its annual Pro plan costs less than Bask's listed annual plan.
 
-Bask is the better fit if you want clothing to be an obvious session input, a 48-hour alert for your next useful sun window, a direct time-to-sunburn timer, quick supplement and cofactor logging, and recent lab trends in a simpler iPhone workflow. Bask says core data stays on your device. dminder offers deeper exports and cross-platform support.
+Bask is the better fit if you want clothing as a clear session input, a 48-hour alert for your next useful sun window, a direct time-to-sunburn timer, quick supplement and cofactor logging, and recent lab trends in a simpler iPhone workflow. Bask says core data stays on your device. dminder offers deeper exports and cross-platform support.
 
 Neither app can claim to measure your vitamin D level. Pick the interface and inputs you will use consistently, then check the estimate against lab work when needed. For a wider category view, see our [comparison of vitamin D tracking apps](/blog/best-apps-to-track-vitamin-d-2026).
 
 ## How this relates to Bask
 
-Bask is built for the daily decision behind this comparison: whether local conditions are useful for your skin, how long to stay out, and how sun and supplements add up. Its live estimate uses UV, weather, skin type, and clothing, while the burn timer gives you a separate reason to stop.
+The practical question is whether local conditions are useful for your skin, how long to stay out, and how sun and supplements add up. Bask's live estimate uses UV, weather, skin type, and clothing. Its burn timer gives you a separate reason to stop.
 
 <Callout type="info" title="See today's sun window and burn time together">
   Bask estimates IU from current conditions and your clothing, then tracks the
@@ -184,13 +188,14 @@ There is no independent current test proving one is most accurate for every pers
 
 1. [dminder official features and platform page](https://dminder.info/)
 2. [dminder official pricing and feature comparison](https://dminder.info/pricing)
-3. [D Minder Pro, US App Store listing](https://apps.apple.com/us/app/d-minder-pro/id547102495)
-4. [Vitamin D Sun Tracker - Bask, US App Store listing](https://apps.apple.com/us/app/vitamin-d-sun-tracker-bask/id6758405235)
-5. [Sunbeam: UV Index, US App Store listing](https://apps.apple.com/us/app/sunbeam-uv-index/id1448601833)
-6. [Sunbeam privacy policy](https://electricacorn.com/sunbeam/privacy-policy/)
-7. [SunSafe: UV Index & Tanning, US App Store listing](https://apps.apple.com/us/app/sunsafe-uv-index-tanning/id6461573146)
-8. [UVLens - UV Index, US App Store listing](https://apps.apple.com/us/app/uvlens-uv-index/id1060878359)
-9. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)
+3. [dminder privacy policy](https://dminder.info/privacy-policy)
+4. [D Minder Pro, US App Store listing](https://apps.apple.com/us/app/d-minder-pro/id547102495)
+5. [Vitamin D Sun Tracker - Bask, US App Store listing](https://apps.apple.com/us/app/vitamin-d-sun-tracker-bask/id6758405235)
+6. [Sunbeam: UV Index, US App Store listing](https://apps.apple.com/us/app/sunbeam-uv-index/id1448601833)
+7. [Sunbeam privacy policy](https://electricacorn.com/sunbeam/privacy-policy/)
+8. [SunSafe: UV Index & Tanning, US App Store listing](https://apps.apple.com/us/app/sunsafe-uv-index-tanning/id6461573146)
+9. [UVLens - UV Index, US App Store listing](https://apps.apple.com/us/app/uvlens-uv-index/id1060878359)
+10. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)
 
 ---
 
