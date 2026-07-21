@@ -1,23 +1,25 @@
 {
-  "lastScan": "2026-07-20",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-20.md",
-  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all queries; DuckDuckGo CAPTCHA on 3rd query; 2/3 successful)",
-  "themesFound": 6,
-  "sourcesCount": 12,
+  "lastScan": "2026-07-21",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-21.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on primary; DuckDuckGo CAPTCHA on 3rd query; 2/3 successful — same access pattern as 07-01, 07-18, 07-19, 07-20)",
+  "themesFound": 8,
+  "sourcesCount": 20,
   "newSignals": [
-    "NEW cofactor/dependency misconception: 'sun isn't vitamin D, it synthesizes D from dietary raw materials' — r/nutrition/qevazz (mechanistic explanation of recurring deficiency-despite-sun)",
-    "NEW co-stated 6000 IU daily cholecalciferol + sun claim — r/VitaminD/13p8cay (reinforces cofactor narrative + sun-pill combo)",
-    "NEW body-part-dosing misconception: palms-only exposure question — r/AskBiology/1487zz8 (contradicts 07-19 chest/belly/back claim; three conflicting body-part recipes now across subs)",
-    "NEW demographic widening: sunscreen-vs-D tension reaches r/beauty (younger/female-leaning audience weighing D vs skin aging) — r/beauty/17s0rpr; 'an hour a day' misconception",
-    "NEW Vitamin D Council citable quote on hand-computation difficulty (skin type+location+season+time) — r/nutrition/92n26u; clean source for 'this is hard by hand' framing",
-    "Huberman morning routine spreading to r/getdisciplined (general productivity sub) — r/getdisciplined/18jps4e (broader audience asking protocol-timing questions)"
+    "NEW SAD light-therapy lamp comparison angle: 35 lamps spectrally tested, circadian-light weighted toward ipRGC wavelengths — r/HubermanLab/185w7ku (enthusiast audience solving 'is light intense enough' with artificial devices; adjacent to Bask audience, currently framed around lamps not sun)",
+    "NEW LED-glasses study reply 'does it really have to be morning sunlight?': corrected young people's delayed sleep, reduced insomnia, improved cognition, relieved depression — r/HubermanLab/17i9uw7 (directly answers indoor-vs-outdoor with a real study)",
+    "NEW 'morning sun super gentle… definitely not in the 10-20 min it takes to get circadian signaling' — r/Biohackers/uen6h1 (resolves recurring dermatology-vs-circadian worry; pairs with 07-20 r/beauty 'an hour a day will age my skin')",
+    "NEW Huberman-vs-Hattar contradiction on light viewing protocol — r/HubermanLab/17eyyu2 (mechanism ambiguity: visible vs UV-B for circadian; even the cited researcher contradicts Huberman's social-media advice)",
+    "NEW supporting supplement-risk framing: 'Sun avoidance → D deficiency → supplements → arterial calcification via serum calcium' — r/PeterAttia/1697fh8 (sharpens recurring sunscreen-vs-D debate into explicit false-choice; middle path = timed low-UV sun)",
+    "NEW circadian neuroscientist confirms robust/measurable circadian impact of morning sun — r/HubermanLab/143glpf (raises stakes for users who can't operationalize the protocol cutoff)"
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
     "dminder sole organic sun-tracking-app mention (HOLDING since 07-18)",
-    "Huberman protocol timing-window vagueness + geographic/winter failure (HOLDING since 07-19)",
-    "Deficiency despite daily sun + non-D benefits of sun (nitric oxide, winter blood clots) (HOLDING since 07-19)"
+    "Cofactor/dependency misconception: 'sun isn't D, it synthesizes D from dietary raw materials' + 6k IU cholecalciferol + sun claim (HOLDING since 07-20)",
+    "Palms-only / partial-body exposure body-part dosing misconception (HOLDING since 07-20)",
+    "Huberman morning-light protocol timing-window vagueness + which twilight-phase ambiguity + geographic/winter failure (HOLDING since 07-19, REINFORCED this run with neuroscientist confirmation + Hattar contradiction)",
+    "Vitamin D Council 'hard to compute by hand' 4-axis quote — skin type, location, time, season (HOLDING since 07-20)"
   ],
   "status": "success",
-  "gitCommit": "20d5149"
+  "gitCommit": "pending"
 }
