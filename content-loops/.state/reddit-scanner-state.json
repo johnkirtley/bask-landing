@@ -1,25 +1,25 @@
 {
-  "lastScan": "2026-07-21",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-21.md",
-  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on primary; DuckDuckGo CAPTCHA on 3rd query; 2/3 successful — same access pattern as 07-01, 07-18, 07-19, 07-20)",
+  "lastScan": "2026-07-22",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-22.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on both primary queries; DuckDuckGo succeeded on queries 1 and 2 [vitamin D + sun; huberman morning light + D], CAPTCHA on query 3 [supplement dosage confusion] — 2/3 successful, same access pattern as 07-01, 07-18, 07-19, 07-20, 07-21)",
   "themesFound": 8,
-  "sourcesCount": 20,
+  "sourcesCount": 19,
   "newSignals": [
-    "NEW SAD light-therapy lamp comparison angle: 35 lamps spectrally tested, circadian-light weighted toward ipRGC wavelengths — r/HubermanLab/185w7ku (enthusiast audience solving 'is light intense enough' with artificial devices; adjacent to Bask audience, currently framed around lamps not sun)",
-    "NEW LED-glasses study reply 'does it really have to be morning sunlight?': corrected young people's delayed sleep, reduced insomnia, improved cognition, relieved depression — r/HubermanLab/17i9uw7 (directly answers indoor-vs-outdoor with a real study)",
-    "NEW 'morning sun super gentle… definitely not in the 10-20 min it takes to get circadian signaling' — r/Biohackers/uen6h1 (resolves recurring dermatology-vs-circadian worry; pairs with 07-20 r/beauty 'an hour a day will age my skin')",
-    "NEW Huberman-vs-Hattar contradiction on light viewing protocol — r/HubermanLab/17eyyu2 (mechanism ambiguity: visible vs UV-B for circadian; even the cited researcher contradicts Huberman's social-media advice)",
-    "NEW supporting supplement-risk framing: 'Sun avoidance → D deficiency → supplements → arterial calcification via serum calcium' — r/PeterAttia/1697fh8 (sharpens recurring sunscreen-vs-D debate into explicit false-choice; middle path = timed low-UV sun)",
-    "NEW circadian neuroscientist confirms robust/measurable circadian impact of morning sun — r/HubermanLab/143glpf (raises stakes for users who can't operationalize the protocol cutoff)"
+    "NEW two-window split: morning/evening UV does nothing for vitamin D, 290-300nm 'magic D zone' only opens ~10am — r/HubermanLab/1cwffaa (splits 'get morning sun' advice into circadian window vs D-synthesis window; strongest differentiator for Bask since 07-18; surfaces both windows Bask can track)",
+    "NEW outdoor-worker-still-deficient counterexample: 6-8 hrs nonstop daily sun, 5-6 days/week, still deficient on prescription D3 — r/nutrition/1dj9y1 (sharpest real-world bust of 'just get sun'; reinforced by r/ScientificNutrition/p68hvz 2007 study: abundant sun != adequate D)",
+    "NEW sunlight benefits beyond vitamin D: nitric oxide, cardiovascular, winter blood-clot ER spike — r/HubermanLab/1d56w90 (reframes supplement-vs-sun debate off D-equivalence; gives Bask a second therapeutic axis)",
+    "NEW sunscreen-vs-D debate reaches general r/ask sub + sun-avoider pivot to 'sunrise' (wrong window for D) — r/ask/1d0ymjq + r/30PlusSkinCare/14x4wlm (behavioral narrative linking Theme 1 two-window split to core acquisition audience)",
+    "NEW clean cutoff-time question wording — r/HubermanLab/16kw6zn ('is there a way to know when morning light stops having an effect on your circadian rhythms?') (Theme 7 reinforced with cleanest single-sentence instance since 07-19)",
+    "NEW geographic/winter deployment failure — r/HubermanLab/18c4sfd (Canada: sun visible but sleeveless exposure impractical in cold; pairs with 07-19 northern-latitude failure)"
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
-    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18)",
-    "Cofactor/dependency misconception: 'sun isn't D, it synthesizes D from dietary raw materials' + 6k IU cholecalciferol + sun claim (HOLDING since 07-20)",
-    "Palms-only / partial-body exposure body-part dosing misconception (HOLDING since 07-20)",
-    "Huberman morning-light protocol timing-window vagueness + which twilight-phase ambiguity + geographic/winter failure (HOLDING since 07-19, REINFORCED this run with neuroscientist confirmation + Hattar contradiction)",
+    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18 — now fifth consecutive scan)",
+    "Cofactor/dependency misconception 'sun synthesizes D from dietary raw materials' + 6000 IU cholecalciferol + 20 min summer + 4000 IU D3+K2 still low (HOLDING since 07-20, now REINFORCED by Theme 2 outdoor-worker counterexample)",
+    "Huberman morning-light protocol cutoff vagueness + 'is it enough?' threshold ambiguity + geographic/winter failure + artificial-substitute specs (HOLDING since 07-19, REINFORCED this run with four fresh clean instances — burst of new support)",
+    "Sunscreen-vs-D debate (carried from 07-19/07-20/07-21, now REACHES general r/ask sub — wider audience)",
     "Vitamin D Council 'hard to compute by hand' 4-axis quote — skin type, location, time, season (HOLDING since 07-20)"
   ],
   "status": "success",
-  "gitCommit": "c2eb145"
+  "gitCommit": "pending"
 }
