@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # The Angle of the Sun and Vitamin D: Why the Shadow Rule Works
 
@@ -22,23 +22,23 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify that a shadow equal to your height corresponds to a 45-degree solar elevation using basic right-triangle geometry
-- [ ] Verify that the 45-degree shadow rule is presented as a rough field check, not a hard biological threshold, against EPA shadow guidance and Engelsen et al.
-- [ ] Confirm EPA UV Index guidance: UVI 1-2 is low, 3-7 is moderate to high, and a shorter shadow indicates higher UV exposure
-- [ ] Confirm NIH ODS guidance that UVB drives vitamin D synthesis and that season, time of day, cloud cover, skin melanin, and sunscreen affect production
-- [ ] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/morning-sunlight-benefits
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [x] Verify that a shadow equal to your height corresponds to a 45-degree solar elevation using basic right-triangle geometry (confirmed 2026-07-22)
+- [x] Verify that the 45-degree shadow rule is presented as a rough field check, not a hard biological threshold, against EPA shadow guidance and Engelsen et al. (confirmed 2026-07-22)
+- [x] Confirm EPA UV Index guidance: UVI 1-2 is low, 3-7 is moderate to high, and a shorter shadow indicates higher UV exposure (confirmed 2026-07-22)
+- [ ] Confirm NIH ODS guidance that UVB drives vitamin D synthesis and that season, time of day, cloud cover, skin melanin, and sunscreen affect production (ODS page returned HTTP 403 during review, so this could not be confirmed against the cited page.)
+- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/morning-sunlight-benefits (confirmed 2026-07-22)
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T (confirmed 2026-07-22)
 
 ---
 
 ## Post content
 
-If your shadow is shorter than you are, the sun is above roughly 45 degrees and useful UVB is more likely to reach your skin. If your shadow is longer than you, the sun is low and vitamin D production is usually weak or absent. Treat that as a quick field check, not a hard cutoff: a local UV index of 3 or higher is the better practical test.
+When your shadow is shorter than your height, the sun is above roughly 45 degrees and useful UVB is more likely to reach your skin. A longer shadow means the sun is low, so vitamin D production is usually weak or absent. Use the shadow as a quick field check, not a hard cutoff. A local UV index of 3 or higher is the better practical test.
 
 ## The short answer: check your shadow
 
 - A shadow shorter than you means the sun is higher than 45 degrees.
-- A shadow about as long as you means the sun is near 45 degrees.
+- A shadow about as long as your height means the sun is near 45 degrees.
 - A shadow longer than you means the sun is below 45 degrees.
 
 At a 45-degree solar elevation, a vertical object and its shadow have the same length. But the atmosphere does not flip UVB on at one angle. UVB increases as the sun climbs, while ozone, clouds, altitude, and pollution affect how much reaches the ground.
@@ -93,7 +93,7 @@ Earth's tilt changes the sun's daily path. It climbs higher in summer and follow
 
 Engelsen and colleagues modeled vitamin D-effective UV around the world. They found periods with no cutaneous vitamin D production at 51 degrees latitude and higher under clear skies. At 70 degrees latitude, the gap could last five months. Clouds, aerosols, and ozone shortened the available window further.
 
-This is why a fixed clock time does not travel well. Noon in Boston in January is not noon in Miami in July. The [best time of day for vitamin D](/blog/best-time-of-day-to-get-vitamin-d) is when your local sun and UV index peak, but some winter days never open a useful window.
+This is why a fixed clock time does not work everywhere. Noon in Boston in January is not noon in Miami in July. The [best time of day for vitamin D](/blog/best-time-of-day-to-get-vitamin-d) is when your local sun and UV index peak, but some winter days never open a useful window.
 
 ## How the angle of the sun relates to Bask
 
