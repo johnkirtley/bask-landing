@@ -1,25 +1,26 @@
 {
-  "lastScan": "2026-07-22",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-22.md",
-  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on both primary queries; DuckDuckGo succeeded on queries 1 and 2 [vitamin D + sun; huberman morning light + D], CAPTCHA on query 3 [supplement dosage confusion] — 2/3 successful, same access pattern as 07-01, 07-18, 07-19, 07-20, 07-21)",
+  "lastScan": "2026-07-23",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-23.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all 5 primary subreddit-targeted queries; DuckDuckGo succeeded on queries 1 and 2 [vitamin D deficiency + sun exposure 2025; huberman morning light + vitamin D], CAPTCHA on query 3 [depression sunlight SAD mood] — 2/3 successful, same access pattern as 07-01, 07-18, 07-19, 07-20, 07-21, 07-22)",
   "themesFound": 8,
   "sourcesCount": 19,
   "newSignals": [
-    "NEW two-window split: morning/evening UV does nothing for vitamin D, 290-300nm 'magic D zone' only opens ~10am — r/HubermanLab/1cwffaa (splits 'get morning sun' advice into circadian window vs D-synthesis window; strongest differentiator for Bask since 07-18; surfaces both windows Bask can track)",
-    "NEW outdoor-worker-still-deficient counterexample: 6-8 hrs nonstop daily sun, 5-6 days/week, still deficient on prescription D3 — r/nutrition/1dj9y1 (sharpest real-world bust of 'just get sun'; reinforced by r/ScientificNutrition/p68hvz 2007 study: abundant sun != adequate D)",
-    "NEW sunlight benefits beyond vitamin D: nitric oxide, cardiovascular, winter blood-clot ER spike — r/HubermanLab/1d56w90 (reframes supplement-vs-sun debate off D-equivalence; gives Bask a second therapeutic axis)",
-    "NEW sunscreen-vs-D debate reaches general r/ask sub + sun-avoider pivot to 'sunrise' (wrong window for D) — r/ask/1d0ymjq + r/30PlusSkinCare/14x4wlm (behavioral narrative linking Theme 1 two-window split to core acquisition audience)",
-    "NEW clean cutoff-time question wording — r/HubermanLab/16kw6zn ('is there a way to know when morning light stops having an effect on your circadian rhythms?') (Theme 7 reinforced with cleanest single-sentence instance since 07-19)",
-    "NEW geographic/winter deployment failure — r/HubermanLab/18c4sfd (Canada: sun visible but sleeveless exposure impractical in cold; pairs with 07-19 northern-latitude failure)"
+    "NEW palms-only / body-surface-area exposure question — r/AskBiology/1487zz8 (surfaces body-surface-area as a previously-unmentioned input axis; the cited 10-15 min arms/legs/abdomen/back rule itself ignores the Theme 8 axes; bridges Theme 4 sunscreen cohort seeking minimal exposure with Theme 8 hard-to-compute)",
+    "NEW supplement-only carries arterial-calcification risk via serum-calcium mechanism — r/PeterAttia/1697fh8 (first supplement-side risk sufficient to move avoid-sun cohort back toward timed sun; inverts the perceived-safe-equivalent framing of the Theme 3/6 debate; positions Bask as dose-sparing middle path)",
+    "NEW deficient sunscreen user in Central Europe planning flat 1-hour daily sunbath, asks about skin aging — r/beauty/17s0rpr (decision-grade question with no rule-of-thumb answer; flat-1-hour is the embodiment of rule-of-thumb failure — same minutes produce wildly different D and burn/aging risk by time-of-day and latitude; core acquirer persona teed up to make a bad call for both goals)",
+    "NEW dminder instance with explicit skin-type-input feature use + D-vs-burn balancing, achieves 'slightly pinkish at the max' — r/VitaminD/1chkjto (clearest dminder-instance yet, sixth scan holding; adoption-friction quote: 'I haven't researched sun exposure time enough, so right now I'm putting trust into dminder')",
+    "NEW second distinct r/nutrition thread (/92n26u) surfacing identical Vitamin D Council 4-axis 'hard to compute' quote (distinct from 07-22 /qevazz) — confirms canonical circulation across multiple threads; reinforces Theme 8 and surfaces a Bask differentiator: Council's four axes omit body-surface-area (Theme 1's new axis), which Bask can add as a fifth"
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
-    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18 — now fifth consecutive scan)",
-    "Cofactor/dependency misconception 'sun synthesizes D from dietary raw materials' + 6000 IU cholecalciferol + 20 min summer + 4000 IU D3+K2 still low (HOLDING since 07-20, now REINFORCED by Theme 2 outdoor-worker counterexample)",
-    "Huberman morning-light protocol cutoff vagueness + 'is it enough?' threshold ambiguity + geographic/winter failure + artificial-substitute specs (HOLDING since 07-19, REINFORCED this run with four fresh clean instances — burst of new support)",
-    "Sunscreen-vs-D debate (carried from 07-19/07-20/07-21, now REACHES general r/ask sub — wider audience)",
-    "Vitamin D Council 'hard to compute by hand' 4-axis quote — skin type, location, time, season (HOLDING since 07-20)"
+    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18 — sixth consecutive scan; REINFORCED today with explicit skin-type-input + burn-balance instance from r/VitaminD/1chkjto)",
+    "Two-window split: morning/evening UV does nothing for vitamin D, 290-300nm 'magic D zone' opens ~10am (HOLDING from 07-22 Theme 1, still the sharpest differentiator; carrying)",
+    "Sunlight benefits beyond vitamin D: nitric oxide, cardiovascular, winter blood-clot ER spike (HOLDING from 07-22 Theme 3, carrying)",
+    "Cofactor/dependency misconception 'sun synthesizes D from dietary raw materials' + 6000 IU cholecalciferol (HOLDING since 07-20; no fresh instance today, holding at 07-22 evidence including outdoor-worker counterexample)",
+    "Huberman morning-light protocol cutoff vagueness + 'is it enough?' threshold ambiguity + geographic/winter failure + artificial-substitute specs (HOLDING since 07-19; consolidated today at 07-22 concentrated evidence level; no new cutoff instances surfaced before query 3 CAPTCHA)",
+    "Sunscreen-vs-D / sun-avoider tension (HOLDING since 07-21, REINFORCED today by Theme 2 supplement-risk and Theme 3 flat-hour anti-aging; three sub-personas of the same core audience converging on 'I need to dose sun, not avoid and not overdo')",
+    "Vitamin D Council 'hard to compute by hand' 4-axis quote — skin type, location, time, season (HOLDING since 07-20, REINFORCED with second distinct thread surface /92n26u; note Council's four axes omit body-surface-area which Bask can add as a fifth axis)"
   ],
   "status": "success",
-  "gitCommit": "b983333"
+  "gitCommit": "6c17b7c"
 }
