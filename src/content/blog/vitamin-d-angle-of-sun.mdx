@@ -1,37 +1,12 @@
-Status: PUBLISHED
-
-# The Angle of the Sun and Vitamin D: Why the Shadow Rule Works
-
-**Slug:** `vitamin-d-angle-of-sun`
-**Primary keyword:** vitamin D angle of sun
-**Secondary keywords:** shadow rule vitamin D · what angle sun vitamin D · sun elevation vitamin D · 45 degree sun vitamin D
-**Pillar:** P1.13
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'The Angle of the Sun and Vitamin D: Why the Shadow Rule Works'
+description: 'When your shadow is shorter than your height, the sun is above roughly 45 degrees and useful UVB is more likely to reach your skin.'
+pubDate: 2026-07-23
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` structured data
-- **ComparisonTable component:** use for the shadow-length and sun-angle table
-- **Callout components:** use for the shadow test (`success`), the Bask download CTA (`info`), and the medical disclaimer (`warning`)
-
----
-
-## Reviewer checklist
-
-- [x] Verify that a shadow equal to your height corresponds to a 45-degree solar elevation using basic right-triangle geometry (confirmed 2026-07-22)
-- [x] Verify that the 45-degree shadow rule is presented as a rough field check, not a hard biological threshold, against EPA shadow guidance and Engelsen et al. (confirmed 2026-07-22)
-- [x] Confirm EPA UV Index guidance: UVI 1-2 is low, 3-7 is moderate to high, and a shorter shadow indicates higher UV exposure (confirmed 2026-07-22)
-- [ ] Confirm NIH ODS guidance that UVB drives vitamin D synthesis and that season, time of day, cloud cover, skin melanin, and sunscreen affect production (ODS page returned HTTP 403 during review, so this could not be confirmed against the cited page.)
-- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/morning-sunlight-benefits (confirmed 2026-07-22)
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T (confirmed 2026-07-22)
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 When your shadow is shorter than your height, the sun is above roughly 45 degrees and useful UVB is more likely to reach your skin. A longer shadow means the sun is low, so vitamin D production is usually weak or absent. Use the shadow as a quick field check, not a hard cutoff. A local UV index of 3 or higher is the better practical test.
 
@@ -145,8 +120,3 @@ The geometry works everywhere, but it cannot account for clouds, ozone, altitude
   skin cancer, take photosensitizing medication, or are treating a vitamin D
   deficiency, ask a clinician about safe exposure, blood testing, and supplements.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/vitamin-d-angle-of-sun.md`_
-_When ready to publish, Developer creates `src/content/blog/vitamin-d-angle-of-sun.mdx`_

@@ -21,6 +21,7 @@ topic with a genuinely different angle, note the angle.
 | understanding-vitamin-d-synthesis           | Understanding Vitamin D Synthesis                      | (off-plan science explainer)         | vitamin D synthesis                         | 2026-02-02 | PUBLISHED        |
 | how-long-to-sit-in-sun-for-vitamin-d        | How Long to Sit in the Sun for Vitamin D, by Skin Type | P1.3                                 | how long to sit in sun for vitamin D        | 2026-06-20 | PUBLISHED        |
 | best-uv-index-for-tanning                   | What UV Index Is Best for Tanning                      | tanning/summer cluster (links to P1) | best UV index for tanning                   | 2026-06-21 | PUBLISHED        |
+| vitamin-d-angle-of-sun                      | The Angle of the Sun and Vitamin D                     | P1.13                                | vitamin D angle of sun                      | 2026-07-23 | PUBLISHED        |
 | how-much-vitamin-d-in-15-minutes-of-sun     | How Much Vitamin D in 15 Minutes of Sun                | P1.9                                 | how much vitamin D in 15 minutes of sun     | 2026-06-22 | NEEDS REVIEW     |
 | can-you-get-too-much-vitamin-d-from-the-sun | Can You Get Too Much Vitamin D From the Sun            | P1.12                                | can you get too much vitamin D from the sun | 2026-06-23 | NEEDS REVIEW     |
 
