@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # Can You Get Enough Vitamin D From Just Your Palms?
 
@@ -22,17 +22,17 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify that face plus backs of hands represented about 5% of body surface and raised serum 25(OH)D after three controlled UVB exposures in Osmancevic et al. 2015
-- [ ] Verify that the Bogh randomized trial tested 6%, 12%, and 24% exposed body surface and found both UVB dose and exposed area affected the response
-- [ ] Confirm the article does not claim that palms alone were tested or assign palms a specific vitamin D output
-- [ ] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/does-sunscreen-block-vitamin-d
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [x] Verify that face plus backs of hands represented about 5% of body surface and raised serum 25(OH)D after three controlled UVB exposures in Osmancevic et al. 2015; confirmed 2026-07-24 against PubMed PMID 25594723
+- [x] Verify that the Bogh randomized trial tested 6%, 12%, and 24% exposed body surface and found both UVB dose and exposed area affected the response; confirmed 2026-07-24 against PubMed PMID 21039402
+- [x] Confirm the article does not claim that palms alone were tested or assign palms a specific vitamin D output; confirmed 2026-07-24 by review of the post body
+- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/does-sunscreen-block-vitamin-d; confirmed 2026-07-24; all four files exist in src/content/blog/
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T; confirmed 2026-07-24; author is present in the post metadata
 
 ---
 
 ## Post content
 
-Sunlight on your palms may produce some vitamin D when enough UVB reaches them, but palms alone expose too little skin to be a reliable way to meet a vitamin D target. Studies show that small exposed areas can raise vitamin D, while larger areas generally produce more under the same UVB conditions. Your UV exposure, skin type, season, latitude, session length, and starting vitamin D level still change the result.
+Sunlight on your palms can produce some vitamin D when enough UVB reaches them. Palms alone cover too little skin to reliably meet a vitamin D target. Studies show that small exposed areas can raise vitamin D, while larger areas generally produce more under the same UVB conditions. UV exposure, skin type, season, latitude, session length, and starting vitamin D level all change the result.
 
 ## What the research actually tested
 
@@ -40,7 +40,7 @@ There is no good palms-only study that tells you how many IU your two palms make
 
 The closest controlled evidence looked at the face and backs of the hands together, not the palms by themselves. In a 2015 clinical trial, ten adults with Fitzpatrick skin types II and III received three suberythemal UVB exposures. Researchers compared three exposed areas: face plus backs of hands, upper body, and whole body.
 
-Face and hands, about 5% of total body surface in the study, did raise serum 25-hydroxyvitamin D. The two larger areas caused a greater rise in vitamin D3. That gives us a useful answer without pretending the study measured something it did not: a small area can contribute, but exposing more skin usually produces more vitamin D from the same session.
+Face and hands, about 5% of total body surface in the study, raised serum 25-hydroxyvitamin D. The two larger areas caused a greater rise in vitamin D3. The study supports a narrow conclusion: a small area can contribute, but exposing more skin usually produces more vitamin D from the same session.
 
 <ComparisonTable
 headers={[
@@ -68,7 +68,7 @@ headers={[
   </tr>
 </ComparisonTable>
 
-A separate randomized trial of 92 participants tested 6%, 12%, and 24% exposed body surface at several UVB doses. Both UVB dose and exposed area affected the rise in 25(OH)D, although UVB dose was the stronger factor overall. Area mattered most at the smaller UVB dose. In plain terms, rolling up your sleeves can help, but it cannot rescue a session when very little useful UVB is available.
+A separate randomized trial of 92 participants tested 6%, 12%, and 24% exposed body surface at several UVB doses. Both UVB dose and exposed area affected the rise in 25(OH)D, although UVB dose was the stronger factor overall. Area mattered most at the smaller UVB dose. Rolling up your sleeves can help, but it cannot make up for sunlight with very little useful UVB.
 
 ## Why palms are an unreliable shortcut
 
@@ -80,7 +80,7 @@ So yes, your palms may contribute. No, they are not a dependable vitamin D plan 
 
 ## More skin versus more time
 
-If the UVB conditions are useful, exposing your forearms or lower legs gives the light more skin to work on. That is usually a better practical lever than keeping only your palms out for a long time.
+If the UVB conditions are useful, exposing your forearms or lower legs gives the light more skin to reach. That usually works better than keeping only your palms out for a long time.
 
 But more time is not a free substitute for more area. UV exposure damages skin, and the World Health Organization says higher UV Index values mean greater potential for skin and eye damage in less time. Staying outside until you turn pink is not a vitamin D strategy. It is a sunburn.
 
@@ -90,13 +90,13 @@ But more time is not a free substitute for more area. UV exposure damages skin, 
   safe. Use a short session and protect your skin before it reddens.
 </Callout>
 
-The safest answer also changes with your own risk. If you have a history of skin cancer, take a medication that increases sun sensitivity, or have been told to avoid direct sun, do not trade medical advice for a palms-only workaround. Food, supplements, and clinician-guided treatment do not require UV exposure.
+The safest choice depends on your own risk. If you have a history of skin cancer, take a medication that increases sun sensitivity, or have been told to avoid direct sun, do not replace medical advice with a palms-only workaround. Food, supplements, and clinician-guided treatment do not require UV exposure.
 
 ## The conditions still have to be right
 
 Exposed area is only one part of the calculation. Your palms cannot make useful vitamin D if the sunlight reaching them contains too little UVB.
 
-The UV Index is a practical clue, not a direct vitamin D meter. Around midday and during higher-UV seasons, more UVB generally reaches the ground. Early morning, late afternoon, winter at higher latitudes, heavy cloud, shade, and window glass can sharply reduce or block the UVB available to your skin. Our guide to [the UV Index needed for vitamin D](/blog/what-uv-index-do-you-need-for-vitamin-d) explains that gate in detail.
+The UV Index is a practical clue, not a direct vitamin D meter. Around midday and during higher-UV seasons, more UVB generally reaches the ground. Early morning, late afternoon, winter at higher latitudes, heavy cloud, shade, and window glass can sharply reduce or block the UVB available to your skin. See [the UV Index needed for vitamin D](/blog/what-uv-index-do-you-need-for-vitamin-d) for more detail.
 
 Skin type changes the pace too. Melanin absorbs UV radiation and can lengthen the exposure needed for the same vitamin D response. Someone with darker skin cannot assume that a palms-only session copied from someone with fair skin will produce the same result. The same goes for a session copied across cities or seasons.
 
