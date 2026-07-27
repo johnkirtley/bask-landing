@@ -1,36 +1,14 @@
-Status: PUBLISHED
-
-# Can You Get Enough Vitamin D From Just Your Palms?
-
-**Slug:** `can-you-get-vitamin-d-from-your-palms`
-**Primary keyword:** can you get vitamin D from your palms
-**Secondary keywords:** vitamin D from hands · how much skin exposed for vitamin D · exposed skin area vitamin D · arms and legs sun vitamin D · vitamin D with minimal sun exposure
-**Pillar:** P1 calculation cluster
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'Can You Get Enough Vitamin D From Just Your Palms?'
+description: 'Sunlight on your palms can produce some vitamin D when enough UVB reaches them. Palms alone cover too little skin to reliably meet a vitamin D target.'
+pubDate: 2026-07-27
+heroImage: ./_images/hero-placeholder.png
+readingTime: '7 min read'
+author: 'Bask Health Team'
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` structured data
-- **ComparisonTable component:** use for the tested exposed-area comparison
-- **Callout components:** use for the more-skin-versus-more-time note (info type), Bask download CTA (info type), and medical disclaimer (warning type)
-
----
-
-## Reviewer checklist
-
-- [x] Verify that face plus backs of hands represented about 5% of body surface and raised serum 25(OH)D after three controlled UVB exposures in Osmancevic et al. 2015; confirmed 2026-07-24 against PubMed PMID 25594723
-- [x] Verify that the Bogh randomized trial tested 6%, 12%, and 24% exposed body surface and found both UVB dose and exposed area affected the response; confirmed 2026-07-24 against PubMed PMID 21039402
-- [x] Confirm the article does not claim that palms alone were tested or assign palms a specific vitamin D output; confirmed 2026-07-24 by review of the post body
-- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/does-sunscreen-block-vitamin-d; confirmed 2026-07-24; all four files exist in src/content/blog/
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T; confirmed 2026-07-24; author is present in the post metadata
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 Sunlight on your palms can produce some vitamin D when enough UVB reaches them. Palms alone cover too little skin to reliably meet a vitamin D target. Studies show that small exposed areas can raise vitamin D, while larger areas generally produce more under the same UVB conditions. UV exposure, skin type, season, latitude, session length, and starting vitamin D level all change the result.
 
@@ -168,8 +146,3 @@ Only uncovered skin receiving UVB contributes meaningfully. If long sleeves and 
   talk to a clinician before changing your sun exposure. A blood test is the
   reliable way to know your vitamin D level.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/can-you-get-vitamin-d-from-your-palms.md`_
-_When ready to publish, Developer creates `src/content/blog/can-you-get-vitamin-d-from-your-palms.mdx`_

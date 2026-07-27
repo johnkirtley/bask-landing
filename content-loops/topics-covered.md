@@ -24,6 +24,7 @@ topic with a genuinely different angle, note the angle.
 | vitamin-d-angle-of-sun                      | The Angle of the Sun and Vitamin D                     | P1.13                                | vitamin D angle of sun                      | 2026-07-23 | PUBLISHED        |
 | how-much-vitamin-d-in-15-minutes-of-sun     | How Much Vitamin D in 15 Minutes of Sun                | P1.9                                 | how much vitamin D in 15 minutes of sun     | 2026-06-22 | NEEDS REVIEW     |
 | can-you-get-too-much-vitamin-d-from-the-sun | Can You Get Too Much Vitamin D From the Sun            | P1.12                                | can you get too much vitamin D from the sun | 2026-06-23 | NEEDS REVIEW     |
+| can-you-get-vitamin-d-from-your-palms | Can You Get Enough Vitamin D From Just Your Palms | P1 calculation cluster | can you get vitamin D from your palms | 2026-07-27 | PUBLISHED |
 
 ## Notes / gaps for future cycles
 
