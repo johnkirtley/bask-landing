@@ -1,36 +1,12 @@
-Status: PUBLISHED
-
-# Why Is My Vitamin D Low Even Though I Get Sun?
-
-**Slug:** `why-is-my-vitamin-d-low-even-though-i-get-sun`
-**Primary keyword:** why is my vitamin D low even though I get sun
-**Secondary keywords:** vitamin D deficiency despite sun exposure · low vitamin D despite sunlight · getting enough sun but low vitamin D · can you be vitamin D deficient in summer
-**Pillar:** P2 (deficiency causes and confirmation)
-**Author:** Bask Health Team
-**Published:** (pending)
-
+---
+title: 'Why Is My Vitamin D Low Even Though I Get Sun?'
+description: 'Low vitamin D is possible even with daily sun. Morning walks, winter sun, shade, clothing, and darker skin can make outdoor time less productive than it looks.'
+pubDate: 2026-07-28
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` structured data
-- **ComparisonTable component:** use for the exposure-and-medical cause audit table
-- **Callout components:** use for the blood-test caution (warning), Bask CTA (info), and medical disclaimer (warning)
-
----
-
-## Reviewer checklist
-
-- [x] Verify NIH ODS blood-level ranges, risk factors, and the role of the 25(OH)D test against the current fact sheet; confirmed 2026-07-27 against the cited NIH ODS fact sheet
-- [x] Verify Binkley et al. 2007 cohort details: 93 adults in Honolulu, average 28.9 hours of sun per week, and 51% below 30 ng/mL; confirmed 2026-07-27 against PubMed PMID 17426097
-- [x] Confirm the 2024 Endocrine Society guideline applies its recommendation against routine screening to healthy adults without an established reason for testing; confirmed 2026-07-27 against the cited guideline
-- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/vitamin-d-from-sun-vs-supplements, /blog/how-much-vitamin-d-should-i-take; confirmed 2026-07-27; all six files exist in src/content/blog/
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T; confirmed 2026-07-27; author is present in the post metadata
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 You can have low vitamin D even if you go outside every day. Outdoor time only makes vitamin D when enough UVB reaches bare skin, so morning walks, winter sun, shade, clothing, darker skin, and a low UV index can all make a sunny routine less productive than it looks. If the exposure conditions are good and your level is still low, a 25(OH)D blood test and a clinician can help check for absorption, medication, liver, kidney, or other health factors.
 
@@ -200,8 +176,3 @@ A supplement can make sense when useful UVB is unavailable, diet and sun do not 
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. A low vitamin D result can have more than one cause, and more unprotected sun may add harm without fixing it. If you have a low 25(OH)D result, symptoms, a condition that affects absorption, kidney or liver disease, or medicines that may affect vitamin D, discuss testing and treatment with a clinician.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/why-is-my-vitamin-d-low-even-though-i-get-sun.md`_
-_When ready to publish, Developer creates `src/content/blog/why-is-my-vitamin-d-low-even-though-i-get-sun.mdx`_
