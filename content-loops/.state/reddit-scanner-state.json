@@ -1,26 +1,27 @@
 {
-  "lastScan": "2026-07-27",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-07-27.md",
-  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all 5 primary subreddit-targeted queries; DuckDuckGo succeeded on queries 1 and 2 [vitamin D deficiency + sun exposure 2025; huberman morning light + vitamin D], CAPTCHA on query 3 [supplement vitamin D dosage confusion] — 2/3 successful, same access pattern as 07-01, 07-18, 07-19, 07-20, 07-21, 07-22, 07-23)",
+  "lastScan": "2026-07-28",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-07-28.md",
+  "searchMethod": "DuckDuckGo (Startpage CAPTCHA on all 5 primary subreddit-targeted queries; DuckDuckGo succeeded on queries 1 and 2 [vitamin D deficiency + sun exposure 2025; huberman morning light + vitamin D], CAPTCHA on query 3 [vitamin D sun UV index skin type 2025] — 2/3 successful, same access pattern as 07-01, 07-18, 07-19, 07-20, 07-21, 07-22, 07-23, 07-27)",
   "themesFound": 9,
   "sourcesCount": 21,
   "newSignals": [
-    "NEW r/VitaminD/wh7lvp 'Vitamin D deficiency despite daily sun exposure' — deficient-despite-daily-sun lived case (Theme 6 prediction) meets a top reply reframe of sun-value as mood/mental-health/'nicer breakfast' (sun-beyond-D mood leg) — first scan where the deficient-despite-sun reality and the sun-beyond-D argument collide in a single user exchange; also the only mood/depression-via-sun signal surfaced this scan since the dedicated depression query (3) CAPTCHA'd",
-    "NEW r/HubermanLab/16kw6zn 'How late into the morning can I still get sunlight and feel [effect]' — fresh direct cutoff question, first new cutoff instance since the 07-22 burst (07-23 surfaced none); user already aware 'this time will change depending on the time of year' and explicitly asks for 'a way to know when morning light stops having an effect' — decision-grade Bask-on-turf prompt hands the local-cutoff framing to Bask in the user's own words; reinforces Theme 8",
-    "NEW supporting r/sleep/12iwud2 'Anyone here tried Andrew Huberman's method of looking at [morning sun]' — user runs shirtless for vitamin D while crediting 'seeing the sun' for clearing mid-morning grogginess; the 07-22 Theme 1 two-window-split conflation embodied in a single morning routine (circadian eye-light vs D-synthesis UVB 290-300nm ~10am); bridges Theme 4/5/7+8"
+    "HOLDING DAY — no NEW threads surfaced this scan. Every thread in the 07-28 source list was already present in the 07-27 source list. Both successful DDG queries returned the same snippet window as 07-27; query 3 CAPTCHA'd before any depression/mood, biohacking/UV-tracking, or supplement-dosage threads could surface (same wall as 07-27 and 8 prior scans). One fresh SYNTHESIS framing added for Agent 2 (Content Opportunity #5: 'The Three People Who Fail the Morning Light Protocol' bundling the Theme 8 sub-personas + Theme 3 shirtless-runner) — a new angle on holding artifacts, not a new signal."
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
-    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18 — seventh consecutive scan; not reinforced with a fresh instance today, query 3 CAPTCHA'd before reaching supplement/dosage threads; holding at the 07-23 explicit skin-type-input evidence from r/VitaminD/1chkjto)",
-    "Two-window split: morning/evening UV does nothing for vitamin D, 290-300nm 'magic D zone' opens ~10am (HOLDING from 07-22, sharpest differentiator, carrying; reinforced today indirectly by Theme 3 r/sleep shirtless-morning-run two-window conflation)",
-    "Sunlight benefits beyond vitamin D: nitric oxide, cardiovascular, winter blood-clot ER spike (HOLDING from 07-22 Theme 3 → Theme 9; indirectly reinforced today by Theme 1 r/VitaminD/wh7lvp mood/depression leg surfacing on vitamin D sub because dedicated depression query was blocked)",
-    "Cofactor/dependency misconception 'sun synthesizes D from dietary raw materials' + 6000 IU cholecalciferol (HOLDING since 07-20; no fresh instance today; REINFORCED by today's Theme 1 deficient-despite-daily-sun live case from r/VitaminD/wh7lvp which is the predicted outcome of the cofactor gap)",
-    "Huberman morning-light protocol cutoff vagueness + 'is it enough?' + geographic/winter failure + artificial-substitute specs (HOLDING since 07-19; REINFORCED today by Theme 2 r/HubermanLab/16kw6zn fresh direct cutoff instance — first new cutoff question since the 07-22 burst)",
+    "dminder sole organic sun-tracking-app mention (HOLDING since 07-18 — eighth consecutive scan; not reinforced with a fresh instance today, query 3 CAPTCHA'd; holding at the 07-23 explicit skin-type-input evidence from r/VitaminD/1chkjto)",
+    "Two-window split: morning/evening UV does nothing for vitamin D, 290-300nm 'magic D zone' opens ~10am (HOLDING from 07-22, sharpest differentiator, carrying; reinforced today indirectly by Theme 3 r/sleep shirtless-morning-run two-window conflation — same artifact as 07-27)",
+    "Sunlight benefits beyond vitamin D: nitric oxide, cardiovascular, winter blood-clot ER spike (HOLDING from 07-22 Theme 3 → Theme 9; reinforced today indirectly by Theme 1 r/VitaminD/wh7lvp mood/depression leg surfacing on vitamin D sub because dedicated depression query was blocked — same artifact as 07-27)",
+    "Cofactor/dependency misconception 'sun synthesizes D from dietary raw materials' + 6000 IU cholecalciferol (HOLDING since 07-20; no fresh instance today; REINFORCED by today's Theme 1 deficient-despite-daily-sun live case from r/VitaminD/wh7lvp — same artifact as 07-27)",
+    "Huberman morning-light protocol cutoff vagueness + 'is it enough?' + geographic/winter failure + artificial-substitute specs (HOLDING since 07-19; the 07-27 fresh cutoff instance r/HubermanLab/16kw6zn remains the sharpest fresh artifact in this cluster — no new cutoff instance today)",
     "Sunscreen-vs-D / sun-avoider tension (HOLDING since 07-21, not freshly reinforced today — query 3 CAPTCHA'd before sun-avoider sub-personas; holding at 07-23 three-sub-persona evidence: sunrise pivot / flat-1-hour sunbath / supplement-risk-aware seeker)",
     "Vitamin D Council 'hard to compute by hand' 4-axis quote (HOLDING since 07-20; no fresh instance today; standing at two distinct thread surfaces /92n26u + /qevazz; Council's four axes still omit body-surface-area which Bask can add as a fifth axis — 07-23 Theme 1 differentiation)",
-    "07-23 Theme 1 body-surface-area / palms-only question (HOLDING from 07-23; no fresh instance today)",
+    "07-23 Theme 1 body-surface-area / palms-only question (HOLDING from 07-23 via r/AskBiology/1487zz8; no fresh instance today)",
     "07-23 Theme 2 supplement-only arterial-calcification risk (HOLDING from 07-23 via r/PeterAttia/1697fh8; no fresh instance today)",
-    "07-23 Theme 3 flat-1-hour sunbath anti-aging vs D tension (HOLDING from 07-23 via r/beauty/17s0rpr; no fresh instance today)"
+    "07-23 Theme 3 flat-1-hour sunbath anti-aging vs D tension (HOLDING from 07-23 via r/beauty/17s0rpr; no fresh instance today)",
+    "07-27 Theme 1 'Vitamin D deficiency despite daily sun exposure' + mood/depression-via-sun defender (HOLDING from 07-27 via r/VitaminD/wh7lvp; no fresh instance today — same artifact, carrying)",
+    "07-27 Theme 2 'How late into the morning can I still get sunlight' direct cutoff question (HOLDING from 07-27 via r/HubermanLab/16kw6zn; no fresh cutoff instance today — same artifact, carrying)",
+    "07-27 Theme 3 shirtless morning run two-window conflation (HOLDING from 07-27 via r/sleep/12iwud2; no fresh instance today — same artifact, carrying)"
   ],
   "status": "success"
 }
