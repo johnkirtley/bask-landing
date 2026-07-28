@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # Why Is My Vitamin D Low Even Though I Get Sun?
 
@@ -22,11 +22,11 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify NIH ODS blood-level ranges, risk factors, and the role of the 25(OH)D test against the current fact sheet
-- [ ] Verify Binkley et al. 2007 cohort details: 93 adults in Honolulu, average 28.9 hours of sun per week, and 51% below 30 ng/mL
-- [ ] Confirm the 2024 Endocrine Society guideline applies its recommendation against routine screening to healthy adults without an established reason for testing
-- [ ] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/vitamin-d-from-sun-vs-supplements, /blog/how-much-vitamin-d-should-i-take
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [x] Verify NIH ODS blood-level ranges, risk factors, and the role of the 25(OH)D test against the current fact sheet; confirmed 2026-07-27 against the cited NIH ODS fact sheet
+- [x] Verify Binkley et al. 2007 cohort details: 93 adults in Honolulu, average 28.9 hours of sun per week, and 51% below 30 ng/mL; confirmed 2026-07-27 against PubMed PMID 17426097
+- [x] Confirm the 2024 Endocrine Society guideline applies its recommendation against routine screening to healthy adults without an established reason for testing; confirmed 2026-07-27 against the cited guideline
+- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/best-time-of-day-to-get-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/vitamin-d-from-sun-vs-supplements, /blog/how-much-vitamin-d-should-i-take; confirmed 2026-07-27; all six files exist in src/content/blog/
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T; confirmed 2026-07-27; author is present in the post metadata
 
 ---
 
