@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-08-02",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-08-02.md",
+  "lastScan": "2026-08-03",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-08-03.md",
   "searchMethod": "DuckDuckGo fallback (Startpage verification page on all 7 queries; DuckDuckGo completed 3 queries: vitamin D deficiency + sun exposure, Huberman morning light + vitamin D, supplement vitamin D dosage confusion; 5 Reddit direct thread fetches returned 403)",
   "themesFound": 3,
   "sourcesCount": 5,
   "newSignals": [
-    "HOLDING DAY — no new eligible high-signal threads surfaced. DuckDuckGo returned recurring vitamin D and Huberman results; individualized supplement dosing and side-effect requests were excluded by the scanner contract. Startpage and 5 direct Reddit thread fetches remained blocked."
+    "HOLDING DAY — no new eligible high-signal threads surfaced. DuckDuckGo returned recurring VitaminD, Supplements, and HubermanLab results; individualized supplement dosing and mood claims were excluded from recommendations. Startpage and 5 direct Reddit thread fetches remained blocked."
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
