@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-08-09",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-08-09.md",
-  "searchMethod": "DuckDuckGo fallback (Startpage verification page on all 7 queries; DuckDuckGo completed 3 queries covering vitamin D/supplements and HubermanLab; 5 direct Reddit thread fetches returned 403)",
+  "lastScan": "2026-08-10",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-08-10.md",
+  "searchMethod": "DuckDuckGo fallback (Startpage verification page on all 7 queries; DuckDuckGo completed 3 queries covering vitamin D/supplements and HubermanLab; no eligible r/depression or r/biohacking result appeared; 5 direct Reddit thread fetches returned 403)",
   "themesFound": 3,
   "sourcesCount": 5,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. DuckDuckGo returned recurring VitaminD, Supplements, and HubermanLab results; no eligible r/depression or r/biohacking thread appeared in the limited fallback search. Individualized supplement dosing and mood claims were excluded from recommendations. Startpage and 5 direct Reddit thread fetches remained blocked."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. DuckDuckGo returned older recurring VitaminD, Supplements, and HubermanLab results; no eligible r/depression or r/biohacking thread appeared in the limited fallback search. Individualized supplement dosing and medical claims were excluded from recommendations. Startpage and 5 direct Reddit thread fetches remained blocked."
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
