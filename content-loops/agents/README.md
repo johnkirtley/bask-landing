@@ -62,8 +62,10 @@ src/content/blog/
 
 ```
 DRAFT → (Agent 4 humanizes) → READY TO PUBLISH → (Agent 5 publishes) → PUBLISHED
-                                    ↘ NEEDS REVIEW (Agent 4 flagged an issue)
+                                     ↘ NEEDS REVIEW (Agent 4 flagged an issue)
 ```
+
+Agent 4 runs at 7:00 PM PT and Agent 5 runs at 8:00 PM PT, so approved posts publish in the same daily cycle. Published MDX files use the draft's `Written` date as `pubDate`.
 
 ## Subreddits scanned
 

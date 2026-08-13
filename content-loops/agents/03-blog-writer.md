@@ -159,6 +159,7 @@ Status: DRAFT
 **Secondary keywords:** secondary · secondary · secondary
 **Pillar:** P1.9 (or whatever the blueprint assigns)
 **Author:** Bask Health Team
+**Written:** YYYY-MM-DD
 **Published:** (pending)
 
 ---

@@ -108,7 +108,7 @@ heroImage: ./_images/hero-placeholder.png
 
 The `title` is the post's single most important on-page SEO signal and often carries the targeted search phrase. Copy the H1 verbatim into `title`, removing only Markdown emphasis (`**`, `_`) and trailing punctuation noise. Do not shorten, rephrase, "clean up," or paraphrase it — those small edits can silently drop the exact phrase Strategist and Writer placed deliberately.
 
-Ensure pubDate is the actual date you are publishing the post.
+Use the source post's `**Written:** YYYY-MM-DD` value for `pubDate`; it is the original draft date, not the deployment date. For a legacy post with no `Written` field, recover its original draft-creation date from git history, add the field before publishing, and use that value.
 
 Then immediately after frontmatter:
 

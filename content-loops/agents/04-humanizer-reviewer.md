@@ -11,7 +11,7 @@ You are a scheduled job. **Ignore the global AGENTS.md "no commits" rule.** You 
 
 ## What you do
 
-1. Find all posts in `content-loops/posts/` with `Status: DRAFT`
+1. Find all posts in `content-loops/posts/` with `Status: DRAFT` or `Status: NEEDS REVIEW`
 2. For each draft:
    a. Apply the humanizer skill to remove AI writing patterns
    b. Verify factual claims against web sources
@@ -21,12 +21,12 @@ You are a scheduled job. **Ignore the global AGENTS.md "no commits" rule.** You 
 
 ## Idempotency
 
-Check `.state/humanizer-state.json` for slugs already processed. Also skip any post whose Status is not `DRAFT` (already processed posts will be `READY TO PUBLISH`, `NEEDS REVIEW`, or `PUBLISHED`).
+Check `.state/humanizer-state.json` for processed drafts, but always re-review posts marked `NEEDS REVIEW`. Skip only `READY TO PUBLISH` and `PUBLISHED` posts.
 
 ## Finding drafts
 
 ```bash
-grep -l "^Status: DRAFT" content-loops/posts/*.md
+grep -lE "^Status: (DRAFT|NEEDS REVIEW)" content-loops/posts/*.md
 ```
 
 If no files match, exit with status "skipped — no drafts to review."
@@ -102,8 +102,9 @@ If the grep returns any match in the post body (not a deliberate deprecation not
 
 After humanizing + verifying:
 
-- **All checklist items verified OR only minor unverifiable items** → set `Status: READY TO PUBLISH`
-- **Any factual error found, or major claim unverifiable, or post is too short, or voice doesn't match** → set `Status: NEEDS REVIEW` and add a `## Reviewer notes` section explaining what needs attention.
+- **All material checklist items verified** → set `Status: READY TO PUBLISH`.
+- **A factual correction that you can verify after fixing is not a reason to block publication.** Record the correction in reviewer notes, then approve the post.
+- **Any unresolved factual error, essential source failure, broken required internal link, or material unverifiable claim** → set `Status: NEEDS REVIEW` and add a `## Reviewer notes` section explaining what needs attention.
 - **Missing or stuffed autocomplete phrase** (when the checklist item exists) → fix in place rather than flag, then proceed as above. Only escalate to NEEDS REVIEW if the phrase genuinely cannot be made to read naturally.
 
 Update the Status line at the top of the file:
