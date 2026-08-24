@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-08-23",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-08-23.md",
-  "searchMethod": "Startpage returned verification pages on all 7 prescribed queries; DuckDuckGo completed all 3 prescribed queries but returned only older recurring VitaminD, HubermanLab, and Supplements results; no eligible r/depression or r/biohacking result appeared; 3 direct Reddit thread fetches returned 403",
+  "lastScan": "2026-08-24",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-08-24.md",
+  "searchMethod": "Startpage returned verification pages on all 7 prescribed queries; DuckDuckGo completed 2 prescribed queries before a CAPTCHA and returned only older recurring VitaminD, HubermanLab, and Supplements results; no eligible r/depression or r/biohacking result appeared; 3 direct Reddit thread fetches returned 403",
   "themesFound": 3,
-  "sourcesCount": 6,
+  "sourcesCount": 5,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. DuckDuckGo returned older recurring VitaminD, HubermanLab, and Supplements results; no eligible r/depression or r/biohacking thread appeared. Individualized supplement dosing and medical claims were excluded from recommendations. Startpage and 3 direct Reddit thread fetches remained blocked."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. DuckDuckGo returned older recurring VitaminD, HubermanLab, and Supplements results before a CAPTCHA; no eligible r/depression or r/biohacking thread appeared. Individualized supplement dosing and medical claims were excluded from recommendations. Startpage and 3 direct Reddit thread fetches remained blocked."
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
