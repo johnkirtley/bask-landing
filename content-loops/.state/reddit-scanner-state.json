@@ -1,7 +1,7 @@
 {
-  "lastScan": "2026-08-25",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-08-25.md",
-  "searchMethod": "Startpage returned verification pages on all 7 prescribed queries; DuckDuckGo completed 2 prescribed queries before a CAPTCHA and returned only older recurring VitaminD, HubermanLab, and Supplements results; no eligible r/depression or r/biohacking result appeared; 5 direct Reddit thread fetches returned 403",
+  "lastScan": "2026-08-26",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-08-26.md",
+  "searchMethod": "Startpage returned verification pages on all 7 prescribed queries; DuckDuckGo returned only older recurring VitaminD, HubermanLab, and Supplements results; no eligible r/depression or r/biohacking result appeared; 5 direct Reddit thread fetches returned 403",
   "themesFound": 3,
   "sourcesCount": 7,
   "newSignals": [
