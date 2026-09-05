@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-09-04",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-04.md",
-  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; 3 DuckDuckGo fallback queries returned older indexed discussions; 3 direct Reddit thread fetches returned 403",
-  "themesFound": 1,
+  "lastScan": "2026-09-05",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-05.md",
+  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; 1 DuckDuckGo fallback query failed in transit and 2 returned older indexed discussions; 3 direct Reddit thread fetches returned 403",
+  "themesFound": 2,
   "sourcesCount": 3,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. DuckDuckGo returned older indexed discussions only. Morning-light and vitamin D confusion remains recurring context; individualized supplement dosing and medical claims were excluded. Startpage and 3 direct Reddit thread fetches remained blocked."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. Two DuckDuckGo fallback queries returned older indexed discussions and one failed in transit. Morning-light and vitamin D confusion, plus supplement side-effect anxiety, remain recurring context; individualized dosing and medical claims were excluded. Startpage and 3 direct Reddit thread fetches remained blocked."
   ],
   "competitorMentions": ["dminder"],
   "recurringThemesHolding": [
