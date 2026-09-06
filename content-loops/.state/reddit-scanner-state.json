@@ -1,13 +1,13 @@
 {
-  "lastScan": "2026-09-05",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-05.md",
-  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; 1 DuckDuckGo fallback query failed in transit and 2 returned older indexed discussions; 3 direct Reddit thread fetches returned 403",
-  "themesFound": 2,
-  "sourcesCount": 3,
+  "lastScan": "2026-09-06",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-06.md",
+  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; all 3 DuckDuckGo fallback queries failed in transit; no thread-level results were available to fetch",
+  "themesFound": 0,
+  "sourcesCount": 0,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. Two DuckDuckGo fallback queries returned older indexed discussions and one failed in transit. Morning-light and vitamin D confusion, plus supplement side-effect anxiety, remain recurring context; individualized dosing and medical claims were excluded. Startpage and 3 direct Reddit thread fetches remained blocked."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. Startpage was JavaScript-gated on all prescribed searches and all DuckDuckGo fallback requests failed in transit. No prior signals were restated as current evidence."
   ],
-  "competitorMentions": ["dminder"],
+  "competitorMentions": [],
   "recurringThemesHolding": [
     "People conflate morning light with vitamin D-producing sun exposure, creating demand for a clear distinction between routine cues and UV awareness",
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
