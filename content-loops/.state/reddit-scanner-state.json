@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-09-06",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-06.md",
-  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; all 3 DuckDuckGo fallback queries failed in transit; no thread-level results were available to fetch",
+  "lastScan": "2026-09-07",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-07.md",
+  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo yielded no usable current results; direct Reddit thread and JSON requests returned 403 responses",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. Startpage was JavaScript-gated on all prescribed searches and all DuckDuckGo fallback requests failed in transit. No prior signals were restated as current evidence."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. Startpage was JavaScript-gated on all prescribed searches, DuckDuckGo yielded no usable current results, and direct Reddit requests returned 403. No prior signals were restated as current evidence."
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
