@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-09-10",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-10.md",
-  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo exposed only older snippets; 3 candidate Reddit thread requests returned 403 responses",
+  "lastScan": "2026-09-11",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-11.md",
+  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo exposed only older supplement snippets; direct Reddit JSON requests for all 5 target communities and 2 candidate thread requests returned 403 responses",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. Startpage was JavaScript-gated on all prescribed searches, DuckDuckGo exposed only older snippets, and three candidate Reddit thread requests returned 403. No prior signals were restated as current evidence."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. Startpage was JavaScript-gated on all prescribed searches, DuckDuckGo exposed only older supplement snippets, and direct Reddit JSON and thread requests returned 403. No prior signals were restated as current evidence."
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
