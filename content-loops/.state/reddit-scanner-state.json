@@ -1,7 +1,7 @@
 {
-  "lastScan": "2026-09-16",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-16.md",
-  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo surfaced only older snippets; selected Reddit thread pages and all five target-subreddit JSON feeds returned 403 responses",
+  "lastScan": "2026-09-17",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-17.md",
+  "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo surfaced only older snippets; selected Reddit thread pages returned 403 responses; all five target-subreddit JSON feeds returned non-JSON block pages",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
