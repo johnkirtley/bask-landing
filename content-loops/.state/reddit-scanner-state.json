@@ -1,6 +1,6 @@
 {
-  "lastScan": "2026-09-23",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-09-23.md",
+  "lastScan": "2026-09-24",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-09-24.md",
   "searchMethod": "Startpage returned JavaScript verification pages on all 7 prescribed queries; DuckDuckGo fallback searches surfaced only older threads; Reddit returned 403 for all 5 attempted full-thread fetches",
   "themesFound": 0,
   "sourcesCount": 0,
