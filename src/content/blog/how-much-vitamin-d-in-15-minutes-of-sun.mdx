@@ -1,37 +1,13 @@
-Status: PUBLISHED
-
-# How Much Vitamin D Do You Actually Get in 15 Minutes of Sun?
-
-**Slug:** `how-much-vitamin-d-in-15-minutes-of-sun`
-**Primary keyword:** how much vitamin D in 15 minutes of sun
-**Secondary keywords:** how many IU from 15 minutes of sun · is 15 minutes of sun enough vitamin D · how many IU is 20 minutes of sun · vitamin D 10 minutes sun · does 10 minutes of sun give vitamin D
-**Pillar:** P1.9
-**Author:** Bask Health Team
-**Written:** 2026-06-22
-**Published:** 2026-09-29
-
+---
+title: 'How Much Vitamin D Do You Actually Get in 15 Minutes of Sun?'
+description: 'There is no verified, universal IU answer for 15 minutes in the sun. The amount depends on UV conditions, skin pigmentation, exposed skin, season, and location.'
+pubDate: 2026-09-29
+writtenDate: 2026-06-22
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` structured data
-- **ComparisonTable component:** use for the factors that change a 15-minute session
-- **Callout components:** use for sun-safety context, the Bask CTA, and the medical disclaimer
-
----
-
-## Reviewer checklist
-
-- [x] Verify that skin pigmentation, exposed skin, season, and UV conditions affect cutaneous vitamin D synthesis against the Nutrients review and NIH ODS fact sheet - confirmed 2026-09-30 against the Nutrients review and National Academies report; NIH ODS endpoint returned 403
-- [x] Verify National Academies recommended dietary allowances: 600 IU for adults 19-70 and 800 IU for adults 71 and older - confirmed 2026-09-30 against the National Academies report
-- [x] Verify the self-limiting conversion of excess previtamin D3 to lumisterol and tachysterol against Nutrients 2025 PMC11821240 - confirmed 2026-09-30
-- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/can-you-get-too-much-vitamin-d-from-the-sun - confirmed 2026-09-30
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T - confirmed 2026-09-30
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 There is no verified, universal IU answer for 15 minutes in the sun. The same 15 minutes can produce very different amounts depending on the UV conditions, your skin pigmentation, how much skin is exposed, the season, and where you are. Treat the clock as one input, not a vitamin D dose.
 
@@ -159,8 +135,3 @@ Yes. The EPA's UV Index changes through the day, and stronger UV conditions usua
 <Callout type="warning" title="A note on medical advice">
   This article is educational, not medical advice. If you have a history of skin cancer, take photosensitizing medication, are pregnant, or are managing a known deficiency, talk to a clinician. A blood test can show your vitamin D level.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/how-much-vitamin-d-in-15-minutes-of-sun.md`_
-_When ready to publish, Developer creates `src/content/blog/how-much-vitamin-d-in-15-minutes-of-sun.mdx`_
