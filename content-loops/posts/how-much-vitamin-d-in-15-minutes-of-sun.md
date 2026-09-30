@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # How Much Vitamin D Do You Actually Get in 15 Minutes of Sun?
 
@@ -23,11 +23,11 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Verify that skin pigmentation, exposed skin, season, and UV conditions affect cutaneous vitamin D synthesis against the Nutrients review and NIH ODS fact sheet
-- [ ] Verify National Academies recommended dietary allowances: 600 IU for adults 19-70 and 800 IU for adults 71 and older
-- [ ] Verify the self-limiting conversion of excess previtamin D3 to lumisterol and tachysterol against Nutrients 2025 PMC11821240
-- [ ] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/can-you-get-too-much-vitamin-d-from-the-sun
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [x] Verify that skin pigmentation, exposed skin, season, and UV conditions affect cutaneous vitamin D synthesis against the Nutrients review and NIH ODS fact sheet - confirmed 2026-09-30 against the Nutrients review and National Academies report; NIH ODS endpoint returned 403
+- [x] Verify National Academies recommended dietary allowances: 600 IU for adults 19-70 and 800 IU for adults 71 and older - confirmed 2026-09-30 against the National Academies report
+- [x] Verify the self-limiting conversion of excess previtamin D3 to lumisterol and tachysterol against Nutrients 2025 PMC11821240 - confirmed 2026-09-30
+- [x] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/can-you-get-too-much-vitamin-d-from-the-sun - confirmed 2026-09-30
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T - confirmed 2026-09-30
 
 ---
 
@@ -41,7 +41,7 @@ Vitamin D production starts in exposed skin when UVB reaches it. That sounds sim
 
 This is why a fixed conversion such as "15 minutes equals 1,000 IU" does not hold up. It takes a measured setting to know how much UV someone received, how much skin was exposed, and how that person's skin responded. A generic table cannot supply those missing measurements.
 
-The useful answer is more practical: check the day's UV conditions, avoid a burn, and do not use a guessed sun number to set a supplement dose. If you are concerned about deficiency, a clinician can use a 25-hydroxyvitamin D blood test to assess your level.
+For a useful answer, check the day's UV conditions, avoid a burn, and do not use a guessed sun number to set a supplement dose. If you are concerned about deficiency, a clinician can use a 25-hydroxyvitamin D blood test to assess your level.
 
 ## What changes the result
 
@@ -100,13 +100,13 @@ headers={['Source', 'Can you know the amount from the source alone?', 'Why']}
   </tr>
 </ComparisonTable>
 
-That distinction matters. Do not add a supplement because you assume a cloudy day produced nothing, and do not skip a clinician-recommended supplement because one outdoor session felt sunny. Your needs may also change with diet, age, health conditions, and medications.
+Do not add a supplement because you assume a cloudy day produced nothing, and do not skip a clinician-recommended supplement because one outdoor session felt sunny. Your needs may also change with diet, age, health conditions, and medications.
 
 ## More sun does not mean more vitamin D forever
 
 Sun-driven vitamin D synthesis has a built-in limit. When previtamin D3 accumulates in the skin, continued UVB converts some of it into inactive photoproducts including lumisterol and tachysterol. Sun exposure does not cause vitamin D toxicity, but it can still burn and damage skin.
 
-That is the part worth remembering after the 15-minute mark. Extra exposure can keep adding UV damage after the vitamin D benefit has flattened. The Skin Cancer Foundation notes that both UVA and UVB damage skin and raise skin cancer risk over time. For the full explanation, read [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
+After the 15-minute mark, extra exposure can keep adding UV damage after the vitamin D benefit has flattened. The Skin Cancer Foundation notes that both UVA and UVB damage skin and raise skin cancer risk over time. For the full explanation, read [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
 
 ## How 15 minutes relates to Bask
 
