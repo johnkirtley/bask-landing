@@ -157,3 +157,5 @@ Record `reviewedAtBySlug[slug]` as the current ISO timestamp for every completed
 Article status and run status are distinct. A blocked source post must keep `Status: NEEDS REVIEW` (or ledger `NEEDS_REVIEW`); `failed` belongs only in the final run report. Never write `failed`, `success`, or `skipped` into an article status.
 
 Scheduled jobs must complete their own work without internal task delegation or interactive approval. If a command is denied, use an allowed equivalent or report failed; never wait for a person in a scheduled run.
+
+For the review handoff, choose a DRAFT article (including a writer revision) before retrying an unchanged NEEDS REVIEW article. Within each status group, use the least recent review timestamp. This verifies newly revised bytes promptly while rotating blocked retries when no draft awaits review.
