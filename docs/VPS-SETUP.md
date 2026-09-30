@@ -77,9 +77,8 @@ npm install
 opencode auth login
 ```
 
-Authenticate these providers (the pipeline uses both):
-- **zai-coding-plan** — powers the Topic Strategist, Blog Writer, Humanizer Reviewer
-- **openrouter** — powers the Reddit Scanner, Publisher, and the general agent
+Authenticate OpenAI (the pipeline uses Terra for research and writing, and Luna
+for review and publishing).
 
 ## Step 7 — Register the scheduled jobs
 
@@ -103,7 +102,7 @@ You should see 5 timers:
 | Job                  | Schedule          |
 | -------------------- | ----------------- |
 | bask-reddit-scan     | daily 7:00 AM PT  |
-| bask-publisher       | daily 9:00 AM PT  |
+| bask-publisher       | daily 8:00 PM PT  |
 | bask-topic-strategy  | daily 11:00 AM PT |
 | bask-blog-writer     | Mon/Wed/Fri 3 PM  |
 | bask-humanizer-review| daily 7:00 PM PT  |
@@ -167,3 +166,11 @@ automatically on failure.
 
 **Timezone wrong:** Confirm `timedatectl` shows the correct timezone.
 All cron schedules are in the system timezone.
+
+## Publishing safeguards and recovery
+
+Run `python3 scripts/install-pipeline-guards.py` after registering jobs to synchronize source prompts into existing active jobs and install the build hook and hourly health timer. Enable `content-pipeline-health-bask-landing.timer` with `systemctl --user enable --now`.
+
+The guard verifies completed work, pushed commits, and new live articles. Missing expected titles or sitemap entries, an exhausted step budget, and skipping a pending review queue cause failure. Health also fails after 14 days without a published content update. Inspect `systemctl --user --failed`, the journal, and `~/.local/state/content-pipelines/bask-landing/health.json`; do not infer publication from research commits.
+
+Reviews process one article per run and rotate blocked drafts using per-article timestamps. First-publication dates drive the blog order; original draft dates are retained separately. Scheduled runs use the owner's Git identity, never a fake agent email that a deploy provider cannot associate with the owner.

@@ -60,7 +60,7 @@ fi
 7. **SEO autocomplete research** — `bask-seo-autocomplete-research.md` (repo root)
    - Standing record of real Google autocomplete phrasings and the recommended keyword/page strategy.
    - **Evidence role only:** it proves the exact wording and intent shape of real queries. It is NOT evidence of search volume, ranking difficulty, rankability, or conversion. Never cite autocomplete as proof of any of those.
-   - Use it to (a) refine a topic's primary/secondary phrasing toward language people actually type, (b) shape titles, FAQ questions, and snippet answers, and (c) reinforce an already-qualified topic. It does not open or reprioritize a topic on its own — Reddit signal, SERP rankability, dedup, seasonality, and blueprint fit remain the gates.
+   - Use it to (a) refine a topic's primary/secondary phrasing toward language people actually type, (b) shape titles, FAQ questions, and snippet answers, and (c) reinforce an already-qualified topic. It does not open or reprioritize a topic on its own — Audience evidence, an honest search-result assessment, dedup, seasonality, and blueprint fit remain the gates. Reddit is optional when the canonical keyword record supplies audience evidence.
    - **Scope guard — much of this document is NOT blog content.** Its homepage copy, SEO title/H1 recommendations, `/vitamin-d-sun-tracker/`, `/vitamin-d-calculator/`, and other product/tool/feature-page recommendations are for the marketing/site team, not this pipeline. This pipeline publishes informational and comparison blog posts only. Never place a homepage, product, calculator, or interactive-tool recommendation into the priority queue as an `Open` topic.
 
 ## Output file
@@ -156,7 +156,7 @@ Study the existing research files (`research-2026-06-20.md` through `research-20
 ### When NOT to produce new topics
 
 - The writing backlog already has 5+ unwritten topics → skip discovery, note "backlog full"
-- No new Reddit signals (all subreddits quiet) → carry forward previous research, note "no new signals"
+- No new Reddit signals AND no eligible unassigned canonical-backlog keywords → carry forward previous research, note "no new signals"
 - Performance data says to focus on refresh/optimization, not new content
 
 ## Git workflow
@@ -177,3 +177,7 @@ End your run with:
 - **Topics proposed:** count + slugs
 - **Backlog size:** N unwritten topics remaining
 - **Git:** commit hash or "pushed"
+
+## Avoid discovery deadlocks
+
+Count only unwritten Open briefs toward the five-item writing cap; completed NEEDS REVIEW drafts belong to the review queue. When no writable topic remains, investigate at most one distinct informational keyword from the canonical backlog with authoritative sources. Use an accessible search engine when Google is blocked, recording the engine and limits honestly; never fabricate Google rankability or Reddit engagement. Carry forward all still-Open unwritten briefs. If no topic meets the substantive gates, report failed with the exact blocker instead of indefinitely reporting successful empty research.

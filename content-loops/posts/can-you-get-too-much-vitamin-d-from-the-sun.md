@@ -8,7 +8,7 @@ Status: PUBLISHED
 **Pillar:** P1.12
 **Author:** Bask Health Team
 **Written:** 2026-06-23
-**Published:** (pending)
+**Published:** 2026-09-29
 
 ---
 
