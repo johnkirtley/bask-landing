@@ -23,6 +23,10 @@ class OutcomeTests(unittest.TestCase):
             calls = 0
             def git(*args):
                 nonlocal calls
+                if args == ('config', '--global', '--get', 'user.name'):
+                    return 'Owner'
+                if args == ('config', '--global', '--get', 'user.email'):
+                    return 'owner@example.com'
                 if args == ('rev-parse', 'HEAD'):
                     calls += 1
                     return 'after' if changed and calls > 1 else 'before'
@@ -59,6 +63,36 @@ class OutcomeTests(unittest.TestCase):
     def test_missing_live_article_fails_publication(self):
         self.assertEqual(self.outcome('Status: success\n', changed=True, new=True,
                                       live_errors=['production returned 404']), 1)
+
+class LiveTests(unittest.TestCase):
+    def verify(self, heading='Expected title', indexed=True):
+        base = guard.SITE[guard.ROOT.name]
+        class Response:
+            status = 200
+            def __init__(self, request):
+                self.url = request.full_url
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                pass
+            def read(self):
+                if 'sitemap' in self.url:
+                    location = base + '/blog/example' if indexed else base + '/blog/other'
+                    if self.url.endswith('sitemap-index.xml'):
+                        return ('<sitemapindex><sitemap><loc>' + base + '/sitemap-0.xml</loc></sitemap></sitemapindex>').encode()
+                    return ('<urlset><url><loc>' + location + '</loc></url></urlset>').encode()
+                return ('<html><h1>' + heading + '</h1></html>').encode()
+        with patch.object(guard.urllib.request, 'urlopen', side_effect=lambda request, **kwargs: Response(request)):
+            return guard.live({'example': 'Expected title'})
+
+    def test_correct_title_and_sitemap_pass(self):
+        self.assertEqual(self.verify(), [])
+
+    def test_soft_404_does_not_pass(self):
+        self.assertTrue(self.verify(heading='Page not found'))
+
+    def test_article_missing_from_sitemap_fails(self):
+        self.assertTrue(self.verify(indexed=False))
 
 if __name__ == '__main__':
     unittest.main()

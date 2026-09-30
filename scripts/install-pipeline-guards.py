@@ -5,6 +5,11 @@ import subprocess
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
+for identity_key in ['user.name', 'user.email']:
+    owner = subprocess.check_output(['git', 'config', '--global', '--get', identity_key], text=True).strip()
+    if not owner:
+        raise SystemExit('Configure the repository owner Git identity before installing jobs')
+    subprocess.check_call(['git', 'config', identity_key, owner], cwd=root)
 scheduler = Path.home() / '.config/opencode/scheduler/scopes'
 for spec_path in sorted((root / '.opencode/jobs').glob('*.json')):
     spec = json.loads(spec_path.read_text())

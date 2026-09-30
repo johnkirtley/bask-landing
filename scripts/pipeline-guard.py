@@ -130,7 +130,16 @@ def checkpoint_drafts(before):
 def run(job, command):
     STATE.mkdir(parents=True, exist_ok=True)
     with (STATE / 'run.lock').open('w') as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        # Serialize stages, including manual recovery runs crossing a timer boundary.
+        # The supervisor's timeout still bounds this wait.
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        owner_name = git('config', '--global', '--get', 'user.name')
+        owner_email = git('config', '--global', '--get', 'user.email')
+        if not owner_name or not owner_email:
+            return report(job, ['missing repository owner Git identity'])
+        for role in ['AUTHOR', 'COMMITTER']:
+            os.environ['GIT_' + role + '_NAME'] = owner_name
+            os.environ['GIT_' + role + '_EMAIL'] = owner_email
         before = git('rev-parse', 'HEAD')
         was_pending = pending(job) if 'review' in job or 'publisher' in job else []
         was_published = published()
