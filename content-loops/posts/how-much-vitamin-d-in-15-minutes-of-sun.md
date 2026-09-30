@@ -1,4 +1,4 @@
-Status: NEEDS REVIEW
+Status: DRAFT
 
 # How Much Vitamin D Do You Actually Get in 15 Minutes of Sun?
 
@@ -7,6 +7,7 @@ Status: NEEDS REVIEW
 **Secondary keywords:** how many IU from 15 minutes of sun · is 15 minutes of sun enough vitamin D · how many IU is 20 minutes of sun · vitamin D 10 minutes sun · does 10 minutes of sun give vitamin D
 **Pillar:** P1.9
 **Author:** Bask Health Team
+**Written:** 2026-06-22
 **Published:** (pending)
 
 ---
@@ -14,167 +15,105 @@ Status: NEEDS REVIEW
 ## Schema notes for Developer
 
 - **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all five FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the IU-by-skin-type-and-UV-index table and the supplement comparison table
-- **Callout components:** use for the "full-body caveat" warning, the Bask CTA blocks (info type), and the medical disclaimer (warning type)
+- **FAQ schema:** mark up the FAQ section with `FAQPage` structured data
+- **ComparisonTable component:** use for the factors that change a 15-minute session
+- **Callout components:** use for sun-safety context, the Bask CTA, and the medical disclaimer
 
 ---
 
 ## Reviewer checklist
 
-- [ ] Verify the Holick full-body 1-MED figure (10,000–25,000 IU) against primary source: Holick MF, "Sunlight and vitamin D for bone health..." _Am J Clin Nutr_ 2004;80(6 Suppl):1678S–88S — unable to confirm the figure because the primary full text was inaccessible; PubMed metadata was reachable.
-- [x] NIH ODS RDA checked via the browser search reader on 2026-09-29: 600 IU/day for adults 19–70 and 800 IU/day for adults over 70. The production VPS fetch returned 403; access failure is not a factual contradiction. The article still requires review of its unsupported custom sun-output calculations before publication.
-- [x] Verify self-limiting mechanism (previtamin D3 → lumisterol/tachysterol) against Nutrients 2025 PMC11821240 — confirmed 2026-09-30.
-- [x] The IU ranges in the table are estimates derived from the Holick full-body data scaled for arm/leg surface area and fractional MED — confirmed 2026-09-30 that the post labels them as rough estimates and not clinical measurements; the underlying custom ranges remain blocked by the unavailable primary source.
-- [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-09-30; canonical URL is present.
-- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-09-30.
-- [x] Verify internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/can-you-get-too-much-vitamin-d-from-the-sun — confirmed 2026-09-30; all four files exist.
+- [ ] Verify that skin pigmentation, exposed skin, season, and UV conditions affect cutaneous vitamin D synthesis against the Nutrients review and NIH ODS fact sheet
+- [ ] Verify National Academies recommended dietary allowances: 600 IU for adults 19-70 and 800 IU for adults 71 and older
+- [ ] Verify the self-limiting conversion of excess previtamin D3 to lumisterol and tachysterol against Nutrients 2025 PMC11821240
+- [ ] Check internal links resolve: /blog/how-much-sun-do-you-need-for-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/what-uv-index-do-you-need-for-vitamin-d, /blog/can-you-get-too-much-vitamin-d-from-the-sun
+- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
 
 ---
 
 ## Post content
 
-There is no reliable universal answer to "how much vitamin D does 15 minutes of sun give you?" The result depends on the UV index, your skin type, and how much skin is uncovered. A short session can produce a useful amount under strong UV, while the same 15 minutes may produce very little under weak UV or with most of the body covered. The often-cited figure of 10,000–25,000 IU describes near-full-body exposure at one minimal erythemal dose, not an ordinary lunch break outdoors.
+There is no verified, universal IU answer for 15 minutes in the sun. The same 15 minutes can produce very different amounts depending on the UV conditions, your skin pigmentation, how much skin is exposed, the season, and where you are. Treat the clock as one input, not a vitamin D dose.
 
-## Why the same 15 minutes means completely different things
+## Fifteen minutes is not a dose
 
-Vitamin D synthesis runs on UVB light, specifically the UVB wavelengths between 290 and 315 nm. Three variables determine how much your skin produces:
+Vitamin D production starts in exposed skin when UVB reaches it. That sounds simple. The hard part is that the amount of UVB at skin level changes constantly.
 
-**UV index.** This is the main constraint. Below a UV index of 3, very little UVB reaches the ground, so meaningful synthesis is unlikely. Above 3, production generally rises with the UV index.
+This is why a fixed conversion such as "15 minutes equals 1,000 IU" does not hold up. It takes a measured setting to know how much UV someone received, how much skin was exposed, and how that person's skin responded. A generic table cannot supply those missing measurements.
 
-**Skin type.** Melanin absorbs some UVB before it reaches the cells where synthesis starts. More melanin generally means more UV exposure is needed to produce the same amount of vitamin D.
+The useful answer is more practical: check the day's UV conditions, avoid a burn, and do not use a guessed sun number to set a supplement dose. If you are concerned about deficiency, a clinician can use a 25-hydroxyvitamin D blood test to assess your level.
 
-**Skin area exposed.** Vitamin D is produced in exposed skin, so uncovering more of your body generally increases production. Face and hands alone are a small fraction of your body. Bare arms and legs expose more area, while the near-full-body conditions used in research explain why those study figures are much higher than what most outdoor sessions produce.
-
-## How much vitamin D does 15 minutes in the sun actually make?
-
-The table below gives rough estimates for someone with arms and legs exposed. These are derived from Holick's foundational full-body exposure data, scaled down to account for typical bare arm/leg surface area (roughly 25–30% of total body surface). They are estimates, not precise clinical measurements. Your actual output depends on your exact skin type, geographic location, time of day, and cloud cover.
+## What changes the result
 
 <ComparisonTable
-headers={[
-'Skin type (Fitzpatrick)',
-'UV 5 (moderate)',
-'UV 7 (high)',
-'UV 9+ (very high)',
-]}
-
+headers={['Factor', 'Why it changes a 15-minute session', 'What to keep in mind']}
 >
-
   <tr>
-    <td>I–II (very fair to fair, burns easily)</td>
-    <td>~300–800 IU</td>
-    <td>~800–2,500 IU</td>
-    <td>~1,500–4,000 IU</td>
+    <td>UV conditions</td>
+    <td>The UV Index changes with time of day, season, latitude, altitude, cloud cover, and ozone.</td>
+    <td>Higher UV also means higher burn risk, not a reason to stay out longer.</td>
   </tr>
   <tr>
-    <td>III–IV (medium to olive, tans readily)</td>
-    <td>~100–400 IU</td>
-    <td>~300–1,000 IU</td>
-    <td>~600–2,000 IU</td>
+    <td>Skin pigmentation</td>
+    <td>Melanin reduces the UVB available for cutaneous vitamin D synthesis.</td>
+    <td>Two people in the same place can need different exposure windows.</td>
   </tr>
   <tr>
-    <td>V–VI (dark, rarely burns)</td>
-    <td>~30–150 IU</td>
-    <td>~100–400 IU</td>
-    <td>~200–700 IU</td>
+    <td>Exposed skin</td>
+    <td>Covered skin cannot make vitamin D from sunlight.</td>
+    <td>A short-sleeve walk and a winter-coat walk are not comparable sessions.</td>
+  </tr>
+  <tr>
+    <td>Season and location</td>
+    <td>Sun angle changes the amount of UV radiation that reaches the ground.</td>
+    <td>A bright day can still have low UV conditions.</td>
   </tr>
 </ComparisonTable>
 
-_Arms and legs bare; UV index must be 3 or higher for any meaningful synthesis._
+The EPA's UV Index is useful for the first row, but it is a measure of UV exposure risk, not a personal vitamin D meter. The EPA recommends sun protection at UV Index 3 and above. That is also the point where a short outing needs some judgment, especially if your skin burns easily.
 
-The table is an illustration, not a dose calculator. UV conditions and exposed area can change the result as much as skin type. The dark-skin row at moderate UV conditions also shows why 15 minutes is not a universal rule: the estimated amount is well below the 600 IU daily recommended intake.
-
-## The big IU numbers assume near-full-body exposure
-
-You may have seen figures like "15 minutes of sun gives you 10,000 IU of vitamin D." That number comes from real research. Holick's work showed that a single minimal erythemal dose (1 MED — the amount of UV that just begins to turn fair skin pink) applied to the whole body produces roughly 10,000–25,000 IU of vitamin D in the skin.
-
-But "whole body, 1 MED" is not a person taking a quick lunch break outside. It's closer to lying nearly undressed in peak summer sun until you're just starting to redden. Most people's actual outdoor sessions expose far less skin, at lower UV conditions, for shorter durations. Scaling from full-body to arms-and-legs alone (about 25–30% of total surface area) drops those large numbers substantially even before accounting for UV index or session length.
-
-<Callout type="warning" title="Where the 10,000 IU figure comes from">
-  The full-body, 1-MED figure is scientifically accurate but describes conditions
-  most people never reach. Scale it down for your actual exposed skin area and
-  your UV conditions, and the realistic output from a typical outdoor session is
-  a few hundred to a few thousand IU for most people.
+<Callout type="warning" title="Do not chase a target number">
+  A longer session is not a safer way to make a known amount of vitamin D. Stop before your skin reddens, and use shade, clothing, hats, and sunscreen for the rest of your time outside.
 </Callout>
 
-This is not a reason to dismiss sun as a vitamin D source. It's a reason to be precise about what your specific session is actually producing.
+## Sun is not a supplement label
 
-## How 15 minutes of sun compares to a supplement
-
-The NIH recommends 600 IU per day for adults aged 19–70, and 800 IU per day for adults 71 and older. The upper tolerable intake level from all sources is 4,000 IU per day.
+The National Academies' recommended dietary allowance is 600 IU per day for adults ages 19 to 70 and 800 IU per day for adults 71 and older. Those are intake recommendations, not a formula for converting a sunny walk into IU.
 
 <ComparisonTable
-headers={[
-'Source',
-'Approximate vitamin D (IU)',
-'Notes',
-]}
-
+headers={['Source', 'Can you know the amount from the source alone?', 'Why']}
 >
-
   <tr>
-    <td>15 min sun, fair skin, UV 7, arms/legs</td>
-    <td>~800–2,500 IU</td>
-    <td>Can meet or exceed daily RDA; approaches UL at higher UV</td>
+    <td>Sun exposure</td>
+    <td>No</td>
+    <td>Conditions, skin response, and exposed area vary from one session to the next.</td>
   </tr>
   <tr>
-    <td>15 min sun, dark skin, UV 7, arms/legs</td>
-    <td>~100–400 IU</td>
-    <td>Well below the RDA; extended sessions or supplementation needed</td>
+    <td>Supplement label</td>
+    <td>Usually</td>
+    <td>The label states the amount per serving, though your clinician may recommend a different plan.</td>
   </tr>
   <tr>
-    <td>Typical vitamin D supplement</td>
-    <td>1,000–2,000 IU</td>
-    <td>Most common over-the-counter doses</td>
-  </tr>
-  <tr>
-    <td>Fortified milk (8 oz)</td>
-    <td>~100–130 IU</td>
-    <td>Per serving; varies by brand</td>
-  </tr>
-  <tr>
-    <td>Salmon (3.5 oz, cooked)</td>
-    <td>~450–600 IU</td>
-    <td>One of the best dietary sources</td>
+    <td>Blood test</td>
+    <td>It measures your level, not a session's output</td>
+    <td>It is the appropriate way to investigate a possible deficiency with a clinician.</td>
   </tr>
 </ComparisonTable>
 
-For someone with fair skin in a climate with regular high-UV days, 15 minutes of outdoor exposure with arms and legs bare can produce enough vitamin D to cover or exceed the daily recommended amount. For someone with dark skin, or anyone in a lower-UV climate, those same 15 minutes fall well short.
+That distinction matters. Do not add a supplement because you assume a cloudy day produced nothing, and do not skip a clinician-recommended supplement because one outdoor session felt sunny. Your needs may also change with diet, age, health conditions, and medications.
 
-The upshot: the phrase "15 minutes a day is enough" is accurate for a specific subset of people under specific conditions. It's not a universal rule.
+## More sun does not mean more vitamin D forever
 
-## Get your personalized vitamin D window
+Sun-driven vitamin D synthesis has a built-in limit. When previtamin D3 accumulates in the skin, continued UVB converts some of it into inactive photoproducts including lumisterol and tachysterol. Sun exposure does not cause vitamin D toxicity, but it can still burn and damage skin.
 
-The numbers in the table above are useful context, but they're still generalizations. Bask calculates your specific output in real time — using your skin type, your exact location, the live UV index, and how much skin you're exposing — and tells you how long to be outside today for a meaningful dose, and when your window closes.
+That is the part worth remembering after the 15-minute mark. Extra exposure can keep adding UV damage after the vitamin D benefit has flattened. The Skin Cancer Foundation notes that both UVA and UVB damage skin and raise skin cancer risk over time. For the full explanation, read [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
 
-<Callout type="info" title="Try Bask free">
-  See how many minutes your skin needs today based on your skin type and live UV index.
-  [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
-</Callout>
+## How 15 minutes relates to Bask
 
-## When 15 minutes is nowhere near enough
+The number on the clock is less useful than the conditions around it. Bask combines live UV, weather, skin type, and clothing information to give you a real-time vitamin D estimate instead of making you reuse someone else's 15-minute rule.
 
-For the groups below, 15 minutes in the sun may be insufficient:
-
-**Dark skin at low to moderate UV.** The table's estimate for Fitzpatrick V–VI skin at UV 5 is only a fraction of the daily recommended intake. A longer session may be needed, but the right approach depends on the person's skin, location, season, and health history. Dietary sources or a supplement may be appropriate for some people.
-
-**Any skin type below UV index 3.** Below this threshold, UVB isn't reaching the ground in meaningful amounts. Fifteen minutes outside in pleasant October sunshine at a high latitude can produce essentially nothing. The [UV index guide](/blog/what-uv-index-do-you-need-for-vitamin-d) explains why 3 is the cutoff.
-
-**Most skin covered.** Arms and legs exposed is the standard assumption in the estimates above. If you're outside in long sleeves and pants with just a face and hands showing, actual production is a small fraction of these numbers. Surface area is a multiplier that most "get 15 minutes of sun" advice ignores.
-
-**Higher latitudes in winter.** At higher latitudes, winter sun can be too low for meaningful UVB to reach the ground. In those conditions, a short walk may produce little vitamin D regardless of skin type. Some people may need dietary sources or a supplement; the [full sun and vitamin D guide](/blog/how-much-sun-do-you-need-for-vitamin-d) explains the seasonal pattern.
-
-## One thing 15 minutes in the sun cannot do: give you too much vitamin D
-
-The self-limiting nature of sun-driven vitamin D synthesis is reassuring. Once previtamin D3 builds up in the skin, continued UVB converts some of the excess into inactive photoproducts, including lumisterol and tachysterol, rather than producing more vitamin D. Sun exposure does not cause vitamin D toxicity, but it can still cause sunburn and other skin damage.
-
-Vitamin D toxicity only comes from high-dose supplementation. The sun route is self-correcting.
-
-What is _not_ self-limiting is UV damage to skin cells. Once you've hit your vitamin D ceiling, additional time in the sun adds sunburn, photoaging, and skin cancer risk, not vitamin D. The case for timing your sessions, rather than simply staying out longer, is that the upside stops while the downside keeps growing. For a fuller treatment of this topic, see [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun).
-
-<Callout type="info" title="Know when you're done">
-  Bask flags the point where your vitamin D window closes — so you can head in
-  rather than accumulating UV damage that adds nothing to your levels.
+<Callout type="info" title="Use today's conditions, not a generic timer">
+  Bask helps you see when the current UV conditions are useful and when it is time to protect your skin.
   [Download Bask on the App Store](https://apps.apple.com/us/app/bask-vitamin-d-sun-tracker/id6758405235) →
 </Callout>
 
@@ -182,58 +121,44 @@ What is _not_ self-limiting is UV damage to skin cells. Once you've hit your vit
 
 **Is 15 minutes of sun enough vitamin D?**
 
-For some people, yes. For many others, no. Fair to medium skin with arms and legs exposed at a UV index of 7 can produce 800–2,500 IU in 15 minutes, which covers or exceeds the 600 IU daily recommended intake for most adults. But for people with dark skin, those at higher latitudes, anyone going out at low UV conditions, or anyone with most of their skin covered, 15 minutes commonly falls well short. The number is only meaningful when paired with UV index, skin type, and exposed area.
+It might be for one person on one day and not for another. Without details about UV conditions, skin pigmentation, exposed skin, season, and location, 15 minutes is not enough information to judge. A blood test is the way to assess your actual vitamin D status.
 
 **How many IU is 20 minutes of sun?**
 
-There is no validated way to turn five extra minutes into a fixed IU amount. The same factors in the table still apply, and the skin's self-limiting mechanism means the extra time may add little vitamin D at high UV. For darker skin, the amount may remain below the daily recommendation. Do not use a table estimate to choose an exposure time or supplement dose.
+There is no dependable fixed conversion. Five additional minutes can occur under very different UV conditions, and skin production is self-limiting. Do not use a generic IU estimate to choose your exposure time or supplement dose.
 
 **Does 10 minutes of sun give me vitamin D?**
 
-It can, if the UV index is high enough and enough skin is exposed. The amount varies too widely to assign a dependable IU number to every 10-minute session. For darker skin or weaker UV, 10 minutes may be only a small contribution rather than a full daily amount.
+Direct sun can contribute to vitamin D production, but the amount from 10 minutes is not knowable from the clock alone. UV conditions, skin pigmentation, covered skin, and the sun's angle all change the result.
 
 **Can a short walk give me vitamin D?**
 
-It depends on the route and what you're wearing. A 15-minute walk with bare arms and legs at midday in summer at UV 7 can produce a useful vitamin D dose for fair to medium skin. A 15-minute walk in late afternoon in autumn, or dressed in long sleeves in a low-UV climate, produces very little. The walk itself isn't the variable; the UV conditions and exposed skin are.
+It can contribute if UVB reaches exposed skin. A short walk is still good movement and daylight, but its vitamin D output depends on the same conditions as any other outdoor session. Glass does not help because it filters UVB.
 
-**Does time of day change how much vitamin D 15 minutes produces?**
+**Does time of day matter?**
 
-Yes, substantially. At solar noon, the sun is at its highest angle and UVB passes through the least atmosphere, so the UV index peaks. Early morning and late afternoon sun sits lower, UVB gets filtered out, and the UV index drops — often below 3, where synthesis essentially stops. The best time for vitamin D production is the two-to-three hour window centered on solar noon. For more detail on how timing affects output, see [The best time of day to get vitamin D](/blog/best-time-of-day-to-get-vitamin-d).
+Yes. The EPA's UV Index changes through the day, and stronger UV conditions usually occur around the middle of the day. That can make a session more productive, but it also raises burn risk. Check the day's UV Index and protect your skin accordingly.
 
 ## Where to go next
 
 - The full picture on exposure variables: [How much sun do you need for vitamin D?](/blog/how-much-sun-do-you-need-for-vitamin-d)
-- Times by skin type at different UV levels: [How long to sit in the sun for vitamin D](/blog/how-long-to-sit-in-sun-for-vitamin-d)
-- The UV threshold that controls everything: [What UV index do you need for vitamin D?](/blog/what-uv-index-do-you-need-for-vitamin-d)
+- Why skin type changes the exposure window: [How long to sit in the sun for vitamin D](/blog/how-long-to-sit-in-sun-for-vitamin-d)
+- How to read the day's conditions: [What UV index do you need for vitamin D?](/blog/what-uv-index-do-you-need-for-vitamin-d)
+- Why staying out longer is not the answer: [Can you get too much vitamin D from the sun?](/blog/can-you-get-too-much-vitamin-d-from-the-sun)
 
 ## Sources
 
-1. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Recommended dietary allowances, upper tolerable intake levels, and sun exposure guidance.
-2. Holick MF. "Sunlight and vitamin D for bone health and prevention of autoimmune diseases, cancers, and cardiovascular disease." _Am J Clin Nutr._ 2004;80(6 Suppl):1678S–88S. Full-body 1-MED output figures and melanin effects on synthesis rate.
-3. ["Illuminating the Connection: Cutaneous Vitamin D3 Synthesis" (_Nutrients_, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). The photochemical self-limiting mechanism (previtamin D3 to lumisterol/tachysterol).
-4. [Linus Pauling Institute, Oregon State University, "Vitamin D and Skin Health"](https://lpi.oregonstate.edu/mic/health-disease/skin-health/vitamin-D). Skin type, melanin, and synthesis efficiency.
-5. Forrest KY, Stuhldreher WL. "Prevalence and correlates of vitamin D deficiency in US adults." _Nutr Res._ 2011;31(1):48–54. Deficiency prevalence by skin tone.
+1. [National Academies, Dietary Reference Intakes for Calcium and Vitamin D](https://nap.nationalacademies.org/read/13050/chapter/5). Vitamin D intake recommendations and metabolism.
+2. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). Factors that affect cutaneous vitamin D synthesis and dietary guidance.
+3. [Uçar and Holick, "Illuminating the Connection: Cutaneous Vitamin D3 Synthesis and Its Role in Skin Cancer Prevention" (_Nutrients_, 2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11821240/). Cutaneous synthesis and the photochemical self-limiting mechanism.
+4. [US EPA, UV Index Scale](https://www.epa.gov/sunsafety/uv-index-scale-0). UV Index categories and sun-protection guidance.
+5. [Skin Cancer Foundation, UV Radiation & Your Skin](https://www.skincancer.org/risk-factors/uv-radiation/). UV damage and skin-cancer risk.
 
 ---
 
 <Callout type="warning" title="A note on medical advice">
-  This article is educational, not medical advice. Vitamin D needs vary between
-  individuals, and sun exposure carries real risks. If you have a history of
-  skin cancer, take photosensitizing medications, are pregnant, or are managing
-  a known deficiency, talk to a clinician and get a blood test to know your
-  actual level.
+  This article is educational, not medical advice. If you have a history of skin cancer, take photosensitizing medication, are pregnant, or are managing a known deficiency, talk to a clinician. A blood test can show your vitamin D level.
 </Callout>
-
----
-
-## Reviewer notes
-
-This review is blocked. The post now makes clear that its IU table is illustrative rather than a dose calculator, and unsupported exact claims about extra exposure time were removed. Two material source checks remain unresolved:
-
-- The primary Holick article's full text was inaccessible during review, so the 10,000–25,000 IU full-body figure and the custom table ranges could not be confirmed.
-- The NIH dietary-allowance figures were subsequently confirmed using the browser search reader. The production VPS still receives HTTP 403 from the NIH page. The custom IU table remains a substantive blocker and must be revised or independently verified; no approval is claimed.
-
-The Nutrients 2025 paper confirms the previtamin D3 to lumisterol/tachysterol mechanism. The canonical App Store CTA, author attribution, and all four internal links were confirmed.
 
 ---
 
