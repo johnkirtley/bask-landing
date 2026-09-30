@@ -4,3 +4,5 @@ dist
 *.tar.gz
 .astro
 .env
+.playwright-mcp/
+__pycache__/

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+changed=0
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [[ "$local_sha" =~ ^0+$ ]] && continue
+  if [[ "$remote_sha" =~ ^0+$ ]]; then
+    remote_sha=$(git hash-object -t tree /dev/null)
+  fi
+  if git diff --name-only "$remote_sha" "$local_sha" -- src/content/blog data/blog content-loops/ledger.json | grep -q .; then
+    changed=1
+  fi
+done
+if [[ "$changed" == 1 ]]; then
+  if [[ -f content-loops/ledger.json ]]; then
+    node scripts/validate-ledger.mjs
+    node .yarn/releases/yarn-3.6.1.cjs build
+  else
+    npm run build
+  fi
+fi

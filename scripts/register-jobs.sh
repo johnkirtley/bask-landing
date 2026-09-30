@@ -32,12 +32,13 @@ opencode run --dangerously-skip-permissions \
   "You are registering scheduled jobs for the Bask content pipeline.
 
 Read every JSON file in .opencode/jobs/. Each file is a job spec with these fields:
-name, schedule, agent, model, files, prompt.
+name, schedule, agent, model, variant, timeoutSeconds, files, prompt.
 
 For each job spec:
 1. If a job with that name already exists, call delete_job to remove it first (idempotent).
-2. Call schedule_job, passing through: name, schedule, agent, model, files, and prompt from the spec.
+2. Call schedule_job, passing through: name, schedule, agent, model, variant, timeoutSeconds, files, and prompt from the spec.
 3. Do NOT pass command, workdir, or any path fields — schedule_job resolves those automatically.
+4. Only pass variant and timeoutSeconds if they are present in the spec JSON.
 
 After registering all jobs, list them with list_jobs to confirm. Print a summary table
 of job name, schedule, and model for each registered job.
@@ -45,4 +46,6 @@ of job name, schedule, and model for each registered job.
 Do not modify any other files. Do not commit anything."
 
 echo ""
+python3 "$REPO_DIR/scripts/install-pipeline-guards.py"
+
 echo "Done. Verify with: systemctl --user list-timers"

@@ -146,3 +146,8 @@ End your run with:
 - **Claims verified:** count
 - **Claims flagged:** count + details
 - **Git:** commit hash or "pushed"
+
+
+## Bounded review and retries
+
+Process exactly one eligible post per run. Choose the least recently reviewed eligible file using git history so one blocked article cannot starve the queue. Complete its review, record specific unresolved blockers, commit its source file and reviewer state only, then push. Prior verification can be reused when the claim and primary source have not changed, but never invent source access or clinical signoff. Resolve unsupported instructions by revising to authoritative, source-backed general education; retain `NEEDS REVIEW` if material instructions still lack support. A corrected and subsequently verified claim can be approved. Use `Status: failed` when a blocker remains, and `skipped` only when the eligible queue is empty.
