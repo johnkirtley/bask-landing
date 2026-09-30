@@ -268,3 +268,7 @@ End your run with:
 - **Slug:** the slug written
 - **Word count:** approximate
 - **Git:** commit hash or "pushed"
+
+## Repair priority
+
+Before selecting any Open brief, select one source post marked NEEDS REVIEW, prioritizing the oldest unresolved reviewer notes. Previously written slugs are eligible for revision; writer-state must not exclude them. Read the specific reviewer blockers and revise this file in place using current authoritative sources. Remove unsupported custom exercise sequences or IU calculations instead of merely labeling them estimates. Preserve the slug, authorship, and original Written date. After a completed revision, set the source status to DRAFT for a fresh reviewer pass, update writer state, and commit and push only this source file and writer state. Do not approve or publish it yourself. If the substantive blocker cannot be repaired, retain NEEDS REVIEW with an exact reason and report failed. Only look for new Open topics when the revision queue is empty.

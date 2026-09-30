@@ -1,4 +1,4 @@
-Status: failed
+Status: NEEDS REVIEW
 
 # How Much Vitamin D Do You Actually Get in 15 Minutes of Sun?
 
@@ -23,7 +23,7 @@ Status: failed
 ## Reviewer checklist
 
 - [ ] Verify the Holick full-body 1-MED figure (10,000–25,000 IU) against primary source: Holick MF, "Sunlight and vitamin D for bone health..." _Am J Clin Nutr_ 2004;80(6 Suppl):1678S–88S — unable to confirm the figure because the primary full text was inaccessible; PubMed metadata was reachable.
-- [ ] Confirm NIH ODS RDA: 600 IU/day (adults 19–70), 800 IU/day (adults 71+); Upper Tolerable Intake Level 4,000 IU/day — unable to confirm the source because the NIH ODS page returned HTTP 403 during review.
+- [x] NIH ODS RDA checked via the browser search reader on 2026-09-29: 600 IU/day for adults 19–70 and 800 IU/day for adults over 70. The production VPS fetch returned 403; access failure is not a factual contradiction. The article still requires review of its unsupported custom sun-output calculations before publication.
 - [x] Verify self-limiting mechanism (previtamin D3 → lumisterol/tachysterol) against Nutrients 2025 PMC11821240 — confirmed 2026-09-30.
 - [x] The IU ranges in the table are estimates derived from the Holick full-body data scaled for arm/leg surface area and fractional MED — confirmed 2026-09-30 that the post labels them as rough estimates and not clinical measurements; the underlying custom ranges remain blocked by the unavailable primary source.
 - [x] Check App Store link points to correct tracked URL for per-post click attribution — confirmed 2026-09-30; canonical URL is present.
@@ -231,7 +231,7 @@ Yes, substantially. At solar noon, the sun is at its highest angle and UVB passe
 This review is blocked. The post now makes clear that its IU table is illustrative rather than a dose calculator, and unsupported exact claims about extra exposure time were removed. Two material source checks remain unresolved:
 
 - The primary Holick article's full text was inaccessible during review, so the 10,000–25,000 IU full-body figure and the custom table ranges could not be confirmed.
-- The NIH ODS Vitamin D fact sheet returned HTTP 403, so the 600 IU, 800 IU, and 4,000 IU figures could not be confirmed from the cited source.
+- The NIH dietary-allowance figures were subsequently confirmed using the browser search reader. The production VPS still receives HTTP 403 from the NIH page. The custom IU table remains a substantive blocker and must be revised or independently verified; no approval is claimed.
 
 The Nutrients 2025 paper confirms the previtamin D3 to lumisterol/tachysterol mechanism. The canonical App Store CTA, author attribution, and all four internal links were confirmed.
 

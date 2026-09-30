@@ -6,6 +6,7 @@ while read -r local_ref local_sha remote_ref remote_sha; do
   if [[ "$remote_sha" =~ ^0+$ ]]; then
     remote_sha=$(git hash-object -t tree /dev/null)
   fi
+  python3 scripts/validate-source-status.py "$local_sha"
   if git diff --name-only "$remote_sha" "$local_sha" -- src/content/blog data/blog content-loops/ledger.json | grep -q .; then
     changed=1
   fi

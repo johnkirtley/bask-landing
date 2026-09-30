@@ -38,9 +38,9 @@ def published():
 def pending(job):
     if (ROOT / 'content-loops/ledger.json').exists():
         ledger = json.loads((ROOT / 'content-loops/ledger.json').read_text())
-        statuses = ['APPROVED'] if 'publisher' in job else ['DRAFT', 'NEEDS_REVIEW']
+        statuses = ['APPROVED'] if 'publisher' in job else (['BRIEFED', 'NEEDS_REVIEW'] if 'writer' in job else ['DRAFT', 'NEEDS_REVIEW'])
         return [a['slug'] for a in ledger['articles'] if a['status'] in statuses]
-    statuses = ['READY TO PUBLISH'] if 'publisher' in job else ['DRAFT', 'NEEDS REVIEW']
+    statuses = ['READY TO PUBLISH'] if 'publisher' in job else (['NEEDS REVIEW'] if 'writer' in job else ['DRAFT', 'NEEDS REVIEW'])
     return [p.stem for p in (ROOT / 'content-loops/posts').glob('*.md')
             if p.read_text().splitlines()[0].removeprefix('Status: ') in statuses]
 
@@ -141,7 +141,7 @@ def run(job, command):
             os.environ['GIT_' + role + '_NAME'] = owner_name
             os.environ['GIT_' + role + '_EMAIL'] = owner_email
         before = git('rev-parse', 'HEAD')
-        was_pending = pending(job) if 'review' in job or 'publisher' in job else []
+        was_pending = pending(job) if any(stage in job for stage in ['review', 'publisher', 'writer']) else []
         was_published = published()
         capture = STATE / (job + '.latest.log')
         with capture.open('w') as output:

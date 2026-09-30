@@ -94,5 +94,15 @@ class LiveTests(unittest.TestCase):
     def test_article_missing_from_sitemap_fails(self):
         self.assertTrue(self.verify(indexed=False))
 
+class SourceStatusTests(unittest.TestCase):
+    def test_run_outcomes_cannot_be_article_statuses(self):
+        spec = importlib.util.spec_from_file_location('source_status', Path(__file__).with_name('validate-source-status.py'))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        for status in ['DRAFT', 'NEEDS REVIEW', 'READY TO PUBLISH', 'PUBLISHED']:
+            self.assertTrue(module.valid_status('Status: ' + status + '\n# Article'))
+        for status in ['failed', 'success', 'skipped', '']:
+            self.assertFalse(module.valid_status('Status: ' + status + '\n# Article'))
+
 if __name__ == '__main__':
     unittest.main()
