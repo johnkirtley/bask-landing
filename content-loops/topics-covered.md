@@ -23,7 +23,7 @@ topic with a genuinely different angle, note the angle.
 | best-uv-index-for-tanning                   | What UV Index Is Best for Tanning                      | tanning/summer cluster (links to P1) | best UV index for tanning                   | 2026-06-21 | PUBLISHED        |
 | vitamin-d-angle-of-sun                      | The Angle of the Sun and Vitamin D                     | P1.13                                | vitamin D angle of sun                      | 2026-07-23 | PUBLISHED        |
 | how-much-vitamin-d-in-15-minutes-of-sun     | How Much Vitamin D in 15 Minutes of Sun                | P1.9                                 | how much vitamin D in 15 minutes of sun     | 2026-06-22 | NEEDS REVIEW     |
-| can-you-get-too-much-vitamin-d-from-the-sun | Can You Get Too Much Vitamin D From the Sun            | P1.12                                | can you get too much vitamin D from the sun | 2026-06-23 | NEEDS REVIEW     |
+| can-you-get-too-much-vitamin-d-from-the-sun | Can You Get Too Much Vitamin D From the Sun            | P1.12                                | can you get too much vitamin D from the sun | 2026-09-29 | PUBLISHED       |
 | can-you-get-vitamin-d-from-your-palms | Can You Get Enough Vitamin D From Just Your Palms | P1 calculation cluster | can you get vitamin D from your palms | 2026-07-27 | PUBLISHED |
 | why-is-my-vitamin-d-low-even-though-i-get-sun | Why Is My Vitamin D Low Even Though I Get Sun | P2 (deficiency causes and confirmation) | why is my vitamin D low even though I get sun | 2026-07-28 | PUBLISHED |
 | dminder-alternatives | dminder Alternatives | P4.1 | dminder alternatives | 2026-07-20 | PUBLISHED |
@@ -32,6 +32,6 @@ topic with a genuinely different angle, note the angle.
 
 - **Pillar 2 (Deficiency: symptoms, levels, dosage) — partially started.** P2.1 (dosage), P2.4 (sun vs supplements), and P2.8 (sunlight & testosterone) are published. The Pillar 2 hub and remaining children (symptoms, levels, testing) are still open — long-term authority play, not seasonally urgent.
 - **Pillar 3 (Winter / latitude) — partially started.** P3.4 (morning sunlight) is published. The Pillar 3 hub and remaining winter/latitude children remain held for September–October publication to lead the Feb demand peak. Do NOT front-load in summer.
-- **Pillar 1 remaining children:** P1.9 (15 minutes) and P1.12 (too much sun) are in review; P1.13 (angle / shadow rule) is open. Unstarted: P1.4 (Fitzpatrick quiz), P1.8 (shade), P1.10 (solar noon window).
+- **Pillar 1 remaining children:** P1.9 (15 minutes) is in review; P1.13 (angle / shadow rule) is open. Unstarted: P1.4 (Fitzpatrick quiz), P1.8 (shade), P1.10 (solar noon window).
 - **Author byline gap:** Published posts have no named author in frontmatter. Operating Principles require a named author per post for E-E-A-T. Flag for Copywriter/Developer to backfill.
 - **Directory mismatch:** Spec calls for `content-loops/performance/`; repo has empty `content-loops/analytics/`. No performance data exists yet either way → discovery cycles until populated.

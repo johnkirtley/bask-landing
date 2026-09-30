@@ -1,39 +1,12 @@
-Status: PUBLISHED
-
-# Can You Get Too Much Vitamin D From the Sun?
-
-**Slug:** `can-you-get-too-much-vitamin-d-from-the-sun`
-**Primary keyword:** can you get too much vitamin D from the sun
-**Secondary keywords:** vitamin D toxicity from sun · can sunbathing cause vitamin D toxicity · how much sun is too much · too much sun vitamin D · vitamin D overdose sun
-**Pillar:** P1.12
-**Author:** Bask Health Team
-**Written:** 2026-06-23
-**Published:** (pending)
-
+---
+title: 'Can You Get Too Much Vitamin D From the Sun?'
+description: 'You cannot get vitamin D toxicity from sun exposure because your skin limits production. The real risks of too much sun are UV damage, sunburn, and skin cancer.'
+pubDate: 2026-06-23
+heroImage: ./_images/hero-placeholder.png
 ---
 
-## Schema notes for Developer
-
-- **Article schema:** standard (site-wide via Astro layout)
-- **FAQ schema:** mark up the FAQ section with `FAQPage` + `Question`/`Answer` structured data — all six FAQ items are self-contained Q&A answers
-- **ComparisonTable component:** use for the sun-vs-supplements toxicity contrast table
-- **Callout components:** use for the self-limiting mechanism callout (info type), the "real risk" overexposure warning (warning type), the Bask CTA blocks (info type), and the medical disclaimer (warning type)
-
----
-
-## Reviewer checklist
-
-- [x] Verify self-limiting mechanism (previtamin D3 -> lumisterol/tachysterol) against Nutrients 2025 PMC11821240 — confirmed 2026-09-29
-- [x] Confirm adult Upper Tolerable Intake Level of 4,000 IU/day and the clinical review's acute-toxicity threshold of probably more than 10,000 IU/day — confirmed 2026-09-29 against National Academies DRI and Marcinowska-Suchowierska et al. (2018); NIH ODS URL returned 403 during review
-- [x] Confirm no documented cases of vitamin D toxicity from sun exposure alone — confirmed 2026-09-29 against Nutrients 2025 PMC11821240
-- [x] Verify Skin Cancer Foundation / WHO framing on cumulative UV damage and skin cancer statistics — confirmed 2026-09-29
-- [x] Check App Store link uses the canonical URL for per-post attribution — confirmed 2026-09-29
-- [x] Confirm "Author: Bask Health Team" or update to named author per E-E-A-T principles — confirmed 2026-09-29
-- [x] Verify internal links resolve — confirmed 2026-09-29; replaced the missing session-estimate link with the existing vitamin-D comparison article
-
----
-
-## Post content
+import Callout from '../../components/mdx/Callout.astro';
+import ComparisonTable from '../../components/mdx/ComparisonTable.astro';
 
 No, you cannot get vitamin D toxicity from sun exposure. Your skin enforces an automatic ceiling: once previtamin D3 builds up past a threshold, UV light converts the surplus into inactive compounds rather than more vitamin D. The cap is photochemical and unavoidable. It applies regardless of skin type or how long you stay outside. The real risks of too much sun are sunburn, cumulative DNA damage, photoaging, and elevated skin cancer risk. None of them stop once vitamin D synthesis has plateaued. That gap, where the vitamin D benefit ends and UV damage continues, is why timing your sessions matters.
 
@@ -62,14 +35,12 @@ Vitamin D toxicity (hypervitaminosis D) occurs from sustained high-dose suppleme
 The National Academies set the adult Upper Tolerable Intake Level at 4,000 IU per day from all sources combined. A clinical review describes acute toxicity as probably requiring more than 10,000 IU per day and chronic toxicity as more likely with doses above 4,000 IU per day taken for extended periods. The effects are driven by hypercalcemia (elevated blood calcium) and can include nausea, weakness, frequent urination, kidney stress, and, in severe cases, cardiac arrhythmia.
 
 <ComparisonTable
-headers={[
-'Source',
-'Can it cause vitamin D toxicity?',
-'Primary risk',
-]}
-
+  headers={[
+  'Source',
+  'Can it cause vitamin D toxicity?',
+  'Primary risk',
+  ]}
 >
-
   <tr>
     <td>Sun exposure</td>
     <td>No (synthesis is self-limiting)</td>
@@ -184,8 +155,3 @@ Children's skin has the same self-limiting synthesis mechanism as adults. Sun ex
   family history of skin cancer, talk to a clinician. A blood test for
   25-hydroxyvitamin D is the only reliable way to know your actual level.
 </Callout>
-
----
-
-_Post file lives at: `content-loops/posts/can-you-get-too-much-vitamin-d-from-the-sun.md`_
-_When ready to publish, Developer creates `src/content/blog/can-you-get-too-much-vitamin-d-from-the-sun.mdx`_
