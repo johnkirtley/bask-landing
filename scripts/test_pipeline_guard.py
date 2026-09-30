@@ -48,6 +48,7 @@ class OutcomeTests(unittest.TestCase):
         self.assertEqual(permission['question'], 'deny')
         self.assertEqual(permission['bash']['*'], 'deny')
         self.assertEqual(permission['bash']['rtk git *'], 'allow')
+        self.assertEqual(permission['bash']['rtk npm run build'], 'allow')
 
     def test_completed_empty_queue_can_skip(self):
         self.assertEqual(self.outcome('Status: skipped\nReason: empty queue\n'), 0)
