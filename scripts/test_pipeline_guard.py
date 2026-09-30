@@ -41,6 +41,14 @@ class OutcomeTests(unittest.TestCase):
                  patch.object(guard, 'live', return_value=live_errors or []):
                 return guard.run('test-review', ['fake-agent'])
 
+    def test_scheduled_commands_cannot_request_interactive_approval(self):
+        self.assertEqual(self.outcome('Status: skipped\n'), 0)
+        permission = guard.json.loads(guard.os.environ['OPENCODE_PERMISSION'])
+        self.assertEqual(permission['task'], 'deny')
+        self.assertEqual(permission['question'], 'deny')
+        self.assertEqual(permission['bash']['*'], 'deny')
+        self.assertEqual(permission['bash']['rtk git *'], 'allow')
+
     def test_completed_empty_queue_can_skip(self):
         self.assertEqual(self.outcome('Status: skipped\nReason: empty queue\n'), 0)
 

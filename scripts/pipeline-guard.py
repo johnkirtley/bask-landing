@@ -143,6 +143,10 @@ def run(job, command):
         before = git('rev-parse', 'HEAD')
         was_pending = pending(job) if any(stage in job for stage in ['review', 'publisher', 'writer']) else []
         was_published = published()
+        permission = json.loads(os.environ.get('OPENCODE_PERMISSION', '{}'))
+        permission['external_directory'] = {'*': 'deny', '/tmp/**': 'allow'}
+        permission.update(question='deny', task='deny', bash={'*': 'deny', 'git *': 'allow', 'rtk git *': 'allow', 'npm run build': 'allow', 'node *': 'allow', 'curl *': 'allow', 'rtk curl *': 'allow', 'grep *': 'allow', 'rg *': 'allow', 'rtk rg *': 'allow', 'find *': 'allow', 'ls *': 'allow', 'date *': 'allow', 'wc *': 'allow', 'rtk wc *': 'allow', 'sha256sum *': 'allow', 'python3 *': 'allow', 'scripts/content-pipeline-lock.sh *': 'allow', 'sleep *': 'allow', 'sed *': 'allow', 'head *': 'allow', 'tail *': 'allow', 'sort *': 'allow', 'uniq *': 'allow', 'tr *': 'allow', 'cut *': 'allow', 'printf *': 'allow', 'cat *': 'allow', 'mkdir -p *': 'allow', 'test *': 'allow'})
+        os.environ['OPENCODE_PERMISSION'] = json.dumps(permission)
         capture = STATE / (job + '.latest.log')
         with capture.open('w') as output:
             child = subprocess.Popen(command, cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

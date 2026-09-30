@@ -77,7 +77,7 @@ Scan the post for bare `<` before digits or spaces in prose. This breaks Astro M
 - `(< 50)` → `(under 50)`
 
 ```bash
-grep -nP '<(?=[0-9 ])' content-loops/posts/*.md
+grep -nE '<[0-9 ]' content-loops/posts/*.md
 ```
 
 Any hit in prose (not in valid HTML tags like `<td>`, `<tr>`, `<Callout>`) must be fixed.
@@ -155,3 +155,5 @@ Process exactly one eligible post per run. Choose the least recently reviewed el
 Record `reviewedAtBySlug[slug]` as the current ISO timestamp for every completed review, including blocked results, and commit that state so other articles receive their turn.
 
 Article status and run status are distinct. A blocked source post must keep `Status: NEEDS REVIEW` (or ledger `NEEDS_REVIEW`); `failed` belongs only in the final run report. Never write `failed`, `success`, or `skipped` into an article status.
+
+Scheduled jobs must complete their own work without internal task delegation or interactive approval. If a command is denied, use an allowed equivalent or report failed; never wait for a person in a scheduled run.

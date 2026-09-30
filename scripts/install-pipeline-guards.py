@@ -10,6 +10,13 @@ for identity_key in ['user.name', 'user.email']:
     if not owner:
         raise SystemExit('Configure the repository owner Git identity before installing jobs')
     subprocess.check_call(['git', 'config', identity_key, owner], cwd=root)
+supervisor = Path.home() / '.config/opencode/scheduler/supervisor.pl'
+text = supervisor.read_text()
+marker = 'my $exit_code = ($status >> 8);'
+if marker not in text:
+    raise SystemExit('Supervisor format changed; inspect signal exit-code handling before installing')
+if '128 + ($status & 127)' not in text:
+    supervisor.write_text(text.replace(marker, marker + '\nif ($status & 127) { $exit_code = 128 + ($status & 127); }'))
 scheduler = Path.home() / '.config/opencode/scheduler/scopes'
 for spec_path in sorted((root / '.opencode/jobs').glob('*.json')):
     spec = json.loads(spec_path.read_text())
