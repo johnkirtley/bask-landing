@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: READY TO PUBLISH
 
 # Does a Base Tan Protect You From Sunburn?
 
@@ -24,9 +24,9 @@ Status: DRAFT
 ## Reviewer checklist
 
 - [x] Verify that tanning is skin damage and does not prevent sunburn against Skin Cancer Foundation, "Tanning & Your Skin" — confirmed 2026-09-30; current source URL resolves.
-- [x] Verify AAD 2023 survey stat: "59% of Gen Z adults believe tanning myths, such as... a base tan will prevent sunburn" — confirmed 2026-07-06 against AAD news release (May 9, 2023, "survey of more than 1,000 U.S. adults"). The release states 59% of Gen Z adults believe tanning myths (including that a base tan will prevent sunburn) and 40% are unaware of tanning risks. URL resolves.
-- [x] Check internal links resolve: /blog/best-uv-index-for-tanning, /blog/does-sunscreen-block-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/how-much-sun-do-you-need-for-vitamin-d — confirmed 2026-07-06 all four slugs exist in src/content/blog/. (Also fixed a misleading "tanning beds post" link label in the salon section that pointed at best-uv-index-for-tanning.)
-- [x] Confirm "Author: Bask Health Team" per E-E-A-T — confirmed 2026-07-06.
+- [x] Verify AAD 2023 survey stat: "59% of Gen Z adults believe tanning myths, such as... a base tan will prevent sunburn" — confirmed 2026-09-30 against AAD news release (May 9, 2023, "survey of more than 1,000 U.S. adults"). The release states 59% of Gen Z adults believe tanning myths (including that a base tan will prevent sunburn) and 40% are unaware of tanning risks. URL resolves.
+- [x] Check internal links resolve: /blog/best-uv-index-for-tanning, /blog/does-sunscreen-block-vitamin-d, /blog/how-long-to-sit-in-sun-for-vitamin-d, /blog/how-much-sun-do-you-need-for-vitamin-d — confirmed 2026-09-30 all four slugs exist in src/content/blog/. (Also fixed a misleading "tanning beds post" link label in the salon section that pointed at best-uv-index-for-tanning.)
+- [x] Confirm "Author: Bask Health Team" per E-E-A-T — confirmed 2026-09-30.
 
 ---
 
@@ -38,7 +38,7 @@ Use sunscreen, shade, clothing, and a hat instead. Those measures reduce the UV 
 
 ## The short answer: a tan is not sun protection
 
-A tan may make redness less obvious, but it does not block UV reliably enough to prevent a burn. The Skin Cancer Foundation explicitly advises against getting a "base tan" before a tropical vacation and recommends shade, protective clothing, a hat, sunglasses, and sunscreen instead.
+A tan can make redness harder to notice, but it does not block enough UV to prevent a burn. The Skin Cancer Foundation advises against getting a "base tan" before a tropical vacation and recommends shade, protective clothing, a hat, sunglasses, and sunscreen instead.
 
 <ComparisonTable
 headers={[
@@ -83,7 +83,7 @@ headers={[
 
 ## What a base tan actually is
 
-A tan is the skin's response to UV-induced DNA damage. When UV hits your skin cells, they ramp up melanin production as a defense, trying to absorb and scatter the next wave of radiation before it reaches the DNA deeper down. The darker color is the visible record of that injury and repair cycle. The Skin Cancer Foundation is explicit on this point: a tan is skin trying to protect itself from further harm, not a sign of health.
+A tan is the skin's response to UV-induced DNA damage. When UV hits your skin cells, they produce more melanin. That pigment absorbs some radiation before it reaches deeper tissue. The darker color is the visible result of that response. The Skin Cancer Foundation describes a tan as evidence of DNA injury, not a sign of health.
 
 This is the part the "build a base" framing skips. A base tan is not a shield you put on. It is damage your skin has already absorbed, measured in pigment. Every session that built the "base" added UV exposure before the vacation began.
 
@@ -106,13 +106,13 @@ The plan trades an acute signal, getting pink and seeking shade, for invisible d
 
 The base tan myth persists because it sounds intuitive: gradual exposure feels safer than a burn. A 2023 survey by the American Academy of Dermatology of more than 1,000 U.S. adults found that 59% of Gen Z adults believe tanning myths, including that a base tan will prevent sunburn. Forty percent were unaware of tanning risks at all.
 
-The honest framing is not fear-based. A tan is not a protective layer, and the sun-protection steps that work do not require skin damage first.
+The useful takeaway is simple: a tan is not a protective layer. The sun-protection steps that work do not require skin damage first.
 
 ## The salon base tan is worse, not better
 
 Getting your base tan from a tanning salon does not improve the math. It makes the trade worse.
 
-Commercial tanning beds emit mainly UVA, the wavelength that darkens skin quickly without the fast burn that UVB causes. That is why a bed produces visible color fast. But UVA penetrates deeper into the skin than UVB, and it is the same wavelength class that the World Health Organization's cancer research arm classifies as part of Group 1 carcinogenic UV exposure. First use of a tanning bed before age 35 raises melanoma risk by roughly 75%.
+Commercial tanning beds emit mainly UVA, which can darken skin without the rapid redness associated with UVB. UVA also penetrates deeper into skin. IARC classifies UV-emitting tanning devices as carcinogenic to humans (Group 1). First use of a tanning bed before age 35 is associated with about a 75% higher melanoma risk.
 
 A salon base tan does not make outdoor sun safe. It adds documented cancer risk to your lifetime total. The [UV index for tanning guide](/blog/best-uv-index-for-tanning) covers this cluster. The short version: beds are bad at vitamin D too, because they short you on the UVB that drives it.
 
@@ -120,17 +120,17 @@ A salon base tan does not make outdoor sun safe. It adds documented cancer risk 
 
 What actually works is a combination, not a single move.
 
-Sunscreen is the baseline. Choose a broad-spectrum, water-resistant sunscreen and use it as directed. Reapply every two hours and after swimming or heavy sweat. If sunscreen and vitamin D is your worry, the evidence runs the other way: regular sunscreen use does not cause vitamin D deficiency. The [sunscreen and vitamin D breakdown](/blog/does-sunscreen-block-vitamin-d) covers why.
+Start with a broad-spectrum, water-resistant sunscreen and use it as directed. Reapply every two hours and after swimming or heavy sweat. If you have questions about sunscreen and vitamin D, read the [sunscreen and vitamin D breakdown](/blog/does-sunscreen-block-vitamin-d).
 
-Timing and shade do the rest. UV peaks between roughly 10 a.m. and 4 p.m., so moving your outdoor time earlier or later, and using shade, hats, and clothing, cuts your dose without any chemistry. This is also the lever that matters for vitamin D. Short, timed sessions when UV is present get you the dose, then you get out. The [sun exposure by skin type guide](/blog/how-long-to-sit-in-sun-for-vitamin-d) has the minute ranges.
+Timing and shade matter too. UV is generally stronger around midday, so shade, hats, and clothing can reduce your exposure. Use the day's UV Index to plan outdoor time, then protect your skin. The [sun exposure by skin type guide](/blog/how-long-to-sit-in-sun-for-vitamin-d) explains how exposure windows vary.
 
-And set honest expectations. There is no safe way to maintain a cosmetic tan. The Skin Cancer Foundation and the AAD both say it plainly. Short, purposeful sun for vitamin D is a different category from lying out for color.
+There is no safe way to maintain a cosmetic tan. The Skin Cancer Foundation and the AAD both advise against deliberate tanning. Getting daylight or vitamin D is a different goal from lying out for color.
 
 ## How this relates to Bask
 
 The base tan plan is built on a broken idea: that more accumulated UV is how you "get ready" for the sun. The opposite is true. The real lever is timing and dose: getting the short window of UV you want (for vitamin D, for mood, for a little color) and then getting out before the damage piles up.
 
-Bask does that math for you. It reads your skin type, your location, and the live UV index, then shows you the minutes you have today before you cross into burn territory, with an alert before that window opens. Instead of pre-damaging your skin before a trip, you take the right amount of sun on the day and stop. The [best UV for tanning guide](/blog/best-uv-index-for-tanning) covers the safer band (UV 3 to 5) if gradual color is part of your goal. The timer, not a "base," is what keeps it from costing you.
+Bask does that math for you. It reads your skin type, your location, and the live UV index, then shows you the minutes you have today before you cross into burn territory, with an alert before that window opens. Instead of pre-damaging your skin before a trip, you take the right amount of sun on the day and stop. The [best UV for tanning guide](/blog/best-uv-index-for-tanning) covers the safer band (UV 3 to 5) if gradual color is part of your goal. The timer gives you a stopping point; a base tan does not.
 
 <Callout type="info" title="Time your sun instead of stockpiling it">
   Bask shows your burn-time countdown for today's UV and skin type, so you get
@@ -150,15 +150,15 @@ No. The UV that causes both the tan and the burn is still reaching your skin. A 
 
 **Is a base tan safe before vacation?**
 
-No major health authority considers it safe. The American Academy of Dermatology and the Skin Cancer Foundation both advise against deliberately tanning to "prepare" for sun exposure. The color is the record of damage already sustained, and building it adds to your lifetime UV dose, which is the primary modifiable risk factor for skin cancer. Sunscreen and shade are the preparation that actually works.
+The American Academy of Dermatology and the Skin Cancer Foundation both advise against deliberately tanning to "prepare" for sun exposure. The color is the record of damage already sustained, and building it adds to your lifetime UV exposure. Sunscreen and shade are the preparation that works.
 
 **Does a spray tan or self-tanner protect you from the sun?**
 
-No. Spray tans, self-tanners, and bronzers are cosmetic. They provide zero SPF and do not change how your skin responds to UV. This is a common and dangerous assumption. People apply a dark self-tanner, feel "tan," skip sunscreen, and burn at full strength on top of it. If you use a self-tanner for color, treat your skin as fully unprotected and use sunscreen as you normally would.
+No. Spray tans, self-tanners, and bronzers are cosmetic unless the product label says it also contains sunscreen. They do not change how your skin responds to UV. A darker color can make it tempting to skip sunscreen, but you can still burn. If you use a self-tanner for color, follow its label and use sunscreen unless it specifically provides the protection you need.
 
 **Can I still get vitamin D if I avoid tanning?**
 
-Yes, and this is the key distinction. Vitamin D synthesis and cosmetic tanning run on different goals. Vitamin D is produced by a short, timed dose of UVB, often 10 to 20 minutes for fair or medium skin at a UV index of 3 or higher, and then it plateaus. More sun past that point adds damage with no extra vitamin D. So you can skip the "base" entirely, take your short vitamin D window, and get out. The [how much sun you need](/blog/how-much-sun-do-you-need-for-vitamin-d) cornerstone post breaks this down.
+Yes. Vitamin D is produced when UVB reaches exposed skin, but the amount depends on conditions, skin pigmentation, clothing, season, and location. A base tan is not required. The [how much sun you need](/blog/how-much-sun-do-you-need-for-vitamin-d) cornerstone post explains those variables and why more exposure is not automatically better.
 
 ## Where to go next
 
@@ -172,8 +172,7 @@ Yes, and this is the key distinction. Vitamin D synthesis and cosmetic tanning r
 1. [Skin Cancer Foundation, "Tanning & Your Skin"](https://www.skincancer.org/risk-factors/tanning/). Tanning is DNA injury, does not prevent sunburn, and is not safe preparation for a vacation.
 2. [American Academy of Dermatology, "Survey shows Gen Z adults are unfamiliar with sunburn and tanning risks" (May 9, 2023)](https://www.aad.org/news/gen-z-unfamiliar-sunburn-tanning-risks). 59% of Gen Z adults believe tanning myths including that a base tan prevents sunburn; survey of 1,000+ U.S. adults; one blistering sunburn in youth nearly doubles melanoma risk.
 3. [US EPA, "Sun safety"](https://www.epa.gov/sunsafety). Sun-protection guidance, including sunscreen, protective clothing, hats, sunglasses, and shade.
-4. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/). UVB-driven cutaneous vitamin D synthesis; self-limiting synthesis ceiling.
-5. [IARC/WHO, classification of UV-emitting tanning devices as Group 1 carcinogens (2009)](https://www.iarc.who.int/news-events/sunbeds-and-uv-radiation/). UVA dominance in commercial beds; melanoma risk increase with first use before age 35.
+4. [IARC/WHO, classification of UV-emitting tanning devices as Group 1 carcinogens (2009)](https://www.iarc.who.int/news-events/sunbeds-and-uv-radiation/). UV-emitting tanning devices are classified as carcinogenic to humans (Group 1).
 
 ---
 
