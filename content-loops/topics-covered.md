@@ -28,6 +28,7 @@ topic with a genuinely different angle, note the angle.
 | can-you-get-vitamin-d-from-your-palms | Can You Get Enough Vitamin D From Just Your Palms | P1 calculation cluster | can you get vitamin D from your palms | 2026-07-27 | PUBLISHED |
 | why-is-my-vitamin-d-low-even-though-i-get-sun | Why Is My Vitamin D Low Even Though I Get Sun | P2 (deficiency causes and confirmation) | why is my vitamin D low even though I get sun | 2026-07-28 | PUBLISHED |
 | dminder-alternatives | dminder Alternatives | P4.1 | dminder alternatives | 2026-07-20 | PUBLISHED |
+| vitamin-d-in-winter | Can You Get Vitamin D From the Sun in Winter? | P3 (winter / latitude hub) | vitamin d in winter | 2026-10-09 | PUBLISHED |
 
 ## Notes / gaps for future cycles
 
