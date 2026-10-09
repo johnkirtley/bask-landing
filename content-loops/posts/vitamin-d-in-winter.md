@@ -12,6 +12,16 @@ Status: DRAFT
 
 ---
 
+## SEO publishing note
+
+- **SEO title / H1:** Can You Get Vitamin D From the Sun in Winter?
+- **Meta description:** Can you get vitamin D from the sun in winter? It depends on latitude. Clear winter sun often makes little to none from Boston north; near LA, a classic study still found midday production.
+- **Slug:** `vitamin-d-in-winter`
+- **Primary query:** can you get vitamin D from the sun in winter / vitamin D in winter
+- **Verified internal links:** `/blog/what-uv-index-do-you-need-for-vitamin-d`, `/blog/vitamin-d-angle-of-sun`, `/blog/can-you-get-vitamin-d-on-a-cloudy-day`, `/blog/can-you-get-vitamin-d-through-a-window`, `/blog/vitamin-d-from-sun-vs-supplements`, `/blog/how-much-vitamin-d-should-i-take`
+
+---
+
 ## Schema notes for Developer
 
 - **Article schema:** standard (site-wide via Astro layout)
@@ -23,31 +33,31 @@ Status: DRAFT
 
 ## Reviewer checklist
 
-- [ ] Boston (42.2°N) produced no previtamin D3 Nov–Feb; Edmonton (52°N) Oct–Mar; 34°N and 18°N still produced it midwinter. Verify against Webb, Kline & Holick 1988 (PMID 2839537)
-- [ ] Season, length of day, cloud cover and skin melanin affect vitamin D synthesis; UVB doesn't pass through glass. Verify against the NIH ODS health professional fact sheet
-- [ ] Adult RDA 600 IU (19–70), 800 IU (71+); UL 4,000 IU; fortified milk ~120 IU per cup. Verify against the NIH ODS consumer fact sheet
-- [ ] UV index of 3 as the practical vitamin D threshold matches the existing post `/blog/what-uv-index-do-you-need-for-vitamin-d`
-- [ ] City latitudes in the table are approximate and labeled "near"; confirm wording doesn't imply each city was measured
-- [ ] Check internal links resolve: `/blog/what-uv-index-do-you-need-for-vitamin-d`, `/blog/vitamin-d-angle-of-sun`, `/blog/can-you-get-vitamin-d-on-a-cloudy-day`, `/blog/can-you-get-vitamin-d-through-a-window`, `/blog/vitamin-d-from-sun-vs-supplements`, `/blog/how-much-vitamin-d-should-i-take`
-- [ ] Confirm "Author: Bask Health Team" per E-E-A-T
+- [x] Boston (42.2°N) no previtamin D3 Nov–Feb; Edmonton (52°N) Oct–Mar; 34°N and 18°N still in midwinter — verified against Webb et al. 1988 abstract (PMID 2839537, PubMed efetch 2026-10-09)
+- [x] Season, length of day, cloud cover, skin melanin, sunscreen affect synthesis; UVB does not pass through glass — verified against NIH ODS Health Professional fact sheet (fetched 2026-10-09)
+- [x] Adult RDA 600 IU (19–70), 800 IU (71+); UL 4,000 IU adults; fortified milk 120 IU (3 mcg) per cup — verified against NIH ODS Consumer fact sheet (fetched 2026-10-09)
+- [ ] UV index ~3 practical threshold — editorial alignment with `/blog/what-uv-index-do-you-need-for-vitamin-d`, not a primary government cutoff
+- [x] City latitudes labeled as reference only; study used Boston/Edmonton and model latitudes, not every city listed
+- [x] Internal links resolve (slugs present under `src/content/blog/`)
+- [x] Author: Bask Health Team
 
 ---
 
 ## Post content
 
-Can you get vitamin D from the sun in winter? It depends on latitude. In much of the northern US and Canada, clear winter days are often too weak for your skin to make meaningful vitamin D for several months. In a classic latitude study, human skin exposed to midday sunlight on cloudless days made no previtamin D3 in Boston (42.2°N) from November through February, or in Edmonton (52°N) from October through March. Around 34°N (Los Angeles latitude) and 18°N, previtamin D3 still formed in midwinter.
+Can you get vitamin D from the sun in winter? It depends on latitude. In much of the northern US and Canada, clear midwinter days are often too weak for your skin to make meaningful vitamin D for several months. In a [classic latitude study](https://pubmed.ncbi.nlm.nih.gov/2839537/), samples of human skin and 7-dehydrocholesterol exposed to midday sunlight on cloudless days formed no previtamin D3 in Boston (42.2°N) from November through February, or in Edmonton (52°N) from October through March. At 34°N and 18°N, previtamin D3 still formed in the middle of winter.
 
 Winter doesn't switch vitamin D off everywhere. It shrinks your window, and in some places it closes for a while.
 
 ## Why winter sun makes less vitamin D
 
-Your skin makes vitamin D from UVB light. In winter the sun sits lower, so its rays travel through more atmosphere and ozone absorbs more UVB along the way. Days are shorter, you're wearing more clothes, and you're inside more. The NIH lists season, length of day, cloud cover, and skin pigment among the factors that change how much vitamin D you make.
+Your skin makes vitamin D when UVB light converts 7-dehydrocholesterol to previtamin D3. In winter the sun sits lower, so its rays travel through more atmosphere before they reach you and more UVB is filtered out along the way. Days are shorter, you're wearing more clothes, and you're inside more. The [NIH Office of Dietary Supplements](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/) lists season, time of day, length of day, cloud cover, skin melanin content, and sunscreen among the factors that change how much vitamin D you make from sunlight.
 
-A bright, cold January afternoon can feel sunny and still deliver almost no UVB. For the geometry behind that, see [the angle of the sun and vitamin D](/blog/vitamin-d-angle-of-sun) (the shadow rule is a quick field check; a local UV index of 3 or higher is the better day-to-day test).
+A bright, cold January afternoon can feel sunny and still deliver almost no UVB. For the geometry behind that, see [the angle of the sun and vitamin D](/blog/vitamin-d-angle-of-sun). The shadow rule is a quick field check; a local UV index of 3 or higher is the better day-to-day test ([why that number matters](/blog/what-uv-index-do-you-need-for-vitamin-d)).
 
 ## How long the "vitamin D winter" lasts by latitude
 
-Researchers at Boston University exposed skin samples to sunlight on cloudless days at different latitudes to see when previtamin D3 formation stopped. Here's what they found, with cities near those latitudes for reference (these cities were not measured in the study):
+Webb, Kline, and Holick exposed skin samples to sunlight on cloudless days at different latitudes to see when previtamin D3 formation stopped. Here's what they found, with cities near those latitudes for reference (these cities were not measured in the study):
 
 <ComparisonTable
   headers={['Latitude', 'Near', 'Winter months with no previtamin D3 from sun (clear skies)']}
@@ -74,7 +84,9 @@ Researchers at Boston University exposed skin samples to sunlight on cloudless d
   </tr>
 </ComparisonTable>
 
-Two caveats. This was measured on clear days, so clouds make the gap longer ([cloudy days](/blog/can-you-get-vitamin-d-on-a-cloudy-day) can cut ground-level UV sharply). And the study only tested a few locations, so cities between those lines fall somewhere in between. Your local UV index is the better day-to-day check.
+Two caveats. Measurements were on clear days, so clouds make the gap longer ([cloudy days](/blog/can-you-get-vitamin-d-on-a-cloudy-day) can cut ground-level UV sharply). The study only tested a few latitudes, so cities between those lines fall somewhere in between. Seasons flip in the Southern Hemisphere; the month ranges above describe northern winter.
+
+Your local UV index is the better day-to-day check than latitude alone.
 
 <Callout type="info" title="Winter sun is weaker, not always gone">
   If you live closer to the equator, a midday walk in winter can still count.
@@ -88,9 +100,9 @@ Two caveats. This was measured on clear days, so clouds make the gap longer ([cl
 
 **Check the UV index, not the brightness.** Snow and clear skies can look intense while the UV index sits at 1 or 2. Our [UV index guide](/blog/what-uv-index-do-you-need-for-vitamin-d) explains the threshold.
 
-**Skip the sunny window.** UVB doesn't pass through glass, so sitting by a bright window won't help. More in [can you get vitamin D through a window](/blog/can-you-get-vitamin-d-through-a-window).
+**Skip the sunny window.** UVB doesn't pass through glass, so sitting by a bright window won't help. See [can you get vitamin D through a window](/blog/can-you-get-vitamin-d-through-a-window).
 
-**Lean on food and supplements when the sun can't help.** Very few foods are naturally rich in vitamin D. Fatty fish like salmon and trout are among the best, and most US milk is fortified with about 120 IU per cup. The NIH recommends 600 IU a day for adults 19 to 70 and 800 IU for adults over 70, from all sources combined. The tolerable upper intake level for adults is 4,000 IU per day from food and supplements. If you're thinking about a supplement, our [dosage guide](/blog/how-much-vitamin-d-should-i-take) and [sun vs. supplements comparison](/blog/vitamin-d-from-sun-vs-supplements) are good next reads, and a clinician can help you decide what fits your situation.
+**Lean on food and supplements when the sun can't help.** Very few foods are naturally rich in vitamin D. Fatty fish like salmon and trout are among the best, and most US milk is fortified with about 120 IU (3 mcg) per cup. The NIH recommends 600 IU a day for adults 19 to 70 and 800 IU for adults over 71, from all sources combined. The tolerable upper intake level for adults 19 and older is 4,000 IU per day from food and supplements. If you're thinking about a supplement, our [dosage guide](/blog/how-much-vitamin-d-should-i-take) and [sun vs. supplements comparison](/blog/vitamin-d-from-sun-vs-supplements) are good next reads, and a clinician can help you decide what fits your situation.
 
 **Know your level.** A blood test for 25-hydroxyvitamin D is how clinicians check vitamin D status. If you test in late winter, you'll see your level after the longest stretch without strong sun.
 
@@ -108,11 +120,11 @@ In winter the hard part is knowing whether a usable window exists today at all. 
 
 **Can you get vitamin D from the sun in winter?**
 
-Sometimes. In the Boston study, midday winter sun still formed previtamin D3 at 34°N and further south. Around Boston's latitude and further north, there are winter months when it makes little to none, even with clear skies.
+Sometimes. In the Webb et al. study, midday winter sun still formed previtamin D3 at 34°N and further south. Around Boston's latitude and further north, there are winter months when clear-sky exposure makes little to none.
 
 **What months can you not get vitamin D from the sun?**
 
-It depends on latitude. In the Boston study, there was no previtamin D3 formation from November through February at 42°N and from October through March at 52°N. Clouds can stretch that gap.
+It depends on latitude. In that study, there was no previtamin D3 formation from November through February at 42°N and from October through March at 52°N. Clouds can stretch those gaps.
 
 **Does snow help you make more vitamin D?**
 
@@ -120,20 +132,22 @@ Snow reflects UV, which can raise your exposure a bit, especially at altitude. I
 
 **Should I take vitamin D in winter?**
 
-Many people get less vitamin D in winter, and the NIH notes that fortified foods and supplements can help when sun and diet fall short. Whether you need a supplement, and how much, is a question for your clinician, ideally with a blood test.
+At higher latitudes, winter sunlight often cannot cover your needs for months. The NIH notes that fortified foods and dietary supplements are useful when you cannot get enough vitamin D from food and sun alone. Whether you need a supplement, and how much, is a question for your clinician, ideally with a blood test.
 
 ## Where to go next
 
 - Check the threshold: [What UV index do you need for vitamin D?](/blog/what-uv-index-do-you-need-for-vitamin-d)
 - Why low sun fails: [The angle of the sun and vitamin D](/blog/vitamin-d-angle-of-sun)
+- Clouds and winter gray days: [Can you get vitamin D on a cloudy day?](/blog/can-you-get-vitamin-d-on-a-cloudy-day)
+- Indoor light: [Can you get vitamin D through a window?](/blog/can-you-get-vitamin-d-through-a-window)
 - Compare your options: [Vitamin D from sun vs. supplements](/blog/vitamin-d-from-sun-vs-supplements)
+- Dosing basics: [How much vitamin D should I take?](/blog/how-much-vitamin-d-should-i-take)
 
 ## Sources
 
 1. Webb AR, Kline L, Holick MF. ["Influence of season and latitude on the cutaneous synthesis of vitamin D3: exposure to winter sunlight in Boston and Edmonton will not promote vitamin D3 synthesis in human skin"](https://pubmed.ncbi.nlm.nih.gov/2839537/). _Journal of Clinical Endocrinology & Metabolism._ 1988;67(2):373-378.
 2. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Health Professionals](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/).
 3. [NIH Office of Dietary Supplements, Vitamin D Fact Sheet for Consumers](https://ods.od.nih.gov/factsheets/VitaminD-Consumer/).
-4. [US EPA, UV Index Scale](https://www.epa.gov/sunsafety/uv-index-scale-0).
 
 ---
 
