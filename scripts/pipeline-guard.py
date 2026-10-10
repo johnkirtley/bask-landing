@@ -20,6 +20,9 @@ SITE = {'bask-landing': 'https://www.getbask.app', 'olly-landing': 'https://olly
         'relocate-to-japan-pipeline': 'https://www.relocatetojapan.com',
         'relocate-to-japan': 'https://www.relocatetojapan.com'}
 
+def site_base():
+    return SITE.get(ROOT.name, SITE['bask-landing'])
+
 def git(*args):
     return subprocess.check_output(['git', *args], cwd=ROOT, text=True).strip()
 
@@ -55,7 +58,7 @@ def live(slugs, wait=0):
                 return response.url, response.read().decode()
         sitemap_urls = set()
         try:
-            base = SITE[ROOT.name]
+            base = site_base()
             sitemap_path = '/sitemap.xml' if 'relocate' in ROOT.name else '/sitemap-index.xml'
             _, sitemap = fetch(base + sitemap_path)
             tree = ET.fromstring(sitemap)
@@ -69,7 +72,7 @@ def live(slugs, wait=0):
         except Exception as error:
             errors.append(f'production sitemap: {error}')
         for slug, title in slugs.items():
-            url = SITE[ROOT.name] + '/blog/' + slug
+            url = site_base() + '/blog/' + slug
             try:
                 actual_url, html = fetch(url)
                 if '/blog/' + slug not in actual_url:
@@ -145,7 +148,7 @@ def run(job, command):
         was_published = published()
         permission = json.loads(os.environ.get('OPENCODE_PERMISSION', '{}'))
         permission['external_directory'] = {'*': 'deny', '/tmp/**': 'allow'}
-        permission.update(question='deny', task='deny', bash={'*': 'deny', 'git *': 'allow', 'rtk git *': 'allow', 'npm run build': 'allow', 'rtk npm run build': 'allow', 'rtk ls *': 'allow', 'rtk grep *': 'allow', 'rtk find *': 'allow', 'rtk cat *': 'allow', 'rtk head *': 'allow', 'rtk tail *': 'allow', 'node *': 'allow', 'curl *': 'allow', 'rtk curl *': 'allow', 'grep *': 'allow', 'rg *': 'allow', 'rtk rg *': 'allow', 'find *': 'allow', 'ls *': 'allow', 'date *': 'allow', 'wc *': 'allow', 'rtk wc *': 'allow', 'sha256sum *': 'allow', 'python3 *': 'allow', 'scripts/content-pipeline-lock.sh *': 'allow', 'sleep *': 'allow', 'sed *': 'allow', 'head *': 'allow', 'tail *': 'allow', 'sort *': 'allow', 'uniq *': 'allow', 'tr *': 'allow', 'cut *': 'allow', 'printf *': 'allow', 'cat *': 'allow', 'mkdir -p *': 'allow', 'test *': 'allow'})
+        permission.update(question='deny', task='deny', bash={'*': 'deny', 'git *': 'allow', 'rtk git *': 'allow', 'npm run build': 'allow', 'rtk npm run build': 'allow', 'rtk ls *': 'allow', 'rtk grep *': 'allow', 'rtk find *': 'allow', 'rtk cat *': 'allow', 'rtk head *': 'allow', 'rtk tail *': 'allow', 'node *': 'allow', 'curl *': 'allow', 'rtk curl *': 'allow', 'grep *': 'allow', 'rg *': 'allow', 'rtk rg *': 'allow', 'find *': 'allow', 'ls *': 'allow', 'date *': 'allow', 'wc *': 'allow', 'rtk wc *': 'allow', 'sha256sum *': 'allow', 'python3 *': 'allow', 'jq *': 'allow', 'rtk jq *': 'allow', 'scripts/content-pipeline-lock.sh *': 'allow', 'sleep *': 'allow', 'sed *': 'allow', 'head *': 'allow', 'tail *': 'allow', 'sort *': 'allow', 'uniq *': 'allow', 'tr *': 'allow', 'cut *': 'allow', 'printf *': 'allow', 'cat *': 'allow', 'mkdir -p *': 'allow', 'test *': 'allow'})
         os.environ['OPENCODE_PERMISSION'] = json.dumps(permission)
         capture = STATE / (job + '.latest.log')
         with capture.open('w') as output:

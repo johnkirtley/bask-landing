@@ -2,9 +2,12 @@
 """Sync repository job specs into existing scheduler jobs and install checks."""
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root / 'scripts'))
+from pipeline_job_command import build_opencode_run_command
 for identity_key in ['user.name', 'user.email']:
     owner = subprocess.check_output(['git', 'config', '--global', '--get', identity_key], text=True).strip()
     if not owner:
@@ -28,11 +31,7 @@ for spec_path in sorted((root / '.opencode/jobs').glob('*.json')):
     if len(matches) != 1:
         raise SystemExit(f"Expected one active job for {spec['name']}, found {len(matches)}; register first")
     active_path, active = matches[0]
-    command = ['/root/.opencode/bin/opencode', 'run', '--agent', spec.get('agent', 'build'),
-               '--model', spec['model'], '--variant', spec.get('variant', 'high')]
-    if spec.get('files'):
-        command += ['--file', spec['files']]
-    command += ['--', spec['prompt']]
+    command = build_opencode_run_command(spec)
     guard = ['python3', str(root / 'scripts/pipeline-guard.py'), 'run', '--job', spec['name'], '--', *command]
     if (root / 'scripts/content-pipeline-lock.sh').exists():
         guard = ['env', 'PIPELINE_LOCK_HELD=1', 'scripts/content-pipeline-lock.sh', 'run', spec['name'], '--', *guard]

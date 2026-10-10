@@ -1,4 +1,4 @@
-Status: DRAFT
+Status: PUBLISHED
 
 # Can You Get Vitamin D From the Sun in Winter?
 

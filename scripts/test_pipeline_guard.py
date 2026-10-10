@@ -49,9 +49,17 @@ class OutcomeTests(unittest.TestCase):
         self.assertEqual(permission['bash']['*'], 'deny')
         self.assertEqual(permission['bash']['rtk git *'], 'allow')
         self.assertEqual(permission['bash']['rtk npm run build'], 'allow')
+        self.assertEqual(permission['bash']['jq *'], 'allow')
+        self.assertEqual(permission['bash']['rtk jq *'], 'allow')
 
     def test_completed_empty_queue_can_skip(self):
         self.assertEqual(self.outcome('Status: skipped\nReason: empty queue\n'), 0)
+
+    def test_no_qualifying_topic_can_skip(self):
+        self.assertEqual(
+            self.outcome('Status: skipped\nReason: no topic cleared audience and rankability gates\n', changed=True),
+            0,
+        )
 
     def test_zero_exit_does_not_hide_reported_failure(self):
         self.assertEqual(self.outcome('Status: **failed**\nReason: lock rejected\n'), 1)
@@ -75,7 +83,7 @@ class OutcomeTests(unittest.TestCase):
 
 class LiveTests(unittest.TestCase):
     def verify(self, heading='Expected title', indexed=True):
-        base = guard.SITE[guard.ROOT.name]
+        base = guard.site_base()
         class Response:
             status = 200
             def __init__(self, request):
