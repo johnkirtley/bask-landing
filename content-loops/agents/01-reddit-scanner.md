@@ -36,50 +36,54 @@ Primary (scan every run):
 
 ## How to fetch Reddit data
 
-Reddit blocks direct API access and requires JavaScript for HTML rendering. Use **Startpage search** (primary) to discover Reddit threads, then **WebFetch on individual threads** to read full content.
+Reddit blocks anonymous HTML fetches (403) and Startpage/DuckDuckGo often require JavaScript on headless servers. **Do not** write an empty scan when only those paths fail. Use the headless-friendly flow below.
 
-### Step 1: Search via Startpage (primary)
+### Step 1: PullPush archive API (primary — works without a browser)
 
-Startpage returns clean Reddit results with titles, URLs, and snippets — no CAPTCHA. Run 5 searches, one per subreddit:
+PullPush mirrors public Reddit submissions and comments. Use `curl` + `jq` (allowed by the pipeline guard):
 
-```
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fvitamin-d+sun+deficiency&cat=web
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fhubermanlab+vitamin+D+morning+light&cat=web
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fsupplements+vitamin+D+dosage+sun&cat=web
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fdepression+sunlight+vitamin+D+mood&cat=web
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+r%2Fbiohacking+UV+vitamin+D+sun+tracking&cat=web
-```
-
-Also run broader searches to catch cross-subreddit discussions:
-
-```
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+vitamin+D+deficiency+sun+exposure+2025&cat=web
-webfetch: https://www.startpage.com/do/dsearch?query=site%3Areddit.com+vitamin+D+supplement+vs+sun+which+better&cat=web
+```bash
+SUBS=(vitaminD HubermanLab Supplements depression Biohacking)
+for sub in "${SUBS[@]}"; do
+  echo "=== r/${sub} ==="
+  curl -sS "https://api.pullpush.io/reddit/search/submission/?subreddit=${sub}&size=15&sort=desc" \
+    | jq -r '.data[] | [.title, .permalink, .score, .num_comments, .created_utc] | @tsv'
+done
 ```
 
-### Step 2: Fetch individual threads
+Pick threads from the last ~90 days with relevant titles and meaningful `score` / `num_comments`. Build permalinks as `https://www.reddit.com` + `.permalink` from the JSON.
 
-For high-signal threads (relevant title, recent date, high engagement), fetch the full thread to read the post body and top comments:
+For post bodies and top comments on a chosen thread:
 
+```bash
+curl -sS "https://api.pullpush.io/reddit/search/comment/?link_id=t3_POST_ID&size=20&sort=desc" \
+  | jq -r '.data[] | [.body, .score] | @tsv'
 ```
-webfetch: https://www.reddit.com/r/SUBREDDIT/comments/POST_ID/
+
+Replace `POST_ID` with the base-36 id from the submission URL (the segment after `/comments/`).
+
+### Step 2: Bing site search (discovery fallback)
+
+When PullPush is down or returns nothing recent, discover threads with HTML search (no JavaScript):
+
+```bash
+curl -sS -A 'BaskContentPipeline/1.0' \
+  'https://www.bing.com/search?q=site%3Areddit.com+r%2FvitaminD+vitamin+d+deficiency+sun'
 ```
 
-This gives you the original post text and comments. Focus on threads where:
+Extract `reddit.com/r/.../comments/...` URLs from the HTML. Prefer titles/snippets that mention vitamin D, sun, supplements, mood, or UV. **Do not** treat Bing snippets as medical evidence — only as pointers to threads you then load via PullPush or cite with permalink + title.
+
+### Step 3: WebFetch / direct Reddit (last resort)
+
+Only if PullPush and Bing both fail for a specific permalink, try WebFetch on `https://www.reddit.com/r/.../comments/...`. If Reddit returns 403, keep the thread in the scan with title + permalink from search/JSON and note that full text was unavailable — do **not** drop the theme solely because of 403.
+
+### Quality bar (unchanged)
+
+Focus on threads where:
 
 - The title matches a Bask-relevant topic (vitamin D, sun, supplements, mood)
-- The post has substantive self-text (not just a link)
+- The post has substantive self-text (not just a link), when body text is available
 - There are engaged comments with real questions or struggles
-
-### Step 3: Fallback — DuckDuckGo
-
-If Startpage fails or returns CAPTCHAs, use DuckDuckGo (limited to 2-3 queries before CAPTCHA):
-
-```
-webfetch: https://html.duckduckgo.com/html/?q=site%3Areddit.com+vitamin+D+deficiency+sun+exposure
-webfetch: https://html.duckduckgo.com/html/?q=site%3Areddit.com+huberman+morning+light+vitamin+D
-webfetch: https://html.duckduckgo.com/html/?q=site%3Areddit.com+supplement+vitamin+D+dosage+confusion
-```
 
 ## Idempotency
 

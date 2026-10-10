@@ -57,10 +57,13 @@ fi
 6. **Previous research files** — `content-loops/research/research-*.md`
    - Read the most recent 1-2 to understand what's been recommended and what the current backlog looks like.
 
-7. **SEO autocomplete research** — `bask-seo-autocomplete-research.md` (repo root)
+7. **Canonical blog backlog** — `content-loops/canonical-blog-backlog.md`
+   - Ordered blueprint topics not yet published. Use during deadlock-breaking (see below).
+
+8. **SEO autocomplete research** — `bask-seo-autocomplete-research.md` (repo root)
    - Standing record of real Google autocomplete phrasings and the recommended keyword/page strategy.
    - **Evidence role only:** it proves the exact wording and intent shape of real queries. It is NOT evidence of search volume, ranking difficulty, rankability, or conversion. Never cite autocomplete as proof of any of those.
-   - Use it to (a) refine a topic's primary/secondary phrasing toward language people actually type, (b) shape titles, FAQ questions, and snippet answers, and (c) reinforce an already-qualified topic. It does not open or reprioritize a topic on its own — Audience evidence, an honest search-result assessment, dedup, seasonality, and blueprint fit remain the gates. Reddit is optional when the canonical keyword record supplies audience evidence.
+   - Use it to (a) refine a topic's primary/secondary phrasing toward language people actually type, (b) shape titles, FAQ questions, and snippet answers, and (c) supply audience-evidence wording together with a canonical backlog row or Reddit signal. Autocomplete alone does not override rankability, dedup, seasonality, or blueprint fit.
    - **Scope guard — much of this document is NOT blog content.** Its homepage copy, SEO title/H1 recommendations, `/vitamin-d-sun-tracker/`, `/vitamin-d-calculator/`, and other product/tool/feature-page recommendations are for the marketing/site team, not this pipeline. This pipeline publishes informational and comparison blog posts only. Never place a homepage, product, calculator, or interactive-tool recommendation into the priority queue as an `Open` topic.
 
 ## Output file
@@ -137,7 +140,7 @@ Study the existing research files (`research-2026-06-20.md` through `research-20
 
 1. **Bask fit** — the honest answer must naturally involve sun exposure timing, UV awareness, avoiding sunburn, or vitamin D tracking. If the honest answer is "take a pill," it's a weak fit. Skip it or reframe.
 
-2. **Rankability** — the SERP for the primary keyword should NOT be a Mayo Clinic / Cleveland Clinic / Healthline / NIH authority wall. Bias toward queries where existing results are forums, thin clinic blogs, or affiliate pages.
+2. **Rankability** — the SERP for the primary keyword should NOT be a Mayo Clinic / Cleveland Clinic / Healthline / NIH authority wall. Bias toward queries where existing results are forums, thin clinic blogs, or affiliate pages. When Google Search is JavaScript-blocked in the agent environment, sample results with `curl` against Bing (`https://www.bing.com/search?q=...`) and describe what ranks; label it as a Bing sample, not a guaranteed Google SERP.
 
 3. **Not duplicated** — check `topics-covered.md` AND `content-loops/posts/` AND previous research files. If the topic exists with a genuinely different angle, note the angle.
 
@@ -149,14 +152,14 @@ Study the existing research files (`research-2026-06-20.md` through `research-20
 
 5. **Honest framing** — for YMYL (health) topics, the brief MUST specify what we can and cannot claim. We are not anti-supplement. We are pro-correct-dose. Every brief should note where supplements are the right answer and where sun timing helps. Honor the medical guardrails in `bask-seo-autocomplete-research.md` ("Medical and SEO guardrails" section): keep "estimate," "may," and "educational tool" language visible; never promise a session fixes deficiency, fatigue, or mood; never give a universal safe-exposure duration.
 
-6. **Audience signal** — prefer topics with real engagement evidence: either Reddit signal strength (multiple threads, high scores, many comments) OR a direct match to a phrase documented in `bask-seo-autocomplete-research.md`. Autocomplete phrasing alone can qualify audience evidence for an otherwise strong topic; it cannot override the other bars.
+6. **Audience signal** — prefer topics with real engagement evidence: Reddit signal strength (multiple threads, high scores, many comments), **or** a row from `content-loops/canonical-blog-backlog.md` whose blueprint primary keyword is not already covered (blueprint-validated intent), **or** a direct match to a phrase in `bask-seo-autocomplete-research.md`. Autocomplete phrasing alone can qualify audience evidence for an otherwise strong topic; it cannot override the other bars. A backlog row satisfies audience evidence even when Reddit is empty for the cycle.
 
 7. **Already covered** — check `topics-covered.md` AND `content-loops/posts/` AND previous research files. Many of the informational phrases in the autocomplete research are already published (how much sun, best time, UV index, through a window, sun vs supplements, etc.). If a phrase is already covered, do not reopen it; consider a refresh only when performance data justifies one.
 
 ### When NOT to produce new topics
 
 - The writing backlog already has 5+ unwritten topics → skip discovery, note "backlog full"
-- No new Reddit signals AND no eligible unassigned canonical-backlog keywords → carry forward previous research, note "no new signals"
+- No new Reddit signals AND no eligible unassigned canonical-backlog keywords → carry forward previous research, note "no new signals", and exit with **Status: skipped** (not failed) when the cycle completed honestly but no topic cleared all gates
 - Performance data says to focus on refresh/optimization, not new content
 
 ## Git workflow
@@ -180,4 +183,4 @@ End your run with:
 
 ## Avoid discovery deadlocks
 
-Count only unwritten Open briefs toward the five-item writing cap; completed NEEDS REVIEW drafts belong to the review queue. When no writable topic remains, investigate at most one distinct informational keyword from the canonical backlog with authoritative sources. Use an accessible search engine when Google is blocked, recording the engine and limits honestly; never fabricate Google rankability or Reddit engagement. Carry forward all still-Open unwritten briefs. If no topic meets the substantive gates, report failed with the exact blocker instead of indefinitely reporting successful empty research.
+Count only unwritten Open briefs toward the five-item writing cap; completed NEEDS REVIEW drafts belong to the review queue. When fewer than three unwritten `Open` briefs remain and Reddit added no eligible signal, open **at most one** topic from `content-loops/canonical-blog-backlog.md` (first eligible row) if it clears Bask fit, dedup, seasonality, honest framing, and your rankability check. Use Bing HTML via `curl` when Google is blocked; never fabricate Reddit engagement. Carry forward all still-Open unwritten briefs in the research file. If no topic meets all gates after that investigation, still write today's research file documenting the decision, then report **Status: skipped** with the exact blocker — reserve **failed** for incomplete work, permission denials, or git/push errors.
