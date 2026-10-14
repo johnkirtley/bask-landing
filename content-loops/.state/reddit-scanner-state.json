@@ -1,5 +1,5 @@
 {
-  "lastScan": "2026-10-12",
+  "lastScan": "2026-10-14",
   "lastScanFile": "content-loops/research/reddit-scan-2026-10-10.md",
   "searchMethod": "PullPush returned Cloudflare challenges for all five target communities; Bing fallback searches ignored the Reddit site filters and returned no Reddit thread candidates",
   "themesFound": 0,
@@ -13,5 +13,5 @@
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
   "status": "failed",
-  "lastFailure": "2026-10-12: no verifiable current Reddit threads were available after PullPush Cloudflare challenges and Bing fallback searches that returned no Reddit candidates; no empty scan was written."
+  "lastFailure": "2026-10-14: no verifiable current Reddit threads were available after PullPush Cloudflare challenges and Bing fallback searches that ignored the Reddit site filters; no empty scan was written."
 }
