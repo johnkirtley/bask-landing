@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-10-20",
+  "lastScan": "2026-10-21",
   "lastScanFile": "content-loops/research/reddit-scan-2026-10-10.md",
-  "searchMethod": "PullPush returned non-JSON responses for all target communities; targeted Bing searches returned no relevant Reddit thread candidates",
+  "searchMethod": "PullPush returned Cloudflare challenge pages for all target communities; targeted Bing searches returned no relevant Reddit thread candidates",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
-    "HOLDING DAY - no new eligible high-signal threads surfaced. PullPush returned non-JSON responses and Bing returned no relevant Reddit candidates. No prior signals were restated as current evidence."
+    "HOLDING DAY - no new eligible high-signal threads surfaced. PullPush returned Cloudflare challenge pages and Bing returned no relevant Reddit candidates. No prior signals were restated as current evidence."
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
@@ -13,5 +13,5 @@
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
   "status": "failed",
-  "lastFailure": "2026-10-20: no verifiable current Reddit threads were available after PullPush returned non-JSON responses and Bing returned no relevant Reddit candidates; no empty scan was written."
+  "lastFailure": "2026-10-21: no verifiable current Reddit threads were available after PullPush returned Cloudflare challenge pages and Bing returned no relevant Reddit candidates; no empty scan was written."
 }
