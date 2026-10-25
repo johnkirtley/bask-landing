@@ -13,5 +13,5 @@
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
   "status": "failed",
-  "lastFailure": "2026-10-24: no verifiable current Reddit threads were available after PullPush returned non-JSON Cloudflare challenge pages for all target communities and Bing returned no eligible target-subreddit Reddit candidates; no empty scan was written."
+  "lastFailure": "2026-10-25: no verifiable current Reddit threads were available after PullPush returned non-JSON Cloudflare challenge pages for all target communities and Bing RSS returned no eligible target-subreddit Reddit candidates; no empty scan was written."
 }
