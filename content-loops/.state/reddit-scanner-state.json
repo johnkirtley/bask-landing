@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-11-10",
+  "lastScan": "2026-11-11",
   "lastScanFile": null,
-  "searchMethod": "PullPush returned non-JSON responses for all target communities; targeted Bing searches returned no eligible target-subreddit Reddit thread candidates",
+  "searchMethod": "PullPush returned Cloudflare error 526 for all target communities; targeted Bing searches returned unrelated results; direct Reddit JSON endpoints returned non-JSON responses",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
-    "No scan written: PullPush returned non-JSON responses and Bing returned no eligible target-subreddit Reddit candidates. No prior signals were restated as current evidence."
+    "No scan written: PullPush returned Cloudflare error 526, Bing returned no eligible target-subreddit Reddit candidates, and direct Reddit JSON endpoints returned non-JSON responses. No prior signals were restated as current evidence."
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
@@ -13,5 +13,5 @@
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
   "status": "failed",
-  "lastFailure": "2026-11-10: no verifiable current Reddit threads were available after PullPush returned non-JSON responses for all target communities and Bing returned no eligible target-subreddit Reddit candidates; no empty scan was written."
+  "lastFailure": "2026-11-11: no verifiable current Reddit threads were available after PullPush returned Cloudflare error 526 for all target communities, Bing returned unrelated results, and direct Reddit JSON endpoints returned non-JSON responses; no empty scan was written."
 }
