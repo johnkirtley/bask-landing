@@ -1,11 +1,11 @@
 {
-  "lastScan": "2026-11-17",
+  "lastScan": "2026-11-18",
   "lastScanFile": null,
-  "searchMethod": "PullPush returned a non-JSON challenge page for all five target communities; targeted Bing HTML and RSS searches returned no Reddit thread permalinks",
+  "searchMethod": "PullPush returned a non-JSON challenge page for all five target communities; targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks",
   "themesFound": 0,
   "sourcesCount": 0,
   "newSignals": [
-    "No scan written: PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS searches returned no Reddit thread permalinks. No prior signals were restated as current evidence."
+    "No scan written: PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks. No prior signals were restated as current evidence."
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
@@ -13,5 +13,5 @@
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
   "status": "failed",
-  "lastFailure": "2026-11-17: no verifiable current Reddit threads were available after PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS searches returned no Reddit thread permalinks; no empty scan was written."
+  "lastFailure": "2026-11-18: no verifiable current Reddit threads were available after PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks; no empty scan was written."
 }
