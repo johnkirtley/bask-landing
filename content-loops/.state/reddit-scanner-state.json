@@ -1,17 +1,20 @@
 {
-  "lastScan": "2026-11-18",
-  "lastScanFile": null,
-  "searchMethod": "PullPush returned a non-JSON challenge page for all five target communities; targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks",
-  "themesFound": 0,
-  "sourcesCount": 0,
+  "lastScan": "2026-11-19",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-11-19.md",
+  "searchMethod": "PullPush returned a non-JSON challenge page for all five target communities and Bing/Startpage were gated or returned no useful Reddit results; Arctic Shift's public Reddit archive supplied current post and comment data",
+  "themesFound": 4,
+  "sourcesCount": 8,
   "newSignals": [
-    "No scan written: PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks. No prior signals were restated as current evidence."
+    "Severe vitamin D result discussions link fatigue, mood, anxiety, confidence, and social withdrawal to personal treatment outcomes",
+    "Users seek a universal maintenance dose or personal optimal level after loading or high-dose courses",
+    "Low follow-up results prompt absorption concerns and self-directed treatment changes",
+    "Morning-light questions continue to conflate daylight, UV exposure, and light-box timing"
   ],
   "competitorMentions": [],
   "recurringThemesHolding": [
     "People conflate morning light with vitamin D-producing sun exposure, creating demand for a clear distinction between routine cues and UV awareness",
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
-  "status": "failed",
-  "lastFailure": "2026-11-18: no verifiable current Reddit threads were available after PullPush returned a non-JSON challenge page for all five target communities and targeted Bing HTML/RSS and DuckDuckGo HTML searches returned no Reddit thread permalinks; no empty scan was written."
+  "status": "success",
+  "lastFailure": null
 }
