@@ -1,15 +1,14 @@
 {
-  "lastScan": "2026-11-19",
-  "lastScanFile": "content-loops/research/reddit-scan-2026-11-19.md",
-  "searchMethod": "PullPush returned non-JSON responses for all five target communities; Bing and DuckDuckGo site searches returned no usable Reddit thread permalinks",
-  "themesFound": 0,
-  "sourcesCount": 0,
+  "lastScan": "2026-11-27",
+  "lastScanFile": "content-loops/research/reddit-scan-2026-11-27.md",
+  "searchMethod": "PullPush returned non-JSON for all five target communities; Bing and DuckDuckGo returned no usable Reddit thread permalinks; direct Reddit fetches returned 403. Recent previously captured threads were retained.",
+  "themesFound": 4,
+  "sourcesCount": 8,
   "newSignals": [],
   "competitorMentions": [],
   "recurringThemesHolding": [
     "People conflate morning light with vitamin D-producing sun exposure, creating demand for a clear distinction between routine cues and UV awareness",
     "Supplement questions continue to combine perceived benefits, side effects, and interactions, reinforcing the need for non-prescriptive education and clear app-versus-clinician boundaries"
   ],
-  "status": "failed",
-  "lastFailure": "2026-11-26: PullPush returned non-JSON responses for all five target communities, and Bing and DuckDuckGo site searches returned no usable Reddit thread permalinks. No scan was written to avoid an empty, unsupported report."
+  "status": "success"
 }
